@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   font-family:$base-font-family;
+   font-size:$base-font-size;
+   color:$base-text-color;
+   background: $base-bg;;
+}

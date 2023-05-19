@@ -1,0 +1,28 @@
+---
+layout: home
+---
+
+<section id="timeline">
+    <div class="container">
+        <div class="row">
+            <div class="timeline-container">
+                <ul>
+                    {% assign sorted = site.data.dates | sort:"date" | reverse %}
+                    {% assign today = 'now' | date: '%Y-%m-%d' %}
+                    {% for d in sorted %}
+                    {% assign date = d.date | date: '%Y-%m-%d' %}
+                    {% if date < today %}
+                        <li style="--accent-color:#605B56">
+                    {% else %}
+                        <li style="--accent-color:#41516C">
+                    {% endif %}
+                        <div class="date">{{date}}</div>
+                        <div class="title">{{d.title}}</div>
+                        <div class="descr">{{d.desc}}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

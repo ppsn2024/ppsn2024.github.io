@@ -1,0 +1,90 @@
+- date: June 4
+  slots:
+    - time: "9:00"
+      title: Coffee Time
+      room: BR1 (F1.232)
+      desc: Get your coffee in the morning beofre the sessions start.
+    - time: "10:00"
+      title: Poster Session
+      desc: Poster Session I - Genetic Algorithms in Real-World Applications
+      room: BR2 (F2.232)
+    - time: "12:00"
+      title: Poster Session
+      desc: Poster Session II - Symbolic Regression for physics-inspired Machine Learning.
+      room: BR2 (F2.232)
+    - time: "13:00"
+      title: Lunch Break
+      desc: Buffed for your refreshing. Come get some food and have a chat.
+      room: BR1 (F1.232)
+    - time: "15:00"
+      title: Workshop II
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR3 (F3.232)
+    - time: "17:00"
+      title: Workshop II
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR3 (F3.232)
+    - time: "18:00"
+      title: Closing
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR1 (F1.232)
+- date: June 5
+  slots:
+    - time: "9:00"
+      title: Coffee Time
+      room: BR1 (F1.232)
+      desc: Get your coffee in the morning beofre the sessions start.
+    - time: "10:00"
+      title: Poster Session
+      desc: Poster Session I - Genetic Algorithms in Real-World Applications
+      room: BR2 (F2.232)
+    - time: "12:00"
+      title: Poster Session
+      desc: Poster Session II - Symbolic Regression for physics-inspired Machine Learning.
+      room: BR2 (F2.232)
+    - time: "13:00"
+      title: Lunch Break
+      desc: Buffed for your refreshing. Come get some food and have a chat.
+      room: BR1 (F1.232)
+    - time: "15:00"
+      title: Workshop II
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR3 (F3.232)
+    - time: "17:00"
+      title: Workshop II
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR3 (F3.232)
+    - time: "18:00"
+      title: Closing
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR1 (F1.232)
+- date: June 6
+  slots:
+    - time: "9:00"
+      title: Coffee Time
+      room: BR1 (F1.232)
+      desc: Get your coffee in the morning beofre the sessions start.
+    - time: "10:00"
+      title: Poster Session
+      desc: Poster Session I - Genetic Algorithms in Real-World Applications
+      room: BR2 (F2.232)
+    - time: "12:00"
+      title: Poster Session
+      desc: Poster Session II - Symbolic Regression for physics-inspired Machine Learning.
+      room: BR2 (F2.232)
+    - time: "13:00"
+      title: Lunch Break
+      desc: Buffed for your refreshing. Come get some food and have a chat.
+      room: BR1 (F1.232)
+    - time: "15:00"
+      title: Workshop II
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR3 (F3.232)
+    - time: "17:00"
+      title: Workshop II
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR3 (F3.232)
+    - time: "18:00"
+      title: Closing
+      desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+      room: BR1 (F1.232)
