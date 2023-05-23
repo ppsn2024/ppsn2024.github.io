@@ -1,0 +1,40 @@
+.navbar-top{
+   background: $brand-primary;
+   line-height: 3rem;
+
+   .nav-container{
+      padding: 0 2rem 0 2rem;
+   }
+
+   .navbar-nav {
+      a.nav-link {
+         font-family: $base-font-family;
+         font-weight: 500;
+         color:#fff;
+         padding: 1rem 0px;
+         margin: 0px 1rem;
+         text-transform:uppercase;
+         opacity: 0.85;
+         display: inline-block;
+         position: relative;
+      }
+
+      .nav-link:hover{
+         opacity: 1;
+      }
+
+      .nav-link::before {
+         transition: 200ms;
+         height: 5px;
+         content: "";
+         position: absolute;
+         background-color: #fff;
+         width: 0%;
+         bottom: 10px;
+       }
+
+       .nav-link:hover::before {
+         width: 100%;
+       }
+   }
+}
