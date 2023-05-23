@@ -184,22 +184,11 @@
          font-weight: 500;
       }
 
-      .grid-wrapper {
-         display:grid;
-         grid-gap: 1rem;
-
-         @media screen and (min-width:600px){
-            grid-template-columns: 1fr 1fr;
-         }
-
-         @media screen and (min-width:1025px){
-            grid-template-columns: 1fr 1fr 1fr;
-         }
-      }
-
       article {
          padding-bottom: 1rem;
          border-bottom: var(--border);
+         min-height: 12rem;
+         max-height: 12rem;
          h3 {
             font-weight: 500;
             font-size:1.5rem;

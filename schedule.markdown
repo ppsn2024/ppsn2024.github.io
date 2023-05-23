@@ -3,22 +3,18 @@ layout: home
 ---
 
 <section id="schedule">
-   <div class="container">
-      <div class="row">
-         {% for day in site.data.schedule %}
-         <div class="schedule-container">
-            <h2>{{day.date}}</h2>
-            <div class="grid-wrapper">
-               {% for timeslot in day.slots %}
-               <article>
-                  <h3>{{timeslot.time}} - {{timeslot.title}}</h3>
-                  <p>{{timeslot.desc}}</p>
-                  <a href="#">@{{timeslot.room}}</a>
-               </article>
-               {% endfor %}
-            </div>
-         </div>
-         {% endfor %}
+   {% for day in site.data.schedule %} 
+   <div class="row schedule-container">
+      <h2>{{day.date}}</h2>
+      {% for timeslot in day.slots %}
+      <div class="col-lg-4 col-sm-6">
+         <article class="row">
+            <h3>{{timeslot.time}} - {{timeslot.title}}</h3>
+            <p>{{timeslot.desc}}</p>
+            <a class="align-text-bottom" href="#">@{{timeslot.room}}</a>
+         </article>
       </div>
+      {% endfor %}
    </div>
+   {% endfor %}
 </section>
