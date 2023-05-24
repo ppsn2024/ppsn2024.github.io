@@ -6,10 +6,74 @@ $brand-warning:#f79824;
 $brand-danger:#f24236;
 $brand-grey: #605B56;
 $brand-light-grey: lighten($brand-grey, 15%);
-$brand-dark-grey: darken($brand-grey, 15%);
+$brand-dark-grey: #333333;
 
-$sans-serif-font: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// Source Sans Pro
+@font-face {
+   font-family: "Source Sans Pro";
+   src: url("../../assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+ }
+ @font-face {
+   font-family: "Source Sans Pro";
+   src: url("../../assets/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf");  
+   font-style: italic;
+ }
+ @font-face {
+   font-family: "Source Sans Pro";
+   src: url("../../assets/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf");
+   font-weight: bold;
+ }
+ @font-face {
+   font-family: "Source Sans Pro";
+   src: url("../../assets/fonts/Source_Sans_Pro/SourceSansPro-BoldItalic.ttf");
+   font-weight: bold;
+   font-style: italic;
+ }
+ @font-face {
+   font-family: "Source Sans Pro";
+   src: url("../../assets/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf");
+   font-weight: 900;
+ }
+ 
+ // Source Serif Pro
+ @font-face {
+   font-family: "Source Serif Pro";
+   src: url("../../assets/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf");
+ }
+ @font-face {
+   font-family: "Source Serif Pro";
+   src: url("../../assets/fonts/Source_Serif_Pro/SourceSerifPro-Italic.ttf");  
+   font-style: italic;
+ }
+ @font-face {
+   font-family: "Source Serif Pro";
+   src: url("../../assets/fonts/Source_Serif_Pro/SourceSerifPro-Bold.ttf");
+   font-weight: bold;
+ }
+ @font-face {
+   font-family: "Source Serif Pro";
+   src: url("../../assets/fonts/Source_Serif_Pro/SourceSerifPro-BoldItalic.ttf");
+   font-weight: bold;
+   font-style: italic;
+ }
+ @font-face {
+   font-family: "Source Serif Pro";
+   src: url("../../assets/fonts/Source_Serif_Pro/SourceSerifPro-Black.ttf");
+   font-weight: 900;
+ }
+ 
+ // Source Code Pro
+ @font-face {
+   font-family: "Source Code Pro";
+   src: url("../../assets/fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf");
+ }
+ @font-face {
+   font-family: "Source Code Pro";
+   src: url("../../assets/fonts/Source_Code_Pro/SourceCodePro-Italic-VariableFont_wght.ttf");  
+   font-style: italic;
+ }
 
+// Poppins
 @font-face {
    font-family: "Poppins";
    src: url(../../assets/fonts/Poppins/Poppins-Black.ttf);
@@ -109,8 +173,11 @@ $sans-serif-font: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-style: italic;
 }
 
+$sans-serif-font: "Poppins", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-font: 'Source Serif Pro', 'Times New Roman', serif;
+
 $base-font-size: 1rem !default;
-$base-font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: $sans-serif-font !default;
 $base-text-color: #111 !default;
 $base-bg: #fff !default;
 $base-font-color-dark-bg: #c8c8c8 !default;
