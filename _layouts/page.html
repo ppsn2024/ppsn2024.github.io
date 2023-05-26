@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+<head>
+    {%- include head.html -%}
+</head>
+
+<body id="page-top">
+    {%- include nav.html home=false navcss=" affix noani" -%}
+    {{ content }}
+    {%- include footer.html -%}
+    {%- include foot.html -%}
+    <script>
+        document.title = "{{ page.title }}{{ site.title_tail }}";
+    </script>
+</body>
+
+</html>
