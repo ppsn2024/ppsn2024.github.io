@@ -1,11 +1,3 @@
----
-title: Timeline
-layout: home
-lang: en
-permalink: timeline/
-description: Conference Timeline
----
-
 <section id="timeline">
     <div class="container">
         <div class="row">
@@ -15,16 +7,15 @@ description: Conference Timeline
                     {% assign today = 'now' | date: '%Y-%m-%d' %}
                     {% for d in sorted %}
                     {% assign date = d.date | date: '%Y-%m-%d' %}
-                    {% if date < today %}
-                        <li style="--accent-color:#605B56">
-                    {% else %}
+                    {% if date < today %} <li style="--accent-color:#605B56">
+                        {% else %}
                         <li style="--accent-color:#41516C">
-                    {% endif %}
-                        <div class="date">{{date}}</div>
-                        <div class="title">{{d.title}}</div>
-                        <div class="descr">{{d.desc}}</div>
-                    </li>
-                    {% endfor %}
+                            {% endif %}
+                            <div class="date">{{date}}</div>
+                            <div class="title">{{d.title}}</div>
+                            <div class="descr">{{d.desc}}</div>
+                        </li>
+                        {% endfor %}
                 </ul>
             </div>
         </div>

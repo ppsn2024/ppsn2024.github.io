@@ -1,90 +1,111 @@
-- date: June 4
+- date: June 26
   slots:
     - time: "9:00"
       title: Coffee Time
       room: BR1 (F1.232)
       desc: Get your coffee in the morning beofre the sessions start.
+      duration: 1
     - time: "10:00"
       title: Poster Session
       desc: Poster Session I - Genetic Algorithms in Real-World Applications
       room: BR2 (F2.232)
+      duration: 2
     - time: "12:00"
       title: Poster Session
       desc: Poster Session II - Symbolic Regression for physics-inspired Machine Learning.
       room: BR2 (F2.232)
+      duration: 1
     - time: "13:00"
       title: Lunch Break
       desc: Buffed for your refreshing. Come get some food and have a chat.
       room: BR1 (F1.232)
+      duration: 2
     - time: "15:00"
       title: Workshop II
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR3 (F3.232)
+      duration: 2
     - time: "17:00"
       title: Workshop II
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR3 (F3.232)
+      duration: 1
     - time: "18:00"
       title: Closing
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR1 (F1.232)
-- date: June 5
+      duration: 1
+- date: June 27
   slots:
     - time: "9:00"
       title: Coffee Time
       room: BR1 (F1.232)
       desc: Get your coffee in the morning beofre the sessions start.
+      duration: 1
     - time: "10:00"
       title: Poster Session
       desc: Poster Session I - Genetic Algorithms in Real-World Applications
       room: BR2 (F2.232)
+      duration: 2
     - time: "12:00"
       title: Poster Session
       desc: Poster Session II - Symbolic Regression for physics-inspired Machine Learning.
       room: BR2 (F2.232)
+      duration: 1
     - time: "13:00"
       title: Lunch Break
       desc: Buffed for your refreshing. Come get some food and have a chat.
       room: BR1 (F1.232)
+      duration: 2
     - time: "15:00"
       title: Workshop II
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR3 (F3.232)
+      duration: 2
     - time: "17:00"
       title: Workshop II
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR3 (F3.232)
+      duration: 1
     - time: "18:00"
       title: Closing
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR1 (F1.232)
-- date: June 6
+      duration: 1
+- date: June 28
   slots:
     - time: "9:00"
       title: Coffee Time
       room: BR1 (F1.232)
       desc: Get your coffee in the morning beofre the sessions start.
+      duration: 1
     - time: "10:00"
       title: Poster Session
       desc: Poster Session I - Genetic Algorithms in Real-World Applications
       room: BR2 (F2.232)
+      duration: 2
     - time: "12:00"
       title: Poster Session
       desc: Poster Session II - Symbolic Regression for physics-inspired Machine Learning.
       room: BR2 (F2.232)
+      duration: 1
     - time: "13:00"
       title: Lunch Break
       desc: Buffed for your refreshing. Come get some food and have a chat.
       room: BR1 (F1.232)
+      duration: 2
     - time: "15:00"
       title: Workshop II
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR3 (F3.232)
+      duration: 2
     - time: "17:00"
       title: Workshop II
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR3 (F3.232)
+      duration: 1
     - time: "18:00"
       title: Closing
       desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
       room: BR1 (F1.232)
+      duration: 1

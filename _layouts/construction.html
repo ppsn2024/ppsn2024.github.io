@@ -3,13 +3,16 @@
 
 <head>
   {%- include head.html -%}
-  <link rel="stylesheet" href="{{ "/assets/css/home.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ " /assets/css/home.css" | relative_url }}">
 </head>
 
 <body>
 
   {{ content }}
-
+  {% if jekyll.environment == "development" %}
+  {% include timeline.html %}
+  {% endif %}
+  {%- include map.html -%}
   {%- include footer.html -%}
   {%- include foot.html -%}
 </body>

@@ -6,13 +6,19 @@ permalink: schedule/
 description: Conference Schedule
 ---
 
+{% if jekyll.environment == "development" %}
 <section id="schedule">
-   {% for day in site.data.schedule %} 
+   {% for day in site.data.schedule %}
    <div class="row schedule-container">
       <h2>{{day.date}}</h2>
       {% for timeslot in day.slots %}
       <div class="col-lg-4 col-sm-6">
          <article class="row">
+            <span class="calendar-check">
+               <input type="checkbox" checked data-day="{{day.date}}" data-time="{{timeslot.time}}"
+                  data-title="{{timeslot.title}}" data-desc="{{timeslot.desc}}" data-room="{{timeslot.room}}"
+                  data-duration="{{timeslot.duration}}" />
+            </span>
             <h3>{{timeslot.time}} - {{timeslot.title}}</h3>
             <p>{{timeslot.desc}}</p>
             <a class="align-text-bottom" href="#">@{{timeslot.room}}</a>
@@ -21,4 +27,9 @@ description: Conference Schedule
       {% endfor %}
    </div>
    {% endfor %}
+
+   <form id="schedule-download-form" onsubmit="download()">
+      <input type="submit" value="Download">
+   </form>
 </section>
+{% endif %}
