@@ -12,6 +12,11 @@
   {% if jekyll.environment == "development" %}
   {% include timeline.html %}
   {% endif %}
+
+  {% if jekyll.environment == "development" %}
+  {%- include venue.html -%}
+  {% endif %}
+
   {%- include map.html -%}
   {%- include footer.html -%}
   {%- include foot.html -%}
