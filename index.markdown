@@ -16,8 +16,7 @@ layout: construction
         <div class="row">
             <div class="col">
                 <p>
-                    Website of the 18th International Conference on Parallel Problem Solving from Nature,<br/>
-                    which takes place in Hagenberg, Upper Austria, September 14th - 18th 2024.
+                    The International Conference on Parallel Problem Solving From Nature is a biannual open forum fostering the study of natural models, iterative optimization heuristics, search heuristics, machine learning and other artificial intelligence approaches. We invite researchers and practitioners to present their work, ranging from rigorously derived mathematical results to carefully crafted empirical studies.
                     <br/><br/>
                     This website is currently under construction. For any intermediate inquiries, please contact <a class="link-offset-2" href="mailto:michael.affenzeller@fh-ooe.at">michael.affenzeller@fh-ooe.at</a>
                 </p>
