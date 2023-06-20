@@ -7,7 +7,10 @@
 </head>
 
 <body>
-
+  {% if jekyll.environment == "development" %}
+  {% include nav.html %}
+  {% include header.html %}
+  {% endif %}
   {{ content }}
   {% if jekyll.environment == "development" %}
   {% include timeline.html %}

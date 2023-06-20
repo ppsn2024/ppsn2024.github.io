@@ -1,8 +1,37 @@
 header{
    width:100%;
    height:100vh;
-   display:flex;
-   align-items: center;
-   justify-content: center;
-   background: linear-gradient(#86B918, #7fb800)
+   background-image: linear-gradient(#86B918, #7fb800);
+   position: relative;
+
+   .svg-holder {
+      width:100%;
+      text-align:center;
+   }
+
+   h1 {
+      font-weight:800;
+      font-size:3rem;
+   }
+
+   @media only screen and (min-width: 1200px) {
+      .header-content {
+         height:100vh;
+         padding-right:100px;
+         background-image: url("../../assets/logo/ppsn2024-logo-anim.svg");
+         background-repeat: no-repeat;
+         background-position: center;
+         background-origin: padding-box;
+      }
+   }
+
+   @media only screen and (min-width: 600px) {
+      .header-content {
+         height:100vh;
+         padding-right:100px;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-origin: padding-box;
+      }
+   }
 }
