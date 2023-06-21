@@ -10,8 +10,21 @@ header{
    }
 
    h1 {
-      font-weight:800;
-      font-size:3rem;
+      
+      font-size:2.2rem;
+      color:$brand-dark-grey;
+      margin-top:35px;
+   }
+
+   .bold-heading {
+      font-weight:700;
+   }
+
+   .conference-info {
+      color:$brand-dark-grey;
+      font-weight:500;
+      font-size:1.8rem;
+      line-height:2.5;
    }
 
    @media only screen and (min-width: 1200px) {
