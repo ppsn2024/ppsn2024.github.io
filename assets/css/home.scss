@@ -293,7 +293,8 @@ section#venue{
       font-size:1.5rem;
     }
 
-    .section-col:hover h2, .section-col:hover p{
-      opacity:1;
+    .section-col:hover h2, .section-col:hover p {
+      cursor: pointer;
+      // opacity:1;
     }
 }

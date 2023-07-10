@@ -25,3 +25,7 @@ layout: construction
         </div>
     </div>
 </section>
+
+{%- include venue.html -%}
+
+{%- include map.html -%}
