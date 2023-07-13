@@ -4,6 +4,7 @@
 
 layout: construction
 ---
+
 <section class="brand-primary">
     <div class="container py-5 text-justify">
         <div class="row">
@@ -29,3 +30,5 @@ layout: construction
 {%- include venue.html -%}
 
 {%- include map.html -%}
+
+{%- include contact.html -%}
