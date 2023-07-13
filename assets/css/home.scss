@@ -125,10 +125,10 @@
       content: "";
       position: absolute;
       width: 90%;
-      height: 0.15rem;
-      background: rgba(0, 0, 0, 0.4);
+      height: 0.10rem;
+      background: rgba(0, 0, 0, 0.3);
       border-radius: 50%;
-      filter: blur(3px);
+      filter: blur(2px);
    }
 
    ul li .descr::before {
@@ -234,71 +234,62 @@ section#contact-map{
 
 //Venue section
 section#venue{
-   height:400px;
-   overflow:hidden;
-   background-color:$brand-dark-grey;
-
-   .section{
-      min-height:400px;
-      text-align:center;
-      position:relative;
-   }
-
-   .text-in {
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%, -50%);
-   }
-
-   .hgb{
-      background: url("../img/fhhgb.jpg") no-repeat;
-      background-size:cover;
-   }
-
-   .aec{
-      background: url("../img/aec.jpg") no-repeat;
-      background-size:cover;
-   }
-
-   .fr{
-      background: url("../img/freistadt.jpg") no-repeat;
-      background-size:cover;
-   }
-
-   .section-row:hover .section-col{
-      opacity: 0.3;
+   .image-item {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      margin:0;
     }
-
-    .section-row .section-col:hover{
+    
+    .hgb {
+      background-image: url("../img/fhhgb.jpg");
+      background-size:cover;
+    }
+    
+    .aec {
+      background-image: url("../img/aec.jpg");
+      background-size:cover;
+    }
+    
+    .fr {
+      background-image: url("../img/freistadt.jpg");
+      background-size:cover;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 350ms linear;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .overlay h2 {
+      font-size: 2.0rem;
+      margin-bottom: 10px;
+    }
+    
+    .overlay p {
+      font-size: 1.4rem;
+    }
+    
+    .image-item:hover .overlay {
       opacity: 1;
     }
 
-    .section-col{
-      transition: opacity 250ms linear;
-    }
-
-    h2, p {
-      color: #fff;
-      opacity: 0;
-    }
-
-    h2 {
-      font-weight:800;
-      font-size:3rem;
-    }
-
-    p {
-      font-weight:500;
-      font-size:1.5rem;
-    }
-
-    .section-col:hover h2, .section-col:hover p {
-      cursor: pointer;
-      // opacity:1;
-    }
 }
 
+//Contact section
 section#contact{
    color:#fff;
    h2{
