@@ -11,10 +11,18 @@
   {% include nav.html %}
   {% include header.html %}
   {% endif %}
-  {{ content }}
+
   {% if jekyll.environment == "development" %}
   {% include timeline.html %}
   {% endif %}
+
+  {{ content }}
+
+  {%- include venue.html -%}
+  
+  {%- include map.html -%}
+  
+  {%- include contact.html -%}
 
   {%- include footer.html -%}
   {%- include foot.html -%}

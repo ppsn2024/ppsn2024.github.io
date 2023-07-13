@@ -16,7 +16,8 @@ body {
    font-family:$base-font-family;
    font-size:$base-font-size;
    color:$base-text-color;
-   background: $base-bg;;
+   background: $base-bg;
+   overflow-x: hidden;
 }
 
 .background-primary{

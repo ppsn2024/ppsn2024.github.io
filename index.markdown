@@ -5,7 +5,7 @@
 layout: construction
 ---
 
-<section class="brand-primary">
+<section id="conference" class="brand-primary">
     <div class="container py-5 text-justify">
         <div class="row">
             <div class="col col-6 col-sm-6 col-md-3 col-lg-2">
@@ -26,9 +26,3 @@ layout: construction
         </div>
     </div>
 </section>
-
-{%- include venue.html -%}
-
-{%- include map.html -%}
-
-{%- include contact.html -%}

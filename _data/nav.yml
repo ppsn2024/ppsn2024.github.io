@@ -16,13 +16,13 @@
 - item: Program
   de: Programm
   en: Program
-  link: "#program"
+  link: "#timeline"
   hardlink: false
-- item: accommodation
-  de: Unterkunft
-  en: Accommodation
-  link: "accommodation"
-  hardlink: false
+#- item: accommodation
+#  de: Unterkunft
+#  en: Accommodation
+#  link: "accommodation"
+#  hardlink: false
 - item: contact
   de: Kontakt
   en: Contact
