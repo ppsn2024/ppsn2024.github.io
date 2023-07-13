@@ -1,8 +1,16 @@
-- id: submission
-  date: 2024-01-05
-  title: Submission
-  desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
-- id: submission2
-  date: 2023-01-10
-  title: Submission Paper
-  desc: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!
+- id: Main Conference
+  date: 2024-09-16
+  title: Main Conference
+  desc: The main conference will start on September 16th. The conference will last for 3 days until September 18th.
+- id: tutorial-workshop
+  date: 2024-09-14
+  title: Tutorials & Workshops
+  desc: The tutorials and workshops will last from September 14th - 15th.
+- id: paper-submission
+  date: 2024-04-05
+  title: Paper Submission
+  desc: More details will be announced soon.
+- id: tutorial-submission
+  date: 2024-02-09
+  title: Tutorial & Workshop Submission
+  desc: More details will be announced soon.

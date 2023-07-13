@@ -18,3 +18,12 @@ body {
    color:$base-text-color;
    background: $base-bg;;
 }
+
+.background-primary{
+  background: $brand-primary;
+}
+
+section.pad{
+  padding-top:30px;
+  padding-bottom:30px;
+}

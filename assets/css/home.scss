@@ -298,3 +298,48 @@ section#venue{
       // opacity:1;
     }
 }
+
+section#contact{
+   color:#fff;
+   h2{
+      font-size:1.8rem;
+      margin-bottom:20px;
+   }
+
+   a{
+      color:#fff;
+      text-decoration: none;;
+   }
+
+   a:hover {
+      text-decoration: underline;
+   }
+
+   h4 {
+      font-size:1.2rem;
+   }
+
+   table.contact-table{
+      font-size:1rem;
+   }
+
+   table.contact-table td {
+      padding: 10px 0px 0px 0px;
+      vertical-align: top;
+      text-align: left;
+   }
+
+   table.contact-table tr td:first-child {
+      padding-right: 20px;
+  }
+
+  @media (max-width: 1200px) {
+   .contact-info>div {
+       margin-bottom:50px
+   }
+
+   .contact-info>div:last-child {
+       margin-bottom: 0px
+   }
+}
+}
