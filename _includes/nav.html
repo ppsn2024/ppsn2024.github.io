@@ -17,16 +17,18 @@
 
 {% include cookie_consent.html %}
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-top">
-    <div class="container-fluid nav-container">
-        <a href="/" class="navbar-brand">
-
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-            <div class="navbar-nav">
+<nav id="main-nav" class="navbar fixed-top navbar-expand-md navbar-top my-nav ">
+    <div class="container-fluid">
+            <div class="brand-container">
+                <a href="/" class="navbar-brand">
+                    {% include svg/ppsn2024-logo.svg %}
+                </a>
+            </div>
+            
+            <button type="button" class="navbar-toggler pull-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>  
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                 {% for item in site.data.nav %}
                 {% if item.hardlink %}
                 {% capture baseurl %}/{% endcapture %}
@@ -38,6 +40,5 @@
                 {% endif %}
                 {% endfor %}
             </div>
-        </div>
     </div>
 </nav>

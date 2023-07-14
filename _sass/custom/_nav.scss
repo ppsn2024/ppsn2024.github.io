@@ -1,39 +1,73 @@
-.navbar-top{
-   background: $brand-primary;
-   line-height: 2rem;
 
-   .nav-container{
-      padding: 0 1.5rem 0 1.5rem;
+nav#main-nav {
+   .navbar-top{
+      background-color: transparent !important;
+      height:75px;
    }
 
-   .navbar-nav {
-      a.nav-link {
-         font-family: $base-font-family;
-         font-weight: 500;
-         color:#fff;
-         padding: 1rem 0px;
-         margin: 0px 1rem;
-         opacity: 0.85;
-         display: inline-block;
-         position: relative;
-      }
-
-      .nav-link:hover{
-         opacity: 1;
-      }
-
-      .nav-link::before {
-         transition: 200ms;
-         height: 5px;
-         content: "";
-         position: absolute;
-         background-color: #fff;
-         width: 0%;
-         bottom: 10px;
-       }
-
-       .nav-link:hover::before {
-         width: 100%;
-       }
+   a.nav-link {
+      font-family: $base-font-family;
+      font-weight: 500;
+      color:#fff;
+      padding: 1rem 0px;
+      margin: 0px 1rem;
+      opacity: 0.85;
+      position: relative;
    }
+
+   .nav-link:hover{
+      opacity: 1;
+   }
+
+   .nav-link::before {
+      transition: 200ms;
+      height: 5px;
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      width: 0%;
+      bottom: 10px;
+    }
+
+    .nav-link:hover::before {
+      width: 100%;
+    }
+
+    .navbar-brand{
+      height:100%;
+      width:100%;
+      padding:10px 0 0 10px;
+      display: block;;
+    }
+
+    .brand-container {
+      float:left;
+    }
+
+    .pull-right {
+      float:right !important;
+    }
+
+    #ppsn2024-logo{
+      position: relative;
+      left:15px;
+      display:inline-block;
+      height:50px;
+    }
 }
+
+.navbar-top.scrolled {
+   background-color: #fff !important;
+   transition: background-color 200ms linear;
+
+   .nav-link {
+      color:$brand-primary !important;
+   }
+
+   .nav-link::before {
+      background-color: $brand-primary !important;
+    }
+ }
+
+ 
+

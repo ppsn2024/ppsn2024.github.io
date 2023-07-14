@@ -10,3 +10,12 @@
 <script src="{{"/assets/js/leaflet.js" | relative_url }}"></script>
 <script src="{{"/assets/js/custom/map.js" | relative_url }}"></script>
 <script src="{{"/assets/js/custom/schedule.js" | relative_url }}"></script>
+
+<script>
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $(".navbar-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+</script>

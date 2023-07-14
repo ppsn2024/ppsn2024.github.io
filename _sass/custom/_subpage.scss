@@ -37,3 +37,11 @@
    margin:0;
  }
 
+ .nav-link {
+  color:$brand-primary !important;
+}
+
+.nav-link::before {
+  background-color: $brand-primary !important;
+}
+
