@@ -32,9 +32,9 @@
                 {% capture baseurl %}/{% endcapture %}
                 {% endif %}
                 {% if forloop.first %}
-                <a href="{{baseurl}}{{item['link']}}" class="active nav-item nav-link">{{item["en"]}}</a>
+                <a href="/{{baseurl}}{{item['link']}}" class="active nav-item nav-link">{{item["en"]}}</a>
                 {% else %}
-                <a href="{{baseurl}}{{item['link']}}" class="nav-item nav-link">{{item["en"]}}</a>
+                <a href="/{{baseurl}}{{item['link']}}" class="nav-item nav-link">{{item["en"]}}</a>
                 {% endif %}
                 {% endfor %}
             </div>

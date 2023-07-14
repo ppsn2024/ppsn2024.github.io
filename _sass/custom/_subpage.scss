@@ -1,0 +1,39 @@
+.subpage-sec {
+   padding-top:120px;
+   padding-bottom:40px;
+
+   h2 {
+      font-size: 2rem;
+      font-weight:500;
+    }
+   
+    h3 {
+      font-size: 1.8rem;
+      font-weight:400;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+      font-weight:300;
+    }
+
+    a {
+      text-decoration: none;
+      color:$brand-primary;
+    }
+   
+    a:hover {
+      text-decoration: underline;
+    }
+ }
+
+ .imprint-infolist li {
+   line-height: 1.7em;
+}
+
+ .imprint-infolist{
+   list-style: none;
+   padding:0;
+   margin:0;
+ }
+

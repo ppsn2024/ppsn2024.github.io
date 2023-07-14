@@ -28,3 +28,16 @@ section.pad{
   padding-top:30px;
   padding-bottom:30px;
 }
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#timeline::before {
+  content: '';
+  display: block;
+  height:140px;
+  margin-top: -140px;
+  visibility: hidden;
+}
