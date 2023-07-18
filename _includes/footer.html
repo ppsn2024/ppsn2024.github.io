@@ -2,23 +2,31 @@
    <div class="container">
       <div class="row">
          <div class="socials">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://github.com/ppsn2024/" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="{{ "/feed.xml" | relative_url }}" target="_blank"><i class="fa-solid fa-rss"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            {% assign fb_item = site.data.nav.Socials | where: "item", "fb" | first %}
+            <a href="{{fb_item.link}}"><i class="fa-brands fa-facebook"></i></a>
+            {% assign github_item = site.data.nav.Socials | where: "item", "github" | first %}
+            <a href="{{github_item.link}}" target="_blank"><i class="fa-brands fa-github"></i></a>
+            {% assign rss_item = site.data.nav.Socials | where: "item", "rss" | first %}
+            <a href="{{rss_item.link | relative_url}}" target="_blank"><i class="fa-solid fa-rss"></i></a>
+            {% assign twitter_item = site.data.nav.Socials | where: "item", "twitter" | first %}
+            <a href="{{twitter_item.link}}"><i class="fa-brands fa-twitter"></i></a>
          </div>
       </div>
       <div class="row">
          <div class="col-md-2"></div>
-         <div class="col-md-2"><a href="/#contact">Contact us</a></div>
-         <div class="col-md-2"><a href="/imprint/">Imprint</a></div>
-         <div class="col-md-2"><a href="/dataprotection/">Data Protection</a></div>
-         <div class="col-md-2"><a href="/press/">Press</a></div>
+         {% for it in site.data.nav.Information %}
+         {% if it.hardlink %}
+         {% capture baseurl %}/{% endcapture %}
+         {% else %}
+         {% capture baseurl %}{% endcapture %}
+         {% endif %}
+         <div class="col-md-2"><a href="{{baseurl}}{{it.link}}">{{it.name["en"]}}</a></div>
+         {% endfor %}
          <div class="col-md-2"></div>
       </div>
       <div class="row">
          <div class="col-md-12">
-            &copy; {{ 'now' | date: "%Y" }} University of Applied Sciences Upper Austria - All rights reserved  
+            &copy; {{ 'now' | date: "%Y" }} University of Applied Sciences Upper Austria - All rights reserved
          </div>
       </div>
    </div>

@@ -16,29 +16,29 @@
 {% endif %}
 
 {% include cookie_consent.html %}
-
 <nav id="main-nav" class="navbar fixed-top navbar-expand-md navbar-top my-nav ">
     <div class="container-fluid">
-            <div class="brand-container">
-                <a href="/" class="navbar-brand">
-                    {% include svg/ppsn2024-logo.svg %}
-                </a>
-            </div>
-            
-            <button type="button" class="navbar-toggler pull-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>  
-            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-                {% for item in site.data.nav %}
-                {% if item.hardlink %}
-                {% capture baseurl %}/{% endcapture %}
-                {% endif %}
-                {% if forloop.first %}
-                <a href="/{{baseurl}}{{item['link']}}" class="active nav-item nav-link">{{item["en"]}}</a>
-                {% else %}
-                <a href="/{{baseurl}}{{item['link']}}" class="nav-item nav-link">{{item["en"]}}</a>
-                {% endif %}
-                {% endfor %}
-            </div>
+        <div class="brand-container">
+            <a href="/" class="navbar-brand">
+                {% include svg/ppsn2024-logo.svg %}
+            </a>
+        </div>
+
+        <button type="button" class="navbar-toggler pull-right" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            {% for nav_item in site.data.nav.MainNav %}
+            {% if nav_item.hardlink %}
+            {% capture baseurl %}/{% endcapture %}
+            {% endif %}
+            {% if forloop.first %}
+            <a href="/{{baseurl}}{{nav_item.link}}" class="active nav-item nav-link">{{nav_item.name["en"]}}</a>
+            {% else %}
+            <a href="/{{baseurl}}{{nav_item.link}}" class="nav-item nav-link">{{nav_item.name["en"]}}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
 </nav>
