@@ -39,7 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-environment: development
+environment: production # production / development
 regenerate: false
 
 show_drafts: false
