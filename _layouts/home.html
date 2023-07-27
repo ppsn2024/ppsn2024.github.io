@@ -8,15 +8,14 @@
 
 <body>
   {% if jekyll.environment == "production" %}
-  {% include nav.html %}
-  {% include header.html %}
   {% endif %}
 
-  {% if jekyll.environment == "production" %}
+  {% include header.html %}
   {% include timeline.html %}
-  {% endif %}
 
   {{ content }}
+
+
 
   {%- include venue.html -%}
 
