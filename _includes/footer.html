@@ -4,12 +4,14 @@
          <div class="socials">
             {% assign fb_item = site.data.nav.Socials | where: "item", "fb" | first %}
             <a href="{{fb_item.link}}"><i class="fa-brands fa-facebook"></i></a>
+            {% assign twitter_item = site.data.nav.Socials | where: "item", "twitter" | first %}
+            <a href="{{twitter_item.link}}"><i class="fa-brands fa-twitter"></i></a>
+            {% assign linkedin_item = site.data.nav.Socials | where: "item", "linkedin" | first %}
+            <a href="{{linkedin_item.link}}"><i class="fa-brands fa-linkedin"></i></a>
             {% assign github_item = site.data.nav.Socials | where: "item", "github" | first %}
             <a href="{{github_item.link}}" target="_blank"><i class="fa-brands fa-github"></i></a>
             {% assign rss_item = site.data.nav.Socials | where: "item", "rss" | first %}
             <a href="{{rss_item.link | relative_url}}" target="_blank"><i class="fa-solid fa-rss"></i></a>
-            {% assign twitter_item = site.data.nav.Socials | where: "item", "twitter" | first %}
-            <a href="{{twitter_item.link}}"><i class="fa-brands fa-twitter"></i></a>
          </div>
       </div>
       <div class="row">

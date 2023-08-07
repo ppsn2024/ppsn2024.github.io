@@ -42,6 +42,12 @@ Socials:
       en: Twitter
     link: "#"
     hardlink: true
+  - item: linkedin
+    name:
+      de: LinkedIn
+      en: LinkedIn
+    link: "#"
+    hardlink: true
   - item: rss
     name:
       de: RSS
