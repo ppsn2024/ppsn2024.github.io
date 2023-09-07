@@ -4,22 +4,63 @@ const ctx = canvas.getContext('2d');
 
 // Green color palette with 5 colors
 const colors = [
-  "#87ba40", // Base Color (Original color)
-  "#b1d06b",
-  "#9fca59",
-  "#8bb446",
-  "#77a732",
-  "#639d1f",
-  "#4f9310"
+  "#87ba40", // 4 Base Color (Original color)
+  "#93C350",
+  // "#79A739",
+  "#b1d06b", // 6
+  "#BCD77F",
+  "#A8CA58",
+  "#9fca59", // 5
+  "#AAD06C",
+  "#93C445"
+  // "#8bb446", // 3
+  // "#77a732",  // 2
+  // "#639d1f", // 0
+  // "#4f9310" // 1
 ];
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex > 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
 
 // Function to generate a random color from the color palette
 function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
-function getRandom(min, max) {
-  return Math.random() * (max - min) + min;
+function getRandomColorRgb() {
+  return hexToRgb(getRandomColor());
+}
+
+function hexToRgb(hex) {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
 }
 
 // Function to generate random points
@@ -43,8 +84,37 @@ function drawTriangleBySize(x, y, size, color) {
   ctx.fill();
 }
 
-function drawTriangle(p1, p2, p3, color) {
-  ctx.fillStyle = color;
+async function drawTriangleGradually(p1, p2, p3, colorRgb) {  
+  let opacity = 0.0;
+  let n = 50;
+
+  for(let i = 0; i < n; i++) {
+    opacity = 1.0/n*i;
+    drawTriangle(p1, p2, p3, colorRgb, opacity);
+    await sleep(1);
+  }
+}
+
+function drawTriangleGradually2(p1, p2, p3, colorRgb) {
+  return new Promise((resolve) => {
+    
+    (async () => {
+      let opacity = 0.0;
+      let n = 50;
+    
+      for(let i = 0; i < n; i++) {
+        await sleep(1);
+        opacity = 1.0/n*i;
+        drawTriangle(p1, p2, p3, colorRgb, opacity);
+        if(i == n*0.1) resolve('resolved');
+      }
+      // resolve('resolved');      
+    })()    
+  });
+}
+
+function drawTriangle(p1, p2, p3, colorRgb, opacity) {
+  ctx.fillStyle = 'rgba(' + colorRgb.r + ',' + colorRgb.g + ',' + colorRgb.b + ',' + opacity + ')';
   ctx.beginPath();
   ctx.moveTo(p1.x, p1.y);
   ctx.lineTo(p2.x, p2.y);
@@ -63,13 +133,15 @@ function drawLine(ctx, p1, p2) {
 }
 
 // Function to clear the canvas and redraw the triangular partitions
-function redrawCanvas() {
-  // Set canvas size to cover the entire screen
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+async function redrawCanvas(gradually) {
+  
+    // Set canvas size to cover the entire screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  
   const width = canvas.width;
   const height = canvas.height;
-  const numPoints = 200;
+  const numPoints = 250;
   
   // Set the background color of the canvas
   //ctx.fillStyle = '#87ba40';
@@ -80,28 +152,38 @@ function redrawCanvas() {
   
   // Create a Delaunay triangulation using the delaunator library
   const delaunay = Delaunator.from(points, point => point.x, point => point.y);
-  
-  // Draw the Delaunay triangulation edges
-  for (let e = 0; e < delaunay.triangles.length; e += 3) {
-    const p1 = points[delaunay.triangles[e]];
-    const p2 = points[delaunay.triangles[e + 1]];
-    const p3 = points[delaunay.triangles[e + 2]];
-    
-    //drawLine(ctx, p1, p2);
-    //drawLine(ctx, p2, p3);
-    //drawLine(ctx, p3, p1);
-    const randomColor = getRandomColor();
-    drawTriangle(p1, p2, p3, randomColor);
+
+  console.log("triangle points: " + delaunay.triangles.length);
+  console.log("triangles: " + delaunay.triangles.length/3.0);
+  const rndTriangles = [];
+  for(let i = 0; i < numPoints; i++) {
+    rndTriangles[i] = i*3;
+  }  
+  shuffle(rndTriangles);  
+  let tasks = [];
+
+  for(let i = 0; i < rndTriangles.length; i++) {
+    const start = rndTriangles[i];
+    const p1 = points[delaunay.triangles[start]];
+    const p2 = points[delaunay.triangles[start + 1]];
+    const p3 = points[delaunay.triangles[start + 2]]; 
+    const randomColor = getRandomColorRgb();    
+    if(gradually && i > rndTriangles.length/2) {             
+      tasks.push(drawTriangleGradually2(p1, p2, p3, randomColor));      
+      if(tasks.length == 10) {
+        let x = await Promise.all(tasks);        
+        tasks = [];
+      }
+    } else {
+      drawTriangle(p1, p2, p3, randomColor, 1.0);
+    }
   }
-  
-  //const randomColor = getRandomColor();
-  //drawTriangle(x, y, triangleSize, randomColor);
 }
 // Initial canvas setup
-redrawCanvas();
+redrawCanvas(true);
 
 // Redraw the canvas on window resize
-window.addEventListener('resize', redrawCanvas);
+window.addEventListener('resize', () => {redrawCanvas(false)});
 
 
 
