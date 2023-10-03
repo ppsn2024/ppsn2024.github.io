@@ -6,7 +6,7 @@
       font-size: 2rem;
       font-weight:500;
     }
-   
+
     h3 {
       font-size: 1.8rem;
       font-weight:400;
@@ -21,7 +21,7 @@
       text-decoration: none;
       color:$brand-primary;
     }
-   
+
     a:hover {
       text-decoration: underline;
     }
@@ -45,3 +45,56 @@
   background-color: $brand-primary !important;
 }
 
+section.subpage-venue {
+  article:not(:first-child) {
+    padding-top:25px;
+  }
+
+  article:nth-child(odd) h1 {
+    font-size:3.5rem;
+    font-size:700;
+    color: $brand-primary;
+  }
+
+  article:nth-child(odd) h2 {
+    font-size:2.5rem;
+    font-weight:500;
+  }
+
+  article:nth-child(even) h1 {
+    font-size:3.5rem;
+    font-size:700;
+    color: $brand-secondary;
+  }
+
+  article:nth-child(even) h2 {
+    font-size:2.5rem;
+    font-weight:500;
+  }
+
+  .image-item {
+    overflow: hidden;
+    max-height:300px;
+  }
+
+  .contact-maps {
+    min-height:350px;
+    margin-top:20px;
+  }
+
+  .venue-list li {
+    line-height: 1.7em;
+ }
+
+  .venue-list{
+    list-style: none;
+    padding:0;
+    margin:0;
+  }
+
+  .venue-list li>span {
+    color:$brand-primary;
+  }
+
+
+}
