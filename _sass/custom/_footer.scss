@@ -25,36 +25,44 @@ footer#main-footer{
    .row a:hover {
       color:#fff;
       text-decoration:underline;
+   }   
+}
+
+footer#disclaimer {
+   padding: 20px 0px 0px 0px;
+   background-color: $brand-black;
+   text-align:center;
+   padding:2rem 0;
+
+   .row {
+      color:$base-font-color-dark-bg;
+      font-size:0.9rem;
+      padding:1.5rem 0;
    }
 
-   #disclaimer {
-      text-align: center;
-      vertical-align: middle;
+   a {
+      text-decoration: none;
    }
+}
 
-   #disclaimer .nopadding {
-      padding: 0px;
-   }
+.footer-logo {
+   height: 60px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   margin: 10px 0px 0px 10px;
+}
 
-   .footer-logo {
-      height: 60px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      margin: 10px 0px 0px 10px;
-   }
+#logo-uasua {
+   height:50px;      
+   margin-top: 15px;      
+   background-image: url("../../assets/logo/logo_fhooe.png");
+}
 
-   #logo-uasua {
-      height:50px;      
-      margin-top: 15px;      
-      background-image: url("../../assets/logo/logo_fhooe.png");
-   }
+#logo-swph {      
+   background-image: url("../../assets/logo/logo_swph.png");
+}
 
-   #logo-swph {      
-      background-image: url("../../assets/logo/logo_swph.png");
-   }
-
-   #logo-ua {      
-      background-image: url("../../assets/logo/logo_upperaustria.png");
-   }
+#logo-ua {      
+   background-image: url("../../assets/logo/logo_upperaustria.png");
 }

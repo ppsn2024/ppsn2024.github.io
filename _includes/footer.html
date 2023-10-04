@@ -26,19 +26,23 @@
          {% endfor %}
          <div class="col-md-2"></div>
       </div>      
-
-      <br/>
+   </div>
+</footer>
+<footer id="disclaimer">
+   <div class="container">
       <div class="row">
          <div class="col-md-12">
             &copy; {{ 'now' | date: "%Y" }} University of Applied Sciences Upper Austria - All Rights Reserved<br/><br/>PPSN 2024 is organized and supported by
          </div>
-      <div class="row">      
+      <div class="row">
+         {% assign fhooe = site.data.nav.Partners | where: "item", "fhooe" | first %}
+         {% assign swph = site.data.nav.Partners | where: "item", "swph" | first %}
+         {% assign looe = site.data.nav.Partners | where: "item", "looe" | first %}
          <div class="col-md-3"></div>   
-         <div class="col-md-2"><div id="logo-uasua" class="footer-logo"></div></div>
-         <div class="col-md-2"><div id="logo-swph" class="footer-logo"></div></div>
-         <div class="col-md-2"><div id="logo-ua" class="footer-logo"></div></div>
-         <div class="col-md-3"></div>   
+         <div class="col-md-2"><a href="{{fhooe.link}}" alt="{{fhooe.name.en}}" target="_blank"><div id="logo-uasua" class="footer-logo"></div></a></div>
+         <div class="col-md-2"><a href="{{swph.link}}" alt="{{swph.name.en}}" target="_blank"><div id="logo-swph" class="footer-logo"></div></a></div>
+         <div class="col-md-2"><a href="{{looe.link}}" alt="{{looe.name.en}}" target="_blank"><div id="logo-ua" class="footer-logo"></div></a></div>
+         <div class="col-md-3"><a></div>   
       </div>
-      
-   </div>
+   </div>         
 </footer>

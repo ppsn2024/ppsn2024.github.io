@@ -22,7 +22,8 @@
 
     var marker = L.marker([48.36831567160878, 14.512507038275828]).addTo(map)
         .bindPopup('University of Applied Sciences Upper Austria<br/>Softwarepark 11<br/>4232 Hagenberg im Mühlkreis'
-            + '<br/><br/><a target="_blank" href="https://www.openstreetmap.org/directions?from=&to=48.36831%2C14.51250">Route here</a>');
+            + '<br/><br/><a target="_blank" href="https://www.openstreetmap.org/directions?from=&to=48.36831%2C14.51250">Route here (via OpenStreetMap)</a>'
+            + '<br/><a target="_blank" href="https://www.google.at/maps/dir//FH1,+Softwarepark+11,+4232+Hagenberg+im+M%C3%BChlkreis/@48.3683657,14.511851,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4773a699552c0acf:0x9d8ec058688548b9!2m2!1d14.5144259!2d48.3683622?entry=ttu">Route here (via Google Maps)</a>');
 
     marker.openPopup();
     // var popup = L.popup()
@@ -53,7 +54,8 @@
 
     var marker = L.marker([48.3707057, 14.5163663]).addTo(map)
         .bindPopup('Parkhotel Hagenberg<br/>Hauptstraße 103<br/>4232 Hagenberg im Mühlkreis'
-            + '<br/><br/><a target="_blank" href="https://www.openstreetmap.org/directions?from=&to=48.37058%2C14.51619">Route here</a>');
+            + '<br/><br/><a target="_blank" href="https://www.openstreetmap.org/directions?from=&to=48.37058%2C14.51619">Route here (via OpenStreetMap)</a>'
+            + '<br/><a target="_blank" href="https://www.google.at/maps/dir//Hauptstra%C3%9Fe+103,+Hagenberg+im+M%C3%BChlkreis/@48.3706298,14.5133277,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4773a69bd5596e3b:0xcae56a346af5deb3!2m2!1d14.5159026!2d48.3706263?entry=ttu">Route here (via Google Maps)</a>');
 
     marker.openPopup();
 })(L);

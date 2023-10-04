@@ -85,3 +85,22 @@ Information:
       en: Press
     link: "/press/"
     hardlink: false
+Partners:
+  - item: fhooe
+    name:
+      de: Fachhochschule Oberösterreich
+      en: University of Applied Sciences Upper Austria
+    link: "https://www.fh-ooe.at/en/"
+    hardlink: true
+  - item: swph
+    name:
+      de: Softwarepark Hagenberg
+      en: Softwarepark Hagenberg
+    link: "https://www.softwarepark-hagenberg.com/en/"
+    hardlink: true
+  - item: looe
+    name:
+      de: Land Oberösterreich
+      en: State of Upper Austria
+    link: "https://www.upperaustria.at/"
+    hardlink: true

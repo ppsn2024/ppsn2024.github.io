@@ -4,20 +4,28 @@ const ctx = canvas.getContext('2d');
 
 // Green color palette with 5 colors
 const colors = [
-  // "#87ba40",
-  // "#93C350",
-  // "#79A739",
-  // "#b1d06b",
-  // "#BCD77F",
-  // "#A8CA58",
-  // "#9fca59",
-  // "#AAD06C",
-  // "#93C445",
-  "#007478", // Campus Linz
-  "#823896", // Campus Steyr
-  "#004b96", // Campus Wels
-  "#00a6eb", // SWPH
-  "#5e8036" // Campus Hgb
+  "#5e8036",
+  
+  "#348C40",
+  "#499638",
+  "#8B9638",
+  "#8C8634",
+
+  "#689931",
+  "#96A334",
+  "#A39134",
+  "#997D31",
+
+  // "#2E401B",
+  // "#95CC56",
+  // "#668C3B",
+  // "#4A662B",
+
+  // "#007478", // Campus Linz
+  // "#823896", // Campus Steyr
+  // "#004b96", // Campus Wels
+  // "#00a6eb", // SWPH
+  // "#5e8036" // Campus Hgb
 ];
 
 function sleep(ms) {
@@ -154,8 +162,8 @@ async function redrawCanvas(gradually) {
   // Create a Delaunay triangulation using the delaunator library
   const delaunay = Delaunator.from(points, point => point.x, point => point.y);
 
-  console.log("triangle points: " + delaunay.triangles.length);
-  console.log("triangles: " + delaunay.triangles.length/3.0);
+  //console.log("triangle points: " + delaunay.triangles.length);
+  //console.log("triangles: " + delaunay.triangles.length/3.0);
   const rndTriangles = [];
   for(let i = 0; i < numPoints; i++) {
     rndTriangles[i] = i*3;
@@ -171,7 +179,7 @@ async function redrawCanvas(gradually) {
     const randomColor = getRandomColorRgb();    
     if(gradually && i > rndTriangles.length/2) {             
       tasks.push(drawTriangleGradually2(p1, p2, p3, randomColor));      
-      if(tasks.length == 10) {
+      if(tasks.length == 10) {        
         let x = await Promise.all(tasks);        
         tasks = [];
       }
@@ -180,11 +188,22 @@ async function redrawCanvas(gradually) {
     }
   }
 }
-// Initial canvas setup
-redrawCanvas(true);
+
 
 // Redraw the canvas on window resize
 window.addEventListener('resize', () => {redrawCanvas(false)});
+
+
+// Initial canvas setup
+redrawCanvas(true);
+// (async () => {
+//   while(true) {
+//     redrawCanvas(true);
+//     await sleep(5000);
+//   }
+// })();
+
+
 
 
 
