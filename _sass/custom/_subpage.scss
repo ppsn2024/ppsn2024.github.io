@@ -45,7 +45,7 @@
   background-color: $brand-primary !important;
 }
 
-section.subpage-venue {
+section.subpage-venue, section.subpage-calls {
   article:not(:first-child) {
     padding-top:25px;
   }
@@ -82,19 +82,44 @@ section.subpage-venue {
     margin-top:20px;
   }
 
-  .venue-list li {
+  .venue-list li, .call-list li {
     line-height: 1.7em;
  }
 
-  .venue-list{
+  .venue-list, .call-list{
     list-style: none;
     padding:0;
     margin:0;
   }
 
-  .venue-list li>span {
+  .venue-list li > span, .call-list li > span {
     color:$brand-primary;
   }
 
+  .call-list li > ul {
+    padding-left:35px;
+  }
 
+  ul.dashed {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+}
+
+ul.dashed > li:not(:first-child) {
+  padding-top:10px;
+}
+
+ul.dashed > li:before {
+    display: inline-block;
+    color:$brand-primary;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
+
+.download-link {
+  font-size:1.2rem;
+  font-weight:500;
+}
 }
