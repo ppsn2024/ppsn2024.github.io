@@ -5,7 +5,7 @@ lang: en
 permalink: calls/
 description: Detailed information for the calls
 ---
-
+{% if jekyll.environment == "development" %}
 <section class="subpage-calls">
     <article id="papercall" class="row">
         <div class="col-md-12">
@@ -18,7 +18,7 @@ description: Detailed information for the calls
             </p>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <h3>Important Dates <span><a class="download-link" href="#" onclick="getCall()">Download</a></span></h3>
                 <ul class="call-list">
                     <li>Paper submission due: <span>April 1, 2024</span></li>
@@ -33,7 +33,7 @@ description: Detailed information for the calls
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <h3>Scope</h3>
                 <p>
                     PPSN was originally designed to bring together researchers and practitioners in the field of Natural
@@ -76,4 +76,152 @@ description: Detailed information for the calls
             </div>
         </div>
     </article>
+
+
+    <article id="workshopcall" class="row">
+        <div class="col-md-12">
+            <h1 class="heading">Call for Workshops</h1>
+            <p>
+                The PPSN 2024 Organizing Committee invites proposals for workshops to 
+                be held in conjunction with PPSN 2024. The workshops should be forums for 
+                presenting and discussing new emerging approaches or for critical reflections 
+                within a subfield. They provide an excellent opportunity to meet people with 
+                similar interests, to be exposed to cutting-edge research and to exchange ideas 
+                in an informal setting. The organizers of an accepted workshop are responsible 
+                for its coordination, publicity (i.e., for sending out call for papers/abstracts, 
+                invitation of participants and speakers), and maintaining a webpage providing a 
+                list of accepted talks. Paper submission and reviewing (if applicable) is to be 
+                organized by workshop organizers.<br />
+
+                Moreover, organizers can decide on setting up a half-day or full-day workshop. 
+                The workshop format is also up to the organizers. However, we encourage interactive 
+                sessions that foster discussion and active exchange of ideas. We suggest soliciting 
+                concept papers or abstracts of not more than a few pages’ length, instead of full 
+                papers.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Important Dates <span><a class="download-link" href="#" onclick="getCall()">Download</a></span></h3>
+                        <ul class="call-list">
+                            <li>Proposal submission due: <span>February 9, 2024</span></li>
+                            <li>Notification of acceptance: <span>February 23, 2024</span></li>
+                            <li>
+                                Conference: <span>September 14-18, 2024</span>
+                                <ul class="call-list">
+                                    <li>Tutorials/Workshops: <span>September 14–15, 2024</span></li>
+                                    <li>Poster Sessions: <span>September 16–18, 2024</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Workshop Chair</h3>
+                        <ul class="call-list">
+                            <li>Roman Kalkreuth<span>(TU Dortmund University, Germany)</span></li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-md-7">
+                <h3>Proposal Submission Details</h3>
+                <p>
+                    Prospective workshop organizers are cordially invited to submit a plain-text 
+                    workshop proposal by email to: <a href="mailto:r.t.kalkreuth@liacs.leidenuniv.nl">
+                    Roman Kalkreuth (r.t.kalkreuth(at)liacs.leidenuniv.nl)</a>
+                </p>
+                <ul class="dashed">
+                    <li>The title of the workshop.</li>
+                    <li>A brief description of the workshop topic (roughly half a page).</li>
+                    <li>A description of potential target participants and audience.</li>
+                    <li>The planned time format (half day, full day).</li>
+                    <li>An approximate number of participants.</li>
+                    <li>An estimate of the number of talks (considering the time format).</li>
+                    <li>Contact details and a short CV of each organizer.</li>
+                </ul>
+                <p>
+                    The workshops and conference will be held “on-site” only. The organizers should 
+                    consider this in their proposal. The local organizers will provide an adequate 
+                    room and technical equipment for local presentations. Hybrid workshop formats 
+                    will not be considered. In case of pandemic-caused restrictions, the workshops 
+                    will have to switch to a full online format.
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <article id="tutorialcall" class="row">
+        <div class="col-md-12">
+            <h1 class="heading">Call for Tutorials</h1>
+            <p>
+                The PPSN 2024 Organizing Committee invites proposals for tutorials to be 
+                held in conjunction with PPSN 2024. The tutorial topic should enjoy broad 
+                interest within the community, ranging from an established or emerging 
+                research topic within the field itself, or a related field, to an interesting 
+                application area. The proposed topic should facilitate a gentle introduction 
+                to the research area, but it should also cover the most important contributions 
+                in depth. The planned duration of each tutorial is 90 minutes. We strongly 
+                encourage interactive sessions including, e.g., demos of tools and discussions 
+                research perspectives in the presented domains. 
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Important Dates <span><a class="download-link" href="#" onclick="getCall()">Download</a></span></h3>
+                        <ul class="call-list">
+                            <li>Proposal submission due: <span>February 9, 2024</span></li>
+                            <li>Notification of acceptance: <span>February 23, 2024</span></li>
+                            <li>
+                                Conference: <span>September 14-18, 2024</span>
+                                <ul class="call-list">
+                                    <li>Tutorials/Workshops: <span>September 14–15, 2024</span></li>
+                                    <li>Poster Sessions: <span>September 16–18, 2024</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial Chair</h3>
+                        <ul class="call-list">
+                            <li>Fabrício Olivetti de França <span>(Federal University of ABC, Brazil)</span></li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-md-7">
+                <h3>Submission Details</h3>
+                <p>
+                    Prospective tutorial organizers are cordially invited to submit a 
+                    tutorial proposal in pdf-format by email to: <a href="mailto:fabricio.olivetti@gmail.com">fabricio.olivetti(at)gmail.com</a> 
+                    with a message header following the format “TPPSN24: [tutorial’s title]”
+                </p>
+                <ul class="dashed">
+                    <li>An abstract (of no more than 400 words) and up to 4 keywords.</li>
+                    <li>A tutorial description of max. 2 pages.</li>
+                    <li>Classification of your tutorial as “introductory” or “advanced”.</li>
+                    <li>Contact details and a short vitae of the organizer(s).</li>
+                    <li>Potential target audience.</li>
+                    <li>Expected number of participants.</li>
+                    <li>Details on previously held versions of the proposed tutorial including venues.</li>
+                </ul>
+                <p>
+                    The tutorials and conference will be held “on-site” only. The organizers 
+                    should consider this in their proposal. The local organizers will provide 
+                    an adequate room and technical equipment for local presentations. Hybrid 
+                    tutorial formats will not be considered. In case of pandemic-caused 
+                    restrictions, the tutorials will have to switch to a full online format.
+                </p>
+            </div>
+        </div>
+    </article>
+
 </section>
+{% endif %}
