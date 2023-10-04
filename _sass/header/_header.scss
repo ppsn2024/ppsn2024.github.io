@@ -22,10 +22,11 @@ header{
 
    .animation-container {
       // height: 100%;
-      height: 100px;
+      height: 70px;
       margin: 0 15px 50px 15px;
-      background: url("../../assets/logo/ppsn2024-logo.svg");
-      // background-size: contain;
+      // background: url("../../assets/logo/ppsn2024-logo.svg");
+      background: url("../../assets/logo/ppsn2024-logo-v6.png");
+      background-size: contain;
       background-repeat: no-repeat;
       // background-position: center;
    }
@@ -41,6 +42,7 @@ header{
 
    .header-info-container {
       padding:0 15px 0 15px;
+      color: $base-text-color-light;
    }
 
    h1 {

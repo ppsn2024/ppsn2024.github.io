@@ -4,19 +4,20 @@ const ctx = canvas.getContext('2d');
 
 // Green color palette with 5 colors
 const colors = [
-  "#87ba40", // 4 Base Color (Original color)
-  "#93C350",
+  // "#87ba40",
+  // "#93C350",
   // "#79A739",
-  "#b1d06b", // 6
-  "#BCD77F",
-  "#A8CA58",
-  "#9fca59", // 5
-  "#AAD06C",
-  "#93C445"
-  // "#8bb446", // 3
-  // "#77a732",  // 2
-  // "#639d1f", // 0
-  // "#4f9310" // 1
+  // "#b1d06b",
+  // "#BCD77F",
+  // "#A8CA58",
+  // "#9fca59",
+  // "#AAD06C",
+  // "#93C445",
+  "#007478", // Campus Linz
+  "#823896", // Campus Steyr
+  "#004b96", // Campus Wels
+  "#00a6eb", // SWPH
+  "#5e8036" // Campus Hgb
 ];
 
 function sleep(ms) {
