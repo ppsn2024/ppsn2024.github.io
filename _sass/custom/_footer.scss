@@ -26,4 +26,35 @@ footer#main-footer{
       color:#fff;
       text-decoration:underline;
    }
+
+   #disclaimer {
+      text-align: center;
+      vertical-align: middle;
+   }
+
+   #disclaimer .nopadding {
+      padding: 0px;
+   }
+
+   .footer-logo {
+      height: 60px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin: 10px 0px 0px 10px;
+   }
+
+   #logo-uasua {
+      height:50px;      
+      margin-top: 15px;      
+      background-image: url("../../assets/logo/logo_fhooe.png");
+   }
+
+   #logo-swph {      
+      background-image: url("../../assets/logo/logo_swph.png");
+   }
+
+   #logo-ua {      
+      background-image: url("../../assets/logo/logo_upperaustria.png");
+   }
 }
