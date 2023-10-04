@@ -61,7 +61,7 @@
       margin-inline: calc(var(--inlineP) * -1);
 
       text-align: center;
-      background-color: var(--accent-color);
+      background-color: $brand-primary;
 
       color: white;
       font-size: 1.25rem;
@@ -79,7 +79,7 @@
       content: "";
       width: var(--inlineP);
       aspect-ratio: 1;
-      background: var(--accent-color);
+      background: $brand-primary;
       background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
       position: absolute;
       top: 100%;
@@ -94,7 +94,7 @@
       width: 2rem;
       aspect-ratio: 1;
       background: var(--bgColor);
-      border: 0.3rem solid var(--accent-color);
+      border: 0.3rem solid $brand-primary;
       border-radius: 50%;
       top: 50%;
 
@@ -180,7 +180,7 @@
       max-width:1400px;
 
       h2{
-         color:$brand-primary;
+         color: $brand-primary;
          font-size: 2rem;
          font-weight: 500;
       }

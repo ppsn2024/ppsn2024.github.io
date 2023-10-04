@@ -13,7 +13,7 @@ institute:
         lastname: Affenzeller
         prefix: FH-Prof. PD DI Dr.
         postfix:
-        position: Organization
+        position: Conference Chair
         phone: +43 50804 22031
         mail: michael.affenzeller@fh-hagenberg.at
         contact: true
@@ -22,7 +22,7 @@ institute:
         lastname: Winkler
         prefix: FH-Prof. PD DI Dr.
         postfix:
-        position: Organization
+        position: Conference Chair
         phone: +43 50804 22720
         mail: stephan.winkler@fh-hagenberg.at
         contact: true

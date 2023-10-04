@@ -1,6 +1,8 @@
-$brand-primary: #86B918;
+$brand-primary: #5e8036;
+$brand-primary-light: lighten($brand-primary, 15%);
+$brand-primary-dark: darken($brand-primary, 15%);
 $brand-secondary: #00a6eb;
-$brand-success:#7fb800;
+$brand-success:#5e8036;
 $bradn-info:#52d1dc;
 $brand-warning:#f79824;
 $brand-danger:#f24236;
