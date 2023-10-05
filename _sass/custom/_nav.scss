@@ -12,6 +12,7 @@ nav#main-nav {
       margin: 0px 1rem;
       opacity: 0.85;
       position: relative;
+      transition: opacity 200ms ease-in;
    }
 
    .nav-link:hover{
@@ -61,14 +62,34 @@ nav#main-nav {
     .nav-home #ppsn2024-logo g,
     .nav-home #ppsn2024-logo polygon,
     .nav-home #ppsn2024-logo path {
-      fill: $brand-text-light;    
+      fill: $brand-text-light;
+      opacity: 0.85;
+      transition: opacity 200ms ease-in;  
     }
 
     .nav-page #ppsn2024-logo g,
     .nav-page #ppsn2024-logo polygon,
     .nav-page #ppsn2024-logo path {
       fill: $brand-primary;      
+      transition: fill 200ms ease-in;
     }
+
+    .nav-home:hover {
+      #ppsn2024-logo g,
+      #ppsn2024-logo polygon,
+      #ppsn2024-logo path {
+      //   fill: $brand-secondary !important;
+        opacity: 1.0; 
+      }
+     }
+
+   .nav-page:hover {
+      #ppsn2024-logo g,
+      #ppsn2024-logo polygon,
+      #ppsn2024-logo path {
+        fill: $brand-dark-grey !important;        
+      }
+     }
 }
 
 nav#main-nav.navbar-top.scrolled {
@@ -77,16 +98,31 @@ nav#main-nav.navbar-top.scrolled {
 
    .nav-link {
       color:$brand-primary !important;
+      opacity: 1;
    }
 
    .nav-link::before {
-      background-color: $brand-primary !important;
+      background-color: $brand-primary !important;      
     }
 
-    #ppsn2024-logo g, #ppsn2024-logo polygon, #ppsn2024-logo path {
+    #ppsn2024-logo g,
+    #ppsn2024-logo polygon,
+    #ppsn2024-logo path {
+      opacity: 1.0;
       fill: $brand-primary !important; 
+      transition: fill 200ms ease-in;
     }
+
+    .brand-container .navbar-brand:hover {
+      #ppsn2024-logo g,
+      #ppsn2024-logo polygon,
+      #ppsn2024-logo path {
+         fill: $brand-dark-grey !important;         
+       }
+     }
  }
+
+
 
  
 
