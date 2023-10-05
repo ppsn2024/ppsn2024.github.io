@@ -8,6 +8,12 @@
     "header/header"
 ;
 
+section#overview {
+   address {
+      padding: 0px 0px 0px 20px;
+   }
+}
+
 //Timeline
 #timeline{
    display: grid;
@@ -291,14 +297,14 @@ section#venue{
 
 //Contact section
 section#contact{
-   color:#fff;
+   // color:#fff;
    h2{
       font-size:1.8rem;
       margin-bottom:20px;
    }
 
    a{
-      color:#fff;
+      // color:#fff;
       text-decoration: none;;
    }
 

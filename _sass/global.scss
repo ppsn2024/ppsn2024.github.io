@@ -22,6 +22,35 @@ body {
 
 .background-primary{
   background: $brand-primary;
+  color: $brand-text-light;
+
+  a {
+    color: $brand-text-light;
+    text-decoration: underline;    
+  }
+}
+
+.background-secondary {
+  background: $brand-secondary;
+  color: $brand-text-light;
+  a {
+    color: $brand-text-light;
+    text-decoration: underline;   
+  }
+}
+
+.background-light {
+  background: $brand-light;
+  color: $brand-text-dark;
+}
+
+.background-dark {
+  background: $brand-dark-grey;
+  color: $brand-text-light;
+  a {
+    color: $brand-text-light;
+    text-decoration: underline;
+  }
 }
 
 section.pad{
@@ -32,6 +61,11 @@ section.pad{
 .h1, .h2, .h3, h1, h2, h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+a {
+  color: $brand-primary;
+  text-decoration: none;;
 }
 
 #timeline::before {

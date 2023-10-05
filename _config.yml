@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: PPSN 2024
+title_tail: " - PPSN 2024"
 email: michael.affenzeller@fh-ooe.at
 description: >- # this means to ignore newlines until "baseurl:"
   Website of the 18th International Conference on Parallel Problem Solving from Nature (PPSN XVIII)

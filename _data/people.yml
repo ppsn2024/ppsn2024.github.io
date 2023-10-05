@@ -15,7 +15,7 @@ institute:
         postfix:
         position: Conference Chair
         phone: +43 50804 22031
-        mail: michael.affenzeller@fh-hagenberg.at
+        mail: michael.affenzeller@fh-ooe.at
         contact: true
       - nick: swinkler
         name: Stephan
@@ -24,7 +24,7 @@ institute:
         postfix:
         position: Conference Chair
         phone: +43 50804 22720
-        mail: stephan.winkler@fh-hagenberg.at
+        mail: stephan.winkler@fh-ooe.at
         contact: true
       - nick: mbeneder
         name: Michaela
@@ -33,5 +33,5 @@ institute:
         postifx:
         position: Coordination
         phone: +43 664 80484 27160
-        mail: michaela.beneder@fh-hagenberg.at
+        mail: michaela.beneder@fh-ooe.at
         contact: true

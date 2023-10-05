@@ -1,19 +1,22 @@
+{% capture _url %}{{ site.url }}/{% endcapture %}
+
 <!DOCTYPE html>
+
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-<head>
-    {%- include head.html -%}
-    <link rel="stylesheet" href="{{ "/assets/css/subpage.css" | relative_url }}">
-</head>
+    <head>
+        {% include head.html %}
+        <link rel="stylesheet" href="{{ "/assets/css/subpage.css" | relative_url }}">
+    </head>
 
-<body id="page-top">
-    {%- include nav.html home=false navcss=" affix noani" -%}
-    {{ content }}
-    {%- include footer.html -%}
-    {%- include foot.html -%}
-    <script>
-        document.title = "{{ page.title }}{{ site.title_tail }}";
-    </script>
-</body>
+    <body id="page-top">
+        {% include nav.html home=false url=_url navcss=" affix noani" %}        
+        {{ content }}
+        {% include footer.html %}
+        {% include foot.html %}
+        <script>
+            document.title = "{{ page.title }}{{ site.title_tail }}";
+        </script>
+    </body>
 
 </html>

@@ -1,33 +1,27 @@
 MainNav:
-  - item: home
+  - item: calls
     name:
-      de: Home
-      en: Home
-    link: "#page-top"
-    hardlink: false
-  - item: conference
-    name:
-      de: Konferenz
-      en: Conference
-    link: "#conference"
+      de: Calls
+      en: Calls
+    link: "/calls/"
     hardlink: false
   - item: program
     name:
-      de: Programm
+      de: Program
       en: Program
-    link: "#timeline"
+    link: "/program"
     hardlink: false
-  - item: news
+  - item: venue
     name:
-      de: Neuigkeiten
-      en: News
-    link: "#news"
+      de: Venue
+      en: Venue
+    link: "/venue"
     hardlink: false
-  - item: contact
+  - item: about
     name:
-      de: Kontakt
-      en: Contact
-    link: "#contact"
+      de: About
+      en: About
+    link: "/about"
     hardlink: false
 Socials:
   - item: fb
@@ -61,12 +55,6 @@ Socials:
     link: "https://github.com/ppsn2024/ppsn2024.github.io"
     hardlink: true
 Information:
-  - item: contact
-    name:
-      de: Kontakt
-      en: Contact us
-    link: "#contact"
-    hardlink: true
   - item: imprint
     name:
       de: "Impressum"
@@ -84,6 +72,12 @@ Information:
       de: Presse Material
       en: Press
     link: "/press/"
+    hardlink: false
+  - item: sitemap
+    name:
+      de: Sitemap
+      en: Sitemap
+    link: "/sitemap/"
     hardlink: false
 Partners:
   - item: fhooe
