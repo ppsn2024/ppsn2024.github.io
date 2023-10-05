@@ -1,3 +1,5 @@
+{% capture _url %}{{ site.url }}/{% endcapture %}
+
 <!DOCTYPE html>
 
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
@@ -8,7 +10,7 @@
   </head>
 
   <body>
-    {%- include nav.html home=false navcss=" affix noani" -%}
+    {%- include nav.html home=true navcss=" affix noani" -%}
     {% include header.html %}
     {{ content }}
     {%- include footer.html -%}

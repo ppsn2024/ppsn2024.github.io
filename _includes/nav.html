@@ -18,10 +18,12 @@
 {% include cookie_consent.html %}
 <nav id="main-nav" class="navbar fixed-top navbar-expand-md navbar-top my-nav ">
     <div class="container-fluid">
-        <div class="brand-container">
-            <a href="/" class="navbar-brand">
-                {% include svg/ppsn2024-logo.svg %}
-            </a>
+        <div class="brand-container">            
+            {% if include.home %}
+            <a href="/" class="navbar-brand nav-home">{% include svg/ppsn2024-logo.svg %}</a>
+            {% else %}
+            <a href="/" class="navbar-brand nav-page">{% include svg/ppsn2024-logo.svg %}</a>
+            {% endif %}
         </div>
 
         <button type="button" class="navbar-toggler pull-right" data-bs-toggle="collapse"

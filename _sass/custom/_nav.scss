@@ -1,7 +1,7 @@
 
 nav#main-nav {   
    background-color: transparent !important;
-   height:80px !important;
+   height:90px !important;
    
 
    a.nav-link {
@@ -58,8 +58,16 @@ nav#main-nav {
       height:60px;
     }
 
-    #ppsn2024-logo g, #ppsn2024-logo polygon, #ppsn2024-logo path {
-      fill: $brand-text-light;      
+    .nav-home #ppsn2024-logo g,
+    .nav-home #ppsn2024-logo polygon,
+    .nav-home #ppsn2024-logo path {
+      fill: $brand-text-light;    
+    }
+
+    .nav-page #ppsn2024-logo g,
+    .nav-page #ppsn2024-logo polygon,
+    .nav-page #ppsn2024-logo path {
+      fill: $brand-primary;      
     }
 }
 
