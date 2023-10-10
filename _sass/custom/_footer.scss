@@ -1,7 +1,8 @@
 footer#main-footer{
-   background:$base-darkgrey-bg;
+   background:$brand-dark-grey;
+   border-top: 5px solid $brand-grey;
    text-align:center;
-   padding:2rem 0;
+   padding:1rem 0;
 
    .row {
       color:$base-font-color-dark-bg;
@@ -30,9 +31,9 @@ footer#main-footer{
 
 footer#disclaimer {
    padding: 20px 0px 0px 0px;
-   background-color: $brand-black;
+   background-color: $brand-dark-grey;
    text-align:center;
-   padding:2rem 0;
+   padding:1rem 0;
 
    .row {
       color:$base-font-color-dark-bg;
@@ -42,6 +43,10 @@ footer#disclaimer {
 
    a {
       text-decoration: none;
+   }
+
+   .rowbreak {
+      padding:0.25rem 0;
    }
 }
 

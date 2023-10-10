@@ -1,8 +1,13 @@
 
 nav#main-nav {   
    background-color: transparent !important;
+   border-bottom: 5px solid transparent;
    height:90px !important;
    
+   .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+   }
 
    a.nav-link {
       font-family: $base-font-family;
@@ -67,6 +72,10 @@ nav#main-nav {
       transition: opacity 200ms ease-in;  
     }
 
+    .nav-home #ppsn2024-logo>path {
+      opacity: 0.75;
+    }
+
     .nav-page #ppsn2024-logo g,
     .nav-page #ppsn2024-logo polygon,
     .nav-page #ppsn2024-logo path {
@@ -90,15 +99,47 @@ nav#main-nav {
         fill: $brand-dark-grey !important;        
       }
      }
+
+     .navbar-toggler {
+      border-radius: 0;
+      border: transparent;
+      background-color: transparent;
+      // color: $brand-text-light !important;
+     }
+
+     .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+     }
+
+     .navbar-toggler:focus {
+      box-shadow: none;
+      // background-color: $brand-primary;
+     }
+
+     .navbar-toggler.collapsed {
+      box-shadow: none;
+      background-color: transparent;
+     }
+
+     @media (max-width: 767px) {
+      .navbar-collapse {
+        background-color: $brand-primary;
+      }
+    }
 }
 
 nav#main-nav.navbar-top.scrolled {
    background-color: #fff !important;
    transition: background-color 200ms linear;
+   border-bottom: 5px solid $brand-primary-light;
 
    .nav-link {
       color:$brand-primary !important;
       opacity: 1;
+   }
+
+   .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
    }
 
    .nav-link::before {
@@ -120,7 +161,15 @@ nav#main-nav.navbar-top.scrolled {
          fill: $brand-dark-grey !important;         
        }
      }
+
+     @media (max-width: 767px) {
+      .navbar-collapse {
+        background-color: $brand-light;
+      }
+    }
  }
+
+ 
 
 
 

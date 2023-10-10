@@ -59,6 +59,22 @@ header{
       font-size:1.75rem;
       font-weight:400;
    }
+
+   @media (max-width: 767px) {
+      h1 {
+         font-size:3.25rem;      
+      }
+   
+      h2 {
+         font-size:1.75rem;         
+      }
+   
+      p {
+         font-size:1.00rem;         
+      }
+   }
 }
+
+
 
 

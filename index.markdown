@@ -80,5 +80,42 @@ description: Homepage of the PPSN 2024 conference
     </div>
 </section>
 
+<section class="background-primary pad" id="contact">
+   <div class="container text-justify">
+      <h2>Questions? &nbsp;Contact Us!</h2>
+      <div class="row contact-info">
+         {% for institute in site.data.people.institute %}
+         {% if institute.short == "fhooe" %}
+         {% for member in institute.member %}
+         {% if member.contact %}
+         <div class="col-lg-4 col-md-12">
+            <h4>{{member.prefix}} {{member.name}} {{member.lastname}} {{member.postfix}}</h4>
+            <table class="contact-table">
+
+               <body>
+                  <tr>
+                     <td>Role:</td>
+                     <td>{{member.position}}</td>
+                  </tr>
+                  <tr>
+                     <td>Phone:</td>
+                     <td>{{member.phone}}</td>
+                  </tr>
+                  <tr>
+                     <td>Mail:</td>
+                     <td>
+                        <a href="mailto:{{member.mail}}">{{member.mail}}</a>
+                     </td>
+                  </tr>
+               </body>
+            </table>
+         </div>
+         {% endif %}
+         {% endfor%}
+         {% endif %}
+         {% endfor %}
+      </div>
+   </div>
+</section>
+
 {% include map.html %}
-{% include contact.html %}
