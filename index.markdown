@@ -14,7 +14,7 @@ description: Homepage of the PPSN 2024 conference
                     The International Conference on Parallel Problem Solving From Nature is a biannual open forum fostering the study of natural models, iterative optimization heuristics search heuristics, machine learning, and other artificial intelligence approaches. We invite researchers and practitioners to present their work, ranging from rigorously derived mathematical results to carefully crafted empirical studies.
                 </p>
                 <p>
-                    All information regarding the conference organization, call for papers/tutorials/workshops, submission, registration, venue, etc. will provided and constantly updated on this website and on our social media channels. In case of any additional inquiries, please do not hesitate to <a href="#contact">contact us</a>.
+                    All information regarding the conference organization, call for papers/tutorials/workshops, submission, registration, venue, etc. will be provided and constantly updated on this website and on our social media channels. In case of any additional inquiries, please do not hesitate to <a href="#contact">contact us</a>.
                 </p>
                 <p>See you soon in beautiful Hagenberg, Austria!</p>
                 <br/>

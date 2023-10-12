@@ -32,9 +32,9 @@ Socials:
     hardlink: true
   - item: twitter
     name:
-      de: Twitter
-      en: Twitter
-    link: "#"
+      de: Twitter (X)
+      en: Twitter (X)
+    link: "https://twitter.com/PPSN2024 "
     hardlink: true
   - item: linkedin
     name:
