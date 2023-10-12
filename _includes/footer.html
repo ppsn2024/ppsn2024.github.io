@@ -5,7 +5,7 @@
             {% assign fb_item = site.data.nav.Socials | where: "item", "fb" | first %}
             <a href="{{fb_item.link}}" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             {% assign twitter_item = site.data.nav.Socials | where: "item", "twitter" | first %}
-            <a href="{{twitter_item.link}}" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="{{twitter_item.link}}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             {% assign linkedin_item = site.data.nav.Socials | where: "item", "linkedin" | first %}
             <a href="{{linkedin_item.link}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             {% assign github_item = site.data.nav.Socials | where: "item", "github" | first %}
@@ -25,24 +25,31 @@
          <div class="col-md-2"><a href="{{baseurl}}{{it.link}}">{{it.name["en"]}}</a></div>
          {% endfor %}
          <div class="col-md-2"></div>
-      </div>      
+      </div>
    </div>
 </footer>
 <footer id="disclaimer">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
-            &copy; {{ 'now' | date: "%Y" }} University of Applied Sciences Upper Austria<div class="rowbreak"></div>PPSN 2024 is organized and supported by
+            &copy; {{ 'now' | date: "%Y" }} University of Applied Sciences Upper Austria<div class="rowbreak"></div>PPSN
+            2024 is organized and supported by
          </div>
-      <div class="row">
-         {% assign fhooe = site.data.nav.Partners | where: "item", "fhooe" | first %}
-         {% assign swph = site.data.nav.Partners | where: "item", "swph" | first %}
-         {% assign looe = site.data.nav.Partners | where: "item", "looe" | first %}
-         <div class="col-md-3"></div>   
-         <div class="col-md-2"><a href="{{fhooe.link}}" alt="{{fhooe.name.en}}" target="_blank"><div id="logo-uasua" class="footer-logo"></div></a></div>
-         <div class="col-md-2"><a href="{{swph.link}}" alt="{{swph.name.en}}" target="_blank"><div id="logo-swph" class="footer-logo"></div></a></div>
-         <div class="col-md-2"><a href="{{looe.link}}" alt="{{looe.name.en}}" target="_blank"><div id="logo-ua" class="footer-logo"></div></a></div>
-         <div class="col-md-3"><a></div>   
+         <div class="row">
+            {% assign fhooe = site.data.nav.Partners | where: "item", "fhooe" | first %}
+            {% assign swph = site.data.nav.Partners | where: "item", "swph" | first %}
+            {% assign looe = site.data.nav.Partners | where: "item", "looe" | first %}
+            <div class="col-md-3"></div>
+            <div class="col-md-2"><a href="{{fhooe.link}}" alt="{{fhooe.name.en}}" target="_blank">
+                  <div id="logo-uasua" class="footer-logo"></div>
+               </a></div>
+            <div class="col-md-2"><a href="{{swph.link}}" alt="{{swph.name.en}}" target="_blank">
+                  <div id="logo-swph" class="footer-logo"></div>
+               </a></div>
+            <div class="col-md-2"><a href="{{looe.link}}" alt="{{looe.name.en}}" target="_blank">
+                  <div id="logo-ua" class="footer-logo"></div>
+               </a></div>
+            <div class="col-md-3"><a></div>
+         </div>
       </div>
-   </div>         
 </footer>
