@@ -246,22 +246,22 @@ section#venue{
       overflow: hidden;
       margin:0;
     }
-    
+
     .hgb {
       background-image: url("../img/fhhgb.jpg");
       background-size:cover;
     }
-    
+
     .aec {
       background-image: url("../img/aec.jpg");
       background-size:cover;
     }
-    
+
     .fr {
       background-image: url("../img/freistadt.jpg");
       background-size:cover;
     }
-    
+
     .overlay {
       position: absolute;
       top: 0;
@@ -279,16 +279,16 @@ section#venue{
       text-align: center;
       color: #fff;
     }
-    
+
     .overlay h2 {
       font-size: 2.0rem;
       margin-bottom: 10px;
     }
-    
+
     .overlay p {
       font-size: 1.4rem;
     }
-    
+
     .image-item:hover .overlay {
       opacity: 1;
     }
@@ -340,4 +340,21 @@ section#contact{
        margin-bottom: 0px
    }
 }
+}
+
+#cal {
+   background:$base-darkgrey-bg;
+   color:$brand-text-light;
+   padding: 25px 0 25px 0;
+
+   .time {
+      text-align:right;
+      height:50px;
+      font-size:1.1rem;
+
+      small{
+         color:darken($brand-text-light, 25%);
+         font-size:0.8rem;
+      }
+   }
 }

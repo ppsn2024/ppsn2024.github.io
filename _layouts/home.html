@@ -3,18 +3,20 @@
 <!DOCTYPE html>
 
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  
-  <head>
-    {% include head.html %}
-    <link rel="stylesheet" href="{{ "/assets/css/home.css" | relative_url }}">
-  </head>
 
-  <body>
-    {%- include nav.html home=true navcss=" affix noani" -%}
-    {% include header.html %}
-    {{ content }}
-    {%- include footer.html -%}
-    {%- include foot.html -%}
-  </body>
-  
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{"/assets/css/home.css" | relative_url }}">
+</head>
+
+<body>
+  {%- include nav.html home=true navcss=" affix noani" -%}
+  {% include header.html %}
+  {{ content }}
+  {%- include footer.html -%}
+  {%- include foot.html -%}
+  <script src="{{"/assets/js/custom/map.js" | relative_url }}"></script>
+  <script src="{{"/assets/js/custom/header.js" | relative_url }}"></script>
+</body>
+
 </html>

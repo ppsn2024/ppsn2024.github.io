@@ -4,13 +4,16 @@ layout: subpage
 lang: en
 permalink: venue/
 description: Detailed information of the venue
+custom_js:
+- venue-maps
 ---
 {% if jekyll.environment == "development" %}
 <section class="subpage-venue">
-    <article id="venue" class="row">
-        <div class="col-md-12 text-center">
-            <div class="divider">
-                <h1 class="heading">Venue</h1>
+    <article id="venue">
+        <h1 class="heading">Venue</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>University of Applied Sciences Upper Austria</h2>
             </div>
         </div>
         <div class="row">
@@ -22,48 +25,42 @@ description: Detailed information of the venue
                 </div>
             </div>
             <div class="col-lg-6">
-                PPSN 2024 will be held in the modern University of Applied Sciences Upper Austria, Hagenberg Campus is
-                part of Softwarepark Hagenberg, the largest technology park for software in Central Europe. Located just
-                20km north of Linz, Hagenberg is an idyllic town in the beautiful Mühlviertel, in the heart of Upper
-                Austria. In the last decade, with its unique combination of IT-related education, research and business
-                in one place, Hagenberg has established itself as an internationally recognised center for computing and
-                software development. The outstanding mix of the most modern technology combined with the picturesque
-                setting of the Hagenberg castle gives the town its unique flair.
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Location</h3>
+                <p>
+                    PPSN 2024 will be held in the modern University of Applied Sciences Upper Austria, Hagenberg Campus
+                    is part of Softwarepark Hagenberg, the largest technology park for software in Central Europe.
+                    Located
+                    just 20km north of Linz, Hagenberg is an idyllic town in the beautiful Mühlviertel, in the heart of
+                    Upper
+                    Austria. In the last decade, with its unique combination of IT-related education, research and
+                    business in one place, Hagenberg has established itself as an internationally recognised center for
+                    computing
+                    and software development. The outstanding mix of the most modern technology combined with the
+                    picturesque setting of the Hagenberg castle gives the town its unique flair.
+                </p>
+                <h4>Location</h4>
                 <ul class="venue-list">
                     <li>University of Applied Sciences Upper Austria</li>
                     <li>Softwarepark 11</li>
                     <li>4232 Hagenberg im Mühlkreis, Austria</li>
                 </ul>
-                <h3>Contact</h3>
-                <ul class="venue-list">
-                    <li>Phone.: +43 50804 10</li>
-                    <li>Fax: +43 50804 11900</li>
-                    <li>E-Mail: <a href="mailto:info@fh-ooe.at">info@fh-ooe.at</a></li>
-                    <li>Web: <a href="https://www.fh-ooe.at/en/" target="_blank">www.fh-ooe.at</a></li>
-                </ul>
             </div>
-            <div class="col-md-8">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div id="map" class="container-fluid contact-maps"></div>
             </div>
         </div>
     </article>
 
 
-    <article id="travel" class="row">
-        <div class="col-md-12 text-center">
-            <div class="divider">
-                <h1 class="heading">How to get there</h1>
-            </div>
-        </div>
+    <article id="travel">
+        <h1 class="heading">Taveling</h1>
         <div class="row">
             <div class="col-md-12">
-                <h2>How to get to linz?</h2>
+                <h2>How to get to Hagenberg?</h2>
                 <p>
+                    Hagenberg is located in Upper Austria’s beautiful Muehlviertel region and only 20 kilometres from
+                    Linz, the capital of Upper Austria.
                     Linz is characterised by short distances. Many locations near the Danube can be reached on foot.
                     However, sometimes greater distances cannot be avoided, which is why we’ve summarised some helpful
                     contacts for you here: <a
@@ -73,30 +70,35 @@ description: Detailed information of the venue
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <h3>Linz Airport</h3>
+            <div class="col-md-12">
+                <h4>Via Vienna Airport</h4>
+                <p>
+                    The train journey time between Vienna Airport (VIE) and Linz is around 1h 48m and covers a
+                    distance of around 203 km. The fastest train normally takes 1h 41m. The Vienna Airport (VIE) to Linz
+                    train service departs directly from Flughafen Wien and arrives in Linz Hbf. The ÖBB – Austrian
+                    Railway
+                    offer direct connections from Vienna Airport to Linz Hauptbahnhof – Central Station. You can buy
+                    tickets here: <a href="https://www.linz-airport.com/en" target="_blank">https://www.oebb.at/en/</a>.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Via Linz Airport</h4>
                 <p>
                     The Linz airport (LNZ) offers direct connections to the transport hubs Frankfurt, Vienna and
                     Düsseldorf. Please visit the website <a href="https://www.linz-airport.com/en"
                         target="_blank">www.linz-airport.com</a> for more
-                    information about the exact flight schedules.<br />
+                    information about the exact flight schedules.
                     The airport is located in Hörsching, which is approximatly 12km outside of the city center Linz.
                     Public transportation is an inexpensive alternative to traveling by car or cab. The airport bus No.
                     601 or the train will take you comfortably to Linz Airport.
                 </p>
             </div>
-            <div class="col-md-4">
-                <h3>Vienna Airport</h3>
-                <p>
-                    The train journey time between Vienna Airport (VIE) and Linz is around 1h 48m and covers a distance
-                    of around 203 km. The fastest train normally takes 1h 41m. The Vienna Airport (VIE) to Linz train
-                    service departs directly from Flughafen Wien and arrives in Linz Hbf. The ÖBB – Austrian Railway
-                    offer direct connections from Vienna Airport to Linz Hauptbahnhof – Central Station. You can buy
-                    tickets here: <a href="https://www.linz-airport.com/en" target="_blank">https://www.oebb.at/en/</a>
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h3>Linz Train Station</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Via Linz Train Station</h4>
                 <p>
                     The linz central train station - Linz Hauptbahnhof - has direct connections to train stations in
                     Germany, Hungary, Switzerland, Italy and other neighboring countries. A direct and fast connection
@@ -104,22 +106,12 @@ description: Detailed information of the venue
                     be found on <a href="https://www.oebb.at/en/" target="_blank">https://www.oebb.at/en/</a> and
                     tickets can be purchased at <a href="https://shop.oebbtickets.at/en/ticket"
                         target="_blank">https://shop.oebbtickets.at/en/ticket</a>
-
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2>How to get to Hagenberg?</h2>
-                <p>
-                    Hagenberg is located in Upper Austria’s beautiful Muehlviertel region and only 20 kilometres from
-                    Linz, the capital of Upper Austria.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Public transportation</h3>
+                <h4>By Public transportation</h4>
                 <p>
                     Hagenberg is linked to the capital of Linz by bus. The 311 coach provides a frequent service between
                     Linz main train station und our campus. For details and timetables please check the <a
@@ -131,8 +123,10 @@ description: Detailed information of the venue
                     available at <a href="https://fahrplan.oebb.at/" target="_blank">https://fahrplan.oebb.at/</a>.
                 </p>
             </div>
-            <div class="col-md-6">
-                <h3>By Car</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>By Car</h4>
                 <p>
                     In case you are planning to come by car on your own, there is both outdoor and underground parking
                     available to participants in and around the software park. Car parks are indicated on the <a
@@ -149,15 +143,27 @@ description: Detailed information of the venue
         </div>
     </article>
 
-    <article id="accommodation" class="row">
-        <div class="col-md-12 text-center">
-            <div class="divider">
+    <article id="accommodation">
+        <div class="row">
+            <div class="col-md-12">
                 <h1 class="heading">Accommodation</h1>
+                <p>
+                    For your convenience, we've partnered with a fantastic hotel located in close proximity to the
+                    conference venue. This hotel offers exclusive details tailored specifically to our
+                    attendees. You'll find all the information you need about this hotel, its amenities, and how to make
+                    a reservation right here.<br />
+                    We also want to ensure that you have choices that suit your preferences and budget. In addition to
+                    our recommended conference hotel, there are numerous other hotels in Linz available for booking
+                    through popular websites like Booking.com. We encourage you to explore these alternatives to find
+                    the perfect place that suits your needs.<br />
+                    If you have any questions or require further assistance regarding accommodation options, feel free
+                    to <a href="{{ site.baseurl }}/#contact">Contact us</a>.
+                </p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2>Parkhotel Hagenberg****</h2>
+                <h2>Parkhotel Hagenberg ****</h2>
             </div>
         </div>
         <div class="row">
@@ -171,37 +177,34 @@ description: Detailed information of the venue
                 </div>
             </div>
             <div class="col-lg-6">
-                Park Hotel Hagenberg has a restaurant, fitness centre, a bar and garden in Hagenberg im Mühlkreis. Among
-                the facilities at this property are room service and luggage storage space, along with free WiFi
-                throughout the property. The hotel features family rooms. The wellness area at Park Hotel Hagenberg is
-                comprised of a spa centre and a sauna. Guests at the hotel will be able to enjoy activities in and
-                around Hagenberg im Mühlkreis, like hiking and cycling. Linz is 18 km from Park Hotel Hagenberg, while
-                Wels is 43 km from the property. The nearest airport is Blue Danube Linz Airport, 29 km from the
-                accommodation.
-                <br /> <br />
-                More information on the wibsite: <a href="https://www.parkhotel-hagenberg.at/"
-                    target="_blank">https://www.parkhotel-hagenberg.at/</a>
-                <br /><br />
-                Book via email: <a href="mailto:office@parkhotel-hagenberg.at">office(at)parkhotel-hagenberg.at</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Location</h3>
+                <p>
+                    Park Hotel Hagenberg has a restaurant, fitness centre, a bar and garden in Hagenberg im Mühlkreis.
+                    Among
+                    the facilities at this property are room service and luggage storage space, along with free WiFi
+                    throughout the property. The hotel features family rooms. The wellness area at Park Hotel Hagenberg
+                    is
+                    comprised of a spa centre and a sauna. Guests at the hotel will be able to enjoy activities in and
+                    around Hagenberg im Mühlkreis, like hiking and cycling. Linz is 18 km from Park Hotel Hagenberg,
+                    while
+                    Wels is 43 km from the property. The nearest airport is Blue Danube Linz Airport, 29 km from the
+                    accommodation. More information on the website: <a href="https://www.parkhotel-hagenberg.at/"
+                        target="_blank">https://www.parkhotel-hagenberg.at/</a>.
+                </p>
+                <p class="highlight">Special Rates: To be announced soon.</p>
+                <h4>Location</h4>
                 <ul class="venue-list">
                     <li>Parkhotel Hagenberg</li>
                     <li>Hauptstraße 103</li>
                     <li>4232 Hagenberg im Mühlkreis, Austria</li>
                 </ul>
-                <h3>Special Rates</h3>
-                To be announced soon.
             </div>
-            <div class="col-md-8">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div id="map-parkhotel" class="container-fluid contact-maps"></div>
             </div>
         </div>
     </article>
-
 </section>
 {% else %}
 <h2>Venue</h2>

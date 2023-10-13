@@ -50,21 +50,25 @@ section.subpage-venue, section.subpage-calls {
     padding-top:25px;
   }
 
-  article:nth-child(odd) h1 {
-    font-size:3.5rem;
+  article h1 {
+
     font-size:700;
     color: $brand-primary;
   }
 
-  article:nth-child(odd) h2 {
-    font-size:2.5rem;
-    font-weight:500;
+  article p {
+    text-align: justify;
   }
 
-  article:nth-child(even) h1 {
-    font-size:3.5rem;
-    font-size:700;
-    color: $brand-secondary;
+  article p.chairs, p.highlight {
+    font-weight:500;
+    font-style: italic;
+    color:$brand-primary;
+  }
+
+  article:nth-child(odd) h2 {
+    font-size:2.2rem;
+    font-weight:500;
   }
 
   article:nth-child(even) h2 {

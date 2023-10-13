@@ -8,15 +8,12 @@
 
 <!-- Custom JS -->
 <script src="{{"/assets/js/leaflet.js" | relative_url }}"></script>
-<script src="{{"/assets/js/custom/map.js" | relative_url }}"></script>
 <script src="{{"/assets/js/custom/schedule.js" | relative_url }}"></script>
 <script src="{{"/assets/js/custom/calendar.js" | relative_url }}"></script>
 <script src="https://unpkg.com/delaunator@5.0.0/delaunator.min.js"></script>
-<script src="{{"/assets/js/custom/header.js" | relative_url }}"></script>
 <!-- Slider JS-->
 <script src="{{"/assets/js/slider/ideal-image-slider.min.js" | relative_url}}"></script>
 <script src="{{"/assets/js/slider/iis-bullet-nav.js" | relative_url}}"></script>
-<script src="{{"/assets/js/slider/iis-caption.js" | relative_url}}"></script>
 <script>
     $(function () {
         $(document).scroll(function () {
@@ -31,8 +28,8 @@
         interval: 5000
     });
     slider.start();
-	
-	var parkhotel_slider = new IdealImageSlider.Slider({
+
+    var parkhotel_slider = new IdealImageSlider.Slider({
         selector: '#parkhotel_slider',
         height: 400, // Required but can be set by CSS
         interval: 5000
