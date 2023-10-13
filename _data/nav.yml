@@ -1,8 +1,8 @@
 MainNav:
   - item: calls
     name:
-      de: Calls
-      en: Calls
+      de: Calls & Submission
+      en: Calls & Submission
     link: "/calls/"
     hardlink: false
   - item: program
@@ -11,11 +11,6 @@ MainNav:
       en: Program
     link: "/program"
     hardlink: false
-  - item: submission
-    name:
-      de: Submission
-      en: Submission
-    link: "/submission"
   - item: registration
     name:
       de: Registration
