@@ -2,8 +2,6 @@
    <div class="container">
       <div class="row">
          <div class="socials">
-            {% assign fb_item = site.data.nav.Socials | where: "item", "fb" | first %}
-            <a href="{{fb_item.link}}" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             {% assign twitter_item = site.data.nav.Socials | where: "item", "twitter" | first %}
             <a href="{{twitter_item.link}}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             {% assign linkedin_item = site.data.nav.Socials | where: "item", "linkedin" | first %}

@@ -21,7 +21,7 @@ MainNav:
       de: Registration
       en: Registration
     link: "/registration"
-    hardlink: false  
+    hardlink: false
   - item: venue
     name:
       de: Venue
@@ -35,12 +35,6 @@ MainNav:
     link: "/about"
     hardlink: false
 Socials:
-  - item: fb
-    name:
-      de: Facebook
-      en: Facebook
-    link: "#"
-    hardlink: true
   - item: twitter
     name:
       de: Twitter (X)
