@@ -36,7 +36,7 @@ description: Homepage of the PPSN 2024 conference
                     PPSN 2024 will take place from <b>September 14-18, 2024</b>. Other important dates are:<br/><em>(deadline interpretation = end of the day, anywhere on earth)</em>
                 </p>
                 <ul class="date-list">
-                    <li>Paper submission due:           <span>April 1, 2024</span></li>
+                    <li>Paper submission due:           <span>April 5, 2024</span></li>
                     <li>Paper acceptance notification:  <span>May 31, 2024</span></li>
                     <li>Tutorials/Workshop proposal submission due: <span>February 9, 2024</span></li>
                     <li>Tutorials/Workshop acceptance notification: <span>February 23, 2024</span></li>
