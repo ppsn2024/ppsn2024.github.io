@@ -1,0 +1,43 @@
+---
+layout: news
+---
+
+{% for group in site.data.people.groups %}
+{% for member in group.members %}
+    {% if page.author == member.nick %}
+        {% assign author = member.firstname | append: " " | append: member.lastname %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+{% endfor %}
+
+<section id="blog">
+<div class="container text-justify">
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h4><a href="/news">News</a>
+    <span class="slash-separator"></span>
+    {% for cat in page.categories %}
+      <a href="/news/{{ cat | downcase }}">{{ cat }}</a> 
+    {% endfor %}
+    </h4>
+    <h2 class="post-title" itemprop="name headline">{{ page.title | escape }}</h2>
+    <p class="post-meta">
+        {% assign m = page.date | date: "%-m" | minus: 1 %}
+        <time class="date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d" }}. {{ site.data.i18n.t.months[page.lang][m] }} {{ page.date | date: "%-Y" }}</time>
+        <span class="slash-separator"></span>
+        <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">{{ author }}</span>
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
+</div>
+</section>

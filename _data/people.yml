@@ -1,4 +1,4 @@
-institute:
+groups:
   - short: fhooe
     name: University of Applied Sciences - Upper Austria
     address:
@@ -7,9 +7,9 @@ institute:
       city: Hagenberg im Mühlkreis
       provinz: Upper Austria
       country: Austria
-    member:
+    members:
       - nick: maffenzeller
-        name: Michael
+        firstname: Michael
         lastname: Affenzeller
         prefix: FH-Prof. PD DI Dr.
         postfix:
@@ -18,7 +18,7 @@ institute:
         mail: michael.affenzeller@fh-ooe.at
         contact: true
       - nick: swinkler
-        name: Stephan
+        firstname: Stephan
         lastname: Winkler
         prefix: FH-Prof. PD DI Dr.
         postfix:
@@ -27,7 +27,7 @@ institute:
         mail: stephan.winkler@fh-ooe.at
         contact: true
       - nick: mbeneder
-        name: Michaela
+        firstname: Michaela
         lastname: Beneder
         prefix: Mag.
         postifx:
@@ -35,3 +35,30 @@ institute:
         phone: +43 664 80484 27160
         mail: michaela.beneder@fh-ooe.at
         contact: true
+      - nick: jzenisek
+        firstname: Jan
+        lastname: Zenisek
+        prefix:
+        postifx:
+        position: Publicity Chair
+        phone:
+        mail: jan.zenisek@fh-ooe.at
+        contact: false
+      - nick: chaider
+        firstname: Christian
+        lastname: Haider
+        prefix:
+        postifx:
+        position: Publicity Chair
+        phone:
+        mail: christian.haider@fh-ooe.at
+        contact: false
+      - nick: lbuur
+        firstname: Louise
+        lastname: Buur
+        prefix:
+        postifx:
+        position: Publicity Chair
+        phone:
+        mail: louise.buur@fh-ooe.at
+        contact: false

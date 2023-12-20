@@ -1,0 +1,58 @@
+---
+title: News
+layout: news
+lang: en
+permalink: news/
+description: Read about recent news around the conference.
+custom_css:
+- news
+---
+<section id="bloglist">
+  <div class="container">
+    <h2>News</h2>
+
+    {% if site.posts.size > 0 %}
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-sm-12">
+      {% for post in paginator.posts %}
+        {% include post_preview.html %}
+      {% endfor %}
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        {% include news_sidebar.html %}
+      </div>
+    </div>
+
+      {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Back</a>
+        {% else %}
+          <span>&laquo; Back</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <em>{{ page }}</em>
+          {% elsif page == 1 %}
+            <a href="/{{ site.baseurl }}{{site.blogname}}/">{{ page }}</a>
+          {% else %}            
+            <a href="/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+        {% else %}
+          <span>Next &raquo;</span>
+        {% endif %}
+      </div>
+      {% endif %}
+
+    {% else %}
+    <div class="row"><div class="col-lg-12"><h4>Sorry, there are currently no posts available.</h4></div></div>
+    {% endif %}
+
+    <p class="rss-subscribe">Follow <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  </div>
+</section>

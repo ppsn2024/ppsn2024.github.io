@@ -1,0 +1,39 @@
+languages: 
+  de:
+    id: de
+    name: Deutsch
+    urlbase: de
+  en:
+    id: en
+    name: English
+    urlbase: en
+
+default: de
+
+t:
+  nav:
+    info:
+      en: "Info"
+      de: "Info"
+    publications:
+      en: "Publications"
+      de: "Publikationen"
+    blog:
+      en: "Blog"
+      de: "Blog"
+    blog-preview:
+      en: "Blog Preview"
+      de: "Blog Vorschau"
+    team:
+      en: "Team"
+      de: "Team"
+    partners:
+      en: "Partners"
+      de: "Partner"
+    contact:
+      en: "Contact"
+      de: "Kontakt"
+
+  months:
+    en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    de: ["Jänner", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember" ]

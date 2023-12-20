@@ -7,6 +7,12 @@
 <head>
     {% include head.html %}
     <link rel="stylesheet" href="{{"/assets/css/subpage.css" | relative_url }}">
+
+    {% if page.custom_css %}
+    {% for css_file in page.custom_css%}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ css_file }}.css">
+    {% endfor %}
+    {% endif %}
 </head>
 
 <body id="page-top">

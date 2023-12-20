@@ -84,12 +84,12 @@ description: Homepage of the PPSN 2024 conference
    <div class="container text-justify">
       <h2>Questions? &nbsp;Contact Us!</h2>
       <div class="row contact-info">
-         {% for institute in site.data.people.institute %}
-         {% if institute.short == "fhooe" %}
-         {% for member in institute.member %}
+         {% for group in site.data.people.groups %}
+         {% if group.short == "fhooe" %}
+         {% for member in group.members %}
          {% if member.contact %}
          <div class="col-lg-4 col-md-12">
-            <h4>{{member.prefix}} {{member.name}} {{member.lastname}} {{member.postfix}}</h4>
+            <h4>{{member.prefix}} {{member.firstname}} {{member.lastname}} {{member.postfix}}</h4>
             <table class="contact-table">
 
                <body>

@@ -1,0 +1,29 @@
+---
+layout: news
+---
+<section id="category-post-list">
+    <div class="container">
+        <h2><a href="/news">News</a> / {{ page.tag }}</h2>
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-12">
+                {% if site.categories[page.tag].size > 0 %}
+                {% for post in site.categories[page.tag] %}
+                {% include post_preview.html %}
+                {% endfor %}
+                {% else %}
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4>Sorry, there are currently no posts to this topic available.</h4>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                {% include news_sidebar.html %}
+            </div>
+        </div>
+        <div class="row">
+            <p class="rss-subscribe">Follow <a href="{{ " /feed.xml" | relative_url }}">via RSS</a></p>
+        </div>
+    </div>
+</section>
