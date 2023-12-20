@@ -1,6 +1,6 @@
 <nav class="blog-side-nav">
     {% assign categoriesSorted = (site.category | sort: 'rank') %}
-    <h3 class="title">Categories</h4>
+    <h3 class="title">Topics</h4>
     {% for cat in categoriesSorted %}
     <div class="category">
       <a href="{{ cat.permalink }}" ><h4>{{ cat.tag }}</h4></a>

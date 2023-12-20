@@ -5,7 +5,12 @@
 
 @import
     "vars",
-    "header/header"
+    "global",
+    "header/header",
+    "news/newspost-teaser",
+    "news/newspost-teaser",
+    "news/news-sidebar",
+    "news"    
 ;
 
 section#overview {
@@ -357,4 +362,27 @@ section#contact{
          font-size:0.8rem;
       }
    }
+}
+
+
+// news
+// BLOG TEASER
+
+.blog-button {
+   margin: 10px 0 10px 0;  
+ }
+
+#btn-blog:hover,
+#btn-blog:focus {
+    color: $brand-primary-light;
+    border-color: $brand-primary-light;
+}
+
+#btn-blog {
+  text-decoration: none;
+}
+
+html {   
+   scroll-padding-block: 80px!important;
+   scroll-behavior: smooth!important;
 }

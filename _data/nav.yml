@@ -1,8 +1,14 @@
 MainNav:
+  - item: news
+    name:
+      de: News
+      en: News
+    link: "/news/"
+    hardlink: false
   - item: calls
     name:
-      de: Calls & Submission
-      en: Calls & Submission
+      de: Calls
+      en: Calls
     link: "/calls/"
     hardlink: false
   - item: program

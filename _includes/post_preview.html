@@ -1,10 +1,18 @@
 <article class="blogpost-teaser">
     <div class="row">
+    {% if include.preview_size_small %}
+    <div class="col-md-3">
+    {% else %}
     <div class="col-md-4">
+    {% endif %}
     <a class="image-link" href="{{ post.url | prepend: site.baseurl }}"><img src="{{ post.image }}" alt="{{ post.title }}" /></a>
     </div>
+    {% if include.preview_size_small %}
+    <div class="col-md-9">
+    {% else %}
     <div class="col-md-8">
-    <header class="postteaser-header">
+    {% endif %}    
+    <div class="postteaser-header">
         <h3>{{ post.title }}</h3>
     
         <p class="post-meta">
@@ -28,12 +36,12 @@
             {% endfor %}
         </span>
         </p>
-    </header>
+    </div>
 
     <div class="excerpt text-justify">
         {{ post.excerpt }}
         {% if post.content contains site.excerpt_separator %}
-        <a class="readmore-link" href="{{ post.url | prepend: site.baseurl }}">&rArr; More</a>
+        <a class="readmore-link" href="{{ post.url | prepend: site.baseurl }}">&rArr; Continue reading</a>
         {% endif %}
     </div>
     </div>

@@ -1,18 +1,19 @@
 {% capture pagescroll %}{% endcapture %}
 
 {% if page.lang == site.lang %}
-{% if page.url == "/" %}
-{% capture prefix %}{% endcapture %}
-{% capture pagescroll %}page-scroll{% endcapture %}
+    {% if page.url == "/" %}
+        {% capture prefix %}{% endcapture %}
+        {% capture pagescroll %}page-scroll{% endcapture %}
+        {% capture ishome %}true{% endcapture %}
+    {% else %}
+        {% capture prefix %}/{% endcapture %}
+    {% endif %}
 {% else %}
-{% capture prefix %}/{% endcapture %}
-{% endif %}
-{% else %}
-{% capture lang_baseurl %}/{{page.lang}}/{% endcapture %}
-{% if page.url == lang_baseurl %}
-{% capture pagescroll %}page-scroll{% endcapture %}
-{% endif %}
-{% capture prefix %}/{{ page.lang }}/{% endcapture %}
+    {% capture lang_baseurl %}/{{page.lang}}/{% endcapture %}
+    {% if page.url == lang_baseurl %}
+        {% capture pagescroll %}page-scroll{% endcapture %}
+    {% endif %}
+    {% capture prefix %}/{{ page.lang }}/{% endcapture %}
 {% endif %}
 
 {% include cookie_consent.html %}
@@ -32,16 +33,22 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             {% for nav_item in site.data.nav.MainNav %}
-            {% if nav_item.hardlink %}
-            {% capture baseurl %}/{% endcapture %}            
-            {% else %}
-            {% capture baseurl %}{% endcapture %}
-            {% endif %}
-            {% if forloop.first %}
-            <a href="{{baseurl}}{{nav_item.link}}" class="active nav-item nav-link">{{nav_item.name["en"]}}</a>
-            {% else %}
-            <a href="{{baseurl}}{{nav_item.link}}" class="nav-item nav-link">{{nav_item.name["en"]}}</a>
-            {% endif %}
+                {% if nav_item.hardlink %}
+                    {% capture baseurl %}/{% endcapture %}            
+                {% else %}
+                    {% capture baseurl %}{% endcapture %}
+                {% endif %}
+                {% if ishome and forloop.first %}
+                    <a href="{{baseurl}}/#{{nav_item.item}}" class="nav-item nav-link">{{nav_item.name["en"]}}</a>
+                {% else %}
+                    <a href="{{baseurl}}{{nav_item.link}}" class="nav-item nav-link">{{nav_item.name["en"]}}</a>
+                {% endif %}    
+
+                <!-- {% if forloop.first %}
+                <a href="{{baseurl}}{{nav_item.link}}" class="active nav-item nav-link">{{nav_item.name["en"]}}</a>
+                {% else %}
+                <a href="{{baseurl}}{{nav_item.link}}" class="nav-item nav-link">{{nav_item.name["en"]}}</a>
+                {% endif %} -->
             {% endfor %}
         </div>
     </div>

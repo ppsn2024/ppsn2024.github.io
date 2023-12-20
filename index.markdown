@@ -27,6 +27,28 @@ description: Homepage of the PPSN 2024 conference
     </div>
 </section>
 
+<section class="background-dark pad" id="news">
+    <div class="container">
+        <h1>Latest News</h1>
+        {% if site.posts.size > 0 %}        
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                {% for post in site.posts limit:1 %}
+                    {% include post_preview.html preview_size_small=true %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-right">
+                <a href="/news" id="btn-blog" class="btn btn-xl btn-slim-primary blog-button">More News</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="row"><div class="col-lg-12"><h4>Sorry, there are currently no posts available.</h4></div></div>
+        {% endif %}
+    </div>
+</section>
+
 <section class="background-primary pad" id="overview">
     <div class="container text-justify">        
         <div class="row">
