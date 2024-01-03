@@ -72,6 +72,10 @@ a {
   text-align: right;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 #timeline::before {
   content: '';
   display: block;
