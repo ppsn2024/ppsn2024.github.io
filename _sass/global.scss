@@ -76,6 +76,10 @@ a {
   text-align: justify;
 }
 
+.text-serif {
+  font-family: $serif-font!important;  
+}
+
 #timeline::before {
   content: '';
   display: block;
