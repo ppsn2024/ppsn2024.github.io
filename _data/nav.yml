@@ -17,6 +17,12 @@ MainNav:
       en: Program
     link: "/program"
     hardlink: false
+  - item: submission
+    name:
+      de: Submission
+      en: Submission
+    link: "/submission"
+    hardlink: false
   - item: registration
     name:
       de: Registration
