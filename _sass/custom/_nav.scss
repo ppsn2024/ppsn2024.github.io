@@ -64,26 +64,26 @@ nav#main-nav {
       height:60px;
     }
 
-    .nav-home #ppsn2024-logo g,
-    .nav-home #ppsn2024-logo polygon,
-    .nav-home #ppsn2024-logo path {
+    .nav-home-brand #ppsn2024-logo g,
+    .nav-home-brand #ppsn2024-logo polygon,
+    .nav-home-brand #ppsn2024-logo path {
       fill: $brand-text-light;
       opacity: 0.85;
       transition: opacity 200ms ease-in;  
     }
 
-    .nav-home #ppsn2024-logo>path {
+    .nav-home-brand #ppsn2024-logo>path {
       opacity: 0.75;
     }
 
-    .nav-page #ppsn2024-logo g,
-    .nav-page #ppsn2024-logo polygon,
-    .nav-page #ppsn2024-logo path {
+    .nav-page-brand #ppsn2024-logo g,
+    .nav-page-brand #ppsn2024-logo polygon,
+    .nav-page-brand #ppsn2024-logo path {
       fill: $brand-primary;      
       transition: fill 200ms ease-in;
     }
 
-    .nav-home:hover {
+    .nav-home-brand:hover {
       #ppsn2024-logo g,
       #ppsn2024-logo polygon,
       #ppsn2024-logo path {
@@ -92,7 +92,7 @@ nav#main-nav {
       }
      }
 
-   .nav-page:hover {
+   .nav-page-brand:hover {
       #ppsn2024-logo g,
       #ppsn2024-logo polygon,
       #ppsn2024-logo path {
@@ -128,11 +128,11 @@ nav#main-nav {
     }
 }
 
-nav#main-nav.navbar-top.scrolled {
+nav#main-nav.navbar-top.scrolled,
+nav#main-nav.navbar-top.nav-page {
   scroll-margin-top: 100px!important;
    background-color: #fff !important;
-   transition: background-color 200ms linear;
-   border-bottom: 5px solid $brand-primary;
+   transition: background-color 200ms linear;   
 
    .nav-link {
       color:$brand-primary !important;
@@ -168,6 +168,10 @@ nav#main-nav.navbar-top.scrolled {
         background-color: $brand-light;
       }
     }
+ }
+
+ nav#main-nav.navbar-top.scrolled {
+  border-bottom: 5px solid $brand-primary;
  }
 
  

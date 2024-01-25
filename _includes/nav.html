@@ -17,13 +17,17 @@
 {% endif %}
 
 {% include cookie_consent.html %}
+{% if ishome  %}
 <nav id="main-nav" class="navbar fixed-top navbar-expand-md navbar-top my-nav">
+{% else %}
+<nav id="main-nav" class="navbar fixed-top navbar-expand-md navbar-top my-nav nav-page">
+{% endif %}
     <div class="container-fluid">
-        <div class="brand-container">            
-            {% if include.home %}
-            <a href="/" class="navbar-brand nav-home">{% include svg/ppsn2024-logo.svg %}</a>
+        <div class="brand-container">                        
+            {% if ishome %}
+            <a href="/" class="navbar-brand nav-home-brand">{% include svg/ppsn2024-logo.svg %}</a>
             {% else %}
-            <a href="/" class="navbar-brand nav-page">{% include svg/ppsn2024-logo.svg %}</a>
+            <a href="/" class="navbar-brand nav-page-brand">{% include svg/ppsn2024-logo.svg %}</a>
             {% endif %}
         </div>
 
