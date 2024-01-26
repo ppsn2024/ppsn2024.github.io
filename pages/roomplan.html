@@ -1,0 +1,146 @@
+---
+title: Program
+layout: page
+lang: en
+permalink: roomplan/
+description: Programm of PPSN 2024 conference
+---
+{% if jekyll.environment == "development" %}
+<section id="roomplan" class="background-light subpage-sec">
+   <div class="planerContainer">
+      <button type="button" id="moveLeft" class="btn-nav">
+        ᐊ
+      </button>
+      <div class="slider" id="mySlider">
+        {% for paper in site.data.plan[0].sessions[0].papers %}
+        <div class="paper" id="{{paper.id}}">
+          <div class="content">
+           <h4>ID: #{{paper.id}}</h4>
+           <p>{{paper.title}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    <button type="button" id="moveRight" class="btn-nav">
+      ᐅ
+    </button>
+    </div>
+    <div id="paperInfo" class="paperInfo">
+      <div class="container">
+         <h2 id="paperTitle">PaperID: #0001</h2>
+         <p id="paperAuthors" class="text-justify paperAuthors">
+            Christian Haider, Jan Zenisek, Florian Bachinger
+         </p>
+         <p id="paperAbstract" class="text-justify">
+            We investigate the addition of constraints on the function
+image and its derivatives for the incorporation of
+prior knowledge in symbolic regression. The approach is called
+shape-constrained symbolic regression and allows us to enforce e.g.
+monotonicity of the function over selected inputs. The aim is to find
+models which conform to expected behaviour and which have improved
+extrapolation capabilities.
+We demonstrate the feasibility of the idea and propose and compare two
+evolutionary algorithms for shape-constrained symbolic regression: i) an extension of
+tree-based genetic programming which discards infeasible solutions in the
+selection step, and ii) a two population evolutionary algorithm that separates
+the feasible from the infeasible solutions. In both algorithms we use interval
+arithmetic to approximate bounds for models and their partial derivatives.
+The algorithms are tested on a set of 19 synthetic and four real-world
+regression problems. Both algorithms are able to identify models which conform
+to shape constraints which is not the case for the unmodified symbolic regression algorithms. However, the predictive accuracy of models with constraints
+is worse on the training set and the test set. Shape-constrained polynomial regression produces the best results for the test set but also significantly larger models.
+         </p>
+      </div>
+    </div>
+    <div class="svgPlan">
+
+    </div>
+</section>
+<script>
+const planData = '{{ site.data.plan }}';
+const planDataJson = planData.replaceAll("=>", ":");
+const data = JSON.parse(planDataJson);
+console.log(data);
+
+//URL params
+var queryParams = new URLSearchParams(window.location.search);
+var paperIdParam = queryParams.get('paperid');
+
+console.log(paperIdParam);
+
+//Add event listeners to the papers
+const papers = document.querySelectorAll(".paper");
+
+papers.forEach((paper) => {
+  paper.addEventListener('click', (e) => {
+    var paperId = paper.id;
+    for (const p of data.sessions[0].papers) {
+      if (p.id === paperId) {
+          const title = document.getElementById("paperTitle");
+          const authors = document.getElementById("paperAuthors");
+          const abstract = document.getElementById("paperAbstract");
+          queryParams.set("paperid", p.id);
+          history.pushState(null, null, "?"+queryParams.toString());
+          title.innerHTML = p.title;
+          authors.innerHTML = p.authors;
+          abstract.innerHTML = p.abstract;
+      }
+    }
+  });
+});
+
+
+const roomSlider = document.querySelector(".slider");
+const btnLeft = document.getElementById("moveLeft");
+const btnRight = document.getElementById("moveRight");
+
+let baseSliderWidth = roomSlider.offsetWidth;
+let activeIndex = 0; 
+
+
+btnLeft.addEventListener("click", (e) => {
+  let paperWidth = document.querySelector(".paper").getBoundingClientRect()
+    .width;
+  let scrollDistance = paperWidth * 6; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
+
+  roomSlider.scrollBy({
+    top: 0,
+    left: -scrollDistance,
+    behavior: "smooth",
+  });
+  activeIndex = (activeIndex - 1) % 3;
+  console.log(activeIndex);
+});
+
+// Scroll Right button
+btnRight.addEventListener("click", (e) => {
+  let paperWidth = document.querySelector(".paper").getBoundingClientRect()
+    .width;
+  let scrollDistance = paperWidth * 6; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
+
+  console.log(`paperWidth = ${paperWidth}`);
+  console.log(`scrolling right ${scrollDistance}`);
+
+  // if we're on the last page
+  if (activeIndex == 2) {
+    // duplicate all the items in the slider (this is how we make 'looping' slider)
+    //populateSlider();
+    roomSlider.scrollBy({
+      top: 0,
+      left: +scrollDistance,
+      behavior: "smooth",
+    });
+    activeIndex = 0;
+  } else {
+   roomSlider.scrollBy({
+      top: 0,
+      left: +scrollDistance,
+      behavior: "smooth",
+    });
+    activeIndex = (activeIndex + 1) % 3;
+    console.log(activeIndex);
+  }
+});
+
+</script>
+{% endif %}

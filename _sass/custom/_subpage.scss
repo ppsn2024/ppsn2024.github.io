@@ -1,3 +1,17 @@
+:root {
+  --paper-width: 15.5vw;
+  --paper-height: 150px;
+  --arrow-width: 50px;
+  --slider-py: 25px;
+
+}
+@media only screen and (max-width: 1000px) {
+  :root {
+    --paper-width: 25vw;
+    --item-width: 25vw;
+  }
+}
+
 .subpage-sec {
    padding-top:120px;
    padding-bottom:40px;
@@ -127,4 +141,162 @@ ul.dashed > li:before {
   font-size:1.2rem;
   font-weight:500;
 }
+}
+
+
+//roomplan 
+#roomplan {
+  .planerContainer {
+    position: relative;
+    background: $brand-dark-grey;
+  }
+  
+  /*
+  *
+  * THE SLIDER CONTAINER
+  *
+  *********************************/
+  .slider {
+    width: 100%;
+    height:var(--paper-height) + var(--slider-py) + var(--slider-py);
+    overflow-x: scroll;
+    overflow-y: visible;
+    white-space: nowrap;
+    position: relative;
+    padding-top: var(--slider-py);
+    padding-bottom: var(--slider-py);
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+  }
+  
+  .slider::-webkit-scrollbar {
+    display:none;
+  }
+  
+  /*
+  *
+  * PAPER ITEM
+  *
+  *********************************/
+  .paper {
+    min-width:200px;
+    width: var(--paper-width);
+    height: var(--paper-height);
+    display: inline-block;
+    position: relative;
+    color: white;
+    background: $brand-grey;
+    border:3px solid $brand-dark-grey;
+    white-space: normal;
+    border-radius: 10px;
+    padding: 0 2px;
+    font-size: 0.8rem;
+    transition: all 0.8s ease-in-out;
+  }
+
+  .paper:hover {
+    cursor: pointer;
+  }
+  
+  .paper:nth-of-type(1) {
+    margin-left: var(--arrow-width);
+  }
+  
+  .paper .content {
+    padding:15px;
+
+
+  }
+  
+  .description {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    background-color: #272727;
+    width: var(--paper-width);
+    margin-top: -10px;
+    padding: 10px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  @media only screen and (min-width: 900px) {
+    .paper:hover {
+      transform: scale(1.2);
+      z-index: 2;
+    }
+
+    .paper:hover > .description {
+      display: block;
+    }
+    .paper:hover > img {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  /*
+  *
+  * BUTTONS
+  *
+  *********************************/
+  .btn-nav {
+    width: var(--arrow-width);
+    height: var(--paper-height);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    color: white;
+    top: var(--slider-py);
+    z-index: 5;
+    visibility: hidden;
+  }
+  
+  #moveLeft {
+    left: 0;
+  }
+  
+  #moveRight {
+    right: 0;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .btn-nav {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 901px) {
+    .planerContainer:hover .btn-nav {
+      visibility: visible;
+    }
+  }
+
+
+
+  /*
+  *INFO TEXT
+  */
+
+  .paperInfo {
+    background:$brand-primary;
+    color:#fff;
+    width:100%;
+    min-height:300px;
+    padding:10px 10px;
+
+    p.paperAuthors {
+      font-style: italic;
+    }
+  }
+
+  /*
+  *SVG PLAN
+  */
+  .svgPlan {
+    min-height:600px;
+  }
+
 }
