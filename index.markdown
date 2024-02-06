@@ -105,6 +105,7 @@ description: Homepage of the PPSN 2024 conference
 <section class="background-primary pad" id="contact">
    <div class="container text-justify">
       <h2>Questions? &nbsp;Contact Us!</h2>
+      <div class="row"><div class="col-sm-12">Write us to <a style="text-decoration:underline" href="mailto:ppsn2024@fh-ooe.at">ppsn2024@fh-ooe.at</a> to get fast response.<br/><br/></div></div>
       <div class="row contact-info">
          {% for group in site.data.people.groups %}
          {% if group.short == "fhooe" %}
