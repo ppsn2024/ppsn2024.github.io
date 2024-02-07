@@ -17,7 +17,7 @@
     
         <p class="post-meta">
         {% assign m = post.date | date: "%-m" | minus: 1 %}
-        <time class="date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%-d" }}. {{ site.data.i18n.t.months[page.lang][m] }} {{ post.date | date: "%-Y" }}</time>
+        <time class="date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ site.data.i18n.t.months[page.lang][m] }} {{ post.date | date: "%-d" }}, {{ post.date | date: "%-Y" }}</time>
         <!-- <span class="slash-separator"></span>
         <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
             {% for group in site.data.people.groups %}
