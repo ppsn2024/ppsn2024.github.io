@@ -11,7 +11,7 @@ author: jzenisek
 image: /news/resources/2024-02-05-keynote-oliverschuetze/oliverschuetze-thumb.jpg
 ---
 
-We are very happy to announce Oliver Schütze (CINVESTAV-IPN, Mexico-City) as one of our keynoters for this year's edition of PPSN!
+We are very pleased to announce Oliver Schütze (CINVESTAV-IPN, Mexico-City) as one of our keynoters for this year's edition of PPSN!
 
 
 <!--more-->
