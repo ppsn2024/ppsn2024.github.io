@@ -14,7 +14,7 @@ image: /news/resources/2024-02-15-keynote-bernardinoromeraparedes/bernardinorome
 We are very pleased to announce Bernardino Romera-Paredes (Google DeepMind) as our second keynoter for this year's edition of PPSN! He is a former core team member of AlphaFold2 and AlphaTensor and now research scientist at Google DeepMind in London.
 
 <!--more-->
-At PPSN 2024 Bernardino Romera-Paredes will present his current research regarding the evolution of new heuristics, supported by pairing a pre-trained LLM and an automated "evaluator", with following keynote:
+At PPSN 2024 Bernardino Romera-Paredes will present his current research regarding the evolution of new heuristics, supported by pairing a pre-trained LLM and an automated "evaluator", within his keynote:
 
 **FunSearch: Discovering new mathematics and algorithms using Large Language Models**
 
