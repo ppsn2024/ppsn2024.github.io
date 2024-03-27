@@ -12,6 +12,14 @@
   }
 }
 
+.cancle{
+  text-decoration: line-through;
+}
+
+h1 span.closed, h4 span.closed {
+  font-weight:700;
+}
+
 .subpage-sec {
    padding-top:120px;
    padding-bottom:40px;
@@ -69,6 +77,7 @@ section.subpage-venue, section.subpage-calls {
 
     font-size:700;
     color: $brand-primary;
+
   }
 
   article p {
@@ -115,6 +124,8 @@ section.subpage-venue, section.subpage-calls {
     color:$brand-primary;
   }
 
+
+
   .call-list li > ul {
     padding-left:35px;
   }
@@ -144,13 +155,13 @@ ul.dashed > li:before {
 }
 
 
-//roomplan 
+//roomplan
 #roomplan {
   .planerContainer {
     position: relative;
     background: $brand-dark-grey;
   }
-  
+
   /*
   *
   * THE SLIDER CONTAINER
@@ -166,13 +177,13 @@ ul.dashed > li:before {
     padding-top: var(--slider-py);
     padding-bottom: var(--slider-py);
     -ms-overflow-style: none;
-    scrollbar-width: none;  
+    scrollbar-width: none;
   }
-  
+
   .slider::-webkit-scrollbar {
     display:none;
   }
-  
+
   /*
   *
   * PAPER ITEM
@@ -197,17 +208,17 @@ ul.dashed > li:before {
   .paper:hover {
     cursor: pointer;
   }
-  
+
   .paper:nth-of-type(1) {
     margin-left: var(--arrow-width);
   }
-  
+
   .paper .content {
     padding:15px;
 
 
   }
-  
+
   .description {
     position: absolute;
     display: none;
@@ -219,7 +230,7 @@ ul.dashed > li:before {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-  
+
   @media only screen and (min-width: 900px) {
     .paper:hover {
       transform: scale(1.2);
@@ -253,21 +264,21 @@ ul.dashed > li:before {
     z-index: 5;
     visibility: hidden;
   }
-  
+
   #moveLeft {
     left: 0;
   }
-  
+
   #moveRight {
     right: 0;
   }
-  
+
   @media only screen and (max-width: 900px) {
     .btn-nav {
       display: none;
     }
   }
-  
+
   @media only screen and (min-width: 901px) {
     .planerContainer:hover .btn-nav {
       visibility: visible;
