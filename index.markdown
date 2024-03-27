@@ -18,10 +18,10 @@ description: Homepage of the PPSN 2024 conference
                 </p>
                 <p>See you soon in beautiful Hagenberg, Austria!</p>
                 <br/>
-                <p>                
+                <p>
                     <em>Michael Affenzeller & Stephan Winkler</em><br/>
                     <em>PPSN 2024 Conference Chairs</em>
-                </p>                
+                </p>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@ description: Homepage of the PPSN 2024 conference
 <section class="background-dark pad" id="news">
     <div class="container">
         <h1>Latest News</h1>
-        {% if site.posts.size > 0 %}        
+        {% if site.posts.size > 0 %}
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 {% for post in site.posts limit:1 %}
@@ -50,7 +50,7 @@ description: Homepage of the PPSN 2024 conference
 </section>
 
 <section class="background-primary pad" id="overview">
-    <div class="container text-justify">        
+    <div class="container text-justify">
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <h2>When?</h2>
@@ -58,10 +58,10 @@ description: Homepage of the PPSN 2024 conference
                     PPSN 2024 will take place from <b>September 14-18, 2024</b>. Other important dates are:<br/><em>(deadline interpretation = end of the day, anywhere on earth)</em>
                 </p>
                 <ul class="date-list">
-                    <li>Paper submission due:           <span>April 5, 2024</span></li>
+                    <li>Paper submission due:           <span class="cancle">April 5, 2024</span><span> Extension: April 18, 2024</span></li>
                     <li>Paper acceptance notification:  <span>May 31, 2024</span></li>
-                    <li>Tutorials/Workshop proposal submission due: <span>February 9, 2024</span></li>
-                    <li>Tutorials/Workshop acceptance notification: <span>February 23, 2024</span></li>
+                    <li><strong>[Closed]</strong> Tutorials/Workshop proposal submission due: <span class="cancle">February 9, 2024</span></li>
+                    <li><strong>[Closed]</strong> Tutorials/Workshop acceptance notification: <span class="cancle">February 23, 2024</span></li>
                     <li>
                         Conference: <span>September 14-18, 2024</span>
                         <ul class="date-list-l2">
@@ -69,7 +69,7 @@ description: Homepage of the PPSN 2024 conference
                             <li>Poster Sessions: <span>September 16–18, 2024</span></li>
                         </ul>
                     </li>
-                </ul> 
+                </ul>
             </div>
             <div class="col-lg-6 col-md-12">
                 <h2>Where?</h2>
@@ -83,20 +83,20 @@ description: Homepage of the PPSN 2024 conference
                     Softwarepark 11<br/>
                     4232 Hagenberg im Mühlkreis<br/>
                     Austria
-                    </address>                    
-                </p>                             
+                    </address>
+                </p>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <p>
                     For more details regarding dates have a look at the pages for <a href="{{ site.baseurl }}/calls">Calls</a> and <a href="{{ site.baseurl }}/program">Program</a>.
-                </p> 
+                </p>
             </div>
             <div class="col-lg-6 col-md-12">
                 <p>
                     For more details regarding venue, travel, accomodation and tourism go to: <a href="{{ site.baseurl }}/venue">Venue</a>.
-                </p> 
+                </p>
             </div>
         </div>
     </div>
