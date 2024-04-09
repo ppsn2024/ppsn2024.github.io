@@ -1,17 +1,17 @@
 ---
 layout: post
 lang: en
-title: "Submission is now open"
-description: The submission system is EquinOCS is no ready to receive manuscripts.
+title: "Deadline extension"
+description: The full paper submission deadline has been extended from April 5 to April 18.
 keywords: Submission
-date: 2024-03-12 11:05 +0200
+date: 2024-04-04 15:23 +0200
 categories:
   - "Updates"
 author: jzenisek
-image: /news/resources/2024-03-12-submission-open/submissionsystem.png
+image: /news/resources/2024-04-04-deadline-extension/deadline.png
 ---
 
-The submission system "EquinOCS" by Springer is now setup for PPSN 2024 and open to receive your full paper manuscript!
+The deadline for full paper submissions has been extended from April 5 to April 18, 2024. We're looking forward to receive your manuscripts and host you in Hagenberg!
 
 <!--more-->
 
