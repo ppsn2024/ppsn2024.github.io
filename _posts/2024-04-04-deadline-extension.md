@@ -13,11 +13,12 @@ image: /news/resources/2024-04-04-deadline-extension/deadline.png
 
 The deadline for full paper submissions has been extended from April 5 to April 18, 2024. We're looking forward to receive your manuscripts and host you in Hagenberg!
 
+
 <!--more-->
 
-For more information regarding the submission (deadlines, guidelines, templates, etc.), please go to [https://ppsn2024.fh-ooe.at/submission/][sub]{:target="_blank"}.
-<br/>
 The link to the EquinOCS submission system is [https://equinocs.springernature.com/service/PPSN2024][equ]{:target="_blank"}.
+<br/><br/>
+For more information regarding the submission (deadlines, guidelines, templates, etc.), please go to [https://ppsn2024.fh-ooe.at/submission/][sub].
 
 
 
