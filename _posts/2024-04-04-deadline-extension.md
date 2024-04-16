@@ -11,7 +11,7 @@ author: jzenisek
 image: /news/resources/2024-04-04-deadline-extension/deadline.png
 ---
 
-The deadline for full paper submissions has been extended from April 5 to April 18, 2024. We're looking forward to receive your manuscripts and host you in Hagenberg!
+The deadline for full paper submissions has been extended from April 5 to April 18, 2024 (*deadline interpretation = end of the day, anywhere on earth*). We're looking forward to receive your manuscripts and host you in Hagenberg!
 
 
 <!--more-->
