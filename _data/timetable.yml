@@ -1,0 +1,521 @@
+days:
+  - day: 1
+    date: 2024-09-14    
+    dayofweek: Saturday 
+    columns: 3
+  - day: 2
+    date: 2024-09-15    
+    dayofweek: Sunday 
+    columns: 3
+  - day: 3
+    date: 2024-09-16    
+    dayofweek: Monday
+    columns: 1
+  - day: 4
+    date: 2024-09-17    
+    dayofweek: Tuesday
+    columns: 1
+  - day: 5
+    date: 2024-09-18    
+    dayofweek: Wednesday
+    columns: 1
+
+
+# =================================================================================================
+# =================================================================================================
+# =================================================================================================
+
+
+slots:
+  - id: s1_1
+    title: Registration / Info
+    day: 1
+    start: 8.00
+    end: 9.00
+    room: Lecture Hall Corridor
+    colspan: 3
+    class: organization
+  - id: s1_2
+    title: Workshop 1
+    description: "BOSS: Bayesian and Surrogate-assisted Search and Optimisation"
+    speaker: "Tinkle Chugh, George De Ath, Paul Kent, Alma Rahat, Kaifeng Yang"
+    day: 1
+    start: 9.50
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: workshop
+  - id: s1_3
+    title: Tutorial 1
+    description: "Decomposition Evolutionary Multi-Objective Optimization: What We Know from the Literature and What We are not Clear from a Data Science Perspective"
+    speaker: "Ke Li"
+    day: 1
+    start: 9.00
+    end: 10.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s1_4
+    title: Tutorial 2
+    description: "A Gentle Introduction to Theory (for Non-Theoreticians)"
+    speaker: "Benjamin Doerr"
+    day: 1
+    start: 9.00
+    end: 10.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s1_5
+    title: Coffee Break
+    day: 1
+    start: 10.50
+    end: 11.00
+    room: Lecture Hall Corridor
+    colspan: 2
+    class: break
+  - id: s1_6
+    title: Tutorial 3
+    description: "CMA-ES"
+    speaker: "Nikolaus Hansen"
+    day: 1
+    start: 11.00
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s1_7
+    title: Tutorial 4
+    description: "Mathematical Programming as a Complement to Bio-Inspired Optimization"
+    speaker: "Ofer M. Shir"
+    day: 1
+    start: 11.00
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s1_8
+    title: Lunch Break
+    day: 1
+    start: 12.50
+    end: 13.50
+    room: Break Room
+    colspan: 3
+    class: break
+  - id: s1_9
+    title: Workshop 2
+    description: "Good Benchmarking Practices for Evolutionary Computation BENCHMARKING"
+    speaker: "Carola Doerr, Vanessa Volz, Boris Naujoks, Olaf Mersmann, Mike Preuss, Pascal Kerschk"
+    day: 1
+    start: 13.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: workshop
+  - id: s1_10
+    title: Tutorial 5
+    description: "Theory of Estimation-of-Distribution Algorithms"
+    speaker: "Martin Krejca"
+    day: 1
+    start: 13.50
+    end: 15.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s1_11
+    title: Tutorial 6
+    description: "Large Language Models as Tools for Metaheuristic Design: Exploring Challenges and Opportunities."
+    speaker: "Michal Pluhacek, Adam Viktorin, Roman Senkerik"
+    day: 1
+    start: 13.50
+    end: 15.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s1_12
+    title: Coffee Break
+    day: 1
+    start: 15.00
+    end: 15.50
+    room: Lecture Hall Corridor
+    colspan: 2
+    class: break
+  - id: s1_13
+    title: Tutorial 7
+    description: "Constraint Handling in Multiobjective Optimization"
+    speaker: "Bogdan Filipič, Aljosa Vodopija"
+    day: 1
+    start: 15.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s1_14
+    title: Tutorial 8
+    description: "Instance Space Analysis for Rigorous and Insightful Algorithm Testing"
+    speaker: "Kate Smith-Miles and Mario Andrés Muñoz Acosta"
+    day: 1
+    start: 15.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+
+
+# =================================================================================================
+
+
+  - id: s2_1
+    title: Registration / Info
+    day: 2
+    start: 8.00
+    end: 9.00
+    room: Lecture Hall Corridor
+    colspan: 3
+    class: organization
+  - id: s2_2
+    title: Workshop 3
+    description: "30 Years of EDAs"
+    speaker: "Benjamin Doerr, Concha Bielza, John McCall, and Weijie Zheng"
+    day: 1
+    start: 9.50
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: workshop
+  - id: s1_3
+    title: Tutorial 9
+    description: "Robot Evolution"
+    speaker: "A.E. Eiben"
+    day: 2
+    start: 9.00
+    end: 10.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s2_4
+    title: Tutorial 10
+    description: "Advanced Use of Automatic Algorithm Configuration: Single- and Multi-Objective Approaches"
+    speaker: "Jeroen Rook, Manuel López-Ibáñez, and Heike Trautmann"
+    day: 2
+    start: 9.00
+    end: 10.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s2_5
+    title: Coffee Break
+    day: 2
+    start: 10.50
+    end: 11.00
+    room: Lecture Hall Corridor
+    colspan: 2
+    class: break
+  - id: s2_6
+    title: Tutorial 11
+    description: "Introduction to Evolution Strategies for Constrained Optimization Problems"
+    speaker: "Michael Hellwig, Steffen Finck, and Hans-Georg Beyer"
+    day: 2
+    start: 11.00
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s2_7
+    title: Tutorial 12
+    description: "Runtime Analysis of Population-based Evolutionary Algorithms"
+    speaker: "Per Kristian Lehre"
+    day: 2
+    start: 11.00
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s2_8
+    title: Lunch Break
+    day: 2
+    start: 12.50
+    end: 13.50
+    room: Break Room
+    colspan: 3
+    class: break
+  - id: s2_9
+    title: Workshop 4
+    description: "Multimodal Multi-objective Optimization"
+    speaker: "Heike Trautmann, Lennart Schapermeier, Oliver Schuetze"
+    day: 2
+    start: 13.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: workshop
+  - id: s2_10
+    title: Tutorial 13
+    description: "Structural bias in optimisation algorithms"
+    speaker: "Anna V. Kononova, Niki van Stein, Diederick Vermetten"
+    day: 2
+    start: 13.50
+    end: 15.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s2_11
+    title: Tutorial 14
+    description: "Transfer Learning in Evolutionary Spaces"
+    speaker: "Nelishia Pillay"
+    day: 2
+    start: 13.50
+    end: 15.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s2_12
+    title: Coffee Break
+    day: 2
+    start: 15.00
+    end: 15.50
+    room: Lecture Hall Corridor
+    colspan: 2
+    class: break
+  - id: s2_13
+    title: Tutorial 15
+    description: "Adversarial Optimisation through Competitive Co-evolutionary Algorithms"
+    speaker: "Per Kristian Lehre, Mario A. Hevia Fajardo"
+    day: 2
+    start: 15.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+  - id: s2_14
+    title: Tutorial 16
+    description: "Pareto Optimization for Subset Selection: Theories and Practical Algorithms"
+    speaker: "Chao Qian"
+    day: 2
+    start: 15.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: tutorial
+
+
+# =================================================================================================
+
+
+  - id: s3_1
+    title: Registration / Info
+    day: 3
+    start: 8.00
+    end: 9.00
+    room: Lecture Hall Corridor
+    colspan: 1
+    class: organization
+  - id: s3_2
+    title: Opening
+    day: 3
+    start: 9.00
+    end: 9.50
+    room: Audimax
+    colspan: 1
+    class: social
+  - id: s3_3
+    title: Keynote 1
+    day: 3
+    start: 9.50
+    end: 10.50
+    room: Audimax
+    colspan: 1
+    class: keynote
+  - id: s3_4
+    title: Coffee Break
+    day: 3
+    start: 10.50
+    end: 11.00
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s3_5
+    title: Poster Session 1
+    day: 3
+    start: 11.00
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s3_6
+    title: Lunch Break
+    day: 3
+    start: 12.50
+    end: 13.50
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s3_7
+    title: Poster Session 2
+    day: 3
+    start: 13.50
+    end: 15.00
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s3_8
+    title: Coffee Break
+    day: 3
+    start: 15.00
+    end: 15.50
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s3_9
+    title: Poster Session 3
+    day: 3
+    start: 15.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s3_10
+    title: Welcome Reception
+    day: 3
+    start: 19.00
+    end: 22.00
+    room: AEC Linz
+    colspan: 1
+    class: social
+
+
+    # =================================================================================================
+
+
+  - id: s4_1
+    title: Registration / Info
+    day: 4
+    start: 8.00
+    end: 9.00
+    room: Lecture Hall Corridor
+    colspan: 1
+    class: organization
+  - id: s4_2
+    title: Keynote 2
+    day: 4
+    start: 9.00
+    end: 10.00
+    room: Audimax
+    colspan: 1
+    class: keynote
+  - id: s4_3
+    title: Coffee Break
+    day: 4
+    start: 10.00
+    end: 10.50
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s4_4
+    title: Poster Session 4
+    day: 4
+    start: 10.50
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s4_5
+    title: Lunch Break
+    day: 4
+    start: 12.50
+    end: 13.50
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s4_6
+    title: Poster Session 5
+    day: 4
+    start: 13.50
+    end: 15.00
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s4_7
+    title: Coffee Break
+    day: 4
+    start: 15.00
+    end: 15.50
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s4_8
+    title: Poster Session 6
+    day: 4
+    start: 15.50
+    end: 17.00
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s4_9
+    title: Conference Dinner
+    day: 4
+    start: 19.00
+    end: 22.00
+    room: "Freistädter Brauhaus"
+    colspan: 1
+    class: social
+
+
+# =================================================================================================
+
+
+  - id: s5_1
+    title: Registration / Info
+    day: 5
+    start: 8.00
+    end: 9.00
+    room: Lecture Hall Corridor
+    colspan: 1
+    class: organization
+  - id: s5_2
+    title: Keynote 3
+    day: 5
+    start: 9.00
+    end: 10.00
+    room: Audimax
+    colspan: 1
+    class: keynote
+  - id: s5_3
+    title: Coffee Break
+    day: 5
+    start: 10.00
+    end: 10.50
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s5_4
+    title: Poster Session 7
+    day: 5
+    start: 10.50
+    end: 12.50
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s5_5
+    title: Lunch Break
+    day: 5
+    start: 12.50
+    end: 13.50
+    room: Break Room
+    colspan: 1
+    class: break
+  - id: s5_6
+    title: Poster Session 8
+    day: 5
+    start: 13.50
+    end: 15.00
+    room: "tba"
+    colspan: 1
+    class: session
+  - id: s5_7
+    title: Closing
+    day: 5
+    start: 15.00
+    end: 15.50
+    room: Audimax
+    colspan: 1
+    class: social
