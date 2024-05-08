@@ -7,8 +7,8 @@
     .timetable-tab {
         width: 100%;
         cursor: default;        
-        border-collapse: collapse;
-        border-style: hidden;        
+        /* border-collapse: collapse;
+        border-style: hidden;         */
 
         td,
         tr,
@@ -126,48 +126,19 @@
             background: #D889A8;
         }
 
-        @media screen and (max-width:700px) {
 
-            table,
-            tr,
-            td {
-                padding: 0;
-                border: 1px solid black;
-            }
 
-            table {
-                border: none;
-            }
+    }
 
-            thead {
-                display: none;
-            }
+    @media (max-width:767px) {
 
-            tr {
-                float: left;
-                width: 100%;
-                margin-bottom: 2em;
-            }
-
-            td {
-                float: left;
-                width: 100%;
-                padding: 1em;
-            }
-
-            td::before {
-                content: attr(data-label);
-                word-wrap: break-word;
-                background: #eee;
-                border-right: 2px solid black;
-                width: 20%;
-                float: left;
-                padding: 1em;
-                font-weight: bold;
-                margin: -1em 1em -1em -1em;
-            }
+        /* #timetable .container {
+            max-width: 75%!important;
+        } */
+        .timetable-container {            
+            overflow-y: auto!important;
+            /* margin: 25px; */
         }
-
     }
 </style>
 
