@@ -32,9 +32,7 @@
             vertical-align: text-top;
             margin: 0;
             padding: 1em;    
-            width: 100%;
-            /* background: #999999; */
-
+            width: 100%;            
         }
 
         tbody tr {            
@@ -42,8 +40,7 @@
             border: 1px solid #eeeeee;
         }
 
-        tbody tr:hover .time {            
-            /* background: #5E8036;             */
+        tbody tr:hover .time {                        
             background:#999999;
             cursor: default;
             transition: all .1s ease;
@@ -267,6 +264,7 @@
 
 
 <script>
+    // (0) prepare objects, gather information from jekyll, etc.
     function printMatrix(m) {
         console.log("matrix:");
         for (var i = 0; i < m.length; i++) {
@@ -281,15 +279,11 @@
     matrix = new Array(rows);
     for (var i = 0; i < matrix.length; i++) {
         matrix[i] = new Array(cols).fill(false);
-    }
-    
-    console.log(cols);    
-    printMatrix(matrix);    
+    }    
 
     var timetable = document.getElementById("timetable-tab");
     var daycolumns = document.querySelectorAll("#timetable-tab > thead > tr > th.day");
-    var timerows = document.querySelectorAll("#timetable-tab > tbody > tr");
-    console.log("rows: " + rows + " / " + timerows.length);
+    var timerows = document.querySelectorAll("#timetable-tab > tbody > tr");    
     
     var dayspans = [], spandays = [];
     let curc = 0;
@@ -302,13 +296,8 @@
             curc++;                   
         }        
     }
-    // console.log(dayspans.join(' '));
-    // console.log(spandays.join(' '));
 
-    // console.log("daycolumns: " + daycolumns.length);
-    // console.log("timerows: " + timerows.length);
-
-    // V2
+    // (1) setup allocation matrix (boolean)
     for(let r = 0; r < timerows.length; r++) {
         for(let d = 0; d < daycolumns.length; d++) {
             let day_id = daycolumns[d].getAttribute("id");            
@@ -320,7 +309,6 @@
                 let slot_rowspan = slots[s].getAttribute("rowspan");
                 let classes = slots[s].getAttribute("class");
                 let slot_day = parseInt(classes.split("slot-day-")[1]);
-                // console.log("day: " + slot_day + " colspan/rowspan: " + slot_colspan + "/" + slot_rowspan);
                 
                 let c = 0;
                 for(let i = 0; i < slot_day-1; i++) {
@@ -337,13 +325,13 @@
                         matrix[r+rs][c+cs] = true;
                     }
                 }
-                // if(r == 0) console.log("column start " + c);
             }
         }
     }
 
-    printMatrix(matrix);
+    // printMatrix(matrix);
 
+    // (2) add missing td (for every "false"-item inside the matrix)
     for(let r = 0; r < timerows.length; r++) {
         var lastslot_id = "";
         for(let c = 0; c < cols; c++) {
@@ -371,56 +359,5 @@
             }            
         }
     }
-
-    // V1
-    /*
-    for(let r = 0; r < timerows.length; r++) {
-        // console.log(timerows[r].id);
-        var lastslot_id = "";
-
-        for(let c = 0; c < daycolumns.length; c++) {
-            let day_id = daycolumns[c].getAttribute("id");            
-            let day_span = daycolumns[c].getAttribute("colspan");            
-            let slots = document.querySelectorAll("#" + timerows[r].id + " td.slot-" + day_id);
-
-            // LOGGING:
-            // if(timerows[r].id == "time-9_00") console.log("day_id = " + day_id + " // " + slots.length);
-
-            let spancount = 0;
-            for(let s = 0; s < slots.length; s++) {
-                let slot_span = slots[s].getAttribute("colspan");                
-                spancount += parseInt(slot_span);
-                lastslot_id = slots[s].id;                
-            }
-
-            // LOGGING:
-            // if(timerows[r].id == "time-8_00")
-            // {
-            //     console.log("day_span: " + day_span + " // spancount: " + spancount);
-            //     console.log(day_span-spancount);
-            //     console.log(lastslot_id);
-            // }
-            
-
-            for(let i = 0; i < (day_span-spancount); i++) {
-                let emptytd = document.createElement("td");
-                let rndId = Math.floor(Math.random() * 1000000);
-                let newslot_id = "slot-empty-" + rndId;
-                emptytd.setAttribute("id", newslot_id);                            
-
-                if(lastslot_id != "") {
-                    const lastslot = document.getElementById(lastslot_id);
-                    lastslot.insertAdjacentElement("afterend", emptytd); 
-                } else {
-                    const timetd = document.querySelector("#" + timerows[r].id + ">td:first-child");
-                    timetd.insertAdjacentElement("afterend", emptytd);
-                }
-
-                // if(timerows[r].id == "time-8_00") console.log("insert " + newslot_id + " after " + lastslot_id);
-                lastslot_id = newslot_id;   
-            }
-        }
-    }
-    */
 
 </script>
