@@ -15,7 +15,7 @@ The preliminary timetable for PPSN 2024 is now online! Have a look at [https://p
 
 <!--more-->
 
-The timetable will be updated regularly, according to upcoming program refinements (accepted papers, keynotes, etc.). Naturaly, we'll inform you about major events.
+The timetable is updated regularly, depending on upcoming program developments (accepted papers, keynotes, etc.). We'll inform you of major changes on this website and our other social media channels.
 
 
 [pro]: https://ppsn2024.fh-ooe.at/program/
