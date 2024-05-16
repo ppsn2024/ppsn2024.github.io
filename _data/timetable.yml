@@ -28,7 +28,7 @@ days:
 
 slots:
   - id: s1_1
-    title: Registration / Info
+    title: Registration & Info Desk
     day: d1
     start: "8:00"
     end: "9:00"
@@ -165,7 +165,7 @@ slots:
 
 
   - id: s2_1
-    title: Registration / Info
+    title: Registration & Info Desk
     day: d2
     start: "8:00"
     end: "9:00"
@@ -176,7 +176,7 @@ slots:
     title: Workshop 3
     description: "30 Years of EDAs"
     speaker: "Benjamin Doerr, Concha Bielza, John McCall, and Weijie Zheng"
-    day: d1
+    day: d2
     start: "9:30"
     end: "12:30"
     room: "tba"
@@ -302,7 +302,7 @@ slots:
 
 
   - id: s3_1
-    title: Registration / Info
+    title: Registration & Info Desk
     day: d3
     start: "8:00"
     end: "9:00"
@@ -387,7 +387,7 @@ slots:
 
 
   - id: s4_1
-    title: Registration / Info
+    title: Registration & Info Desk
     day: d4
     start: "8:00"
     end: "9:00"
@@ -464,7 +464,7 @@ slots:
 
 
   - id: s5_1
-    title: Registration / Info
+    title: Registration & Info Desk
     day: d5
     start: "8:00"
     end: "9:00"
