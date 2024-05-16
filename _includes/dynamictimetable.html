@@ -1,0 +1,442 @@
+{% assign days = site.data.timetable.days | sort:"date" %}
+{% assign slots = site.data.timetable.slots | sort:"id" %}
+
+<style>
+
+    #timetable .container {
+        /* max-width: 95%; */
+    }
+
+    .timetable-table {
+        width: 100%;
+        cursor: default;        
+        /* border-collapse: collapse;
+        border-style: hidden;         */
+
+        td,
+        tr,
+        th {
+            border-collapse: collapse;
+            text-align: left;            
+        }
+
+        thead>tr {
+            border-bottom: 5px solid #ffffff;
+        }
+
+        tbody>tr>td:first-child {
+            border-right: 5px solid #ffffff;
+        }
+
+        td>span,
+        th>span {            
+            display: inline-block;            
+            text-align: center;            
+            vertical-align: text-top;
+            margin: 0;
+            padding: 1em;    
+            width: 100%;            
+        }
+
+        tbody tr {            
+            min-height: 50px!important;
+            border: 1px solid #eeeeee;
+        }
+
+        tbody tr:hover .time {                        
+            background:#999999;
+            cursor: default;
+            transition: all .1s ease;
+        }
+
+        th {            
+            background: #ffffff;
+            font-weight: bold;
+        }
+
+        td {
+            background: #ffffff;
+            line-height: 1rem;
+        }
+
+        .day {
+            background: #eeeeee;
+            /* width: 20%; */
+        }
+
+        .time {            
+            background: #eeeeee;
+            width: 5%;
+        }
+
+        .time.blank {
+            background: #ffffff;
+        }
+
+        .slot {
+            background-color: #ffffff;
+            outline: 5px solid white;
+            outline-offset: -5px;
+            transition: all .3s ease;
+            overflow: hidden;
+            filter: brightness(100%);
+        }
+
+        .slot:hover {
+            cursor: default;            
+            filter: brightness(125%);
+        }
+
+        .slot-title {
+            font-weight: bold;
+        }
+
+        .slot-baseinfo {
+            font-size: 0.75em;   
+        }
+
+        .slot-description {            
+            font-size: 0.75em;            
+        }
+
+        .slot-speaker {            
+            font-size: 0.0em;
+            line-height: 0.5em;
+            font-style: italic;
+        }
+
+        .organization {
+            background: #B3965D;
+        }
+
+        .tutorial {
+            background: #71B28D;
+        }
+
+        .workshop {
+            background: #678C9E;
+        }
+
+        .session {
+            background: #5E8036;
+            background: #7EA254
+        }
+
+        .break {
+            background: #BDA5D9;
+        }
+
+        .social {            
+            background: #D27B64;
+        }
+
+        .keynote {
+            background: #D889A8;
+        }
+    }
+</style>
+
+<script>
+    function printMatrix(m) {
+        console.log("matrix:");
+        for (var i = 0; i < m.length; i++) {            
+            console.log(m[i]);
+        }
+        console.log("");
+    }
+
+    function getDatetime(str) {
+        var timeArr = str.split(":");        
+        var newDate = new Date();
+        newDate.setHours(timeArr[0]);
+        newDate.setMinutes(timeArr[1]);
+
+        return newDate;
+    }
+
+    function getTimeStr(date) {
+        var timeHours = date.getHours();
+        var timeMinutes = date.getMinutes();        
+        return (timeHours <= 9 ? "0" : "") + timeHours + ":" + (timeMinutes <= 9 ? "0" : "") + timeMinutes;
+    }
+
+    function getTimeNum(str) {
+        var timeArr = str.split(":");
+        var hour = parseInt(timeArr[0]);
+        var minute = parseInt(timeArr[1]);
+
+        return hour + minute / 60.0;
+    }
+
+    function diffTime(startDate, endDate) {
+        var diff = endDate.getTime() - startDate.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+
+        // If using time pickers with 24 hours format, add the below line get exact hours
+        if (hours < 0)
+            hours = hours + 24;
+
+        return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
+    }
+
+    function getRowspan(startDate, endDate, slotSpan) {
+        var diff = endDate.getTime() - startDate.getTime();
+        var hours = diff / 1000 / 60 / 60;        
+        
+        return Math.floor(hours / slotSpan);
+    }
+
+    function getTimes(startDate, endDate, slotSpan) {
+        var startDatetime = startDate.getTime();
+        var endDatetime = endDate.getTime();
+
+        var diff = endDatetime - startDatetime;
+        var hours = diff / 1000 / 60 / 60;
+        var rowcount = Math.floor(hours / slotSpan);
+        var step = diff / rowcount; // ms        
+
+        var times = [];
+        for(let i = 0; i < rowcount; i++) {
+            var newDate = new Date(startDatetime + step*i);
+            var timeHours = newDate.getHours();
+            var timeMinutes = newDate.getMinutes();
+            var time = {};
+            time.str = (timeHours <= 9 ? "0" : "") + timeHours + ":" + (timeMinutes <= 9 ? "0" : "") + timeMinutes;
+            time.num = newDate.getHours() + newDate.getMinutes() / 60.0;
+            times[i] = time;
+        }
+        
+        return times;
+    }
+
+    function setMatrixField(matrix, rowstart, colstart, rowspan, colspan, id) {
+        var curcol = colstart;
+        for(let r = rowstart; r < (rowstart+rowspan); r++) {
+            for(let c = colstart; c < (colstart+colspan); c++) {
+                if(!matrix[r][c]) matrix[r][c] = id;
+                else colstart++;
+
+                curcol = c;
+            }
+        }
+
+        return curcol + 1;
+    }
+
+    function createTimetable(id, days, slots) {
+        var table = document.createElement("table");
+        table.setAttribute("class", "timetable-table");
+        var thead = document.createElement("thead");
+        var theadrow = document.createElement("tr");
+        var theadblank = document.createElement("th");
+        theadblank.setAttribute("colspan", 1);
+        theadblank.setAttribute("class", "time blank");
+        var tbody = document.createElement("tbody");
+
+        theadrow.appendChild(theadblank);
+        thead.append(theadrow);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        // load and transform day/slot data
+        var slotstartdatetimes = slots.map(x => x.start);
+        var slotenddatetimes = slots.map(x => x.end);    
+
+        var mintime = new Date(Math.min.apply(null, slotstartdatetimes));
+        var maxtime = new Date(Math.max.apply(null, slotenddatetimes));
+        var slotspan = 0.5; // hours
+        var rowcount = getRowspan(mintime, maxtime, slotspan);
+        var colcount = days.map(x => x.columns).reduce((a, b) => a + b, 0);                
+        var times = getTimes(mintime, maxtime, slotspan); 
+
+        // initialize matrix for internal representation
+        var matrix = new Array(rowcount);
+        for(let i = 0; i < rowcount; i++) {
+            matrix[i] = new Array(colcount);
+            for(let j = 0; j < colcount; j++) {
+                matrix[i][j] = "";
+            }
+        }
+
+        // fill matrix
+        var ti = 0, di = 0;
+        for(t of times) {
+            c = 0;
+            for(d of days) {
+                // console.log(slots.map(x => x.startnum).join(" "));
+                var startingslots = slots.filter(x => x.day == d.id && x.startnum == t.num)
+                var cc = c;
+                for(s of startingslots) {
+                    var slotrowspan = getRowspan(s.start, s.end, slotspan);
+                    s.rowspan = slotrowspan;
+                    cc = setMatrixField(matrix, ti, cc, slotrowspan, s.colspan, s.id);                    
+                }
+                c += d.columns;
+                di++;
+            }
+            ti++;
+        }
+        // printMatrix(matrix);
+
+        // setup array for slot checking
+        var slotStatus = [];
+        for(s of slots) {
+            slotStatus[s.id] = false;
+            // console.log(s.id);
+        }
+        
+        // build header
+        for(d of days) {            
+            var theadday = document.createElement("th");
+            theadday.setAttribute("class", "day");
+            theadday.setAttribute("colspan", d.columns);
+            var theaddaycontent = document.createElement("span");            
+            theaddaycontent.innerHTML = d.formatteddate;
+            theadday.appendChild(theaddaycontent);
+            theadrow.appendChild(theadday);
+        }
+        
+        var r = 0;
+        for(t of times) {
+            var timerow = document.createElement("tr");
+            var timetd = document.createElement("td");
+            timetd.setAttribute("class", "time");
+            var timetdcontent = document.createElement("span");
+            timetdcontent.innerHTML = t.str;
+            timetd.appendChild(timetdcontent);
+            timerow.appendChild(timetd);
+            
+            for(let c = 0; c < colcount; c++) {
+                var sid = matrix[r][c];
+                if(!sid) {
+                    var td = document.createElement("td");
+                    td.setAttribute("class", "blank");
+                    td.setAttribute("colspan", 1);
+                    td.setAttribute("rowspan", 1);
+                    // var span = document.createElement("span");
+                    // td.appendChild(span);
+                    timerow.appendChild(td);
+                } else if(slotStatus[sid] === false) {
+                    var slot = slots.find(x => x.id == sid);
+                    var td = document.createElement("td");
+                    td.setAttribute("class", "slot " + slot.class);
+                    td.setAttribute("colspan", slot.colspan);
+                    td.setAttribute("rowspan", slot.rowspan);
+                    var span = document.createElement("span");
+                    span.setAttribute("class", "slot-title");
+                    span.innerHTML = slot.title;
+                    td.appendChild(span);
+
+                    if(slot.start && slot.end && slot.room) {
+                        // td.appendChild(document.createElement("br"));
+                        var spandesc = document.createElement("span");
+                        spandesc.setAttribute("class", "slot-baseinfo");
+                        spandesc.innerHTML = slot.startstr + " - " + slot.endstr + ", " + slot.room;
+                        td.appendChild(spandesc);
+                    }
+                    if(slot.description) {
+                        td.appendChild(document.createElement("br"));
+                        var spandesc = document.createElement("span");
+                        spandesc.setAttribute("class", "slot-description");
+                        spandesc.innerHTML = slot.description;
+                        td.appendChild(spandesc);
+                    }
+                    if(slot.speaker) {
+                        td.appendChild(document.createElement("br"));
+                        var spanspeaker = document.createElement("span");
+                        spanspeaker.setAttribute("class", "slot-speaker");
+                        spanspeaker.innerHTML = slot.speaker;
+                        td.appendChild(spanspeaker);
+                    }
+                    
+                    timerow.appendChild(td);
+                    slotStatus[sid] = true;                    
+                }
+            }
+
+            tbody.appendChild(timerow);
+            r++;
+        }
+
+        return table;
+    }
+    
+
+    // transfer data from yml
+    var days = [];
+    var slots = [];    
+    var ditem = {}, sitem;
+
+    {% for d in days %}
+        ditem = {};
+        ditem.id = "{{ d.id }}";
+        ditem.date = {{ d.date }};
+        ditem.dayofweek = "{{ d.dayofweek }}";
+        ditem.formatteddate = '{{ d.date | date: "%A, %-d %b" }}';
+        ditem.columns = {{ d.columns }};
+        days.push(ditem);                
+    {% endfor %}
+
+    {% for s in slots %}
+        sitem = {};
+        sitem.id = "{{ s.id }}";
+        sitem.title = "{{ s.title }}";
+        sitem.description = "{{ s.description }}";
+        sitem.speaker = "{{ s.speaker }}";
+        sitem.day = "{{ s.day }}";
+        sitem.start = getDatetime("{{ s.start }}");
+        sitem.startstr = getTimeStr(getDatetime("{{ s.start }}"));
+        sitem.startnum = getTimeNum("{{ s.start }}");
+        sitem.end = getDatetime("{{ s.end }}");
+        sitem.endstr = getTimeStr(getDatetime("{{ s.end }}"));
+        sitem.endnum = getTimeNum("{{ s.end }}");
+        sitem.room = "{{ s.room }}";
+        sitem.colspan = {{ s.colspan }};
+        sitem.class = "{{ s.class }}";
+        slots.push(sitem);                  
+    {% endfor %}
+
+</script>
+
+<section id="timetable" class="background-light"></section>
+
+<script>
+
+    function drawTimetable() {
+        var tts = document.getElementById("timetable");
+        tts.innerHTML = "";
+        var ttc = document.createElement("div");
+        ttc.setAttribute("class", "container text-justify");
+        
+
+        var w = window.innerWidth;
+        if(w >= 1200) {
+            var timetable1 = createTimetable("tt1", days, slots);
+            ttc.appendChild(timetable1);
+        } else {
+            var di = 1;
+            for(d of days) {                
+                var selecteddays = [], selectedslots = [];
+                selecteddays.push(d);
+                selectedslots = slots.filter(x => x.day == d.id);
+
+                var timetableN = createTimetable("tt" + di, selecteddays, selectedslots);
+                ttc.appendChild(timetableN);
+                ttc.appendChild(document.createElement("br"));
+
+                di++;
+            }
+        }
+
+        tts.appendChild(ttc);
+    }
+
+    window.addEventListener('resize', function(event) {
+        drawTimetable();
+    }, true);
+
+    drawTimetable();
+
+</script>
