@@ -79,31 +79,7 @@ description: Programm of PPSN 2024 conference
         </div>
         <br />
 
-        <h3>Accepted Papers</h3>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Authors</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for paper in site.data.papers | sort: "Category" %}
-                        <tr>
-                            <td>{{paper.Authors}}</td>
-                            <td>{{paper.Title}}</td>
-                            <td>{{paper.Category}}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
+        <br/>
         <h3>Workshops</h3>
         <div class="row">
             <div class="col-md-12">
@@ -117,7 +93,7 @@ description: Programm of PPSN 2024 conference
                     <tbody>
                         <tr>
                             <td>Benjamin Doerr, Concha Bielza, John McCall, and Weijie Zheng</td>
-                            <td>30 Years of EDAs</td>
+                            <td>30 Years of EDAs (more information at <a href="https://30yearsofedas.github.io/index.html" target="_blank">https://30yearsofedas.github.io/index.html</a>)</td>
                         </tr>
                         <tr>
                             <td>Tinkle Chugh, George De Ath, Paul Kent, Alma Rahat, Kaifeng Yang</td>
@@ -137,6 +113,7 @@ description: Programm of PPSN 2024 conference
             </div>
         </div>
 
+        <br/>
         <h3>Tutorials</h3>
         <div class="row">
             <div class="col-md-12">
@@ -215,6 +192,31 @@ description: Programm of PPSN 2024 conference
                             <td>Anna V. Kononova, Niki van Stein, Diederick Vermetten</td>
                             <td>Structural bias in optimisation algorithms</td>
                         </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <br/>
+        <h3>Accepted Papers</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Authors</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for paper in site.data.papers | sort: "Category" %}
+                        <tr>
+                            <td>{{paper.Authors}}</td>
+                            <td>{{paper.Title}}</td>
+                            <td>{{paper.Category}}</td>
+                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
