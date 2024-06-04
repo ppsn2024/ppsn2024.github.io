@@ -227,7 +227,8 @@ description: Programm of PPSN 2024 conference
                         </tr>
                     </thead>
                     <tbody>
-                        {% for paper in site.data.papers | sort: "Category" %}
+                        {% assign papers = site.data.papers | sort: "Category"%}
+                        {% for paper in papers %}
                         <tr>
                             <td>{{paper.Authors}}</td>
                             <td>{{paper.Title}}</td>
