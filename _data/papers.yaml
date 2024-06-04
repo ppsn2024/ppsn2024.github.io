@@ -1,0 +1,2426 @@
+- ID: 8
+  Title: Population-Based Algorithms Built on Weighted Automata
+  Submitter: Johannes Textor
+  Authors: Gijs Schröder, Inge Wortel, Johannes Textor
+  Corresponding Authors: Gijs Schröder (gijs.schroeder@ru.nl), Johannes Textor (johannes.textor@ru.nl)
+  Keywords: Simulation tools, Bio-inspired approaches, Regular languages, Transducers
+  Category: (Evolutionary) Machine Learning and Neuroevolution
+  Abstract: "Many algorithms in natural computing and computational biology are\n
+    population-based: genetic algorithms evolve candidate solutions for\noptimization
+    problems; artificial immune systems and learning classifier\nsystems maintain
+    populations of rules. Using such algorithms at realistic\nscales (e.g., millions
+    or billions of individuals) is computationally\nexpensive.  Here, we develop a
+    methodology for implementing population-based\nmodels using  weighted finite state
+    machines (WFSMs) with exact rational\nweights.  For populations that can be represented
+    as weighted sets of strings,\nWFSMs can reduce memory use and runtime of population-based
+    algorithms by\norders of magnitude.  We demonstrate the generality of our approach
+    by\nconstructing an immune-inspired anomaly detector for string data and an\n
+    evolutionary algorithm that solves constraint satisfaction problems.  The WFSM\n
+    approach allows repurposing of advanced algorithms developed for natural\nlanguage
+    processing, and should be applicable to other population-based\nalgorithms such
+    as learning classifier systems."
+- ID: 103
+  Title: 'Automatic Brain Tumor Segmentation Using Convolutional Neural Networks:
+    U-Net Framework with PSO-Tuned Hyperparameters'
+  Submitter: Rafał Dreżewski
+  Authors: Rafał Dreżewski, Shoffan Saifullah
+  Corresponding Authors: Rafał Dreżewski (drezew@agh.edu.pl), Shoffan Saifullah (saifulla@agh.edu.pl)
+  Keywords: Brain tumor segmentation, Convolutional neural networks, Particle swarm
+    optimization, Medical image analysis, Deep learning
+  Category: (Evolutionary) Machine Learning and Neuroevolution
+  Abstract: Accurate segmentation of brain tumors from magnetic resonance imaging
+    (MRI) data is imperative for precise diagnosis and treatment planning. Manual
+    segmentation, while accurate, is labor-intensive and subject to human error. In
+    this study, we propose an innovative approach leveraging a modified convolutional
+    neural network (CNN) architecture, CNN-U-Net, optimized using Particle Swarm Optimization
+    (PSO) to tackle this challenge. Our method achieves significantly improved segmentation
+    accuracy through dynamic parameter tuning, particularly adjusting learning rates
+    and dropout rates with PSO. Compared to existing methods, we observe enhancements
+    of up to 4 p.p. in the Dice Similarity Coefficient (DSC) and 2 p.p. in the Jaccard
+    Index (JI). Using skip connections and dropout layers in CNN-U-Net enables the
+    effective capture of intricate features while mitigating overfitting, resulting
+    in robust segmentation performance. Experimental results showcase the superiority
+    of our approach across different tumor classes, including Meningioma, Glioma,
+    and Pituitary, as well as overall, with maximum DSC and JI values of 94.14% and
+    89.02%, respectively. Comparative analysis against established techniques underscores
+    the reliability and robustness of our proposed method. By demonstrating the efficacy
+    of deep learning coupled with metaheuristic optimization in medical image segmentation,
+    our study contributes to advancing the field's understanding and applications.
+    This research lays a foundation for future automated brain tumor segmentation
+    developments, with implications for clinical practice and patient care.
+- ID: 114
+  Title: Learning Discretized Bayesian Networks with GOMEA
+  Submitter: Damy Ha
+  Authors: Damy Ha, Tanja Alderliesten, Peter Bosman
+  Corresponding Authors: Damy Ha (damyha@hotmail.com)
+  Keywords: Bayesian networks, Evolutionary Algorithms, Multi-objective Optimization,
+    Explainable AI, Discretization
+  Category: (Evolutionary) Machine Learning and Neuroevolution
+  Abstract: Bayesian networks model relationships between random variables under uncertainty
+    and can be used to predict the likelihood of events and outcomes while incorporating
+    observed evidence. From an eXplainable AI (XAI) perspective, such models are interesting
+    as they tend to be compact. Moreover, captured relations can be directly inspected
+    by domain experts. In practice, data is often real-valued. Unless assumptions
+    of normality can be made, discretization is often required. The optimal discretization,
+    however, depends on the relations modelled between the variables. This complicates
+    learning Bayesian networks from data. For this reason, most literature focuses
+    on learning conditional dependencies between sets of variables, called structure
+    learning. In this work, we extend an existing state-of-the-art structure learning
+    approach based on the Gene-pool Optimal Mixing Evolutionary Algorithm (GOMEA)
+    to jointly learn variable discretizations. The proposed Discretizing Bayesian
+    Network GOMEA (DBN-GOMEA) obtains similar or better results than the current state-of-the-art
+    when tasked to retrieve randomly generated ground-truth networks. Moreover, leveraging
+    a key strength of evolutionary algorithms, we can straightforwardly perform DBN
+    learning multi-objectively. We show how this enables incorporating expert knowledge
+    in a uniquely insightful fashion, finding multiple DBNs that trade-off complexity,
+    accuracy, and the difference with a pre-determined expert network.
+- ID: 167
+  Title: Pareto-Informed Multi-Objective Neural Architecture Search
+  Submitter: Zefeng Chen
+  Authors: Ganyuan Luo, Hao Li, Yuren Zhou, Zefeng Chen
+  Corresponding Authors: Zefeng Chen (chenzef5@mail.sysu.edu.cn)
+  Keywords: Neural architecture search (NAS), Multi-objective optimization, Surrogate,
+    Pareto set
+  Category: (Evolutionary) Machine Learning and Neuroevolution
+  Abstract: "This paper introduces a novel approach called Pareto-informed multi-objective
+    neural architecture search (PiMO-NAS), which utilizes a solution generator based
+    on Tchebycheff decomposition to explore the multi-objective evaluation function
+    space in one-shot neural architecture search (NAS). We detail the application
+    of PiMO-NAS in two distinct search spaces: Once-For-All (OFA) and AutoFormer,
+    covering both convolutional neural networks and vision transformers. Our method
+    begins with a continuous transformation of these discrete search spaces, followed
+    by an iterative optimization of the Pareto front. We deploy a Gaussian Process
+    surrogate model to estimate the function landscape and a recurrent solution generator,
+    influenced by preference vectors, for exploration. To cope with local optima and
+    maintain diversity, we introduce an adaptive sampler for balanced Pareto front
+    formation. The efficiency of PiMO-NAS is demonstrated through comprehensive experiments
+    within the AutoFormer and OFA-based search spaces. Our approach not only covers
+    the genetic algorithm's search results in these spaces but also excels in the
+    hypervolume metric. Experimental results on the ImageNet dataset show that in
+    the OFA-based search spaces, compared with the NSGANetV2 , the proposed PiMO-NAS
+    was able to achieve similar performance in two-thirds of the number of iterations,
+    thereby saving about 24% of the search time. On the one hand, in the AutoFormer-based
+    search space, we successfully approached a strong baseline formed by a single-objective
+    evolutionary algorithm with restricted parameter quantities, approximating the
+    entire Pareto front in a comparable timeframe."
+- ID: 260
+  Title: A Variable-Length Fuzzy Set Representation for Learning Fuzzy-Classifier
+    Systems
+  Submitter: Hiroki Shiraishi
+  Authors: Hiroki Shiraishi, Rongguang Ye, Hisao Ishibuchi, Masaya Nakata
+  Corresponding Authors: Hiroki Shiraishi (shiraishi-hiroki-yw@ynu.jp)
+  Keywords: Learning Fuzzy-Classifier Systems, Fuzzy-UCS, Supervised Learning, Membership
+    Functions, Variable-Length Fuzzy Set Representation
+  Category: (Evolutionary) Machine Learning and Neuroevolution
+  Abstract: 'This paper introduces a novel Learning Fuzzy-Classifier System (LFCS)
+    that incorporates variable-length fuzzy sets in rule-antecedents to enhance classification
+    accuracy and mitigate overfitting in real-world data scenarios. Traditional LFCSs
+    utilize fixed-length fuzzy sets, which can limit their performance, especially
+    when the rule set size is restricted in high-dimensional input space. The proposed
+    algorithm, Fuzzy-UCSv (i.e., the Fuzzy-UCS classifier system with a variable-length
+    fuzzy set representation), addresses these limitations by allowing the number
+    of fuzzy sets per dimension in rule-antecedents to vary. Fuzzy-UCSv aims to tackle
+    two primary challenges identified in LFCS: the unnecessary optimization of membership
+    functions for irrelevant features and the difficulty in forming optimal classification
+    boundaries with a single membership function per feature. By optimizing the number
+    of membership functions for each rule using an evolutionary algorithm, Fuzzy-UCSv
+    acquires rules that ignore non-contributing features and effectively cover complex
+    input spaces, significantly improving test accuracy without increasing the risk
+    of overfitting. Experimental results demonstrate that Fuzzy-UCSv outperforms conventional
+    Fuzzy-UCS and other machine learning techniques in terms of test accuracy.'
+- ID: 44
+  Title: Emergence of Specialised Collective Behaviors in Evolving Heterogeneous Swarms
+  Submitter: Fuda van Diggelen
+  Authors: Fuda van Diggelen, Matteo de Carlo, Nicolas Cambier, Eliseo Ferrante, A.E.
+    Eiben
+  Corresponding Authors: Fuda van Diggelen (fuda.van.diggelen@vu.nl)
+  Keywords: Swarm robotics, Evolutionary robotics, Heterogeneous swarm
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: "Natural groups of animals, such as swarms of social insects, exhibit
+    astonishing degrees of task specialization, useful to address complex tasks and
+    to survive.\nThis is supported by phenotypic plasticity: individuals sharing the
+    same genotype that is expressed differently for different classes of individuals,
+    each specializing in one task.\nIn this work, we evolve a swarm of simulated robots
+    with phenotypic plasticity to study the emergence of specialized collective behavior
+    during an emergent perception task.\nPhenotypic plasticity is realized in the
+    form of heterogeneity of behavior by dividing the genotype into two components,
+    with one different neural network controller associated to each component. \n
+    The whole genotype, expressing the behavior of the whole group through the two
+    components, is subject to evolution with a single fitness function.\nWe analyse
+    the obtained behaviors and use the insights provided by these results to design
+    an online regulatory mechanism.\nOur experiments show four main findings: 1) Heterogeneity
+    improves both robustness and scalability; 2) The sub-groups evolve distinct emergent
+    behaviors. \n3) The effectiveness of the whole swarm depends on the interaction
+    between the two sub-groups, leading to a more robust performance than with singular
+    sub-group behavior. 4) The online regulatory mechanism enhances overall performance
+    and scalability."
+- ID: 82
+  Title: Identifying Easy Instances to Improve Efficiency of ML Pipelines for Algorithm-Selection
+  Submitter: Quentin Renau
+  Authors: Quentin Renau, Emma Hart
+  Corresponding Authors: Quentin Renau (q.renau@napier.ac.uk)
+  Keywords: Algorithm Selection, Budget Re-Allocation, Black-Box Optimisation
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: "Algorithm-selection (AS) methods are essential in order to obtain the
+    best performance from a portfolio of solvers over large sets of instances. However,
+    many AS methods rely on an analysis phase, e.g. where features are computed by
+    sampling solutions and used as input in a machine-learning model. For AS to be
+    efficient, it is therefore important that this analysis phase is not computationally
+    expensive.  We propose a method for identifying easy instances which can be solved
+    quickly using a generalist solver without any need for algorithm-selection. This
+    saves computational budget associated with feature-computation which can then
+    be used elsewhere in an AS pipeline, e.g., enabling additional function evaluations
+    on hard problems.\nExperiments on the BBOB dataset in two settings (batch and
+    streaming) show that identifying easy instances  results in substantial savings
+    in function evaluations. Re-allocating the saved budget to hard problems provides
+    a substantial gain in performance compared to both the virtual best solver computed
+    with the original budget (VBS), the single best solver (SBS) and a standard algorithm-selector."
+- ID: 106
+  Title: Landscape-aware Automated Algorithm Configuration using Multi-output Mixed
+    Regression and Classification
+  Submitter: Fu Xing Long
+  Authors: Fu Xing Long, Moritz Frenzel, Peter Krause, Markus Gitterle, Thomas Baeck,
+    Niki van Stein
+  Corresponding Authors: Fu Xing Long (fu-xing.long@bmw.de)
+  Keywords: Black-box optimization, Exploratory landscape analysis, Multi-output mixed
+    regression and classification, Dense neural network, Randomly generated functions
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: In landscape-aware algorithm selection problem, the effectiveness of feature-based
+    predictive models strongly depends on the representativeness of training data
+    for practical applications. In this work, we investigate the potential of randomly
+    generated functions (RGF) for the model training, which cover a much more diverse
+    set of optimization problem classes compared to the widely-used black-box optimization
+    benchmarking (BBOB) suite. Correspondingly, we focus on automated algorithm configuration
+    (AAC), that is, selecting the best suited algorithm and fine-tuning its hyperparameters
+    based on the landscape features of problem instances. Precisely, we analyze the
+    performance of dense neural network (NN) models in handling the multi-output mixed
+    regression and classification tasks using different training data sets, such as
+    RGF and many-affine BBOB (MA-BBOB) functions. Based on our results on the BBOB
+    functions in 5d and 20d, near optimal configurations can be identified using the
+    proposed approach, which can most of the time outperform the off-the-shelf default
+    configuration considered by practitioners with limited knowledge about AAC. Furthermore,
+    the predicted configurations are competitive against the single best solver in
+    many cases. Overall, configurations with better performance can be best identified
+    by using NN models trained on a combination of RGF and MA-BBOB functions.
+- ID: 125
+  Title: Feature Encapsulation by Stages in the Regression Domain Using Grammatical
+    Evolution
+  Submitter: Darian Reyes Fernández de Bulnes
+  Authors: Darian Reyes Fernández de Bulnes, Allan de Lima, Edgar Galván, Conor Ryan
+  Corresponding Authors: Darian Reyes Fernández de Bulnes (darian.reyesfernandezdebulnes@ul.ie)
+  Keywords: e-Lexi2, Feature Encapsulation by Stages, Grammatical Evolution, Regression
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: "Feature Encapsulation by Stages (FES) is a recently proposed mechanism
+    that can be implemented in any Evolutionary Computation (EC) metaheuristic. Encapsulation
+    occurs via input space expansion in several stages by adding the best individual
+    so far as an additional input. FES has been shown to perform well in training
+    Boolean problems. This paper extends FES to the regression domain. Grammatical
+    Evolution (GE), a branch of Genetic Programming (GP), supports the implementation
+    of the FES approach by enabling the investigation of performance across various
+    search guides expressed in the grammar. We conduct experiments on both synthetic
+    and real-world symbolic regression problems, including multi-target issues.\n
+    Additionally, we study several FES-based approaches utilising the best selection
+    process for each problem, choosing between tournament, e-Lexicase, and e-Lexi2.
+    Statistical tests on unseen subsets' results show that FES outperforms the standard
+    baseline in all problems. Furthermore, we analyse individual complexity across
+    generations, showing that populations utilising FES consist of simpler individuals,
+    thereby reducing computational costs."
+- ID: 166
+  Title: Evaluating the Robustness of Deep-Learning Algorithm-Selection Models by
+    Evolving Adversarial Instances
+  Submitter: Quentin Renau
+  Authors: Emma Hart, Quentin Renau, Kevin Sim, Mohamad Alissa
+  Corresponding Authors: Emma Hart (e.hart@napier.ac.uk), Quentin Renau (q.renau@napier.ac.uk)
+  Keywords: Combinatorial optimisation, algorithm-selection, deep neural networks,
+    adversarial samples
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: "Deep neural networks (DNN) are increasingly being used to perform algorithm-selection
+    in combinatorial optimisation domains, particularly as they accommodate input
+    representations which avoid designing and calculating features. Mounting evidence
+    from domains that use images as input shows that deep convolutional networks are
+    vulnerable to adversarial samples, in which a small perturbation of an instance
+    can cause the DNN to misclassify. However, it remains unknown as to whether deep
+    recurrent networks (DRN) which have recently been shown promise as algorithm-selectors
+    in the bin-packing domain\nare equally vulnerable. We use an evolutionary algorithm
+    (EA) to find perturbations of instances from two existing benchmarks for online
+    bin packing  that cause trained DRNs to misclassify: adversarial samples are successfully
+    generated from up to  56\\% of the original instances depending on the dataset.\n
+    Analysis of the new misclassified instances sheds light on the `fragility' of
+    some training instances, i.e. instances where it is trivial to find a small perturbation
+    that results in a  misclassification and the factors that influence this.\nFinally,
+    the method generates a large number of new instances misclassified with a wide
+    variation in confidence, providing a rich new source of training data to create
+    more robust models."
+- ID: 207
+  Title: Learned Features vs. Classical ELA on Affine BBOB Functions
+  Submitter: Moritz Seiler
+  Authors: Moritz Seiler, Urban Skvorc, Gjorgjina Cenikj, Carola Doerr, Heike Trautmann
+  Corresponding Authors: Moritz Seiler (moritz.seiler@uni-muenster.de), Urban Skvorc
+    (skvorcurban@gmail.com), Gjorgjina Cenikj (gjorgjina.cenikj@ijs.si), Carola Doerr
+    (carola.doerr@lip6.fr), Heike Trautmann (heike.trautmann@uni-paderborn.de)
+  Keywords: Black-box Optimization, Exploratory Landscape Analysis, Automated Algorithm
+    Selection, Deep Learning
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: Automated algorithm selection has proven to be effective to improve optimization
+    performance by using machine learning to select the best-performing algorithm
+    for the particular problem being solved. However, doing so requires the ability
+    to describe the landscape of optimization problems using numerical features, which
+    is a difficult task. In this work, we analyze the synergies and complementarity
+    of recently proposed feature sets TransOpt and Deep ELA, which are based on deep-learning,
+    and compare them to the commonly used classical ELA features. We analyze the correlation
+    between the feature sets as well as how well one set can predict the other. We
+    show that while the feature sets contain some shared information, each also contains
+    important unique information. Further, we compare and benchmark the different
+    feature sets for the task of automated algorithm selection on the recently proposed
+    affine black-box optimization problems. We find that while classical ElA is the
+    best-performing feature set by itself, using selected features from a combination
+    of all three feature sets provides superior performance, and all three sets individually
+    substantially outperform the single best solver.
+- ID: 220
+  Title: Hybridizing Target- and SHAP-encoded Features for Algorithm Selection in
+    Mixed-variable Black-box Optimization
+  Submitter: Konstantin Dietrich
+  Authors: Konstantin Dietrich, Raphael Patrick Prager, Carola Doerr, Heike Trautmann
+  Corresponding Authors: Konstantin Dietrich (konstantin.dietrich@tu-dresden.de),
+    Raphael Patrick Prager (raphael.prager@uni-muenster.de), Carola Doerr (carola.doerr@lip6.fr),
+    Heike Trautmann (heike.trautmann@uni-paderborn.de)
+  Keywords: Mixed-Variable Optimisation, SHAP, Automated Algorithm Selection
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: Exploratory landscape analysis (ELA) is a well-established tool to characterize
+    optimization problems via numerical features. ELA is used for problem comprehension,
+    algorithm design, and applications such as automated algorithm selection and configuration.
+    Until recently, however, ELA was limited to search spaces with either continuous
+    or discrete variables, neglecting problems with mixed variable types. This gap
+    was addressed in a recent study that uses an approach based on target-encoding
+    to compute exploratory landscape features for mixed-variable problems. In this
+    work, we investigate an alternative encoding scheme based on SHAP values. While
+    these features do not lead to better results in the algorithm selection setting
+    considered in previous work, the two different encoding mechanisms exhibit complementary
+    performance. Combining both feature sets into a hybrid approach outperforms each
+    encoding mechanism individually. Finally, we experiment with two different ways
+    of meta-selecting between the two feature sets. Both approaches are capable of
+    taking advantage of the performance complementarity of the models trained on target-encoded
+    and SHAP-encoded feature sets, respectively.
+- ID: 261
+  Title: 'iMOPSE: a Comprehensive Open Source Library for single- and multi-objective
+    Metaheuristic Optimization'
+  Submitter: Pawel Myszkowski
+  Authors: Konrad Gmyrek, Pawel Myszkowski, Michał Antkiewicz, Łukasz Olech
+  Corresponding Authors: Pawel Myszkowski (pawel.myszkowski@pwr.edu.pl)
+  Keywords: Optimisation, Multi-Objective Optimization, Metaheuristic, NP-hard problems,
+    Software Library
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: The Intelligent Multi-Objective Problem Solving Environment (iMOPSE) is
+    a robust open-source C++ library designed to tackle NP-hard optimization problems.
+    It hosts a suite of multi-objective optimization algorithms, including state-of-the-art
+    NSGA-II, MOEA/D, SPEA2, or NTGA2, complemented by a set of single-objective optimization
+    metaheuristics such as Genetic Algorithms, Differential Evolution, Ant Colony
+    Optimization, Tabu Search, Simulated Annealing, and Particle Swarm Optimization.
+    One of iMOPSE's notable strengths lies in its ability to handle classical NP-hard
+    problems with constraints, ranging from the Traveling Salesman and Traveling Thief
+    to Capacitated Vehicle Routing and Multi-Skill Resource-Constrained Project Scheduling
+    Problems. Its flexible encoding mechanism adeptly manages different problems and
+    facilitates the utilization of specialized operators. Moreover, iMOPSE offers
+    pre-configured problem instances and method setups, along with a suite of tools
+    for data collection, visualization, and analysis, bolstering its efficacy for
+    rigorous research and optimization result interpretation. iMOPSE also provides
+    extensive customization options, enabling researchers to explore and research
+    various optimization methods and scenarios effectively. Its user-friendly interface
+    streamlines setup procedures through intuitive input parameters and configuration
+    files, ensuring accessibility across Windows and Unix-based operating systems.
+    Together, these features position iMOPSE as a comprehensive solution for addressing
+    real-world optimization challenges.
+- ID: 296
+  Title: Towards Understanding the Effectiveness of Automatic Heuristic Design with
+    Large Language Models
+  Submitter: Rui Zhang
+  Authors: Rui Zhang, Fei Liu, Xi Lin, Zhenkun Wang, Zhichao Lu, Qingfu Zhang
+  Corresponding Authors: Zhichao Lu (luzhichaocn@gmail.com)
+  Keywords: Automatic heuristic design, Evolutionary program search, Large language
+    model
+  Category: Automated Algorithm Selection and Configuration
+  Abstract: Automatic heuristic design (AHD) has recently gained considerable attention
+    for its potential to automate the development of effective heuristics. The advent
+    of large language models (LLMs) has opened up new avenues for AHD, with initial
+    efforts focusing on framing AHD as an evolutionary program search (EPS) problem.
+    However, inconsistent benchmark settings, inadequate baselines, and a lack of
+    detailed component analysis have left the necessity of integrating LLMs with search
+    strategies and the true progress achieved by existing LLM-based EPS methods to
+    be inadequately justified. This work seeks to fulfill these research queries by
+    conducting a comprehensive benchmark, comprising four LLM-based EPS methods and
+    four AHD problems across nine LLMs and five independent runs. Our extensive experiments
+    yield meaningful insights, providing empirical grounding for the importance of
+    LLM-based EPS in AHD, while also contributing to the advancement of future EPS
+    algorithmic development. To foster accessibility and reproducibility, we have
+    fully open-sourced our benchmark and corresponding results.
+- ID: 43
+  Title: Performance Comparison of Surrogate-Assisted Evolutionary Algorithms on Computational
+    Fluid Dynamics Problems
+  Submitter: Jakub Kudela
+  Authors: Jakub Kudela, Ladislav Dobrovsky
+  Corresponding Authors: Jakub Kudela (jakub.kudela@vutbr.cz)
+  Keywords: Expensive optimization, evolutionary algorithm, surrogate model, computational
+    fluid dynamics, benchmarking
+  Category: Bayesian- and Surrogate-Assisted Optimization
+  Abstract: Surrogate-assisted evolutionary algorithms (SAEAs) are recently among
+    the most widely studied methods for their capability to solve expensive real-world
+    optimization problems. However, the development of new methods and benchmarking
+    with other techniques still relies almost exclusively on artificially created
+    problems. In this paper, we use two real-world computational fluid dynamics problems
+    to compare the performance of eleven state-of-the-art single-objective SAEAs.
+    We analyze the performance by investigating the quality and robustness of the
+    obtained solutions and the convergence properties of the selected methods. Our
+    findings suggest that the more recently published methods, as well as the techniques
+    that utilize differential evolution as one of their optimization mechanisms, perform
+    significantly better than the other considered methods.
+- ID: 179
+  Title: Balancing Between Time Budgets and Costs in Surrogate-Assisted Evolutionary
+    Algorithms
+  Submitter: Cedric Rodriguez
+  Authors: Cedric Rodriguez, Peter Bosman, Tanja Alderliesten
+  Corresponding Authors: Cedric Rodriguez (c.j.rodriguez@lumc.nl)
+  Keywords: Expensive optimization, Surrogate-Assisted Evolutionary Algorithms, Real-world
+    problems, Biomechanical simulations
+  Category: Bayesian- and Surrogate-Assisted Optimization
+  Abstract: For many real-world multi-objective optimization problems, function evaluations
+    are computationally expensive, resulting in a limited budget of function evaluations
+    that can be performed in practice. To tackle such expensive problems, multi-objective
+    surrogate-assisted evolutionary algorithms (SAEAs) have been introduced. Often,
+    the performance of these EAs is measured after a fixed number of function evaluations
+    (typically several hundreds) and complex surrogate models are found to be the
+    best to use. However, when selecting an SAEA for a real-world problem, the surrogate
+    building time, surrogate evaluation time, function evaluation time, and available
+    optimization time budget should be considered simultaneously. To gain insight
+    into the performance of various surrogate models under different conditions, we
+    evaluate an EA with and without four surrogate models (both complex and simple)
+    for a range of optimization time budgets and function evaluation times while considering
+    the surrogate building and surrogate evaluation times. We use 55 bbob-biobj benchmark
+    problems as well as a real-world problem where the fitness function involves a
+    biomechanical simulation. Our results on both types of problems indicate that
+    a larger hypervolume can be obtained with SAEAs when a function evaluation takes
+    longer than 0.384 seconds. While we confirm that state-of-the-art complex surrogate
+    models are mostly the best choice if up to several hundred function evaluations
+    can be performed, we also observe that simple surrogate models can still outperform
+    non-surrogate-assisted EAs if several thousand function evaluations can be performed.
+- ID: 269
+  Title: An adaptive approach to Bayesian Optimization with switching costs
+  Submitter: Stefan Pricopie
+  Authors: Stefan Pricopie, Richard Allmendinger, Manuel López-Ibáñez, Clyde Fare,
+    Matt Benatan, Joshua Knowles
+  Corresponding Authors: Stefan Pricopie (stefan.pricopie@postgrad.manchester.ac.uk)
+  Keywords: Bayesian Optimization, switching costs, expensive optimization
+  Category: Bayesian- and Surrogate-Assisted Optimization
+  Abstract: We investigate modifications to Bayesian Optimization for a resource-constrained
+    setting of sequential experimental design where changes to certain design variables
+    of the search space incur a switching cost. This models the scenario where there
+    is a trade-off between evaluating more while maintaining the same setup, or switching
+    and restricting the number of possible evaluations due to the incurred cost. We
+    adapt two process-constrained batch algorithms to this sequential problem formulation,
+    and propose two new methods - one cost-aware and one cost-ignorant. We validate
+    and compare the algorithms using a set of 7 scalable test functions in different
+    dimensionalities and switching-cost settings for 30 total configurations. Our
+    proposed cost-aware hyperparameter-free algorithm yields comparable results to
+    tuned process-constrained algorithms in all settings we considered, suggesting
+    some degree of robustness to varying landscape features and cost trade-offs. This
+    method starts to outperform the other algorithms with increasing switching-cost.
+    Our work broadens out from other recent Bayesian Optimization studies in resource-constrained
+    settings that consider a batch setting only. While the contributions of this work
+    are relevant to the general class of resource-constrained problems, they are particularly
+    relevant to problems where adaptability to varying resource availability is of
+    high importance.
+- ID: 274
+  Title: Re-Examining Supervised Dimension Reduction for High-Dimensional Bayesian
+    Optimization
+  Submitter: Quanlin Chen
+  Authors: Quanlin Chen, Jing Huo, Yiyu Chen, Tianyu Ding, Yang Gao
+  Corresponding Authors: Yang Gao (gaoy@nju.edu.cn)
+  Keywords: Bayesian Optimization, High-dimensional
+  Category: Bayesian- and Surrogate-Assisted Optimization
+  Abstract: "Bayesian optimization (BO) has been broadly applied to op-\ntimize expensive-to-evaluate
+    black-box functions, but it is still challeng-\ning to scale BO to high dimensions
+    while retaining sample efficiency.\nA solution in the existing literature is to
+    assume that there exists a\nlower-dimensional structure for objective functions
+    and learn the lower-\ndimensional embedding via supervised dimension reduction.
+    For exam-\nple, BO based on Sliced Inverse Regression (SIR) directly uses SIR
+    to dis-\ncover the intrinsic lower-dimensional structure of the objective function.\n
+    However, the assumption of SIR leads to a mismatch in BO, and maxi-\nmizing a
+    high-dimensional acquisition function also leads to its poor per-\nformance. To
+    reduce the mismatch between dimension reduction methods\nand BO, we introduce
+    Kernel Dimension Reduction (KDR) and mani-\nfold KDR to BO. Furthermore, to improve
+    the performance of acquisition\nfunctions, we construct a constrained low-dimensional
+    acquisition func-\ntion, where the constraint is constructed by the inverse mapping
+    from\nthe central subspace back to the original space using a batch of Gaus-\n
+    sian Process models. We verify empirically that tackling these two issues\nimproves
+    the performance of methods based on supervised dimension\nreduction on a wide
+    range of problems."
+- ID: 294
+  Title: Evolve Cost-aware Acquisition Functions Using Large Language Models
+  Submitter: Yiming Yao
+  Authors: Yiming Yao, Fei Liu, Ji Cheng, Qingfu  Zhang
+  Corresponding Authors: Qingfu  Zhang (qingfu.zhang@cityu.edu.hk)
+  Keywords: Cost-aware Bayesian optimization, Acquisition functions, Large language
+    models, Evolutionary computation
+  Category: Bayesian- and Surrogate-Assisted Optimization
+  Abstract: Many real-world optimization scenarios involve expensive evaluation with
+    unknown and heterogeneous costs. Cost-aware Bayesian optimization stands out as
+    a prominent solution in addressing these challenges. To approach the global optimum
+    within a limited budget in a cost-efficient manner, the design of cost-aware acquisition
+    functions (AFs) becomes a crucial step. However, traditional manual design paradigm
+    typically requires extensive domain knowledge and involves a labor-intensive trial-and-error
+    process. This paper introduces EvolCAF, a novel framework that integrates large
+    language models (LLMs) with evolutionary computation (EC) to automatically design
+    cost-aware AFs. Leveraging the crossover and mutation in the algorithm space,
+    EvolCAF offers a novel design paradigm, significantly reduces the reliance on
+    domain expertise and model training. The designed cost-aware AF maximizes the
+    utilization of available information from historical data, surrogate models and
+    budget details. It introduces novel ideas not previously explored in the existing
+    literature on acquisition function design, allowing for clear interpretations
+    to provide insights into its behavior and decision-making process. In comparison
+    to the well-known EIpu and EI-cool methods designed by human experts, our approach
+    showcases remarkable efficiency and generalization across various tasks, including
+    12 synthetic problems and 3 real-world hyperparameter tuning test sets.
+- ID: 297
+  Title: A Surrogate-assisted Partial Optimization for Expensive Constrained Optimization
+    Problems
+  Submitter: Kei Nishihara
+  Authors: Kei Nishihara, Masaya Nakata
+  Corresponding Authors: Kei Nishihara (nishihara-kei-jv@ynu.jp)
+  Keywords: surrogate-assisted evolutionary algorithm, constrained optimization problem,
+    expensive optimization problem, radial basis function network, differential evolution
+  Category: Bayesian- and Surrogate-Assisted Optimization
+  Abstract: Surrogate-assisted evolutionary algorithms (SAEAs) are gradually gaining
+    attention as a method for solving expensive optimization problems with inequality
+    constraints. Most SAEAs construct a surrogate model for each objective/constraint
+    function and then aggregate approximation functions of constraints to estimate
+    the feasibility of unevaluated solutions. However, because of the aggregation,
+    the differences in the scales among constraints are ignored. Constraints with
+    smaller scales do not benefit from constraint handling techniques as much as larger
+    constraints, while the effects of handling constraints with larger scales scatter
+    to the other many constraints. This results in an inefficient constraint optimization.
+    Accordingly, this work proposes a new SAEA that partially optimizes each objective/constraint,
+    namely surrogate-assisted partial optimization (SAPO). Solutions with better values
+    of objective/constraint are selected from the evaluated solutions as the parent
+    solutions and a focused objective/constraint is independently optimized using
+    surrogate models one by one. Experimental results reveal the superiority of SAPO
+    compared to the state-of-the-art SAEAs on a single-objective optimization problem
+    suite with inequality constraints under an expensive optimization scenario.
+- ID: 38
+  Title: Aggregated Partial Hypervolumes - An Overall Indicator for Performance Evaluation
+    of Multimodal Multiobjective Optimization Methods
+  Submitter: Ali Ahrari
+  Authors: Ali Ahrari, Ruhul Sarker, Carlos Coello Coello
+  Corresponding Authors: Ali Ahrari (a.ahrari@unsw.edu.au)
+  Keywords: Performance indicator, Multimodal multiobjective optimization, Hypervolume
+  Category: Benchmarking and Performance Measures
+  Abstract: Multimodal multiobjective optimization (MMMOO) can be perceived as the
+    combination of multiobjective optimization (MOO) and multimodal optimization (MMO).
+    The performance of an MMMOO method should be thus assessed from both perspectives,
+    leading to the prevalence of dual-metric indicators in existing literature. This
+    study first analyzes the ideal outcome of MMMOO for informed decision-making to
+    determine the prerequisites of a theoretically and practically sound performance
+    indicator. Then, it critically evaluates existing indicators, especially those
+    that intend to measure success from the MMO perspective. Subsequently, it introduces
+    Aggregated Partial Hypervolumes (APHVs) as a novel overall parametric performance
+    indicator that not only addresses the drawbacks of existing ones but also can
+    reflect the relative importance of MMO for the decision-maker. Finally, a few
+    descriptive MMMOO examples are studied to verify that the optimal population according
+    to APHVs matches our understanding of the ideal outcome of MMMOO, taking into
+    account the relative importance of MMO and MOO perspectives.
+- ID: 109
+  Title: Empirical Analysis of the Dynamic Binary Value Problem with IOHprofiler
+  Submitter: Diederick Vermetten
+  Authors: Diederick Vermetten, Johannes Lengler, Dimitri Rusin, Thomas Baeck, Carola
+    Doerr
+  Corresponding Authors: Diederick Vermetten (d.l.vermetten@liacs.leidenuniv.nl),
+    Johannes Lengler (johannes.lengler@inf.ethz.ch), Thomas Baeck (t.h.w.baeck@liacs.leidenuniv.nl),
+    Carola Doerr (carola.doerr@lip6.fr)
+  Keywords: Evolutionary Algorithms, Benchmarks, Dynamic Environment, Dynamic Binary
+    Value
+  Category: Benchmarking and Performance Measures
+  Abstract: "Optimization problems in dynamic environments have recently been the
+    source of several theoretical studies. One of these problems is the monotonic
+    Dynamic Binary Value problem, which theoretically has high discriminatory power
+    between different Genetic Algorithms. \nGiven this theoretical foundation, we
+    integrate several versions of this problem into the IOHprofiler benchmarking framework.
+    Using this integration, we perform several large-scale benchmarking experiments
+    to both recreate theoretical results on moderate dimensional problems and investigate
+    aspects of GA's performance which have not yet been studied theoretically. \n
+    Our results highlight some of the many synergies between theory and benchmarking
+    and offer a platform through which further research into dynamic optimization
+    problems can be performed."
+- ID: 256
+  Title: A Deep Dive into Effects of Structural Bias on CMA-ES Performance along Affine
+    Trajectories
+  Submitter: Sarah L. Thomson
+  Authors: Niki van Stein, Sarah L. Thomson, Anna V. Kononova
+  Corresponding Authors: Niki van Stein (n.van.stein@liacs.leidenuniv.nl), Sarah L.
+    Thomson (s.thomson4@napier.ac.uk)
+  Keywords: Structural bias, benchmarking, performance analysis, algorithm behaviour
+  Category: Benchmarking and Performance Measures
+  Abstract: "To guide the design of better iterative optimisation heuristics, it is
+    imperative to  understand how inherent structural biases within algorithm components
+    affect the performance on a wide variety of search landscapes.\nThis study explores
+    the impact of structural bias in the modular Covariance Matrix Adaptation Evolution
+    Strategy (modCMA), focusing on the roles of various modulars within the algorithm.
+    Through an extensive investigation involving $435\\,456$ configurations of modCMA,
+    we identified key modules that significantly influence structural bias of various
+    classes. Our analysis utilized the Deep-BIAS toolbox for structural bias detection
+    and classification, complemented by SHAP analysis for quantifying module contributions.
+    The performance of these configurations was tested on a sequence of affine-recombined
+    functions, maintaining fixed optimum locations while gradually varying the landscape
+    features. Our results demonstrate an interplay between module-induced structural
+    bias and algorithm performance across different landscape characteristics."
+- ID: 116
+  Title: On the design of diploid memetic algorithms for solving the multidimensional
+    multi-way number partitioning problem
+  Submitter: Petrica Pop Sitar
+  Authors: Petrica Pop Sitar, Cosmin Sabo, Adrian Petrovan, Adrian Petrovan
+  Corresponding Authors: Petrica Pop Sitar (petrica.pop@mi.utcluj.ro)
+  Keywords: genetic algorithms, diploid genetic algorithms, local search, diploid
+    memetic algorithms, number partitioning problem, multidimensional multi-way number
+    partitioning problem
+  Category: Combinatorial Optimization
+  Abstract: "In this paper, we investigate the ability and the performance of a diploid
+    memetic algorithm (DMA) to solve the multidimensional multi-way number partitioning
+    problem (MDMWNPP). \n\tGiven a multiset consisting of a number of vectors of fixed
+    dimension, the MDMWNPP searches for a partition of the vectors into a given number
+    of subsets with the property that the sums of the elements in each subset are
+    equal or almost equal for all the coordinates of the vectors. We design an enhanced
+    genetic algorithm using diploidy to maintain diversity of the population for solving
+    the MDMWNPP. The resulted diploid genetic algorithm (DGA) is hybridized by incorporating
+    a local search procedure to guide the search towards the most promising search
+    regions of the solution space, obtaining a diploid memetic algorithm. We report
+    preliminary computational results on a set of standard benchmark instances from
+    the literature to assess the performance of our developed DMA. The achieved computational
+    results show that our novel solution approach compares favorably against the existing
+    state-of-the-art algorithms. These findings were confirmed by the performed statistical
+    evaluation. Finally, we conduct ablation studies on key algorithmic components
+    to confirm their novelty and effectiveness."
+- ID: 143
+  Title: Sliding Window Bi-Objective Evolutionary Algorithms for Optimizing Chance-Constrained
+    Monotone Submodular Functions
+  Submitter: Frank Neumann
+  Authors: Xiankun Yan, Aneta Neumann, Frank Neumann
+  Corresponding Authors: Xiankun Yan (xiankun.yan@adelaide.edu.au), Aneta Neumann
+    (aneta.neumann@adelaide.edu.au), Frank Neumann (frank.neumann@adelaide.edu.au)
+  Keywords: chance constraints, submodular function, evolutionary algorithms, runtime
+    analysis
+  Category: Combinatorial Optimization
+  Abstract: Variants of the GSEMO algorithm using multi-objective formulations have
+    been successfully analyzed and applied to optimize chance-constrained submodular
+    functions. However, due to the effect of the increasing population size of the
+    GSEMO algorithm considered in these studies from the algorithms, the approach
+    becomes ineffective if the number of trade-offs obtained grows quickly during
+    the optimization run. In this paper, we apply the sliding-selection approach introduced
+    in [20] to the optimization of chance-constrained monotone submodular functions.
+    We theoretically analyze the resulting SW-GSEMO algorithm which successfully limits
+    the population size as a key factor that impacts the runtime and show that this
+    allows it to obtain better runtime guarantees than the best ones currently known
+    for the GSEMO. In our experimental study, we compare the performance of the SW-GSEMO
+    to the GSEMO and NSGA-II on the maximum coverage problem under the chance constraint
+    and show that the SW-GSEMO outperforms the other two approaches in most cases.
+    In order to get additional insights into the optimization behavior of SW-GSEMO,
+    we visualize the selection behavior of SW-GSEMO during its optimization process
+    and show it beats other algorithms to obtain the highest quality of solution in
+    variable instances.
+- ID: 154
+  Title: 'GPGLS: Genetic Programming Guided Local Search for Large-Scale Vehicle Routing
+    Problems'
+  Submitter: SAINING LIU
+  Authors: SAINING LIU, Joao  Guilherme Cavalcanti Costa, Yi Mei, Mengjie Zhang
+  Corresponding Authors: SAINING LIU (saining.liu@vuw.ac.nz), Joao  Guilherme Cavalcanti
+    Costa (joao.cavalcanticosta@gmail.com), Yi Mei (yi.mei@ecs.vuw.ac.nz), Mengjie
+    Zhang (mengjie.zhang@ecs.vuw.ac.nz)
+  Keywords: Large-scale vehicle routing problem · Genetic programming · Guided local
+    search · Utility function.
+  Category: Combinatorial Optimization
+  Abstract: The Vehicle Routing Problem (VRP) is a classical combinatorial optimization
+    problem. In this paper, we focus on Large-Scale VRP (LSVRP), which contains more
+    than 200 customers. In particular, the Knowledge Guided Local Search (KGLS) has
+    shown highly competitive performance for LSVRP, due to the strength of GLS for
+    jumping out of local optima and improved utility functions by taking the edge
+    width into consideration. The newly discovered good or effective utility function
+    used by KGLS suggests that the default utility function used in the traditional
+    GLS is by no means the optimal. However, manually designing better utility function
+    for GLS is very time-consuming and can involve much trial-and-error. To address
+    this issue, we proposed to use Genetic Programming (GP) to automatically design
+    utility functions for GLS. We developed a GP training framework in which an individual
+    stands for a possible utility function for GLS. To evaluate a GP individual, GLS
+    runs on the training instances, where the GP individual is used as the utility
+    function to identify the edges to penalize. We also designed a wide range of terminals
+    to capture all possible important factors for the utility function. The results
+    on the commonly used X dataset demonstrates that GP successfully evolved significantly
+    better GLS algorithms than the state-of-the-art KGLS on a majority of the large-scale
+    X instances. The further analysis also shows the effectiveness of the newly learned
+    GLS utility functions that take into account new factors which are not been considered
+    by GLS and KGLS.
+- ID: 156
+  Title: Generalizing and Unifying Gray-box Optimization Operators
+  Submitter: Francisco Chicano
+  Authors: Francisco Chicano, Darrell Whitey, Gabriela Ochoa, Renato Tinos
+  Corresponding Authors: Francisco Chicano (chicano@uma.es)
+  Keywords: Gray-box optimization, hill climbing, partition crossover, combinatorial
+    optimization, group theory
+  Category: Combinatorial Optimization
+  Abstract: 'Gray-box optimization leverages the information available about the mathematical
+    structure of an optimization problem to design efficient search operators.  Efficient
+    hill climbers and crossover operators have been proposed in the domain of pseudo-Boolean
+    optimization and also in some permutation problems. However, there is no general
+    rule on how to design these efficient operators in different representation domains.
+    This paper proposes a general framework that encompasses all known gray-box operators.
+    The framework is general enough to shed light on the design of new efficient operators
+    for new problems and representation domains. We also unify the proofs of efficiency
+    for gray-box hill climbers and crossovers and show that the mathematical property
+    explaining the speed-up of gray-box crossover operators, also explains the efficient
+    identification of improving moves in gray-box hill climbers. We illustrate the
+    power of the new framework by proposing an efficient hill climber and crossover
+    for two related permutation problems: the Linear Ordering Problem and the Single
+    Machine Total Weighted Tardiness Problem.'
+- ID: 157
+  Title: Ant Colony Optimization for the Dynamic Electric Vehicle Routing Problem
+  Submitter: MARIA N. ANASTASIADOU
+  Authors: MARIA N. ANASTASIADOU, Michalis Mavrovouniotis, Diofantos  Hadjimitsis
+  Corresponding Authors: MARIA N. ANASTASIADOU (maria.anastasiadou@eratosthenes.org.cy),
+    Michalis Mavrovouniotis (michalis.mavrovouniotis@eratosthenes.org.cy), Diofantos  Hadjimitsis
+    (d.hadjimitsis@cut.ac.cy)
+  Keywords: Electric vehicle, Ant colony optimization, Traffic congestion, Dynamic
+    electric vehicle routing, Dynamic optimization
+  Category: Combinatorial Optimization
+  Abstract: Traffic congestion significantly affects the efficiency of electric vehicles
+    (EVs), especially during extended periods of low-speed conditions, which, in this
+    context, will violate battery capacity of the vehicle. This study addresses the
+    dynamic electric vehicle routing problem (DEVRP), focusing on minimizing the impact
+    of traffic congestion. Using the proven adaptation capabilities and behaviors
+    of ant colonies, we applied the ant colony optimization (ACO) approach to improve
+    vehicle performance under dynamic traffic conditions. Specifically, our experimental
+    findings, on a set of benchmark generated test cases, demonstrate the effectiveness
+    of transferring knowledge from previously optimized environments rather than optimizing
+    from ground up. The advantage of ACO in DEVRP highlights the importance of adaptive-learning,
+    knowledge-based, and decision-making in optimizing EV routes, presenting a promising
+    path for future research in intelligent transportation systems.
+- ID: 193
+  Title: Learning a Prior for Monte Carlo Search by Replaying Solutions to Combinatorial
+    Problems
+  Submitter: Tristan Cazenave
+  Authors: Tristan Cazenave
+  Corresponding Authors: Tristan Cazenave (tristan.cazenave@lamsade.dauphine.fr)
+  Keywords: Monte Carlo Search, Latin Square Completion, Kakuro, Inverse RNA Folding,
+    Learning Search Heuristics
+  Category: Combinatorial Optimization
+  Abstract: "Monte Carlo Search gives excellent results in multiple difficult com-\n
+    binatorial problems. Using a prior to perform non uniform playouts during the\n
+    search improves a lot the results compared to uniform playouts. Handmade heuris-\n
+    tics tailored to the combinatorial problem are often used as priors. We propose
+    a\nmethod to automatically compute a prior. It uses statistics on solved problems.\n
+    It is a simple and general method that incurs no computational cost at playout\n
+    time and that brings large performance gains. The method is applied to three\n
+    difficult combinatorial problems: Latin Square Completion, Kakuro, and Inverse\n
+    RNA Folding."
+- ID: 211
+  Title: Dancing to the State of the Art? How Candidate Lists Influence LKH for Solving
+    the Traveling Salesperson Problem
+  Submitter: Jonathan Heins
+  Authors: Jonathan Heins, Lennart Schäpermeier, Pascal Kerschke, Darrell Whitey
+  Corresponding Authors: Jonathan Heins (jonathan.heins@tu-dresden.de), Lennart Schäpermeier
+    (lennart.schaepermeier@tu-dresden.de), Pascal Kerschke (pascal.kerschke@tu-dresden.de),
+    Darrell Whitey (darrell.whitley@gmail.com)
+  Keywords: Traveling Salesperson Problem, Heuristic Search, Problem Hardness, Algorithm
+    Configuration, Benchmarking
+  Category: Combinatorial Optimization
+  Abstract: "Solving the Traveling Salesperson Problem (TSP) remains a persistent
+    challenge, despite its fundamental role in numerous generalized applications in
+    modern contexts. Heuristic solvers address the demand for finding high-quality
+    solutions efficiently. Among these solvers, the Lin-Kernighan-Helsgaun (LKH) heuristic
+    stands out, as it complements the performance of genetic algorithms across a diverse
+    range of problem instances. However, frequent timeouts on challenging instances
+    hinder the practical applicability of the solver. \n\nWithin this work, we investigate
+    a previously overlooked factor contributing to many timeouts: The use of a fixed
+    candidate set based on a tree structure. Our investigations reveal that candidate
+    sets based on Hamiltonian circuits contain more optimal edges. We thus propose
+    to integrate this promising initialization strategy, in the form of POPMUSIC,
+    within an efficient restart version of LKH. As confirmed by our experimental studies,
+    this refined TSP heuristic is much more efficient -- causing fewer timeouts and
+    improving the performance (in terms of penalized average runtime) by an order
+    of magnitude -- and thereby challenges the state of the art in TSP solving."
+- ID: 234
+  Title: Multi-Objective Evolutionary Approaches for the Knapsack Problem with Stochastic
+    Profits
+  Submitter: Frank Neumann
+  Authors: Kokila Perera, Frank Neumann, Aneta Neumann
+  Corresponding Authors: Kokila Perera (kokila.perera@adelaide.edu.au), Frank Neumann
+    (frank.neumann@adelaide.edu.au), Aneta Neumann (aneta.neumann@adelaide.edu.au)
+  Keywords: .nan
+  Category: Combinatorial Optimization
+  Abstract: "Uncertainties in real-world problems impose a challenge in finding reliable
+    solutions. If mishandled, they can lead to suboptimal or infeasible solutions.
+    Chance constraints are a natural way to capture uncertain problem parameters.
+    They model probabilistic constraints involving the stochastic parameters and an
+    upper bound of probability that mimics the confidence level of the solution.\n
+    We focus on a variation of the knapsack problem with stochastic profits to guarantee
+    a certain level of confidence in the profit of the solutions. We present a bi-objective
+    fitness formulation that uses expected profit and standard deviation to capture
+    the chance constraints. This formulation allows for optimising the problem independent
+    of a specific confidence level. We evaluate the proposed fitness formulation using
+    well-known evolutionary algorithms GSEMO, NSGA-II and MOEA/D. Moreover, we introduce
+    a filtering method that improves the quality of the final population by periodically
+    removing solutions from the interim populations based on their confidence level.
+    We evaluate this filtering approach by applying it along with GSEMO. We conduct
+    extensive experiments to show the effectiveness of these approaches using several
+    benchmarks and present a detailed analysis of the results."
+- ID: 276
+  Title: Knowledge-Guided Optimization for Complex Vehicle Routing with 3D Loading
+    Constraints
+  Submitter: Han Zhang
+  Authors: Han Zhang, Qing Li, Xin Yao
+  Corresponding Authors: Han Zhang (zhangh2020@mail.sustech.edu.cn), Xin Yao (xinyao@ln.edu.cn)
+  Keywords: Vehicle routing, Packing, Knowledge-guided optimization
+  Category: Combinatorial Optimization
+  Abstract: 'The split delivery vehicle routing problem with three-dimensional loading
+    constraints (3L-SDVRP) intertwines complex routing and packing challenges. The
+    current study addresses 3L-SDVRP using intelligent optimization algorithms, which
+    iteratively evolve towards optimal solutions. A pivotal aspect of these algorithms
+    is search operators that determine the search direction and the search step size.
+    Effective operators significantly improve algorithmic performance. Traditional
+    operators like swap, shift, and 2-opt fall short in complex scenarios like 3L-SDVRP,
+    mainly due to their limited capacity to leverage domain knowledge. Additionally,
+    the search step size is crucial: smaller steps enhance fine-grained search (exploitation),
+    while larger steps facilitate exploring new areas (exploration). However, optimally
+    balancing these step sizes remains an unresolved issue in 3L-SDVRP. To address
+    this, we introduce an adaptive knowledge-guided insertion (AKI) operator. This
+    innovative operator uses node distribution characteristics for adaptive node insertion,
+    enhancing search abilities through domain knowledge integration and larger step
+    sizes. Integrating AKI with local search framework, we develop an adaptive knowledge-guided
+    search (AKS) algorithm, which effectively balances exploitation and exploration
+    by combining traditional neighbourhood operators for detailed searches with the
+    AKI operator for broader exploration. Our experiments demonstrate that the AKS
+    algorithm significantly outperforms the state-of-the-art method in solving various
+    3L-SDVRP instances.'
+- ID: 56
+  Title: Exploring proprioceptive feedback in the evolution of modular robots
+  Submitter: Babak Hosseinkhani Kargar
+  Authors: Babak Hosseinkhani Kargar, Karine Miras, A.E. Eiben
+  Corresponding Authors: Babak Hosseinkhani Kargar (b.hosseinkhanikargar@vu.nl)
+  Keywords: Evolutionary Robotics, Proprioception, Efficiency
+  Category: Evolvable Hardware and Evolutionary Robotics
+  Abstract: We investigate an evolvable robot system where the body provides proprioceptive
+    sensory signals to the controller (brain) about the positions of the joints. The
+    key aspect we consider is whether all joints should be sensed or if sensing fewer
+    joints would be better. We research this matter based on a test suite of twenty-two
+    robots with various shapes and sizes and implement a system where the controller
+    and the sensory signal system evolve together. Experiments with this system show
+    that the evolved solutions use signals only from a fraction of the joints (25-51%)
+    and perform better than the baseline, where all signals are used. This effect
+    was observed across the majority of the test suite.
+- ID: 16
+  Title: Funnels in Multi-objective Fitness Landscapes
+  Submitter: Gabriela Ochoa
+  Authors: Gabriela Ochoa, Sébastien Verel, Arnaud Liefooghe
+  Corresponding Authors: Gabriela Ochoa (gabriela.ochoa@stir.ac.uk), Sébastien Verel
+    (verel@univ-littoral.fr), Arnaud Liefooghe (arnaud.liefooghe@gmail.com)
+  Keywords: Multi-objective optimisation, landscape analysis, local optima networks,
+    LON, PLOS-net, multi-objective NK landscapes, funnel
+  Category: Fitness Landscape Modeling and Analysis
+  Abstract: 'We propose a characterisation of funnels in multi-objective landscapes
+    using solutions’ ranks (layers of non-dominated solutions). We combine the concept
+    of monotonic sequences from energy landscapes with the recently proposed graph
+    model of multi-objective landscapes: the compressed Pareto local optimal solution
+    network (C-PLOS-net). Using a set of ρmnk-landscapes, we construct and visualise
+    monotonic C-PLOS-nets. We also introduce a set of metrics to characterise the
+    landscapes’ funnel structure, including network metrics and a rank-distance correlation
+    metric. Our findings indicate that these proposed funnel metrics capture the landscape
+    global structure, correlate with benchmark parameters and explain the performance
+    of well-established multi-objective local search and evolutionary algorithms.'
+- ID: 73
+  Title: Contrasting the Landscapes of Feature Selection under Different Machine Learning
+    Models
+  Submitter: Arnaud Liefooghe
+  Authors: Arnaud Liefooghe, Ryoji Tanabe, Sébastien Verel
+  Corresponding Authors: Arnaud Liefooghe (arnaud.liefooghe@gmail.com), Ryoji Tanabe
+    (tanabe-ryoji-sn@ynu.ac.jp), Sébastien Verel (verel@univ-littoral.fr)
+  Keywords: Feature selection, Machine learning, Landscape analysis
+  Category: Fitness Landscape Modeling and Analysis
+  Abstract: Feature selection plays a crucial role in improving the performance of
+    machine learning (ML) models for various prediction tasks and in explaining their
+    recommendations. Feature selection can be defined as an optimization problem whose
+    evaluation function calls on an ML algorithm — a method known as the wrapper approach.
+    While a thorough understanding of the landscape of the feature selection problem
+    might help guide the development of efficient evolutionary algorithms and algorithm
+    selection technologies, only a couple of previous studies have explored this problem’s
+    landscape. In addition, only k-nearest neighbors classification is typically used
+    as an ML model. This paper investigates how the choice of an ML model influences
+    the search difficulty of the feature selection problem. Specifically, we examine
+    the feature selection problem with 14 classification datasets and 6 ML models
+    by means of landscape analysis and local optima networks, and we relate them to
+    the performance of three feature selection algorithms. Our findings have important
+    implications for feature selection problems and algorithms.
+- ID: 110
+  Title: Entropy, Search Trajectories, and Explainability for Frequency Fitness Assignment
+  Submitter: Sarah L. Thomson
+  Authors: Sarah L. Thomson, Gabriela Ochoa, Daan van den Berg, Tianyu Liang, Thomas
+    Weise
+  Corresponding Authors: Sarah L. Thomson (s.thomson4@napier.ac.uk), Gabriela Ochoa
+    (gabriela.ochoa@stir.ac.uk), Daan van den Berg (daan@yamasan.nl), Tianyu Liang
+    (liangty@stu.hfuu.edu.cn), Thomas Weise (tweise@ustc.edu.cn)
+  Keywords: frequency fitness assignment, fitness landscape, quadratic assignment
+    problem
+  Category: Fitness Landscape Modeling and Analysis
+  Abstract: "Local optima are a menace that can trap optimisation pro-\ncesses. Frequency
+    fitness assignment (FFA) is an concept aiming to over-\ncome this problem. It
+    steers the search towards solutions with rare fit-\nness instead of high-quality
+    fitness. FFA-based algorithms have shown\npromise in the literature, but their
+    behaviour is not well understood. We\ntake a first step in this direction by seeking
+    to explain FFA behaviour\nand performance for the first time. In particular, we
+    attempt to un-\nderstand the difference in how FFA-based algorithms navigate the
+    space\nwhen compared with a standard objective-guided algorithm which incor-\n
+    porates diversification: simulated annealing (SA). As a testbed for these\ninvestigations,
+    a set of quadratic assignment problem (QAP) benchmark\ninstances designed to be
+    difficult for metaheuristics is used. A statistical\nanalysis of trajectory behaviours
+    for FFA-based algorithms is conducted.\nAdditionally, we consider and compare
+    the fitness distributions encoun-\ntered by each algorithm, as well their respective
+    proficiency on the prob-\nlems. The findings help to explain FFA performance behaviours,
+    and\nshow that FFA explores more widely and consistently than SA. It is\nhoped
+    that the explanatory approach adopted in this study serves as an\nexample and
+    inspires further similar investigations into how — and why\n— FFA-assisted optimisation
+    works."
+- ID: 127
+  Title: 'Over Sampling Local Optima: Selection and Sampling Bias in Hybrid Genetic
+    Algorithms'
+  Submitter: Darrell Whitey
+  Authors: Darrell Whitey, Gabriela Ochoa, Francisco Chicano
+  Corresponding Authors: Darrell Whitey (darrell.whitley@gmail.com)
+  Keywords: Partition Crossover, Hybrid Genetic Algorithms, Gray-Box Optimization,
+    k-bounded pseudo-Boolean functions
+  Category: Fitness Landscape Modeling and Analysis
+  Abstract: "Partition Crossover induces lattices over subsets of local optima in
+    the search spaces\nof classic combinatorial problems such as MAX-SAT and the Traveling
+    Salesman Problem.\nThis paper explores the interaction between Partition Crossover,
+    the lattices that are produced,\nand various algorithmic decisions.\nFirst, we
+    prove that hard selection such as ``truncation selection'' will make it\nmore
+    difficult to find opportunities to successfully apply Partition Crossover.   \
+    \ \nThis suggests that less aggressive forms of selection could be more productive.\n
+    Second, we consider hybrid genetic algorithms (GAs)\nthat only recombine solutions
+    that are local optima.\nWe prove that hybrid GAs have an inherent bias\nthat makes
+    them more likely to sample other local optima.\nThese two results can inform the
+    design of more effective hybrid evolutionary algorithms."
+- ID: 227
+  Title: 'Regularized Feature Selection Landscapes: An Empirical Study of Multimodality'
+  Submitter: Xavier F. C. Sánchez-Díaz
+  Authors: Xavier F. C. Sánchez-Díaz, Corentin Masson, Ole Jakob Mengshoel
+  Corresponding Authors: Xavier F. C. Sánchez-Díaz (xavier.sanchezdz@ntnu.no), Corentin
+    Masson (camasson@stud.ntnu.no), Ole Jakob Mengshoel (ole.j.mengshoel@ntnu.no)
+  Keywords: Machine Learning, Feature Selection, Regularization, Landscape Analysis,
+    Multimodality, Local Optima Networks, Visualization
+  Category: Fitness Landscape Modeling and Analysis
+  Abstract: The processing of features in data is among the key topics in machine
+    learning. While a broad range of heuristics for feature processing, including
+    feature selection, have been developed and experimented with, less research has
+    been concerned with the underlying fitness landscape. In this paper, we perform
+    a fitness landscape analysis of feature selection, using local optima networks
+    and other methods. We focus on the impact of regularization, an important element
+    of many machine learning methods. Our study using ten datasets and learning of
+    decision trees confirms and adds to previous findings that feature selection landscapes
+    are highly multimodal. It is the first study to focus on the impact of regularization
+    on the landscape induced by feature selection. In the ten datasets studied, we
+    find a high degree of multimodality when there is no regularization, and that
+    the degree of multimodality drops off with increasing regularization.
+- ID: 9
+  Title: Positional Bias Does Not Influence Cartesian Genetic Programming with Crossover
+  Submitter: Henning Cui
+  Authors: Henning Cui, Michael Heider, Jörg Hähner
+  Corresponding Authors: Henning Cui (henning.cui@uni-a.de)
+  Keywords: Cartesian Genetic Programming, CGP, Crossover, Recombination, Positional
+    Bias
+  Category: Genetic Programming
+  Abstract: "The recombination operator plays an important role in many evolutionary
+    algorithms.\nHowever, in Cartesian Genetic Programming (CGP), which is part of
+    Genetic Programming and evolutionary algorithms, the usefulness of crossover is
+    contested.\nInstead, CGP mainly relies on mutation and selection operators for
+    its evolutionary search process.\nTo this day, many researchers focus on trying
+    to explain the effect of recombination algorithms on CGP, or on finding new specialized
+    crossover operators for CGP.\nIn this work, we investigate whether CGP's positional
+    bias actually influences the usefulness of the crossover operator negatively.\n
+    This bias describes a skewed distribution of its active and inactive nodes, which
+    might lead to destructive behaviours of standard recombination operators.\nTo
+    try to answer our hypothesis, we employ a standard CGP implementation and one
+    without the effects of positional bias.\nThey are combined with one of four standard
+    crossover operators, or with no crossover operator.\nAdditionally, two different
+    selection methods are used to configure a CGP variant.\nWe then analyse their
+    performance and convergence behaviour on eight benchmarks taken from the Boolean
+    and symbolic regression domain.\nBy using Bayesian inference, we are able to rank
+    them, and we found that positional bias does not influence CGP with crossover.\n
+    Furthermore, we argue that the current research on CGP with standard crossover
+    operators is incomplete, and CGP with recombination might not negatively impact
+    its evolutionary search process.\nOn the contrary, using CGP with crossover might
+    improve its performance."
+- ID: 15
+  Title: Unit-Aware Genetic Programming for the Development of Empirical Equations
+  Submitter: Julia Reuter
+  Authors: Julia Reuter, Viktor Martinek, Roland Herzog, Sanaz Mostaghim
+  Corresponding Authors: Julia Reuter (julia.reuter@ovgu.de)
+  Keywords: Genetic Programming, Unit-awareness, Physics Constraints
+  Category: Genetic Programming
+  Abstract: When developing empirical equations, domain experts require these to be
+    accurate and adhere to physical laws. Often, constants with unknown units need
+    to be discovered alongside the equations. Traditional unit-aware genetic programming
+    (GP) approaches cannot be used when unknown constants with undetermined units
+    are included. This paper presents a method for dimensional analysis that propagates
+    unknown units as “jokers” and returns the magnitude of unit violations. We propose
+    three methods, namely evolutive culling, a repair mechanism, and a multi-objective
+    approach, to integrate the dimensional analysis in the GP algorithm. Experiments
+    on datasets with ground truth demonstrate comparable performance of evolutive
+    culling and the multi-objective approach to a baseline without dimensional analysis.
+    Extensive analysis of the results on datasets without ground truth reveals that
+    the unit-aware algorithms make only low sacrifices in accuracy, while producing
+    unit-adherent solutions. Overall, we presented a promising novel approach for
+    developing unit-adherent empirical equations.
+- ID: 67
+  Title: Improving the performance of relocation rules for the container relocation
+    problem with the rollout algorithm
+  Submitter: Marko Đurasević
+  Authors: Marko Đurasević, Mateja Đumić, Francisco Javier Gil-Gala, Nikolina Frid,
+    Domagoj Jakobović
+  Corresponding Authors: Marko Đurasević (marko.durasevic@fer.hr)
+  Keywords: Container relocation problem, Relocation rules, Genetic programming, Rollout
+    heuristic
+  Category: Genetic Programming
+  Abstract: "Container relocation problems represent a significant challenge in maritime
+    ports and terminals. \nTo address this challenge, there is a growing demand for
+    innovative and efficient solution methods. \nWhile exact and metaheuristic methods
+    often yield superior results, they require a substantial time to reach good solutions.\n
+    On the other hand, relocation rules (RRs) represent simple yet efficient constructive
+    heuristics. \nNevertheless, RRs suffer from two main issues, they are difficult
+    to design for different problem variants and their performance is quite limited.
+    \nTo tackle the first issue, genetic programming (GP) is commonly used to automatically
+    generate RRs. \nHowever, regarding the second issue, there is no single approach
+    by which their performance can be improved. \nIn this study, we investigate the
+    application of the rollout algorithm in combination with manually and automatically
+    generated RRs to improve their performance. \nThe idea of using the rollout algorithm
+    is to balance between an exhaustive and heuristic search, where RRs are used to
+    determine the most appropriate decision in each step of the rollout algorithm.\n
+    The results demonstrate that with the use of the rollout algorithm it is possible
+    to significantly improve the performance of RRs, albeit with increased execution
+    time.\nNevertheless, even in this case, the method can still solve all the considered
+    problems within seconds, underscoring its effectiveness."
+- ID: 81
+  Title: 'P-Mixup: Improving Generalization Performance of Evolutionary Feature Construction
+    with Pessimistic Vicinal Risk Minimization'
+  Submitter: Hengzhe Zhang
+  Authors: Hengzhe Zhang, Qi Chen, Bing Xue, Mengjie Zhang, Wolfgang Banzhaf
+  Corresponding Authors: Hengzhe Zhang (hengzhe.zhang@ecs.vuw.ac.nz), Qi Chen (qi.chen@ecs.vuw.ac.nz),
+    Bing Xue (bing.xue@ecs.vuw.ac.nz), Mengjie Zhang (mengjie.zhang@ecs.vuw.ac.nz),
+    Wolfgang Banzhaf (banzhafw@cse.msu.edu)
+  Keywords: evolutionary machine learning, symbolic regression, feature construction,
+    vicinal risk minimization, genetic programming
+  Category: Genetic Programming
+  Abstract: Genetic programming (GP)-based feature construction has achieved great
+    success as an automated machine learning technique to improve learning performance.
+    The key challenge in GP-based feature construction is that it is easy to overfit
+    the training data. In supervised learning, unseen data usually lie in the vicinity
+    of the training data and behave similar to the training data. However, a rugged
+    model may make significantly different predictions, thus resulting in poor generalization
+    performance. Here, we propose a pessimistic vicinal risk minimization method to
+    control overfitting in GP-based feature construction. The idea is to minimize
+    the worst-case loss on vicinal examples of training instances, where vicinal examples
+    are synthesized using the an instance-wise mixing method. The experimental results
+    on 58 datasets demonstrate that GP with the proposed overfitting control method
+    clearly outperforms standard GP and seven other overfitting control methods for
+    GP, validating the superiority of using pessimistic vicinal risk minimization
+    to control overfitting in GP for feature construction.
+- ID: 89
+  Title: Symbol Graph Genetic Programming for Symbolic Regression
+  Submitter: jinglu song
+  Authors: jinglu song, Qiang Lu, bozhou tian, jingwen zhang, jake luo, zhiguang wang
+  Corresponding Authors: Qiang Lu (luqiang@cup.edu.cn)
+  Keywords: Symbolic Regression, Semantics, Symbol Graph, Extreme Distribution
+  Category: Genetic Programming
+  Abstract: This paper tackles the challenge of symbolic regression (SR) with a vast
+    mathematical expression space, where the primary difficulty lies in accurately
+    identifying subspaces that are more likely to contain the correct mathematical
+    expressions. Establishing the NP-hard nature of the SR problem, this study introduces
+    a novel approach named Symbol Graph Genetic Programming (SGGP). SGGP begins by
+    constructing a symbol graph to represent the mathematical expression space effectively.
+    It then employs the generalized Pareto distribution based on semantic similarity
+    to assess the likelihood that each edge (subspace) in this graph will yield superior
+    individuals. Guided by these probabilistic evaluations, SGGP strategically samples
+    new individuals in its quest to discover accurate mathematical expressions. Comparative
+    experiments conducted across three different benchmark types demonstrate that
+    SGGP outperforms 21 existing baseline SR methods, achieving greater accuracy and
+    conciseness in the mathematical expressions it generates.
+- ID: 115
+  Title: Simultaneous Model-Based Evolution of Constants and Expression Structure
+    in GP-GOMEA for Symbolic Regression
+  Submitter: Johannes Koch
+  Authors: Johannes Koch, Tanja Alderliesten, Peter Bosman
+  Corresponding Authors: Johannes Koch (johannes@cwi.nl), Tanja Alderliesten (t.alderliesten@lumc.nl),
+    Peter Bosman (peter.bosman@cwi.nl)
+  Keywords: Genetic programming, Constant optimization, Symbolic regression, Model-based
+    evolutionary algorithms
+  Category: Genetic Programming
+  Abstract: Genetic programming (GP) approaches are among the state-of-the-art for
+    symbolic regression, the task of constructing symbolic expressions that fit well
+    with data. To find highly accurate symbolic expressions, both the expression structure
+    and any contained real-valued constants, are important. GP-GOMEA, a modern model-based
+    evolutionary algorithm, is one of the leading algorithms for finding accurate,
+    yet compact expressions. Yet, GP-GOMEA does not perform dedicated constant optimization,
+    but rather uses ephemeral random constants. Hence, the accuracy of GP-GOMEA may
+    well still be improved upon by the incorporation of a constant optimization mechanism.
+    Existing research into mixed discrete-continuous optimization with EAs has shown
+    that a simultaneous and well-integrated approach to optimizing both discrete and
+    continuous parts, leads to the best results on a variety of problems, especially
+    when there are interactions between these parts. In this paper, we therefore propose
+    a novel approach where constants in expressions are optimized at the same time
+    as the expression structure by merging the real-valued variant of GOMEA with GP-GOMEA.
+    The proposed approach is compared to other forms of handling constants in GP-GOMEA,
+    and in the context of other commonly used techniques such as linear scaling, restarts,
+    and constant tuning after GP optimization. Our results indicate that our novel
+    approach generally performs best and confirms the importance of simultaneous constant
+    optimization during evolution.
+- ID: 165
+  Title: Adaptive Sampling of Biomedical Images with Cartesian Genetic Programming
+  Submitter: Yuri Lavinas
+  Authors: Yuri Lavinas, Nathaniel Haut, William Punch, Wolfgang Banzhaf, Sylvain
+    Cussat-Blanc
+  Corresponding Authors: Yuri Lavinas (yclavinas@gmail.com)
+  Keywords: cartesian genetic programming, biomedical data, data sampling, active
+    learning
+  Category: Genetic Programming
+  Abstract: "In this contribution we study how to effectively evolve \nprograms tailored
+    for biomedical image segmentation by using an Active Learning approach in Cartesian
+    Genetic Programming (CGP). \nActive Learning allows to dynamically select training
+    data by identifying the most informative next image to add to the training set.
+    \nWe study how different metrics for selecting images under active learning impact
+    the searchability of CGP. \nOur results show that datasets built during evolution
+    with active learning improve the performance of Cartesian GP substantially. In
+    addition, we found that the choice of the particular metric used for selecting
+    which images to add heavily impacts convergence speed. Our work shows that the
+    right choice of the image selection metric positively impacts the effectiveness
+    of the evolutionary algorithm."
+- ID: 185
+  Title: The Inefficiency of Genetic Programming for Symbolic Regression
+  Submitter: Gabriel Kronberger
+  Authors: Gabriel Kronberger, Fabricio Olivetti de Franca, Harry Desmond, Deaglan
+    Bartlett, Lukas Kammerer
+  Corresponding Authors: Gabriel Kronberger (gabriel.kronberger@fh-hagenberg.at),
+    Fabricio Olivetti de Franca (folivetti@ufabc.edu.br)
+  Keywords: Genetic Programming, Symbolic Regression, Search Space
+  Category: Genetic Programming
+  Abstract: "We analyse the search behaviour of genetic programming for symbolic regression
+    in practically relevant but limited settings, allowing to exhaustively enumerate
+    all solutions. This enables us to quantify the success probability of finding
+    the best possible expressions, and to compare the search efficiency of genetic
+    programming to random search in the space of semantically unique expressions.
+    \nThis analysis is made possible by improved algorithms for equality saturation,
+    which we use to improve an exhaustive symbolic regression algorithm to produce
+    the set of semantically unique expression structures that is orders of magnitude
+    smaller than the SR search space. We compare the efficiency of random search in
+    the set of unique expressions and genetic programming.\nFor our experiments we
+    use two real-world datasets, where symbolic regression has been used to produce
+    well-fitting univariate expressions.\nThe results show that genetic programming
+    in such limited settings explores only a small fraction of all unique expressions,
+    and evaluates expressions repeatedly that are congruent to already visited expressions."
+- ID: 204
+  Title: Decision Tree Based Wrappers for Hearing Loss
+  Submitter: Miguel Rabuge
+  Authors: Miguel Rabuge, Nuno Lourenço
+  Corresponding Authors: Miguel Rabuge (rabuge@dei.uc.pt), Nuno Lourenço (naml@dei.uc.pt)
+  Keywords: Feature Engineering, Grammatical Evolution, Audiology
+  Category: Genetic Programming
+  Abstract: Nowadays, the medical field benefits greatly from data analysis, aiding
+    diagnosis and decisions. Audiology, a medical branch that studies hearing, balance,
+    and associated disorders, faces a significant challenge. The World Health Organization
+    (WHO) predicts that by 2050, 2.5 billion people will suffer from Hearing Loss
+    (HL). To address this, audiology entities are using Machine Learning (ML) models
+    to guide their screening towards people at risk. Feature Engineering (FE) focuses
+    on optimizing data for ML models, with evolutionary methods being effective in
+    feature selection and construction tasks. This work aims to benchmark an evolutionary
+    FE wrapper, using models based on decision trees as proxies. The FEDORA framework
+    is applied to a HL dataset, being able to reduce data dimensionality and statistically
+    maintain baseline performance. Compared to traditional methods, FEDORA demonstrates
+    superior performance, with a maximum accuracy of 76.2%, using 57 features. The
+    framework also generated an individual that achieved 72.8% using a single feature.
+- ID: 223
+  Title: Multi-Modal Adaptive Graph Evolution for Program Synthesis
+  Submitter: Camilo De La Torre
+  Authors: Camilo De La Torre, Yuri Lavinas, Kevin Cortacero, Dennis Wilson, Sylvain
+    Cussat-Blanc
+  Corresponding Authors: Dennis Wilson (dennis.wilson@isae-supaero.fr)
+  Keywords: Genetic programming, Program synthesis, Evolutionary computation, Search
+    Trajectory Networks
+  Category: Genetic Programming
+  Abstract: Program synthesis (PS) constitutes a category of problems where the objective
+    is to automatically produce computer programs that meet specified criteria. Among
+    Genetic Programming algorithms, Cartesian Genetic Programming (CGP) has been successfully
+    used for a variety of function synthesis problems, such as circuit design, pattern
+    analysis, and game playing. These problems are designed to work only on a single
+    data type, for example, boolean values or entire images. CGP cannot directly be
+    applied for problems with multiple data types, which poses a great limitation
+    as more realistic programs should be able to deal with different data types. Mixed-Type
+    CGP (MT-CGP) is the only current extension of CGP which allows for processing
+    different data types. In this work, we present and study Multimodal Adaptive Graph
+    Evolution (MAGE), a multi-chromosome generalization of CGP that groups functions
+    by return type and constrain graph mutation based on node's type coherence. We
+    compare MAGE to Mixed-Type CGP on the Program Synthesis Benchmark Suite, showing
+    that the representation and mutation constraints of MAGE aid in the search of
+    multimodal functions. Using Search Trajectory Networks (STN), we find that MAGE
+    converges faster to local or global minimum compared to MT-CGP and explores the
+    solution space more effectively by creating candidate solutions with lower semantic
+    redundancy.
+- ID: 298
+  Title: Enhancing the Computational Efficiency of Genetic Programming through Alternative
+    Floating-Point Primitives
+  Submitter: Christopher Crary
+  Authors: Christopher Crary, Bogdan Burlacu, Wolfgang Banzhaf
+  Corresponding Authors: Christopher Crary (ccrary@ufl.edu), Bogdan Burlacu (bogdan.burlacu@fh-ooe.at),
+    Wolfgang Banzhaf (banzhafw@msu.edu)
+  Keywords: genetic programming, field-programmable gate arrays, approximate computing,
+    floating-point, symbolic regression
+  Category: Genetic Programming
+  Abstract: Can evolution operate effectively with noisy floating-point function primitives?
+    In this paper, we are motivated by recent work that aims to accelerate genetic
+    programming (GP) through specialized hardware and field-programmable gate arrays
+    (FPGAs), for which it has been shown that additional performance and power/energy
+    benefits could likely be achieved with floating-point function primitives that
+    trade off enhanced computational efficiency for increased error. Although GP is
+    known to be robust in filtering out certain forms of noise (e.g., within input
+    data), it is not immediately clear that less-accurate function primitives would
+    be viable for GP, since GP formulates arbitrary compositions of its primitives,
+    which could potentially compound error to a prohibitive level. In addition, when
+    introducing more complex forms of computation, such as function differentiation
+    and local optimization techniques, it is not readily apparent that using rougher
+    primitive implementations would be tenable. Here, we address both situations by
+    employing the state-of-the-art CPU-based Operon tool on a diverse set of 15 regression
+    problems, and we show that tree-based GP is capable of evolving very similar (and
+    sometimes better) results with alternative high-performance approximations of
+    standard function primitives, while often also allowing for faster CPU runtimes.
+    Most importantly, in the context of specialized hardware, we conclude that our
+    proposed techniques can likely allow for significant speedups over general-purpose
+    computing platforms, as well as improved power/energy efficiency.
+- ID: 62
+  Title: Selection Strategy Based on Proper Pareto Optimality in Evolutionary Multi-Objective
+    Optimization
+  Submitter: Kai Li
+  Authors: Kai Li, Kangnian Lin, Ruihao Zheng, Zhenkun Wang
+  Corresponding Authors: Zhenkun Wang (wangzhenkun90@gmail.com)
+  Keywords: Multi-objective optimization, Dominance resistant solution, Evolutionary
+    algorithm, Proper Pareto optimality
+  Category: Multi-Objective Optimization
+  Abstract: On the multi-objective optimization problems (MOP), the dominance-resistant
+    solution (DRS) refers to the solution that has inferior objective values but is
+    difficult to dominate by other solutions. Prior studies have affirmed that DRSs
+    are prevalent across MOPs and difficult to eliminate, leading to substantial performance
+    deterioration in many multi-objective evolutionary algorithms (MOEAs). In this
+    paper, we propose a metric inspired by proper Pareto optimality and then develop
+    a selection strategy based on this metric (SPP) to mitigate the negative impact
+    of DRSs. Furthermore, we implement SPP on multi-objective evolutionary algorithm
+    based on decomposition (MOEA/D) and call the new algorithm MOEA/D-SPP. Specifically,
+    the algorithm employs the penalty-based boundary intersection method to scalarize
+    the MOP. Subsequently, SPP is integrated into the environmental selection. The
+    strategy measures and sorts a set of solutions such that DRSs can be identified
+    and removed. Finally, weight vectors are adjusted, thereby enhancing the population
+    diversity. In experimental studies, MOEA/D-SPP outperforms five state-of-the-art
+    MOEAs on DRS-MOPs, demonstrating the promising application of SPP.
+- ID: 76
+  Title: Hypervolume gradient subspace approximation
+  Submitter: Kenneth Zhang
+  Authors: Kenneth Zhang, Ke Shang, Oliver Schuetze, Angel Rodriguez-Fernandez
+  Corresponding Authors: Ke Shang (kshang@foxmail.com), Oliver Schuetze (schuetze@cs.cinvestav.mx)
+  Keywords: Multiobjective evolutionary algorithm, Multiobjective optimization, Memetic
+    algorithm, Hypervolume indicator, Hypervolume gradients
+  Category: Multi-Objective Optimization
+  Abstract: "Multiobjective evolutionary algorithms (MOEA) are powerful\noptimizers
+    that are capable of solving black-box multi-objective\noptimization problems (MOP).
+    Due to its stochastic nature, local search\nmethods have been proposed to lead
+    its search directions in the solution\nspace. A relatively recent study has shown
+    methods to leverage local\nhypervolume gradient information to aid MOEAs with
+    faster convergence\nand better qualities of solutions. In this paper, a set-based
+    method\nof estimating the hypervolume gradient without extra function evaluations\n
+    or reliance on Jacobian information is proposed, and the resulting\nlocal operator
+    is integrated with SMS-EMOA to form a powerful steady-state\nMOEA. The proposed
+    algorithm is compared to state-of-the-art\nMOEAs on two- and three- objective
+    benchmark suites, and outperforms\nall other algorithms on all 6 two-objective
+    problems and 12 out of\n17 three-objective problems."
+- ID: 94
+  Title: 'LTR-HSS: A Learning-to-Rank based Framework for Hypervolume Subset Selection'
+  Submitter: Cheng Gong
+  Authors: Cheng Gong, Ping Guo, Hisao Ishibuchi, Qingfu Zhang, Tianye Shu
+  Corresponding Authors: Cheng Gong (chenggong6-c@my.cityu.edu.hk)
+  Keywords: Hypervolume subset selection, Multi-objective optimization, Machine learning
+  Category: Multi-Objective Optimization
+  Abstract: Hypervolume subset selection (HSS) strongly involves in the field of evolutionary
+    multi-objective optimization, such as environmental selection and post-processing
+    for decision-making. The goal of these problems is to find the optimal subset
+    that maximizes the hypervolume from a given candidate solution set. Many methods
+    have been developed to solve or approximately solve different types of HSS problems.
+    However, existing approaches cannot effectively solve HSS problems with a large
+    number of objectives within a short computation time. This drawback directly limits
+    their applicability as a component for developing new EMO algorithms. In this
+    paper, we propose a novel learning-to-rank based framework, named LTR-HSS, for
+    solving the challenging HSS problems with a large number of objectives. The experimental
+    results show that, compared to other state-of-the-art HSS methods, our proposed
+    LTR-HSS requires a shorter computation time to solve HSS problems with large numbers
+    of objectives while achieving superior or competitive hypervolume performance.
+    This demonstrates the potential of our method to be integrated into algorithms
+    for many-objective optimization.
+- ID: 96
+  Title: Three objectives degrade the convergence ability of dominance-based multi-objective
+    evolutionary algorithms
+  Submitter: Cheng Gong
+  Authors: Cheng Gong, Lie Meng Pang, Hisao Ishibuchi, Qingfu Zhang
+  Corresponding Authors: Cheng Gong (chenggong6-c@my.cityu.edu.hk)
+  Keywords: Multi-objective optimization, Pareto dominance-based algorithms, Evolutionary
+    Multi-objective Optimization
+  Category: Multi-Objective Optimization
+  Abstract: In the evolutionary multi-objective optimization (EMO) community, it is
+    well known that the convergence ability of dominance-based multi-objective evolutionary
+    algorithms (MOEAs) is severely deteriorated on many-objective problems with more
+    than three objectives. In this paper, we clearly demonstrate that the convergence
+    ability of NSGA-II deteriorates even in the case of three objectives. Our experimental
+    results on multi-objective knapsack and traveling salesman problems with 2-6 objectives
+    show that NSGA-II starts to deteriorate the quality of the current population
+    after a number of generations even when it is applied to three-objective problems.
+    Surprisingly, NSGA-III also shows a similar performance deterioration. We analyze
+    the search behavior of NSGA-II, NAGA-III, three versions of MOEA/D, and SMS-EMOA.
+    Then, we explain the reason for the performance deterioration of NSGA-II and NSGA-III,
+    which exists in the environmental selection mechanism of each algorithm. Another
+    interesting observation is that NSGA-II has the best or second best performance
+    (next MOEA/D with the weighted sum function) among the examined algorithms on
+    many-objective problems in early generations before it starts to show the performance
+    deterioration.
+- ID: 105
+  Title: 'Many-Objective Cover Problem: Discovering Few Solutions to Cover Many Objectives'
+  Submitter: Yilu LIU
+  Authors: Yilu LIU, Chengyu LU, Xi LIN, Qingfu ZHANG
+  Corresponding Authors: Qingfu ZHANG (qingfu.zhang@cityu.edu.hk)
+  Keywords: Multi-objective optimization, Many-objective optimization, Particle swarm
+    optimization, Clustering
+  Category: Multi-Objective Optimization
+  Abstract: "Many-objective optimization (MaO) is a basic issue in various research
+    areas. Although Pareto optimality is a common criterion for MaO, it may bring
+    many troubles when facing a huge number (e.g., up to 100) of objectives. This
+    paper provides a new perspective on MaO by introducing a many-objective cover
+    problem (MaCP). Given m objectives, MaCP aims to find a solution set with size
+    k (1 < k ≪ m) to cover all objectives (i.e., each objective can be approximately
+    optimized by at least one solution in this set). \nWe prove the NP-hard property
+    of MaCP and develop a clustering-based swarm optimizer (CluSO) with a convergence
+    guarantee to tackle MaCP. Then, we propose a decoupling many-objective test suite
+    (DC-MaTS) with practical significance and use it to evaluate CluSO. Extensive
+    experimental results on various test problems with up to 100 objectives demonstrate
+    both the efficiency and effectiveness of CluSO, while also illustrating that MaCP
+    is a feasible perspective on MaO."
+- ID: 113
+  Title: Solution-based Knowledge Discovery for Multi-objective Optimization
+  Submitter: Clément Legrand
+  Authors: Clément Legrand, Diego Cattaruzza, Laetitia JOURDAN, Marie-Eléonore Kessaci
+  Corresponding Authors: Clément Legrand (clement.legrand4.etu@univ-lille.fr)
+  Keywords: Knowledge Discovery, Multi-objective Optimization, Combinatorial Optimization,
+    Routing Problems
+  Category: Multi-Objective Optimization
+  Abstract: "In the combinatorial optimization field, Knowledge Discovery (KD) mechanisms
+    (e.g., data mining, neural networks) have received increasing interest over the
+    years. KD mechanisms are based upon two main procedures, being the extraction
+    of knowledge from solutions, and the injection of such knowledge into solutions.
+    However, in a multi-objective (MO) context, the simultaneous optimization of many
+    conflicting objectives can lead to the learning of contradictory knowledge. \n
+    We propose to develop a Solution-based KD (SKD) mechanism suited to MO optimization.
+    \nIt is integrated within two existing metaheuristics: the Iterated MO Local Search
+    (IMOLS) and the MO Evolutionary Algorithm based on Decomposition (MOEA/D). \n
+    As a case study, we consider a bi-objective Vehicle Routing Problem with Time
+    Windows (bVRPTW), to define accordingly the problem-dependent knowledge of the
+    SKD mechanism.\nOur experiments show that using the KD mechanism we propose increases
+    the performance of both IMOLS and MOEA/D algorithms."
+- ID: 120
+  Title: Innovization for Route Planning
+  Submitter: Eva Röper
+  Authors: Eva Röper, Jens Weise, Christoph Steup, Sanaz Mostaghim
+  Corresponding Authors: Eva Röper (eva.roeper@ovgu.de), Christoph Steup (steup@ovgu.de),
+    Sanaz Mostaghim (sanaz.mostaghim@ovgu.de)
+  Keywords: Innovization, Time-Dependent Route Planning, Multi-Objective Evolutionary
+    Algorithms
+  Category: Multi-Objective Optimization
+  Abstract: Multi-objective route planning is a prominent but computationally expensive
+    optimisation problem of everyday life. Reusing knowledge from similar route planning
+    problems could enhance the performance and the sustainability of routing algorithms.
+    The goal of this paper is to adapt the concept of innovization to route planning
+    and in this way extract knowledge from Pareto-optimal solutions. To this end,
+    we design a multi-objective evolutionary algorithm for routing and introduce a
+    novel local search for routing problems called Perimeter Mutation Local Search.
+    We evaluate our proposed approach on multi-objective time-dependent routing problems
+    to see what knowledge can be gained and whether this knowledge can improve a multi-objective
+    evolutionary algorithm. Our results show that we can extract knowledge using the
+    introduced innovization for route planning. This knowledge is used to improve
+    a multi-objective evolutionary algorithm by reducing computational effort. With
+    only about 40 % of previously necessary function evaluations, we manage to produce
+    similar optimisation results. This is particularly beneficial for mobile applications
+    with limited available computational resources.
+- ID: 146
+  Title: Evolutionary Multi-Objective Diversity Optimization
+  Submitter: Frank Neumann
+  Authors: Anh Viet Do, Mingyu Guo, Aneta Neumann, Frank Neumann
+  Corresponding Authors: Anh Viet Do (vietanh.do@adelaide.edu.au), Mingyu Guo (mingyu.guo@adelaide.edu.au),
+    Aneta Neumann (aneta.neumann@adelaide.edu.au), Frank Neumann (frank.neumann@adelaide.edu.au)
+  Keywords: Evolutionary Diversity Optimization
+  Category: Multi-Objective Optimization
+  Abstract: Creating diverse sets of high-quality solutions has become an important
+    problem in recent years. Previous works on diverse solutions problems consider
+    solutions' objective quality and diversity where one is regarded as the optimization
+    goal and the other as the constraint. In this paper, we treat this problem as
+    a bi-objective optimization problem, which is to obtain a range of quality-diversity
+    trade-offs. To address this problem, we frame the evolutionary process as evolving
+    a population of populations, and present a suitable general implementation scheme
+    that is compatible with existing evolutionary multi-objective search methods.
+    We realize the scheme in NSGA-II and SPEA2, and test the methods on various instances
+    of maximum coverage, maximum cut and minimum vertex cover problems. The resulting
+    non-dominated populations exhibit rich qualitative features, giving insights into
+    the optimization instances and the quality-diversity trade-offs they induce.
+- ID: 152
+  Title: Forward-Inverse Transfer Multiobjective Optimization
+  Submitter: Tingyang Wei
+  Authors: Tingyang Wei, Abhishek Gupta, Yew-Soon Ong, Puay Siew Tan, Jiao Liu
+  Corresponding Authors: Abhishek Gupta (abhishekgupta@iitgoa.ac.in), Jiao Liu (jiao.liu@ntu.edu.sg)
+  Keywords: Evolutionary algorithms, Multiobjective optimization, Expensive optimization,
+    Inverse models
+  Category: Multi-Objective Optimization
+  Abstract: "We present an evolutionary optimizer incorporating knowledge transfer
+    through forward and inverse surrogate models for solving multiobjective problems,
+    within a stringent computational budget. \nForward knowledge transfer is employed
+    to fully exploit solution-evaluation datasets from related tasks by building forward
+    multitask surrogate models that map points from decision to objective space.\n
+    Inverse knowledge transfer via inverse multitask models makes possible the creation
+    of high-quality solution populations in decision space by mapping back from preferred
+    points in objective space.\nIn contrast to prior work, the proposed method can
+    improve the overall convergence performance to multiple Pareto sets by fully exploiting
+    information available for diverse multiobjective problems. \nEmpirical studies
+    conducted on benchmark and real-world multitask multiobjective optimization problems
+    demonstrate the faster convergence rate and enhanced inverse modeling accuracy
+    of our algorithm compared to state-of-the-art algorithms."
+- ID: 153
+  Title: Near-Tight Runtime Guarantees for Many-Objective Evolutionary Algorithms
+  Submitter: Simon Wietheger
+  Authors: Simon Wietheger, Benjamin Doerr
+  Corresponding Authors: Simon Wietheger (swietheger@ac.tuwien.ac.at), Benjamin Doerr
+    (doerr@lix.polytechnique.fr)
+  Keywords: evolutionary multi-objective optimization, runtime analysis, SEMO, NSGA,
+    theory
+  Category: Multi-Objective Optimization
+  Abstract: "Despite significant progress in the field of mathematical runtime analysis
+    of multi-objective evolutionary algorithms (MOEAs), the performance of MOEAs on
+    discrete many-objective problems is little understood. In particular, the few
+    existing bounds for the SEMO, global SEMO, and SMS-EMOA algorithms on classic
+    benchmarks are all roughly quadratic in the size of the Pareto front.\n\nIn this
+    work, we prove near-tight runtime guarantees for these three algorithms on the
+    four most common benchmark problems OneMinMax, CountingOnesCountingZeros, LeadingOnesTrailingZeros,
+    and OneJumpZeroJump, and this for arbitrary numbers of objectives. Our bounds
+    depend only linearly on the Pareto front size, showing that these MOEAs on these
+    benchmarks cope much better with many objectives than what previous works suggested.
+    Our bounds are tight apart from small polynomial factors in the number of objectives
+    and length of bitstrings. This is the first time that such tight bounds are proven
+    for many-objective uses of these MOEAs. \nFurther, we show that our bounds also
+    transfer to the more practically motivated NSGA-III algorithm."
+- ID: 163
+  Title: Multi-Objective Random Bit Climbers with Weighted Permutation on Large Scale
+    Binary MNK-Landscapes
+  Submitter: Felipe Honjo Ide
+  Authors: Felipe Honjo Ide, Hernan Aguirre, Kiyoshi Tanaka
+  Corresponding Authors: Felipe Honjo Ide (22hs204k@shinshu-u.ac.jp)
+  Keywords: Multi-Objective Optimization, Multi-Objective Bit Climbers, Evolutionary
+    Algorithms, Large Scale Binary Problems, Decision Space Reduction, MNK-Landscapes
+  Category: Multi-Objective Optimization
+  Abstract: Multi-Objective Evolutionary Algorithms have proven to be very effective
+    when solving Multi-Objective Optimization Problems. However, their performance
+    decreases significantly when solving large scale problems, which can have hundreds
+    or thousands of variables. Although several algorithms have been proposed to tackle
+    this problem in the recent years, most of them are designed for continuous problems,
+    and only a few focus on binary ones. In this paper, we propose a modification
+    to multi-objective random one-bit climbers that achieves better performance in
+    large scale binary problems by learning the trend of the values of the decision
+    variables from previously found solutions and applying that information to decide
+    which ones to focus on when executing the bit climb. We present the implemented
+    algorithm, compare its performance to other well known evolutionary algorithms
+    and study some of its properties.
+- ID: 164
+  Title: An Unbounded Archive-Based Inverse Model in Evolutionary Multi-objective
+    Optimization
+  Submitter: Rongguang Ye
+  Authors: Rongguang Ye, Longcan  Chen, Jinyuan Zhang, Hisao Ishibuchi
+  Corresponding Authors: Rongguang Ye (yerg2023@mail.sustech.edu.cn)
+  Keywords: Decision Maker, Inverse Model, Multi-Objective Optimization
+  Category: Multi-Objective Optimization
+  Abstract: Inverse model (IM) is a method for tailoring solutions to decision-makers
+    based on their preferences. Existing approaches are often trained by the final
+    solution set obtained from a multi-objective evolutionary algorithm (MOEA). The
+    final solution set obtained by MOEA usually has a small number of samples. However,
+    model training will perform poorly when there are few samples in the final solution
+    set. To further improve the performance of the model, we propose an unbounded
+    archive-based inverse model (UAIM) to enhance the quality of the trained inverse
+    model. We first create an unbounded archive to collect all non-dominated solutions
+    during the execution of MOEA. Unlike IM, UAIM is trained using all solutions in
+    the archive. Moreover, for a decision maker's preference, an alternative solution
+    from the archive is considered if the suggested solution is inferior to the alternative
+    solution in the archive. UAIM thus may provide more reliable suggested solutions
+    for decision-makers. To better evaluate algorithms, we propose two indicators
+    that can measure the matching degree between the suggested solution and the decision
+    maker's preference. We demonstrate that the proposed UAIM is superior to IM on
+    ten benchmark problems.
+- ID: 171
+  Title: 'Reinvestigating the R2 Indicator: Achieving Pareto Compliance by Integration'
+  Submitter: Lennart Schäpermeier
+  Authors: Lennart Schäpermeier, Pascal Kerschke
+  Corresponding Authors: Lennart Schäpermeier (lennart.schaepermeier@tu-dresden.de),
+    Pascal Kerschke (pascal.kerschke@tu-dresden.de)
+  Keywords: Performance assessment, Multi-objective optimization, R2 indicator, Benchmarking,
+    Utility functions, Pareto compliance
+  Category: Multi-Objective Optimization
+  Abstract: "In multi-objective optimization, set-based quality indicators are a cornerstone
+    of benchmarking and performance assessment. \nThey capture the quality of a set
+    of trade-off solutions by reducing it to a scalar number.\nOne of the most commonly
+    used set-based metrics is the R2 indicator, which describes the expected utility
+    of a solution set to a decision-maker under a distribution of utility functions.\n
+    Typically, this indicator is applied by discretizing this distribution of utility
+    functions, yielding a weakly Pareto-compliant indicator. In consequence, adding
+    a nondominated or dominating solution to a solution set may -- but does not have
+    to -- improve the indicator's value.\n    \nIn this paper, we reinvestigate the
+    R2 indicator under the premise that we have a continuous, uniform distribution
+    of (Tchebycheff) utility functions.\nWe analyze its properties in detail, demonstrating
+    that this continuous variant is indeed Pareto-compliant -- that is, any beneficial
+    solution will improve the metric's value.\nAdditionally, we provide an efficient
+    computational procedure to compute this metric for bi-objective problems in O(N
+    log N). \nAs a result, this work contributes to the state-of-the-art Pareto-compliant
+    unary performance metrics, such as the hypervolume indicator, offering an efficient
+    and promising alternative."
+- ID: 186
+  Title: Influence Maximization in Hypergraphs using Multi-Objective Evolutionary
+    Algorithms
+  Submitter: Giovanni Iacca
+  Authors: Stefano Genetti, Eros Ribaga, Quintino Francesco Lotito, Giovanni Iacca,
+    Elia Cunegatti
+  Corresponding Authors: Giovanni Iacca (giovanni.iacca@unitn.it)
+  Keywords: Influence Maximization, Hypergraphs, Evolutionary Algorithm, Multi-Objective
+    Optimization, Higher-order Networks
+  Category: Multi-Objective Optimization
+  Abstract: The Influence Maximization (IM) problem is a well-known NP-hard combinatorial
+    problem over graphs whose goal is to find the set of nodes in a network that spreads
+    influence at most. Among the various methods for solving the IM problem, evolutionary
+    algorithms (EAs) have been shown to be particularly effective. While the literature
+    on the topic is particularly ample, only a few attempts have been made at solving
+    the IM problem over higher-order networks, namely extensions of standard graphs
+    that can capture interactions that involve more than two nodes. Hypergraphs are
+    a valuable tool for modeling complex interaction networks in various domains;
+    however, they require rethinking of several graph-based problems, including IM.
+    In this work, we propose a multi-objective EA for the IM problem over hypergraphs
+    that leverages smart initialization and hypergraph-aware mutation. While the existing
+    methods rely on greedy or heuristic methods, to our best knowledge this is the
+    first attempt at applying EAs to this problem. Our results over nine real-world
+    datasets and three propagation models, compared with five baseline algorithms,
+    reveal that our method achieves in most cases state-of-the-art results in terms
+    of hypervolume and solution diversity.
+- ID: 190
+  Title: Biased Pareto Optimization for Subset Selection with Dynamic Cost Constraints
+  Submitter: Dan-Xuan Liu
+  Authors: Dan-Xuan Liu, Chao Qian
+  Corresponding Authors: Chao Qian (qianc@nju.edu.cn)
+  Keywords: subset selection, dynamic cost constraints, Pareto optimization, multi-objective
+    evolutionary algorithms
+  Category: Multi-Objective Optimization
+  Abstract: Subset selection with cost constraints aims to select a subset from a
+    ground set to maximize a monotone objective function without exceeding a given
+    budget $B$, which has various applications such as influence maximization and
+    maximum coverage. In real-world scenarios, the budget, representing available
+    resources, may change over time, requiring algorithms quickly adapt their solutions
+    to the new budget. However, in this dynamic environment, previous algorithms either
+    fail to maintain a theoretical guarantee or need a long running time. The SOTA
+    algorithm POMC, is a multi-objective evolutionary algorithm designed for static
+    problems, lacking consideration for dynamic problems. In this paper, we propose
+    BPODC, an enhancement of POMC that incorporates biased selection and warm-up strategies
+    tailored for dynamic environments. We focus on the ability of BPODC to leverage
+    existing computational results while adapting to budget changes. We prove that
+    BPODC can maintain the best known $(\alpha_f/2)(1-e^{-\alpha_f})$-approximation
+    guarantee when the budget changes. Experiments on influence maximization and maximum
+    coverage show that BPODC is capable of adapting more effectively and rapidly to
+    budget changes, utilizing a running time that is less than that of the static
+    greedy algorithm.
+- ID: 201
+  Title: Reaching Pareto Front Shape Invariance with a Continuous Multi-Objective
+    Ant Colony Optimization Algorithm
+  Submitter: Jesús Guillermo Falcón-Cardona
+  Authors: Rodolfo Humberto Tamayo, Jesús Guillermo Falcón-Cardona, Carlos A. Coello
+    Coello
+  Corresponding Authors: Jesús Guillermo Falcón-Cardona (jfalcon@tec.mx)
+  Keywords: Multi-Objective Ant Colony Optimization, Pareto Front Shape Invariance,
+    Continuous Decision Space, Pair-Potential Energy
+  Category: Multi-Objective Optimization
+  Abstract: Generating Pareto Front Approximations with good convergence, uniformity,
+    and spread regardless of the geometry of the Pareto Front remains as an open problem.
+    Many Multi-Objective Evolutionary Algorithms (MOEAs) have been proposed for this
+    aim achieving remarkable results. However, the utilization of Swarm Intelligence
+    algorithms such as Multi-Objective Ant Colony Optimization Algorithms (MOACOs)
+    has been scarcely studied. In this paper, we propose a Geometric-Invariant MOACO$_\mathbb{R}$
+    (GI-MOACO$_\mathbb{R}$) designed to tackle multi-objective optimization problems
+    with a continuous decision space. According to our experimental results, GI-MOACO$_\mathbb{R}$
+    outperforms the existing MOACOs for continuous search spaces and it is competitive
+    with respect to state-of-the-art MOEAs on several test suites with regular and
+    irregular Pareto Front geometries. To the best of the author's knowledge, GI-MOACO$_\mathbb{R}$
+    is the first Pareto-Front-Shape invariant MOACO.
+- ID: 213
+  Title: Scalabale Quantum Approximate Optimiser for Multi-Objective Optimisation
+  Submitter: Zakaria A. DAHI
+  Authors: Zakaria A. DAHI, Francisco Chicano, Gabriel Luque, Enrique Alba, Bilel
+    Derbel
+  Corresponding Authors: Zakaria A. DAHI (abdelmoiz-zakaria.dahi@inria.fr)
+  Keywords: Quantum Computing, Multi-objective Optimisation
+  Category: Multi-Objective Optimization
+  Abstract: Quantum computation uses quantum mechanical principles to reach beyond-classical
+    computational power. This has endless applications, especially in optimisation-problems'
+    solving. Most of today's quantum optimisers, more specifically, Quantum Approximate
+    Optimisation Algorithm (QAOA), were originally designed to solve single-objective
+    problems, although real-life scenarios include generally dealing with multiple
+    ones. Very preliminary literature with design/implementation limitations has been
+    done in this sense. This makes correcting such limitations and expanding the QAOA
+    applicability to multi-objective optimisation an important step towards advancing
+    quantum computation. To do so, this work presents a decomposition-based Multi-Objective
+    QAOA (MO-QAOA) able to solve multi-objective problems. The proposal's design explores
+    QAOA's features considering the error-prone and limited nature of today's quantum
+    computers as well as the costly quantum simulation. This works' contributions
+    stand in designing both, (I) sequential and parallel MO-QAOA, based on (II) weighted-sum
+    and Tchebycheff scalarisation, by (III) exploring the QAOA's parameters' transference.
+    The validation has been done using 2, 3 and 4 objectives problems of several sizes/complexities/types,
+    using up to 2000 slaves/jobs running quantum computer simulators, as well as three
+    IBM 127-qubits' real quantum computers. The results show up to 89% execution-time
+    decrease, which supports the applicability/reliability of the proposal in today's
+    time-constrained and error-prone quantum computers.
+- ID: 236
+  Title: Reliability of Indicator-based Comparison Results of Evolutionary Multi-Objective
+    Algorithms
+  Submitter: Lie Meng Pang
+  Authors: Lie Meng Pang, Hisao Ishibuchi, Yang Nan, Cheng Gong
+  Corresponding Authors: Lie Meng Pang (panglm@sustech.edu.cn), Hisao Ishibuchi (hisao@sustech.edu.cn),
+    Yang Nan (12132350@mail.sustech.edu.cn), Cheng Gong (12150059@mail.sustech.edu.cn)
+  Keywords: Evolutionary multi-objective optimization, performance comparisons, performance
+    indicators, reliability
+  Category: Multi-Objective Optimization
+  Abstract: 'In evolutionary multi-objective optimization (EMO), performance indicators
+    are often used to measure the quality of non-dominated solution sets obtained
+    by EMO algorithms. However, the reliability of the performance indicators has
+    not been well studied. In this paper, we compare the quality of non-dominated
+    solution sets using four performance indicators: hypervolume (HV), inverted generational
+    distance (IGD), inverted generational distance+} (IGD+), and additive epsilon
+    (epsilon+). Our experimental results show that different performance indicators
+    produce similar results when applied to commonly-used benchmark test problems,
+    such as DTLZ1 and DTLZ2. However, for real-world problems, we obtained significantly
+    different comparison results from these indicators. Even when we use the same
+    HV indicator, we obtain significantly different results depending on the reference
+    point specifications. These observations suggest the importance of the choice
+    of an indicator for performance comparison of EMO algorithms on real-world problems.
+    When the HV indicator is used, the choice of a reference point is also important.
+    Moreover, our observations also suggest the necessity of using multiple indicators
+    (including the HV indicator with multiple reference points) to obtain reliable
+    performance comparison results.'
+- ID: 254
+  Title: 'Pareto Landscape: Visualising the Landscape of Multi-Objective Optimisation
+    Problems'
+  Submitter: Miqing Li
+  Authors: Zimin Liang, Zhiji Cui, Miqing Li
+  Corresponding Authors: Miqing Li (m.li.8@bham.ac.uk)
+  Keywords: Multi-objective optimisation, fitness landscape, visualisation, Pareto
+    dominance, benchmark problems
+  Category: Multi-Objective Optimization
+  Abstract: Fitness landscape is a valuable framework to understand optimisation problems.
+    In single-objective optimisation, by displaying fitness landscape in a 3D space
+    with the “height” representing the fitness (objective function value) of solutions,
+    one can easily comprehend a variety of problem characteristics (optimality, multi-modality,
+    level of ruggedness, etc) and spatial features of the search space (basin, ridge,
+    funnel, etc). However, such straightforward visualisation cannot be directly extended
+    to the multi-objective optimisation case in which a solution corresponds to a
+    vector of values on multiple objective functions. In this paper, we make an attempt
+    to address this issue. Instead of objective function values, we use the Pareto
+    dominance relation to stratify solutions, introducing a method we term Pareto
+    landscape for visualising multi-objective problem landscape. We compare Pareto
+    landscape with well-established fitness landscape visualisation methods, including
+    cost landscape, gradient field heatmap and PLOT, and show that Pareto landscape
+    can capture problem characteristics that the other methods cannot do. Lastly,
+    we present the Pareto landscapes of commonly used benchmark problems (ZDT, DTLZ,
+    WFG and BBOB) in the domain, and discuss their features and characteristics.
+- ID: 147
+  Title: Warm Starting of CMA-ES for Contextual Optimization Problems
+  Submitter: Kento Uchida
+  Authors: Yuta Sekino, Kento Uchida, Shinichi Shirakawa
+  Corresponding Authors: Yuta Sekino (sekino-yuta-cs@ynu.jp)
+  Keywords: contextual optimization, warm starting, covariance matrix adaptation evolution
+    strategy, Gaussian process regression, initialization
+  Category: Numerical Optimization
+  Abstract: Several practical applications of evolutionary computation possess objective
+    functions that receive the design variables and externally given parameters. Such
+    problems are called contextual optimization problems and require finding the optimal
+    solutions corresponding to the given context vectors. Existing contextual optimization
+    methods train a policy model to predict the optimal solution from context vectors.
+    However, their performance is limited due to the model's representation ability.
+    On the other hand, warm starting methods have been used to initialize the evolutionary
+    algorithms on the given problem using the optimization results on similar problems.
+    Because the warm starting methods do not consider the context vectors, the performance
+    of warm starting can be improved on contextual optimization problems. In this
+    paper, we propose the covariance matrix adaptation evolution strategy with contextual
+    warm-starting (CMA-ES-CWS) to efficiently optimize the contextual optimization
+    problem with a given context vector. The CMA-ES-CWS utilizes optimization results
+    for past context vectors to train the multivariate Gaussian process regression.
+    Then, the CMA-ES-CWS performs warm starting for a given context vector by initializing
+    the search distribution using the posterior distribution of the Gaussian process
+    regression. The numerical simulation shows that the CMA-ES-CWS outperforms the
+    existing contextual optimization and warm starting methods.
+- ID: 176
+  Title: A Potential Potential Function for a Variable-Metric Evolution Strategy
+  Submitter: Stephan Frank
+  Authors: Stephan Frank, Tobias Glasmachers
+  Corresponding Authors: Stephan Frank (stephan.frank@ini.rub.de)
+  Keywords: drift analysis, (1+1)-CMA-ES, convergence analysis
+  Category: Numerical Optimization
+  Abstract: "This paper works towards an analysis of a variable-metric\nevolution
+    strategy by means of drift analysis. Drift analysis has been\neffective for proving
+    convergence and analyzing the runtime of a sim-\nple (1+1)-ES. We make a first
+    step towards including covariance ma-\ntrix adaptation (CMA). To this end, we
+    develop a novel class of poten-\ntial functions for the (1+1)-CMA-ES optimizing
+    two-dimensional convex\nquadratic functions. We leverage invariances to efficiently
+    sample a rep-\nresentative space of states. We use simulations to gain an empirical
+    es-\ntimate of the expected minimal drift induced by the candidate potential\n
+    function and to tune potential function parameters. Our results indicate\nthat
+    the tuned potential function is negative and uniformly bounded\naway from zero,
+    which yields linear convergence."
+- ID: 200
+  Title: CMA-ES for Discrete and Mixed-Variable Optimization on Sets of Points
+  Submitter: Kento Uchida
+  Authors: Kento Uchida, Ryoki Hamano, Masahiro Nomura, Shota Saito, Shinichi Shirakawa
+  Corresponding Authors: Kento Uchida (uchida-kento-fz@ynu.ac.jp)
+  Keywords: CMA-ES, discrete optimization, mixed-variable optimization, adaptation
+  Category: Numerical Optimization
+  Abstract: Discrete and mixed-variable optimization problems have appeared in several
+    real-world applications. Most of the research on mixed-variable optimization considers
+    a mixture of integer and continuous variables, and several integer handlings have
+    been developed to inherit the optimization performance of the continuous optimization
+    methods to mixed-integer optimization. In some applications, acceptable solutions
+    are given by selecting possible points in the disjoint subspaces. This paper focuses
+    on the optimization on sets of points and proposes an optimization method by extending
+    the covariance matrix adaptation evolution strategy (CMA-ES), termed the CMA-ES
+    on sets of points (CMA-ES-SoP). The CMA-ES-SoP incorporates margin correction
+    that maintains the generation probability of neighboring points to prevent premature
+    convergence to a specific non-optimal point, which is an effective integer-handling
+    technique for CMA-ES. In addition, because margin correction with a fixed margin
+    value tends to increase the marginal probabilities for a portion of neighboring
+    points more than necessary, the CMA-ES-SoP updates the target margin value adaptively
+    to make the average of the marginal probabilities close to a predefined target
+    probability. Numerical simulations demonstrated that the CMA-ES-SoP successfully
+    optimized the optimization problems on sets of points, whereas the naive CMA-ES
+    failed to optimize them due to premature convergence.
+- ID: 266
+  Title: Natural Gradient Interpretation of Rank-One Update in CMA-ES
+  Submitter: Ryoki Hamano
+  Authors: Ryoki Hamano, Shinichi Shirakawa, Masahiro Nomura
+  Corresponding Authors: Ryoki Hamano (hamano_ryoki_xa@cyberagent.co.jp)
+  Keywords: Covariance Matrix Adaptation Evolution Strategy, Natural Gradient, Information
+    Geometric Optimization
+  Category: Numerical Optimization
+  Abstract: The covariance matrix adaptation evolution strategy (CMA-ES) is a stochastic
+    search algorithm using a multivariate normal distribution for continuous black-box
+    optimization. In addition to strong empirical results, part of the CMA-ES can
+    be described by a stochastic natural gradient method and can be derived from information
+    geometric optimization (IGO) framework. However, there are some components of
+    the CMA-ES, such as the rank-one update, for which the theoretical understanding
+    is limited. While the rank-one update makes the covariance matrix to increase
+    the likelihood of generating a solution in the direction of the evolution path,
+    this idea has been difficult to formulate and interpret as a natural gradient
+    method unlike the rank-$\mu$ update. In this work, we provide a new interpretation
+    of the rank-one update in the CMA-ES from the perspective of the natural gradient
+    with prior distribution. First, we propose maximum a posteriori IGO (MAP-IGO),
+    which is the IGO framework extended to incorporate a prior distribution. Then,
+    we derive the rank-one update from the MAP-IGO by setting the prior distribution
+    based on the idea that the promising mean vector should exist in the direction
+    of the evolution path. Moreover, the newly derived rank-one update is extensible,
+    where an additional term appears in the update for the mean vector. We empirically
+    investigate the properties of the additional term using various benchmark functions.
+- ID: 300
+  Title: Avoiding Redundant Restarts in Multimodal Global Optimization
+  Submitter: Diederick Vermetten
+  Authors: Jacob de Nobel, Diederick Vermetten, Anna Kononova, Ofer Shir, Thomas Baeck
+  Corresponding Authors: Jacob de Nobel (nobeljpde1@liacs.leidenuniv.nl), Diederick
+    Vermetten (d.l.vermetten@liacs.leidenuniv.nl), Anna Kononova (anna.kononova@gmail.com),
+    Ofer Shir (ofersh@telhai.ac.il), Thomas Baeck (t.h.w.baeck@liacs.leidenuniv.nl)
+  Keywords: numerical optimization, multimodal landscapes, CMA-ES
+  Category: Numerical Optimization
+  Abstract: Naive restarts of global optimization solvers when operating on multimodal
+    search landscapes may resemble the Coupon's Collector Problem, with a potential
+    to waste significant function evaluations budget on revisiting the same basins
+    of attractions. In this paper we assess the degree to which such `duplicate restarts'
+    occur on standard multimodal benchmark functions, which defines the redundancy
+    potential of each particular landscape. We then propose a repelling mechanism
+    to avoid such wasted restarts with the CMA-ES, and investigate its efficacy on
+    test-cases with high redundancy potential, when compared to the standard restart
+    mechanism.
+- ID: 226
+  Title: 'LBIC-CMA: Two simple modifications of CMA-ES to handle mixed-integer problems'
+  Submitter: Tristan Marty
+  Authors: Tristan Marty, Nikolaus Hansen, Anne Auger, Yann Semet, Sébastien Héron
+  Corresponding Authors: Tristan Marty (tristan.marty@inria.fr)
+  Keywords: mixed-integer optimization, CMA-ES, Evolution Strategies
+  Category: Other
+  Abstract: "We present LBIC-CMA, a variant of CMA-ES to handle\nmixed-integer problems.
+    The algorithm uses two simple mechanisms to\nhandle integer variables: setting
+    a lower bound on the variance of integer\nvariables and centering integer variable
+    values to their domain middle.\nAfter presenting the algorithm, we evaluate the
+    different variants ensu-\ning from these modifications on the BBOB mixed-integer
+    testbed and\ncompare the performance of the different variants with the recently
+    in-\ntroduced CMA-ES with margin."
+- ID: 99
+  Title: Improving continuous Monte Carlo Tree Search for identifying parameters in
+    hybrid Gene Regulatory Networks
+  Submitter: Romain Michelucci
+  Authors: Romain Michelucci, Denis Pallez, Tristan Cazenave, Jean-Paul Comet
+  Corresponding Authors: Romain Michelucci (rmichelucci@i3s.unice.fr)
+  Keywords: MCTS, continuous GRAVE, constraints-based selective policy, action decomposition,
+    chronotherapy, hybrid GRNs
+  Category: Real-World Applications
+  Abstract: 'Monte-Carlo Tree Search (MCTS) is largely responsible for the improvement
+    not only of many computer games, including Go and General Game Playing (GPP),
+    but also of real-world continuous Markov decision process problems. MCTS initially
+    uses the Upper Confidence bounds applied to Trees (UCT), but the Rapid Action
+    Value Estimation (RAVE) heuristic has rapidly taken over in the discrete and continuous
+    domains. Recently, generalized RAVE (GRAVE) outperformed such heuristics in the
+    discrete domain. This paper is concerned with extending the GRAVE heuristic to
+    continuous action and state spaces (cGRAVE). To enhance its performance, we suggest
+    an action decomposition strategy to break down multidimensional actions into multiple
+    unidimensional actions, and we propose a selective policy based on constraints
+    that bias the playouts and select promising actions in the search tree. The approach
+    is experimentally validated on a real-world biological problem: the goal is to
+    identify the continuous parameters of gene regulatory networks (GRNs).'
+- ID: 126
+  Title: 'Satellite Resource Scheduling:  Compaction Strategies for Genetic Algorithm
+    Schedulers'
+  Submitter: Darrell Whitey
+  Authors: Darrell Whitey, Ozeas Quevedo De Carvalho, Mark Roberts, Vivant Shetty,
+    Piyabutra Jampathom
+  Corresponding Authors: Darrell Whitey (darrell.whitley@gmail.com)
+  Keywords: Satellite Scheduling, Genetic Algorithm Schedulers, Permutation Representations
+  Category: Real-World Applications
+  Abstract: "The United States Naval Research Laboratory is currently using permutation-based
+    genetic algorithms for large-scale satellite resource scheduling. \nThis is a
+    real-world, deployed application.  The permutations must be mapped to a Gantt
+    chart representing the final schedule. How this mapping is done can have a significant
+    impact on the ability of the search algorithm to discover high-quality solutions.
+    We present new work that uses compaction strategies in combination with genetic
+    algorithms to construct less fragmented schedules. A schedule with ``fewer holes\"\
+    \ should also translate into better resource utilization. We show that this is
+    indeed the case. This work is impactful because this strategy can be used to improve
+    all genetic algorithms schedulers."
+- ID: 140
+  Title: Attacker-Defender Strategy Optimization Using Multi-objective Competitive
+    Co-evolution
+  Submitter: Ritam Guha
+  Authors: Ritam Guha, Ryan  Mckendrick, Bradley Feest, Kalyanmoy Deb
+  Corresponding Authors: Ritam Guha (guharita@msu.edu)
+  Keywords: Attacker-defender system, Competitive co-evolution, Decision- making,
+    Multi-objective games, Multi-agent systems
+  Category: Real-World Applications
+  Abstract: "Attacker-defender strategy optimization deals with optimizing and deciding
+    on different tactics used by two independent entities working in tandem. Unlike
+    in standard optimization problems, a complete solution of the entire two-agent
+    problem consists of strategies of both agents and evaluation of a solution requires
+    precise information of both strategies. For this reason, a co-evolutionary optimization
+    framework is proposed in this paper to keep two co-evolving populations interacting
+    with each other in tandem to reach their optimal strategies. While co-evolutionary
+    algorithms have been proposed in the past, multi-objective co-evolutionary problems
+    make the optimization task more complex, resulting in a set of Pareto-optimal
+    strategies for each entity. In this paper, we apply a multi-objective competitive
+    co-evolutionary optimization algorithm to a real-world wargame strategy optimization
+    problem. The proposed co-evolutionary algorithm is used to find trade-off sets
+    of competitive wargame strategies for both entities and an interesting post-optimization
+    decision-making procedure is also proposed to\nchoose preferred strategies for
+    each entity in tandem, leading to a stable or a cycle of sequential strategies.
+    To the best of our knowledge, this paper marks one of the first-ever applications
+    of multi-objective, competitive, co-evolutionary optimization approaches to a
+    real-world wargame scenario, revealing their impact and importance in practice."
+- ID: 212
+  Title: On the Multi-Objective Optimization of Wind Farm Cable Layouts with regard
+    to Cost and Robustness
+  Submitter: Lee A. Christie
+  Authors: Lee A. Christie, Atakan Sahin, Akinola Ogunsemi, John A. W. McCall, Alexandru-Ciprian
+    Zavoianu
+  Corresponding Authors: Lee A. Christie (l.a.christie@rgu.ac.uk), Atakan Sahin (a.sahin@rgu.ac.uk),
+    Akinola Ogunsemi (a.ogunsemi1@rgu.ac.uk), John A. W. McCall (j.mccall@rgu.ac.uk),
+    Alexandru-Ciprian Zavoianu (c.zavoianu@rgu.ac.uk)
+  Keywords: topology optimization, network robustness, offshore wind farm, inter-array
+    cabling, optimal trade-offs, planarity constraints
+  Category: Real-World Applications
+  Abstract: Offshore wind farms (OWFs) have emerged as a vital component in the transition
+    to renewable energy, essential for countries like the United Kingdom with abundant
+    shallow coastal waters suitable for wind energy exploitation. As net-zero emissions
+    targets propel investments in renewables, OWFs present unique engineering challenges,
+    notably in the design of cost-effective and efficient infrastructural networks
+    such as layout and electrical system optimization. Diverging from the previous
+    approaches in electrical system optimization for OWFs, this paper introduces network
+    robustness as a pivotal metric in design evaluations, differently from traditional
+    reliability evaluation focused studies. By designing approximate solutions to
+    the capacitated minimum spanning tree (CMST) using an approach grounded in a radial
+    space partitioning strategy, the application of the Non-dominated Sorting Genetic
+    Algorithm II (NSGA-II), and a bespoke domain-specific mutation operator, we present
+    a multi-objective exploration of the cost-robustness trade-off. To demonstrate
+    the effectiveness of our approach and its ability to offer decision makers valuable
+    insight on cable layout designs, we apply it to a real-world case study that considers
+    the Anholt OWF. The obtained results indicate the ability of our approach to discover
+    sets of high-quality solutions, underscoring its potential to enhance the strategic
+    development of robust and economically viable OWF networks.
+- ID: 221
+  Title: 'EvoVec: Evolutionary Image Vectorization with Adaptive Curve Number and
+    Color Gradients'
+  Submitter: Egor Bazhenov
+  Authors: Egor Bazhenov, Ivan Jarsky, Sergey Muravyov, Valeria Efimova
+  Corresponding Authors: Egor Bazhenov (tujh.bazhenov.kbn00@mail.ru), Ivan Jarsky
+    (ivanjarsky@niuitmo.ru), Valeria Efimova (valeryefimova@gmail.com)
+  Keywords: Image vectorization, Evolutionary algorithm, Machine learning, Vector
+    graphics
+  Category: Real-World Applications
+  Abstract: "Vector and raster graphics are the two main types of 2D images used in
+    computer graphics. \nRaster graphics are images made up of pixels (dots); vector
+    images are created using mathematical objects such as lines, curves, and shapes.\n
+    The main advantage of vector graphics is that it can be scaled without loss of
+    quality, which is useful for advertising, design, frontend development, and other
+    fields of application. \nAt the moment, the issue of vectorization (conversion
+    from raster to vector graphics) has not been fully resolved. \nThere are two main
+    approaches: deterministic algorithms and machine learning-based algorithms. \n
+    Both of these types are not able to work with a color gradient and have other
+    disadvantages, such as artifacts for deterministic algorithms, and extremely long
+    working time and predefined curve number for machine learning-based algorithms.
+    \nTo solve the problems of existing solutions, we propose an evolutionary algorithm
+    for image vectorization.\nIts main idea is to iteratively improve vector images
+    using mutations and crossover.\nThe proposed algorithm does not require any parameters
+    other than the original image and can process color gradients. \nThe results of
+    comparison with existing solutions show that our algorithm qualitatively and quickly
+    vectorize images. \nParticularly, our approach outperforms others in terms of
+    pixel-by-pixel MSE by 15%.\nThe implementation is publicly available https://github.com/EgorBa/EvoVec-Evolutionary-Image-Vectorization."
+- ID: 230
+  Title: Evolution-based Feature Selection for Predicting Dissolved Oxygen Concentrations
+    in Lakes
+  Submitter: Runlong Yu
+  Authors: Runlong Yu, Robert Ladwig, Xiang Xu, Peijun Zhu, Paul Hanson, Yiqun Xie,
+    Xiaowei Jia
+  Corresponding Authors: Runlong Yu (ruy59@pitt.edu), Xiaowei Jia (xiaowei@pitt.edu)
+  Keywords: Ecosystem modeling, Adaptive learning, Feature selection
+  Category: Real-World Applications
+  Abstract: "Accurate prediction of dissolved oxygen (DO) concentrations in lakes
+    requires a comprehensive study of phenological patterns across ecosystems, highlighting
+    the need for precise selection of interactions amongst external factors and internal
+    physical–chemical–biological variables. \n\tAs evolutionary algorithms (EAs) have
+    shown promise for complex selection problems, this paper presents a new EA, namely
+    \\textsl{Multi-Population Evolutionary Search (MPES)}, to extract sophisticated
+    phenological patterns. MPES allows models within every population to evolve adaptively,
+    selecting relevant feature interactions for different lake types and tasks. These
+    models are not only capable of undergoing crossover and mutation mechanisms within
+    intra-populations but also, albeit infrequently, engage in inter-population crossover.
+    \n\tWe have tested the performance of MPES  in predicting daily DO concentrations
+    across a wide range of lakes in the Midwest, USA. Our findings demonstrate that
+    MPES not only produces accurate predictions with few observed labels but also,
+    through gene maps of models, reveals sophisticated phenological patterns of different
+    lake types."
+- ID: 233
+  Title: Using Evolutionary Algorithms for the search of 16-variable Weight-Wise Perfectly
+    Balanced Boolean Functions with high Non-Linearity
+  Submitter: Adriana Lara López
+  Authors: Sara Mandujano, Adriana Lara López, Juan Carlos Ku Cauich
+  Corresponding Authors: Adriana Lara López (alaral@ipn.mx)
+  Keywords: evolutionary algorithms, Boolean functions, cryptography
+  Category: Real-World Applications
+  Abstract: "New methods to construct adequate boolean functions for use in cryptography
+    have\nhad to evolve in accordance with the requirements of continually proposed
+    cryptosystems. Among\nthe desired properties in boolean functions are balancedness,
+    high non-linearity, algebraic immunity,\nand resilience, all of which contribute
+    to making the cryptosystem more resistant to various\nattacks. In 2016, the FLIP
+    steam-cipher was proposed [16], which requires weight-wise perfectly\nbalanced
+    boolean functions. As the field of cryptography evolves, so does the need for
+    new methods\nof constructing boolean functions. [7,15]. Our research contributes
+    to this ongoing exploration. Evolutionary algorithms are among the explored approaches;
+    however, much of the work has focused\non 8-variable functions. In this investigation,
+    we revisit the investigation in [14] and apply it to\nthe search for 16-variable
+    WPB boolean functions. Our investigation yielded promising results. We\nfound
+    16 variable WPB boolean functions with weight-wise non-linearities that surpassed
+    previous\nachievements. This marks a significant advancement in the exploration
+    of EAs’ potential in\ncryptography."
+- ID: 277
+  Title: Discovering Rotation Symmetric Self-dual Bent Functions with Evolutionary
+    Algorithms
+  Submitter: Stjepan Picek
+  Authors: Claude Carlet, Marko Đurasević, Domagoj Jakobovic, Stjepan Picek
+  Corresponding Authors: Marko Đurasević (marko.durasevic@fer.hr), Domagoj Jakobovic
+    (domagoj.jakobovic@fer.hr), Stjepan Picek (picek.stjepan@gmail.com)
+  Keywords: Boolean functions, rotation symmetric functions, self-dual bent functions
+  Category: Real-World Applications
+  Abstract: "Bent Boolean functions are interesting mathematical objects with diverse
+    real-world applications. Besides looking at the whole class of bent functions,
+    one could also consider subclasses like rotation symmetric bent functions or (anti)-self-dual
+    bent functions. Such classes are naturally smaller, making it easier to enumerate
+    functions inside the class.\n\nIn this work, we consider a novel problem of evolving
+    rotation symmetric (anti)-self-dual bent functions. We consider two solution encodings
+    and a number of evolutionary algorithms. We successfully find rotation symmetric
+    (anti)-self-dual functions for several Boolean function sizes, which are the first
+    known examples of such functions. We hope this work will open a new research direction
+    that will result in finding more such functions for larger dimensions, as well
+    as algebraic constructions that will be valid for infinite Boolean function sizes."
+- ID: 123
+  Title: Self-Adjusting Evolutionary Algorithms Are Slow on Multimodal Landscapes
+  Submitter: Konstantin Sturm
+  Authors: Konstantin Sturm, Johannes Lengler
+  Corresponding Authors: Konstantin Sturm (konstantin.sturm@inf.ethz.ch), Johannes
+    Lengler (johannes.lengler@inf.ethz.ch)
+  Keywords: evolutionary algorithm, comma selection, parameter control, population
+    size, one-fifth rule, fixed-target, runtime analysis
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "The one-fifth rule and its generalizations are a classical parameter
+    control mechanism in discrete domains. They have also been transferred to control
+    the offspring population size of the $(1, \\lambda)$-EA. This has been shown to
+    work very well for hill-climbing, and combined with a restart mechanism it was
+    recently shown by Hevia Fajardo and Sudholt to improve performance on the multi-modal
+    problem Cliff drastically. \n\nIn this work we show that the positive results
+    do not extend to other types of local optima. On the distorted OneMax benchmark,
+    the self-adjusting $(1, \\lambda)$-EA is slowed down just as elitist algorithms
+    because self-adaptation prevents the algorithm from escaping from local optima.
+    This makes the self-adaptive algorithm considerably worse than good static parameter
+    choices, which do allow to escape from local optima efficiently. We show this
+    theoretically and complement the result with empirical runtime results."
+- ID: 142
+  Title: Runtime Analysis of Evolutionary Diversity Optimization on the Multi-objective
+    (LeadingOnes, TrailingZeros) Problem
+  Submitter: Frank Neumann
+  Authors: Antipov Denis, Aneta Neumann, Frank Neumann, Andrew Sutton
+  Corresponding Authors: Antipov Denis (antipovden@yandex.ru), Aneta Neumann (aneta.neumann@adelaide.edu.au),
+    Frank Neumann (frank.neumann@adelaide.edu.au), Andrew Sutton (amsutton@d.umn.edu)
+  Keywords: Diversity optimization, Multi-objective optimization, Theory, Runtime
+    analysis
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "The diversity optimization is the class of optimization problems, in
+    which we aim at finding a diverse set of good solutions. One of the frequently
+    used approaches to solve such problems is to use evolutionary algorithms which
+    evolve a desired diverse population. This approach is called evolutionary diversity
+    optimization (EDO).\n\nIn this paper, we analyse EDO on a 3-objective function
+    LOTZ$_k$, which is a modification of the 2-objective benchmark function (LeadingOnes,
+    TrailingZeros). We prove that the GSEMO computes a set of all Pareto-optimal solutions
+    in $O(kn^3)$ expected iterations. We also analyze the runtime of the GSEMO$_D$
+    (a modification of the GSEMO for diversity optimization) until it finds a population
+    with the best possible diversity for two different diversity measures, the total
+    imbalance and the sorted imbalances vector. For the first measure we show that
+    the GSEMO$_D$ optimizes it asymptotically faster than it finds a Pareto-optimal
+    population, in $O(kn^2\\log(n))$ expected iterations, and for the second measure
+    we show an upper bound of $O(k^2n^3\\log(n))$ expected iterations. We complement
+    our theoretical analysis with an empirical study, which shows a very similar behavior
+    for both diversity measures that is close to the theory predictions."
+- ID: 149
+  Title: Sliding Window 3-Objective Pareto Optimization for Problems with Chance Constraints
+  Submitter: Frank Neumann
+  Authors: Frank Neumann, Carsten Witt
+  Corresponding Authors: Frank Neumann (frank.neumann@adelaide.edu.au), Carsten Witt
+    (cawi@dtu.dk)
+  Keywords: chance constraints, evolutionary algorithms, multi-objective optimization
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: Constrained single-objective problems have been frequently tackled by
+    evolutionary multi-objective algorithms where the constraint is relaxed into an
+    additional objective. Recently, it has been shown that Pareto optimization approaches
+    using bi-objective models can be significantly sped up using sliding windows (Neumann
+    and Witt, ECAI 2023). In this paper, we extend the sliding window approach to
+    3-objective formulations for tackling chance constrained problems. On the theoretical
+    side, we show that our new sliding window approach improves previous runtime bounds
+    obtained in (Neumann and Witt, GECCO 2023) while maintaining the same approximation
+    guarantees. Our experimental investigations for the chance constrained dominating
+    set problem show that our new sliding window approach allows one to solve much
+    larger instances in a much more efficient way than the 3-objective approach presented
+    in (Neumann and Witt, GECCO 2023) .
+- ID: 158
+  Title: Runtime Analysis of a Multi-Valued Compact Genetic Algorithm on Generalized
+    OneMax
+  Submitter: Carsten Witt
+  Authors: Sumit Adak, Carsten Witt
+  Corresponding Authors: Sumit Adak (suad@dtu.dk), Carsten Witt (cawi@dtu.dk)
+  Keywords: Estimation-of-distribution algorithms, multi-valued compact genetic algorithm,
+    genetic drift, OneMax
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "A class of metaheuristic techniques called estimation-of-distribution
+    algorithms (EDAs) are employed in optimization as more sophisticated substitutes
+    for traditional strategies like evolutionary algorithms. EDAs generally drive
+    the search for the optimum by creating probabilistic models of potential candidate
+    solutions through repeated sampling and selection from the underlying search space.\n
+    \nMost theoretical research on EDAs has focused on pseudo-Boolean optimization.
+    Jedidia et al. (GECCO 2023) introduced the EDAs for optimizing problems involving
+    multi-valued decision variables. By building a framework, they have analyzed the
+    runtime of a multi-valued UMDA on the r-valued LeadingOnes function. Using their
+    framework, here we focus on the multi-valued compact genetic algorithm (r-cGA)
+    and provide a first runtime analysis of a generalized OneMax function.\n\nTo prove
+    our results, we investigate the effect of genetic drift and progress of the probabilistic
+    model towards the optimum. After finding the right algorithm parameters, we prove
+    that the r-cGA solves this r-valued OneMax problem efficiently. We establish that
+    the runtime bound is O(r^2 n log^2 r log^3 n) with high probability. At the end
+    of experiments, we state one conjecture related to the expected runtime of another
+    variant of multi-valued OneMax function."
+- ID: 168
+  Title: Faster Optimization Through Genetic Drift
+  Submitter: Marc Kaufmann
+  Authors: Ulysse Schaller, Marc Kaufmann, Johannes Lengler, Cella Florescu
+  Corresponding Authors: Ulysse Schaller (ulysse.schaller@inf.ethz.ch), Marc Kaufmann
+    (marc.kaufmann@inf.ethz.ch), Johannes Lengler (johannes.lengler@inf.ethz.ch),
+    Cella Florescu (cella.florescu@inf.ethz.ch)
+  Keywords: compact Genetic Algorithm, Genetic Drift, Estimation-of-Distribution Algorithm,
+    Dynamic Binary Value
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: 'The compact Genetic Algorithm (cGA), parameterized by its hypothetical
+    population size K, offers a low-memory alternative to evolving a large offspring
+    population of solutions. It evolves a probability distribution, biasing it towards
+    promising samples. For the classical benchmark OneMax, the cGA has to two different
+    modes of operation: a conservative one with small step sizes Θ(1/(√n log n)),
+    which is slow but prevents genetic drift, and an aggressive one with large step
+    sizes Θ(1/ log n), in which genetic drift leads to wrong decisions, but those
+    are corrected efficiently. On OneMax, an easy hill-climbing problem, both modes
+    lead to optimization times of Θ(n log n) and are thus equally efficient. In this
+    paper we study how both regimes change when we replace OneMax by the harder hill-climbing
+    problem Dynamic BinVal. It turns out that the aggressive mode is not affected
+    and still yields quasi-linear runtime O(n polylog n). However, the conservative
+    mode becomes substantially slower, yielding a runtime of Ω(n^2), since genetic
+    drift can only be avoided with smaller step sizes of O(1/n). We complement our
+    theoretical results with simulations.'
+- ID: 177
+  Title: Greedy versus Curious Parent Selection for Multi-Objective Evolutionary Algorithms
+  Submitter: Aishwarya Radhakrishnan
+  Authors: Antipov Denis, Timo Kötzing, Aishwarya Radhakrishnan
+  Corresponding Authors: Antipov Denis (antipovden@yandex.ru), Timo Kötzing (timo.koetzing@hpi.de),
+    Aishwarya Radhakrishnan (aishwarya.radhakrishnan@hpi.de)
+  Keywords: Evolutionary Algorithm, Multi-Objective Optimization, Run time analysis
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "From the literature we know that simple evolutionary multi-objective
+    algorithms can optimize the classic two-objective test functions \\textsc{OneMinMax}
+    and \\textsc{CountingOnesCountingZeroes} in $O(n^2\\log n)$ expected time. We
+    extend this result to any pair of generalized \\OneMax functions and show that,
+    if the optima of the two functions are $d$ apart, then (G)SEMO has an expected
+    optimization time of $O(dn \\log(n) )$.\n\nIn an attempt to achieve better optimization
+    times, some algorithms consider parent selection. We show that parent selection
+    based on the curiosity-based novelty search can improve the optimization time
+    to $O(n^2)$ on \\textsc{OneMinMax}. By contrast, we show that greedy parent selection
+    schemes can be trapped with an incomplete Pareto front for superpolynomial time.\n
+    \nFinally, we provide experimental results on the two-objective optimization of
+    linear functions.\nIn an attempt to achieve better optimization times, some algorithms
+    consider parent selection. We show that parent selection based on the curiosity-based
+    novelty search can improve the optimization time to $O(n^2)$ on \\textsc{OneMinMax}.
+    By contrast, we show that greedy parent selection schemes can be trapped with
+    an incomplete Pareto front for superpolynomial time.\n\nFinally, we provide experimental
+    results on the two-objective optimization of linear functions."
+- ID: 199
+  Title: How Population Diversity Influences the Efficiency of Crossover
+  Submitter: Sacha Cerf
+  Authors: Sacha Cerf, Johannes Lengler
+  Corresponding Authors: Sacha Cerf (sacha.cerf@inria.fr), Johannes Lengler (johannes.lengler@inf.ethz.ch)
+  Keywords: (mu+1)GA, LeadingOnes, crossover, diversity, runtime analysis, theory
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: Our theoretical understanding of crossover is limited by our ability to
+    analyze how population diversity evolves. In this study, we provide one of the
+    first rigorous analyses of population diversity and optimization time in a setting
+    where large diversity and large population sizes are required to speed up progress.
+    We give a formal and general criterion which amount of diversity is necessary
+    and sufficient to speed up the $(\mu+1)$ Genetic Algorithm on \textsc{LeadingOnes}.
+    We show that the naturally evolving diversity falls short of giving a substantial
+    speed-up for any $\mu=O(\sqrt{n}/\log^2 n)$. On the other hand, we show that even
+    for $\mu=2$, if we simply break ties in favor of diversity then this increases
+    diversity so much that optimization is accelerated by a constant factor.
+- ID: 208
+  Title: 'Overcome Binary Adversarial Optimisation:  From $(1,\lambda)$ Evolutionary
+    Algorithm to $(1,\lambda)$ Co-evolutionary Algorithm'
+  Submitter: Shishen Lin
+  Authors: Per Kristian Lehre, Shishen Lin
+  Corresponding Authors: Shishen Lin (sxl1242@student.bham.ac.uk)
+  Keywords: Adversarial Optimisation, Theory of Computation, Competitive Coevolution
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "Co-evolutionary algorithms (CoEAs), which pair candidate designs with
+    test cases, are frequently used in adversarial optimisation, particularly for
+    binary test-based problems where designs and tests yield binary outcomes. The
+    effectiveness of designs is determined by their performance against tests, and
+    the value of tests is based on their ability to identify failing designs, often
+    leading to more sophisticated tests and improved designs. However, CoEAs can exhibit
+    complex, sometimes pathological behaviours like disengagement. Through runtime
+    analysis, we aim to rigorously analyse whether CoEAs can efficiently solve test-based
+    adversarial optimisation problems in an expected polynomial runtime.\n\nThis paper
+    carries out the first rigorous runtime analysis of $(1,\\lambda)$ CoEA for binary
+    test-based adversarial optimisation problems. In particular, we introduce a binary
+    test-based benchmark problem called \\Diagonal problem and initiate the first
+    runtime analysis of competitive CoEA on this problem. The mathematical analysis
+    shows that the $(1,\\lambda)$-CoEA can efficiently find an $\\varepsilon$ approximation
+    to the optimal solution of the \\Diagonal problem, i.e. in expected polynomial
+    runtime assuming sufficiently low mutation rates and large offspring population
+    size. On the other hand, the standard $(1,\\lambda)$-EA fails to find an $\\varepsilon$
+    approximation to the optimal solution of the \\Diagonal problem in polynomial
+    runtime. This suggests the promising potential of coevolution for solving binary
+    adversarial optimisation problems."
+- ID: 228
+  Title: Evolving Populations of Solved Subgraphs with Crossover and Constraint Repair
+  Submitter: Andrew Sutton
+  Authors: Andrew Sutton, Jiwon Lee
+  Corresponding Authors: Andrew Sutton (amsutton@d.umn.edu), Jiwon Lee (lee02761@d.umn.edu)
+  Keywords: runtime analysis, parameterized complexity, crossover
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: We introduce a population-based approach to solving parameterized graph
+    problems for which the goal is to identify a small set of vertices subject to
+    a feasibility criterion.  The idea is to evolve a population of individuals where
+    each individual corresponds to an optimal solution to a subgraph of the original
+    problem. The crossover operation then combines both solutions and subgraphs with
+    the hope to generate an optimal solution for a slightly larger graph.  In order
+    to correctly combine solutions and subgraphs, we propose a new crossover operator
+    called generalized allelic crossover which generalizes uniform crossover by associating
+    a probability at each locus depending on the combined alleles of the parents.
+    We prove for graphs with $n$ vertices and $m$ edges, the approach solves the $k$-vertex
+    cover problem in expected time $O{\left(4^k m + m^4 k \log n \right)}$ using a
+    simple RLS-style mutation. This bound can be improved to $O(4^k m + m^2 n k \log
+    n)$ by using standard mutation constrained to the vertices of the graph.
+- ID: 232
+  Title: Analysis of Evolutionary Diversity Optimisation for the Maximum Matching
+    Problem
+  Submitter: Frank Neumann
+  Authors: Jonathan Gadea Harder, Aneta Neumann, Frank Neumann
+  Corresponding Authors: Jonathan Gadea Harder (jonandrop.ja@gmail.com), Aneta Neumann
+    (aneta.neumann@adelaide.edu.au), Frank Neumann (frank.neumann@adelaide.edu.au)
+  Keywords: Evolutionary Algorithms, Evolutionary Diversity Optimization, Maximum
+    Matching, Runtime Analysis
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "This paper delves into the enhancement of solution diversity in evolutionary
+    algorithms (EAs) for the maximum matching problem, with a particular focus on
+    complete bipartite graphs and paths. We utilize binary string encoding for matchings
+    and employ Hamming distance as the metric for measuring diversity, aiming to maximize
+    it. Central to our research is the $(\\mu+1)$-EA and 2P-EA$_D$, applied for diversity
+    optimization, which we rigorously analyze both theoretically and empirically.
+    \n\nFor complete bipartite graphs, our runtime analysis demonstrates that, for
+    reasonably small $\\mu$, the $(\\mu+1)$-EA achieves maximal diversity with an
+    expected runtime of \\(O(\\mu^2 m^4\\log(m))\\) for the small gap case (where
+    the population size $\\mu$ is less than the difference in the sizes of the bipartite
+    partitions) and \\(O(\\mu^2 m^2\\log(m))\\) otherwise. For paths we give an upper
+    bound of $O(\\mu^3m^3)$. Additionally, for the 2P-EA$_D$ we give stronger performance
+    bounds of \\(O(\\mu^2 m^2\\log(m))\\) for the small gap case, \\(O(\\mu^2 n^2\\
+    log(n))\\) otherwise, and \\(O(\\mu^3m^2)\\) for paths. Here \\(n\\) is the total
+    number of vertices and \\(m\\) the number of edges.\nOur empirical studies, examining
+    the scaling behavior with respect to $m$ and $\\mu$, complement these theoretical
+    insights and suggest potential for further refinement of the runtime bounds."
+- ID: 239
+  Title: Archive-based Single-Objective Evolutionary Algorithms for Submodular Optimization
+  Submitter: Frank Neumann
+  Authors: Frank Neumann, Guenter Rudolph
+  Corresponding Authors: Frank Neumann (frank.neumann@adelaide.edu.au), Guenter Rudolph
+    (guenter.rudolph@tu-dortmund.de)
+  Keywords: evolutionary algorithms, submodular optimization, runtime analysis, theory
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: Constrained submodular optimization problems play a key role in the area
+    of combinatorial optimization as they capture many NP-hard optimization problems.
+    So far, Pareto optimization approaches using multi-objective formulations have
+    been shown to be successful to tackle these problems while single-objective formulations
+    lead to difficulties for algorithms such as the (1+1) EA due to the presence of
+    local optima. We introduce for the first time single-objective algorithms that
+    are provably successful for different classes of constrained submodular maximization
+    problems. Our algorithms are variants of the (1+\lambda)-EA and (1+1) EA and increase
+    the feasible region of the search space incrementally in order to deal with the
+    considered submodular problems.
+- ID: 242
+  Title: 'Local Optima in Diversity Optimization: Non-trivial Offspring Population
+    is Essential'
+  Submitter: Aneta Neumann
+  Authors: Antipov Denis, Aneta Neumann, Frank Neumann
+  Corresponding Authors: Antipov Denis (antipovden@yandex.ru), Aneta Neumann (aneta.neumann@adelaide.edu.au),
+    Frank Neumann (frank.neumann@adelaide.edu.au)
+  Keywords: Diversity Optimization, Population-based Algorithms, Theory, Landscape
+    Analysis, Vertex Cover
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "The main goal of diversity optimization is to find a diverse set of solutions
+    which satisfy some lower bound on their fitness. Evolutionary algorithms (EAs)
+    are often used for such tasks, since they are naturally designed to optimize populations
+    of solutions. This approach to diversity optimization, called EDO, has been previously
+    studied from theoretical perspective, but most studies considered only EAs with
+    a trivial offspring population such as the $(\\mu + 1)$ EA. In this paper we give
+    an example instance of a $k$-vertex cover problem, which highlights a critical
+    difference of the diversity optimization from the regular single-objective optimization,
+    namely that we might have a locally optimal population from which we can escape
+    only by replacing at least two individuals at once, which the $(\\mu + 1)$ algorithms
+    cannot do.\n\nWe also show that the $(\\mu + \\lambda)$ EA with $\\lambda \\ge
+    \\mu$ can effectively find a diverse population on $k$-vertex cover, if using
+    a mutation operator inspired by Branson and Sutton (TCS 2023). To avoid the problem
+    of subset selection which arises in the $(\\mu + \\lambda)$ EA when it optimizes
+    diversity, we also propose a $(1_\\mu + 1_\\mu)$ EA$_D$, which is an analogue
+    of the $(1 + 1)$ EA for populations, and which is also efficient at optimizing
+    diversity on the $k$-vertex cover problem."
+- ID: 252
+  Title: Proven Runtime Guarantees for How the MOEA/D Computes the Pareto Front From
+    the Subproblem Solutions
+  Submitter: Martin Krejca
+  Authors: Benjamin Doerr, Martin Krejca, Noé Weeks
+  Corresponding Authors: Benjamin Doerr (doerr@lix.polytechnique.fr), Martin Krejca
+    (martin.krejca@polytechnique.edu), Noé Weeks (noe.weeks@ens.psl.eu)
+  Keywords: MOEA/D, Multi-objective optimization, Runtime analysis, Power-law mutation
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "The decomposition-based multi-objective evolutionary algorithm (MOEA/D)
+    does not directly optimize a given multi-objective function $f$, but instead optimizes
+    $N + 1$ single-objective subproblems of $f$ in a co-evolutionary manner. It maintains
+    an archive of all non-dominated solutions found and outputs it as approximation
+    to the Pareto front. Once the MOEA/D found all optima of the subproblems (the
+    $g$-optima), it may still miss Pareto optima of $f$. The algorithm is then tasked
+    to find the remaining Pareto optima directly by mutating the $g$-optima.\n\nIn
+    this work, we analyze for the first time how the MOEA/D with only standard mutation
+    operators computes the whole Pareto front of the OneMinMax benchmark when the
+    $g$-optima are a strict subset of the Pareto front. For standard bit mutation,
+    we prove an expected runtime of $O(n N \\log n + n^{n/(2N)} N \\log n)$ function
+    evaluations. Especially for the second, more interesting phase when the algorithm
+    start with all $g$-optima, we prove an $\\Omega(n^{(1/2)(n/N + 1)} \\sqrt{N} 2^{-n/N})$
+    expected runtime. This runtime is super-polynomial if $N = o(n)$, since this leaves
+    large gaps between the $g$-optima, which require costly mutations to cover.\n\n
+    For power-law mutation with exponent $\\beta \\in (1, 2)$, we prove an expected
+    runtime of $O\\left(n N \\log n + n^{\\beta} \\log n\\right)$ function evaluations.
+    The $O\\left(n^{\\beta} \\log n\\right)$ term stems from the second phase of starting
+    with all $g$-optima, and it is independent of the number of subproblems $N$. This
+    leads to a huge speedup compared to the lower bound for standard bit mutation.
+    In general, our overall bound for power-law suggests that the MOEA/D performs
+    best for $N = O(n^{\\beta - 1})$, resulting in an $O(n^\\beta \\log n)$ bound.
+    In contrast to standard bit mutation, smaller values of $N$ are better for power-law
+    mutation, as it is capable of easily creating missing solutions."
+- ID: 265
+  Title: Ranking Diversity Benefits Coevolutionary Algorithms on an Intransitive Game
+  Submitter: Mario Alejandro Hevia Fajardo
+  Authors: Mario Alejandro Hevia Fajardo, Per Kristian Lehre
+  Corresponding Authors: Mario Alejandro Hevia Fajardo (m.heviafajardo@bham.ac.uk)
+  Keywords: Runtime analysis, Competitive coevolution, Archives, Maximin optimisation
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "Competitive coevolutionary algorithms (CoEAs) often encounter so-called
+    coevolutionary pathologies particularly cycling behavior, which becomes more pronounced
+    for games where there is no clear hierarchy of superiority among the possible
+    strategies (intransitive games). In order to avoid these pathologies and ensure
+    an efficient optimisation, it has been suggested that it is critical to choose
+    a \\emph{good} evaluation environment (set of solutions used for evaluation).\n
+    \nIn this paper, we use runtime analysis to increase our understanding of the
+    essential characteristics that\nthe evaluation environments should possess to
+    ensure efficient runtime on the intransitive problem class Bilinear. For this
+    problem class, we observe that it is beneficial to maintain a high diversity of
+    rankings in the evaluation environment, that is, a set of individuals used for
+    evaluation which are diverse in how they rank opponents.\n\nWe propose and analyse
+    two mechanisms that implement this idea. In the first approach, we ensure diversity
+    of rankings through an archive. In the second approach, we introduce a CoEA without
+    an archive, but with a ranking diversity mechanism. Both approaches optimise Bilinear
+    in expected polynomial time."
+- ID: 279
+  Title: On the Equivalence between Stochastic Tournament and Power-law Ranking Selection
+    and How to Implement them Efficiently
+  Submitter: Duc-Cuong Dang
+  Authors: Duc-Cuong Dang, Andre Opris, Dirk Sudholt
+  Corresponding Authors: Duc-Cuong Dang (duccuong.dang@uni-passau.de), Andre Opris
+    (andre.opris@uni-passau.de), Dirk Sudholt (dirk.sudholt@uni-passau.de)
+  Keywords: Selection operators, tournament selection, power-law ranking, multi-objective
+    optimisation, runtime analysis, algorithm engineering
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "Tournament selection is a popular parent selection mechanism in evolutionary
+    algorithms. Bian and Qian (PPSN 2022) proved that choosing the tournament size
+    uniformly at random, called stochastic tournament selection, in combination with
+    crossover significantly improves the performance of NSGA-II on some benchmark
+    functions. \nWe show that this selection mechanism is asymptotically equivalent
+    to the power-law ranking selection proposed in Covantes Osuna et al. (Theor. Comput.
+    Sci. 832, 2020) with the exponent of $2$. Thus asymptotic runtime bounds proven
+    for one operator also hold when one operator is replaced with the other.\n\nWe
+    also investigate how to implement these operators  efficiently for NSGA-II on
+    the problems considered in the previous papers. We propose to implement the stochastic
+    tournament with a pre-computed selection distribution to save on random numbers.
+    Experiments on high dimensional problems demonstrate the superiority of this method
+    compared to the standard implementation. Overall, the power-law ranking selection
+    is the most efficient selection mechanism for the studied problems. Remarkably,
+    we also find that the way ties are broken between equally fit solutions can make
+    the difference between the best and the worst approach, especially when crossover
+    is involved."
+- ID: 285
+  Title: Level-based Theorems for Runtime Analysis of Multi-objective Evolutionary
+    Algorithms
+  Submitter: Dirk Sudholt
+  Authors: Duc-Cuong Dang, Andre Opris, Dirk Sudholt
+  Corresponding Authors: Duc-Cuong Dang (duccuong.dang@uni-passau.de), Andre Opris
+    (andre.opris@uni-passau.de), Dirk Sudholt (dirk.sudholt@uni-passau.de)
+  Keywords: Runtime analysis, analysis methods, evolutionary multi-objective optimisation,
+    theory
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "Runtime analysis of multi-objective evolutionary algorithms (MOEAs) is
+    a rapidly emerging field in which recent breakthroughs studied state-of-the-art
+    MOEAs like NSGA-II and NSGA-III. These analyses typically bound the expected time
+    to cover the Pareto front by analysing (1) the expected time to find a first Pareto-optimal
+    search point and (2) the expected time to cover the whole Pareto front from there.
+    \n\nWe support this development by providing a powerful general tool for bounding
+    the expected time to reach a first Pareto-optimal search point. It is based on
+    the well-known fitness-level method, a simple and versatile yet powerful analysis
+    method, adapted to multiple objectives. The benefits are to simplify runtime analyses
+    by removing repetitive arguments used across many runtime analyses, thus allowing
+    for shorter and simpler proofs, and to make runtime analysis of MOEAs more accessible
+    to other researchers. Our level-based theorems further provide additional results
+    on stochastic domination and tail bounds in addition to bounds on expected hitting
+    times. We identify sufficient conditions for  NSGA-II and NSGA-III to reach the
+    Pareto front, which may pave the way for runtime analyses of state-of-the-art
+    MOEAs approximating the Pareto front with population sizes smaller than the Pareto
+    front."
+- ID: 286
+  Title: Runtime Analysis for State-of-the-Art Multi-Objective Evolutionary Algorithms
+    on the Subset Selection Problem
+  Submitter: Renzhong Deng
+  Authors: Renzhong Deng, Weijie Zheng, Mingfeng Li, Jie Liu, Benjamin Doerr
+  Corresponding Authors: Weijie Zheng (zhengweijie@hit.edu.cn)
+  Keywords: Subset selection, Multi-objective optimization, Runtime analysis, Theory
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: In the last few years, the mathematical runtime analysis of randomized
+    search heuristics has made a huge step forward by developing the methods to analyze
+    the most prominent multi-objective evolutionary algorithms (MOEAs) as opposed
+    to previously only simplistic algorithms. These results confirmed that many previous
+    results extend to state-of-the-art MOEAs, but also showed that algorithms like
+    the NSGA-II can have unexpected difficulties on problems easily solved by simple
+    MOEAs. We continue this line of research by analyzing how the NSGA-II and the
+    SMS-EMOA (also with a recently proposed stochastic population update) solve the
+    NP-complete subset selection problem. For these two state-of-the-art algorithms,
+    we prove performance guarantees that agree with those previously shown for the
+    POSS algorithm, a variant of the simplistic GSEMO, namely that they compute $(1
+    − e^{−γ} )$-approximate solutions in expected time $O(k^2n)$. Our experiments
+    confirm these findings. This work is the first runtime analysis of state-of-the-art
+    MOEAs for the subset selection problem, and also the first runtime analysis of
+    SMS-EMOA on a combinatorial problem.
+- ID: 302
+  Title: When Does the Time-Linkage Property Help Optimization by Evolutionary Algorithms?
+  Submitter: Mingfeng Li
+  Authors: Mingfeng Li, Weijie Zheng, Xie Wen, sun ao, Xin Yao
+  Corresponding Authors: Weijie Zheng (zhengweijie@hit.edu.cn)
+  Keywords: Time-linkage property, Evolutionary algorithms, Theory
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: "Recent theoretical works show that the time-linkage property\nchallenges
+    evolutionary algorithms to optimize. Here we consider\nthree positive circumstances
+    and give the first runtime analyses to show\nthat the time-linkage property can
+    also help the optimization of evolutionary\nalgorithms.\nThe problem is easier
+    to optimize if the time-linkage property changes\nthe optimal function value to
+    an easy-to-reach one. We construct a\ntime-linkage variant of the Cliffd problem
+    with this feature and prove\nthat conditional on an event that happens with Ω(1)
+    probability, the\n(1 + 1) EA reaches the optimum in expected O(n ln n) iterations
+    (Theorem\n1). It is much better than the expected runtime of Θ(nd) for the\noriginal
+    Cliffd.\nIf the time-linkage property does not change the optimal function value\n
+    but enlarges the optimal solution set, the problem is also possible to\nbe easier
+    to optimize. We construct another time-linkage variant of the\nCliffd problem
+    with this feature, and also prove an expected runtime\nof O(n ln n) (conditional
+    on an event happening with Ω(1) probability)\n(Theorem 3), compared with the expected
+    runtime of Ω(nd−2) for the\ncorresponding problem without the time-linkage property.\n
+    Even if the time-linkage property neither changes the optimal function\nvalue
+    nor the optimal solution set, it is still possible to ease this problem\nif the
+    intermediate solution, from which the optimum is easier to reach, is\nmore prone
+    to be maintained. We construct a time-linkage variant of the\nJump problem, and
+    proved that the expected runtime is reduced from\nO(nk) to O(nk−1) (Theorem 4).\n
+    Our experiments also verify the above theoretical findings."
+- ID: 303
+  Title: A First Running Time Analysis of the Strength Pareto Evolutionary Algorithm
+    2 (SPEA2)
+  Submitter: Shengjie Ren
+  Authors: Shengjie Ren, Chao Qian, Chao Bian, Miqing Li
+  Corresponding Authors: Shengjie Ren (201300036@smail.nju.edu.cn), Chao Qian (qianc@nju.edu.cn),
+    Chao Bian (bianc@lamda.nju.edu.cn), Miqing Li (m.li.8@bham.ac.uk)
+  Keywords: .nan
+  Category: Theoretical Aspects of Nature-Inspired Optimization
+  Abstract: Evolutionary algorithms (EAs) have emerged as a predominant approach for
+    addressing multi-objective optimization problems. However, the theoretical foundation
+    of multi-objective EAs (MOEAs), particularly the fundamental aspects like running
+    time analysis, remains largely underexplored. Existing theoretical studies mainly
+    focus on basic MOEAs, with little attention given to practical MOEAs. In this
+    paper, we present a running time analysis of strength Pareto evolutionary algorithm
+    2 (SPEA2) for the first time. Specifically, we prove that the expected running
+    time of SPEA2 for solving three commonly used multi-objective problems, i.e.,
+    $m$OneMinMax, $m$LeadingOnesTrailingZeros, and $m$-OneJumpZeroJump, is $O(\mu
+    n\cdot \min\{m\log n, n\})$, $O(\mu n^2)$, and $O(\mu n^k \cdot \min\{mn$,  $2^{m/2}\})$,
+    respectively. Here $m$ denotes the number of objectives, and the population size
+    $\mu$ is required to be at least $(2n/m+1)^{m/2}$, $(2n/m+1)^{m-1}$ and $(2n/m-2k+3)^{m/2}$,
+    respectively. The proofs are accomplished through general theorems which are also
+    applicable for analyzing the expected running time of other MOEAs on these problems,
+    and thus can be helpful for future theoretical analysis of MOEAs.

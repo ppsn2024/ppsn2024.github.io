@@ -10,18 +10,18 @@ description: Programm of PPSN 2024 conference
     <div class="container text-justify">
         <style>
             .subpage-sec {
-                min-height: 0!important;
+                min-height: 0 !important;
             }
         </style>
         <h2>Program</h2>
-        
+
         <h3>Preliminary Timetable</h3>
-        <br/><br/>
+        <br /><br />
         {% include dynamictimetable.html %}
-        <br/><br/>            
+        <br /><br />
 
         <h3>Keynotes</h3>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12">
                 <img src="/assets/img/oliverschuetze-500.jpg" alt="Oliver Schuetze">
@@ -78,6 +78,31 @@ description: Programm of PPSN 2024 conference
             </div>
         </div>
         <br />
+
+        <h3>Accepted Papers</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Authors</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for paper in site.data.papers | sort: "Category" %}
+                        <tr>
+                            <td>{{paper.Authors}}</td>
+                            <td>{{paper.Title}}</td>
+                            <td>{{paper.Category}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
 
         <h3>Workshops</h3>
         <div class="row">
@@ -196,4 +221,3 @@ description: Programm of PPSN 2024 conference
         </div>
     </div>
 </section>
-
