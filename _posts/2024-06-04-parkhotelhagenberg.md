@@ -6,7 +6,7 @@ description: There is a special room contingent and rate available at Parkhotel 
 keywords: Venue, Hotel, Accommodation
 date: 2024-06-04 16:37 +0200
 categories:
-  - "Updates"
+  - "Misc"
 author: jzenisek
 image: /news/resources/2024-06-04-parkhotelhagenberg/parkhotel.jpg
 ---
