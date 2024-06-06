@@ -48,7 +48,7 @@ future: false
 
 blogname: "news"
 permalink: news/:year/:month/:day/:title/
-paginate: 10
+paginate: 20
 paginate_path: "news/page:num/"
 
 

@@ -3,15 +3,22 @@
 
 <style>
 
-    #timetable .container {
-        /* max-width: 95%; */
-    }
-
     .timetable-table {
         width: 100%;
         cursor: default;        
-        /* border-collapse: collapse;
-        border-style: hidden;         */
+
+        .tdc {
+            text-align: center;            
+            vertical-align: text-top;
+            margin: 0;
+            padding: 0.5em;
+            width: 100%;
+            height: 50px!important;
+        }
+
+        .time.tdc{
+            height: 50px!important;
+        }
 
         td,
         tr,
@@ -28,25 +35,23 @@
             border-right: 5px solid #ffffff;
         }
 
-        td>span,
-        th>span {            
+        td span,
+        th span {            
             display: inline-block;            
             text-align: center;            
             vertical-align: text-top;
             margin: 0;
-            padding: 1em;    
             width: 100%;            
         }
 
         tbody tr {            
-            min-height: 50px!important;
+            /* min-height: 50px!important; */
             border: 1px solid #eeeeee;
         }
 
         tbody tr:hover .time {                        
             background:#999999;
             cursor: default;
-            transition: all .1s ease;
         }
 
         th {            
@@ -68,7 +73,6 @@
         .time {            
             background: #eeeeee;
             width: 5%;
-            height: 75px!important;
         }
 
         .time.blank {
@@ -79,7 +83,6 @@
             background-color: #ffffff;
             outline: 5px solid white;
             outline-offset: -5px;
-            transition: all .3s ease;
             overflow: hidden;
             filter: brightness(100%);
         }
@@ -305,9 +308,12 @@
             var timerow = document.createElement("tr");
             var timetd = document.createElement("td");
             timetd.setAttribute("class", "time");
+            var tdc = document.createElement("div");
+            tdc.setAttribute("class", "tdc");
             var timetdcontent = document.createElement("span");
             timetdcontent.innerHTML = t.str;
-            timetd.appendChild(timetdcontent);
+            tdc.appendChild(timetdcontent);
+            timetd.appendChild(tdc);
             timerow.appendChild(timetd);
             
             for(let c = 0; c < colcount; c++) {
@@ -326,33 +332,35 @@
                     td.setAttribute("class", "slot " + slot.class);
                     td.setAttribute("colspan", slot.colspan);
                     td.setAttribute("rowspan", slot.rowspan);
+                    var tdc = document.createElement("div");
+                    tdc.setAttribute("class", "tdc");
                     var span = document.createElement("span");
                     span.setAttribute("class", "slot-title");
                     span.innerHTML = slot.title;
-                    td.appendChild(span);
+                    tdc.appendChild(span);
 
                     if(slot.start && slot.end && slot.room) {
                         // td.appendChild(document.createElement("br"));
                         var spandesc = document.createElement("span");
                         spandesc.setAttribute("class", "slot-baseinfo");
                         spandesc.innerHTML = slot.startstr + " - " + slot.endstr + ", " + slot.room;
-                        td.appendChild(spandesc);
+                        tdc.appendChild(spandesc);
                     }
                     if(slot.description) {
                         td.appendChild(document.createElement("br"));
                         var spandesc = document.createElement("span");
                         spandesc.setAttribute("class", "slot-description");
                         spandesc.innerHTML = slot.description;
-                        td.appendChild(spandesc);
+                        tdc.appendChild(spandesc);
                     }
                     if(slot.speaker) {
                         td.appendChild(document.createElement("br"));
                         var spanspeaker = document.createElement("span");
                         spanspeaker.setAttribute("class", "slot-speaker");
                         spanspeaker.innerHTML = slot.speaker;
-                        td.appendChild(spanspeaker);
+                        tdc.appendChild(spanspeaker);
                     }
-                    
+                    td.appendChild(tdc);
                     timerow.appendChild(td);
                     slotStatus[sid] = true;                    
                 }
