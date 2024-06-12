@@ -64,6 +64,7 @@ description: Homepage of the PPSN 2024 conference
                     <li><strong>[Closed]</strong> Paper review due:  <span class="cancle">May 20, 2024</span></li>
                     <li><strong>[Done]</strong> Paper acceptance notification:  <span class="cancle">May 31, 2024</span></li>
                     <li>Camera ready paper submission due: <span>June 22, 2024</span></li>
+                    <li>Early bird registration due: <span>June 22, 2024</span></li>
                     <li>
                         Conference: <span>September 14-18, 2024</span>
                         <ul class="date-list-l2">
