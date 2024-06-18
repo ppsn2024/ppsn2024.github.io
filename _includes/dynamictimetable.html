@@ -168,7 +168,7 @@
             var timerow = document.createElement("tr");
             var timetd = document.createElement("td");
             timetd.setAttribute("class", "time");
-            var tdc = document.createElement("div");
+            var tdc = document.createElement("a");
             tdc.setAttribute("class", "tdc");
             var timetdcontent = document.createElement("span");
             timetdcontent.innerHTML = t.str;
@@ -192,29 +192,34 @@
                     td.setAttribute("class", "slot " + slot.class);
                     td.setAttribute("colspan", slot.colspan);
                     td.setAttribute("rowspan", slot.rowspan);
-                    var tdc = document.createElement("div");
+
+                    var tdc = document.createElement("a");                    
                     tdc.setAttribute("class", "tdc");
+                    if(slot.rowspan > 1) {
+                        tdc.classList.add("tdc-rowspan" + slot.rowspan);
+                    }
+                                        
                     var span = document.createElement("span");
                     span.setAttribute("class", "slot-title");
                     span.innerHTML = slot.title;
                     tdc.appendChild(span);
 
                     if(slot.start && slot.end && slot.room) {
-                        // td.appendChild(document.createElement("br"));
+                        // tdc.appendChild(document.createElement("br"));
                         var spandesc = document.createElement("span");
                         spandesc.setAttribute("class", "slot-baseinfo");
                         spandesc.innerHTML = slot.startstr + " - " + slot.endstr + ", " + slot.room;
                         tdc.appendChild(spandesc);
                     }
                     if(slot.description) {
-                        td.appendChild(document.createElement("br"));
+                        tdc.appendChild(document.createElement("br"));
                         var spandesc = document.createElement("span");
                         spandesc.setAttribute("class", "slot-description");
                         spandesc.innerHTML = slot.description;
                         tdc.appendChild(spandesc);
                     }
                     if(slot.speaker) {
-                        td.appendChild(document.createElement("br"));
+                        tdc.appendChild(document.createElement("br"));
                         var spanspeaker = document.createElement("span");
                         spanspeaker.setAttribute("class", "slot-speaker");
                         spanspeaker.innerHTML = slot.speaker;

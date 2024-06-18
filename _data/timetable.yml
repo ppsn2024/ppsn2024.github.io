@@ -70,7 +70,7 @@ slots:
     day: d1
     start: "10:30"
     end: "11:00"
-    room: Lecture Hall Corridor
+    room: Break Room
     colspan: 2
     class: break
   - id: s1_6
@@ -136,7 +136,7 @@ slots:
     day: d1
     start: "15:00"
     end: "15:30"
-    room: Lecture Hall Corridor
+    room: Break Room
     colspan: 2
     class: break
   - id: s1_13
@@ -207,7 +207,7 @@ slots:
     day: d2
     start: "10:30"
     end: "11:00"
-    room: Lecture Hall Corridor
+    room: Break Room
     colspan: 2
     class: break
   - id: s2_6
@@ -273,7 +273,7 @@ slots:
     day: d2
     start: "15:00"
     end: "15:30"
-    room: Lecture Hall Corridor
+    room: Break Room
     colspan: 2
     class: break
   - id: s2_13

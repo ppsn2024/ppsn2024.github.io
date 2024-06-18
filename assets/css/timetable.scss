@@ -10,14 +10,46 @@
     .tdc {
         text-align: center;            
         vertical-align: text-top;
-        margin: 0;
-        padding: 0.5em;
+        display: inline-block;
+        margin: 0px;
+        padding: 1em;
         width: 100%;
-        height: 50px!important;
+        height: 60px;
+        overflow: hidden;
+        color: #000000;
     }
 
-    .time.tdc{
-        height: 50px!important;
+    .time .tdc{
+        padding: 1em;
+        height: 60px!important;  
+        vertical-align: middle;      
+    }
+
+    .tdc-rowspan1 {
+        height: 60px!important;
+    }
+
+    .tdc-rowspan2 {
+        height: 100px!important;
+    }
+
+    .tdc-rowspan3 {
+        height: 150px!important;
+    }
+
+    .tdc-rowspan4 {
+        height: 200px!important;
+    }
+
+    .tdc-rowspan5 {
+        height: 250px!important;
+    }
+
+    .tdc-rowspan6 {
+        height: 300px!important;
+    }
+    .tdc-rowspan7 {
+        height: 350px!important;
     }
 
     td,
@@ -29,6 +61,7 @@
 
     thead>tr {
         border-bottom: 5px solid #ffffff;
+        height: 60px;
     }
 
     tbody>tr>td:first-child {
@@ -84,16 +117,19 @@
         outline: 5px solid white;
         outline-offset: -5px;
         overflow: hidden;
-        filter: brightness(100%);
+        filter: brightness(100%);        
     }
 
     .slot:hover {
         cursor: default;            
-        filter: brightness(125%);
+        filter: brightness(115%);
+        transition: all 200ms linear;
     }
 
     .slot-title {
+        font-size: 0.75em;  
         font-weight: bold;
+        color: #ffffff;
     }
 
     .slot-baseinfo {
@@ -101,7 +137,8 @@
     }
 
     .slot-description {            
-        font-size: 0.75em;            
+        font-size: 0.75em;
+        font-style: italic;            
     }
 
     .slot-speaker {            
@@ -137,5 +174,17 @@
 
     .keynote {
         background: #D889A8;
+    }
+}
+
+@media (min-width: 1200px) {
+    .timetable-table {
+        .day {
+            width: 10%!important;
+        }
+
+        .time {
+            width: 5%;
+        }
     }
 }
