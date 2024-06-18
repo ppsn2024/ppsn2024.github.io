@@ -166,14 +166,20 @@
         var r = 0;
         for(t of times) {
             var timerow = document.createElement("tr");
-            var timetd = document.createElement("td");
+            var timetd = document.createElement("td");            
             timetd.setAttribute("class", "time");
-            var tdc = document.createElement("a");
+
+            var tdlink = document.createElement("a");
+            tdlink.setAttribute("href", "/iprogram/?time=" + t.str);
+
+            var tdc = document.createElement("div");
             tdc.setAttribute("class", "tdc");
             var timetdcontent = document.createElement("span");
             timetdcontent.innerHTML = t.str;
             tdc.appendChild(timetdcontent);
-            timetd.appendChild(tdc);
+
+            tdlink.appendChild(tdc);
+            timetd.appendChild(tdlink);
             timerow.appendChild(timetd);
             
             for(let c = 0; c < colcount; c++) {
@@ -192,8 +198,11 @@
                     td.setAttribute("class", "slot " + slot.class);
                     td.setAttribute("colspan", slot.colspan);
                     td.setAttribute("rowspan", slot.rowspan);
+                    
+                    var tdlink = document.createElement("a");
+                    tdlink.setAttribute("href", "/iprogram/?slot=" + slot.id);
 
-                    var tdc = document.createElement("a");                    
+                    var tdc = document.createElement("div");                    
                     tdc.setAttribute("class", "tdc");
                     if(slot.rowspan > 1) {
                         tdc.classList.add("tdc-rowspan" + slot.rowspan);
@@ -225,7 +234,8 @@
                         spanspeaker.innerHTML = slot.speaker;
                         tdc.appendChild(spanspeaker);
                     }
-                    td.appendChild(tdc);
+                    tdlink.appendChild(tdc);
+                    td.appendChild(tdlink);
                     timerow.appendChild(td);
                     slotStatus[sid] = true;                    
                 }
