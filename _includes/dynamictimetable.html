@@ -170,7 +170,7 @@
             timetd.setAttribute("class", "time");
 
             var tdlink = document.createElement("a");
-            tdlink.setAttribute("href", "/iprogram/?time=" + t.str);
+            tdlink.setAttribute("href", "/program/?time=" + t.str);
 
             var tdc = document.createElement("div");
             tdc.setAttribute("class", "tdc");
@@ -200,7 +200,7 @@
                     td.setAttribute("rowspan", slot.rowspan);
                     
                     var tdlink = document.createElement("a");
-                    tdlink.setAttribute("href", "/iprogram/?slot=" + slot.id);
+                    tdlink.setAttribute("href", "/program/?slot=" + slot.id);
 
                     var tdc = document.createElement("div");                    
                     tdc.setAttribute("class", "tdc");
@@ -285,15 +285,13 @@
 
 </script>
 
-<section id="timetable" class="background-light"></section>
+<div id="timetable" class="background-light"></div>
 
 <script>
 
     function drawTimetable() {
-        var tts = document.getElementById("timetable");
-        tts.innerHTML = "";
-        var ttc = document.createElement("div");
-        ttc.setAttribute("class", "container text-justify");
+        var ttc = document.getElementById("timetable");
+        ttc.innerHTML = "";
         
 
         var w = window.innerWidth;
@@ -314,8 +312,6 @@
                 di++;
             }
         }
-
-        tts.appendChild(ttc);
     }
 
     window.addEventListener('resize', function(event) {
