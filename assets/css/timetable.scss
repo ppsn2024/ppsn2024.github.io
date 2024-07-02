@@ -1,14 +1,14 @@
---- 
-# this ensures Jekyll reads the file to be transformed into CSS later 
-# only Main files contain this front matter, not partials. 
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
 ---
 
 .timetable-table {
     width: 100%;
-    cursor: default;        
+    cursor: default;
 
     .tdc {
-        text-align: center;            
+        text-align: center;
         vertical-align: text-top;
         display: inline-block;
         margin: 0px;
@@ -21,8 +21,8 @@
 
     .time .tdc{
         padding: 1em;
-        height: 60px!important;  
-        vertical-align: middle;      
+        height: 60px!important;
+        vertical-align: middle;
     }
 
     .tdc-rowspan1 {
@@ -56,7 +56,7 @@
     tr,
     th {
         border-collapse: collapse;
-        text-align: left;            
+        text-align: left;
     }
 
     thead>tr {
@@ -69,25 +69,25 @@
     }
 
     td span,
-    th span {            
-        display: inline-block;            
-        text-align: center;            
+    th span {
+        display: inline-block;
+        text-align: center;
         vertical-align: text-top;
         margin: 0;
-        width: 100%;            
+        width: 100%;
     }
 
-    tbody tr {            
+    tbody tr {
         /* min-height: 50px!important; */
         border: 1px solid #eeeeee;
     }
 
-    tbody tr:hover .time {                        
+    tbody tr:hover .time {
         background:#999999;
         cursor: default;
     }
 
-    th {            
+    th {
         background: #ffffff;
         font-weight: bold;
     }
@@ -103,7 +103,7 @@
         /* width: 20%; */
     }
 
-    .time {            
+    .time {
         background: #eeeeee;
         width: 5%;
     }
@@ -117,31 +117,42 @@
         outline: 5px solid white;
         outline-offset: -5px;
         overflow: hidden;
-        filter: brightness(100%);        
+        filter: brightness(100%);
     }
 
     .slot:hover {
-        cursor: default;            
+        cursor: default;
         filter: brightness(115%);
         transition: all 200ms linear;
     }
 
     .slot-title {
-        font-size: 0.75em;  
+        font-size: 0.75em;
         font-weight: bold;
         color: #ffffff;
     }
 
     .slot-baseinfo {
-        font-size: 0.75em;   
-    }
-
-    .slot-description {            
         font-size: 0.75em;
-        font-style: italic;            
     }
 
-    .slot-speaker {            
+    .slot-description {
+        font-size: 0.75em;
+        font-style: italic;
+    }
+
+    a.slot-link {
+        font-size: 0.75em;
+        font-style: italic;
+        display: block;
+        color: #fff;
+    }
+
+    a.slot-link:hover {
+        text-decoration: underline;
+    }
+
+    .slot-speaker {
         font-size: 0.0em;
         line-height: 0.5em;
         font-style: italic;
@@ -168,7 +179,7 @@
         background: #BDA5D9;
     }
 
-    .social {            
+    .social {
         background: #D27B64;
     }
 

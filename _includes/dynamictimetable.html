@@ -4,14 +4,14 @@
 <script>
     function printMatrix(m) {
         console.log("matrix:");
-        for (var i = 0; i < m.length; i++) {            
+        for (var i = 0; i < m.length; i++) {
             console.log(m[i]);
         }
         console.log("");
     }
 
     function getDatetime(str) {
-        var timeArr = str.split(":");        
+        var timeArr = str.split(":");
         var newDate = new Date();
         newDate.setHours(timeArr[0]);
         newDate.setMinutes(timeArr[1]);
@@ -21,7 +21,7 @@
 
     function getTimeStr(date) {
         var timeHours = date.getHours();
-        var timeMinutes = date.getMinutes();        
+        var timeMinutes = date.getMinutes();
         return (timeHours <= 9 ? "0" : "") + timeHours + ":" + (timeMinutes <= 9 ? "0" : "") + timeMinutes;
     }
 
@@ -48,8 +48,8 @@
 
     function getRowspan(startDate, endDate, slotSpan) {
         var diff = endDate.getTime() - startDate.getTime();
-        var hours = diff / 1000 / 60 / 60;        
-        
+        var hours = diff / 1000 / 60 / 60;
+
         return Math.floor(hours / slotSpan);
     }
 
@@ -60,11 +60,11 @@
         var diff = endDatetime - startDatetime;
         var hours = diff / 1000 / 60 / 60;
         var rowcount = Math.floor(hours / slotSpan);
-        var step = diff / rowcount; // ms        
+        var step = diff / rowcount; // ms
 
         var times = [];
-        for(let i = 0; i < rowcount; i++) {
-            var newDate = new Date(startDatetime + step*i);
+        for (let i = 0; i < rowcount; i++) {
+            var newDate = new Date(startDatetime + step * i);
             var timeHours = newDate.getHours();
             var timeMinutes = newDate.getMinutes();
             var time = {};
@@ -72,15 +72,15 @@
             time.num = newDate.getHours() + newDate.getMinutes() / 60.0;
             times[i] = time;
         }
-        
+
         return times;
     }
 
     function setMatrixField(matrix, rowstart, colstart, rowspan, colspan, id) {
         var curcol = colstart;
-        for(let r = rowstart; r < (rowstart+rowspan); r++) {
-            for(let c = colstart; c < (colstart+colspan); c++) {
-                if(!matrix[r][c]) matrix[r][c] = id;
+        for (let r = rowstart; r < (rowstart + rowspan); r++) {
+            for (let c = colstart; c < (colstart + colspan); c++) {
+                if (!matrix[r][c]) matrix[r][c] = id;
                 else colstart++;
 
                 curcol = c;
@@ -107,36 +107,36 @@
 
         // load and transform day/slot data
         var slotstartdatetimes = slots.map(x => x.start);
-        var slotenddatetimes = slots.map(x => x.end);    
+        var slotenddatetimes = slots.map(x => x.end);
 
         var mintime = new Date(Math.min.apply(null, slotstartdatetimes));
         var maxtime = new Date(Math.max.apply(null, slotenddatetimes));
         var slotspan = 0.5; // hours
         var rowcount = getRowspan(mintime, maxtime, slotspan);
-        var colcount = days.map(x => x.columns).reduce((a, b) => a + b, 0);                
-        var times = getTimes(mintime, maxtime, slotspan); 
+        var colcount = days.map(x => x.columns).reduce((a, b) => a + b, 0);
+        var times = getTimes(mintime, maxtime, slotspan);
 
         // initialize matrix for internal representation
         var matrix = new Array(rowcount);
-        for(let i = 0; i < rowcount; i++) {
+        for (let i = 0; i < rowcount; i++) {
             matrix[i] = new Array(colcount);
-            for(let j = 0; j < colcount; j++) {
+            for (let j = 0; j < colcount; j++) {
                 matrix[i][j] = "";
             }
         }
 
         // fill matrix
         var ti = 0, di = 0;
-        for(t of times) {
+        for (t of times) {
             c = 0;
-            for(d of days) {
+            for (d of days) {
                 // console.log(slots.map(x => x.startnum).join(" "));
                 var startingslots = slots.filter(x => x.day == d.id && x.startnum == t.num)
                 var cc = c;
-                for(s of startingslots) {
+                for (s of startingslots) {
                     var slotrowspan = getRowspan(s.start, s.end, slotspan);
                     s.rowspan = slotrowspan;
-                    cc = setMatrixField(matrix, ti, cc, slotrowspan, s.colspan, s.id);                    
+                    cc = setMatrixField(matrix, ti, cc, slotrowspan, s.colspan, s.id);
                 }
                 c += d.columns;
                 di++;
@@ -147,26 +147,26 @@
 
         // setup array for slot checking
         var slotStatus = [];
-        for(s of slots) {
+        for (s of slots) {
             slotStatus[s.id] = false;
             // console.log(s.id);
         }
-        
+
         // build header
-        for(d of days) {            
+        for (d of days) {
             var theadday = document.createElement("th");
             theadday.setAttribute("class", "day");
             theadday.setAttribute("colspan", d.columns);
-            var theaddaycontent = document.createElement("span");            
+            var theaddaycontent = document.createElement("span");
             theaddaycontent.innerHTML = d.formatteddate;
             theadday.appendChild(theaddaycontent);
             theadrow.appendChild(theadday);
         }
-        
+
         var r = 0;
-        for(t of times) {
+        for (t of times) {
             var timerow = document.createElement("tr");
-            var timetd = document.createElement("td");            
+            var timetd = document.createElement("td");
             timetd.setAttribute("class", "time");
 
             var tdlink = document.createElement("a");
@@ -181,10 +181,10 @@
             tdlink.appendChild(tdc);
             timetd.appendChild(tdlink);
             timerow.appendChild(timetd);
-            
-            for(let c = 0; c < colcount; c++) {
+
+            for (let c = 0; c < colcount; c++) {
                 var sid = matrix[r][c];
-                if(!sid) {
+                if (!sid) {
                     var td = document.createElement("td");
                     td.setAttribute("class", "blank");
                     td.setAttribute("colspan", 1);
@@ -192,42 +192,50 @@
                     // var span = document.createElement("span");
                     // td.appendChild(span);
                     timerow.appendChild(td);
-                } else if(slotStatus[sid] === false) {
+                } else if (slotStatus[sid] === false) {
                     var slot = slots.find(x => x.id == sid);
                     var td = document.createElement("td");
                     td.setAttribute("class", "slot " + slot.class);
                     td.setAttribute("colspan", slot.colspan);
                     td.setAttribute("rowspan", slot.rowspan);
-                    
+
                     var tdlink = document.createElement("a");
                     tdlink.setAttribute("href", "/program/?slot=" + slot.id);
 
-                    var tdc = document.createElement("div");                    
+                    var tdc = document.createElement("div");
                     tdc.setAttribute("class", "tdc");
-                    if(slot.rowspan > 1) {
+                    if (slot.rowspan > 1) {
                         tdc.classList.add("tdc-rowspan" + slot.rowspan);
                     }
-                                        
+
                     var span = document.createElement("span");
                     span.setAttribute("class", "slot-title");
                     span.innerHTML = slot.title;
                     tdc.appendChild(span);
-
-                    if(slot.start && slot.end && slot.room) {
+                    if (slot.start && slot.end && slot.room) {
                         // tdc.appendChild(document.createElement("br"));
                         var spandesc = document.createElement("span");
                         spandesc.setAttribute("class", "slot-baseinfo");
                         spandesc.innerHTML = slot.startstr + " - " + slot.endstr + ", " + slot.room;
                         tdc.appendChild(spandesc);
                     }
-                    if(slot.description) {
+                    if (slot.description) {
                         tdc.appendChild(document.createElement("br"));
                         var spandesc = document.createElement("span");
                         spandesc.setAttribute("class", "slot-description");
                         spandesc.innerHTML = slot.description;
                         tdc.appendChild(spandesc);
                     }
-                    if(slot.speaker) {
+                    if (slot.link) {
+                        tdc.appendChild(document.createElement("br"));
+                        var link = document.createElement("a");
+                        link.setAttribute("class", "slot-link");
+                        link.href = slot.link;
+                        link.target = "_blank";
+                        link.innerHTML = slot.link;
+                        tdc.appendChild(link);
+                    }
+                    if (slot.speaker) {
                         tdc.appendChild(document.createElement("br"));
                         var spanspeaker = document.createElement("span");
                         spanspeaker.setAttribute("class", "slot-speaker");
@@ -237,7 +245,7 @@
                     tdlink.appendChild(tdc);
                     td.appendChild(tdlink);
                     timerow.appendChild(td);
-                    slotStatus[sid] = true;                    
+                    slotStatus[sid] = true;
                 }
             }
 
@@ -247,40 +255,41 @@
 
         return table;
     }
-    
+
 
     // transfer data from yml
     var days = [];
-    var slots = [];    
+    var slots = [];
     var ditem = {}, sitem;
 
     {% for d in days %}
-        ditem = {};
-        ditem.id = "{{ d.id }}";
-        ditem.date = {{ d.date }};
-        ditem.dayofweek = "{{ d.dayofweek }}";
-        ditem.formatteddate = '{{ d.date | date: "%A, %-d %b" }}';
-        ditem.columns = {{ d.columns }};
-        days.push(ditem);                
+    ditem = {};
+    ditem.id = "{{ d.id }}";
+    ditem.date = {{ d.date }};
+    ditem.dayofweek = "{{ d.dayofweek }}";
+    ditem.formatteddate = '{{ d.date | date: "%A, %-d %b" }}';
+    ditem.columns = {{ d.columns }};
+    days.push(ditem);
     {% endfor %}
 
     {% for s in slots %}
-        sitem = {};
-        sitem.id = "{{ s.id }}";
-        sitem.title = "{{ s.title }}";
-        sitem.description = "{{ s.description }}";
-        sitem.speaker = "{{ s.speaker }}";
-        sitem.day = "{{ s.day }}";
-        sitem.start = getDatetime("{{ s.start }}");
-        sitem.startstr = getTimeStr(getDatetime("{{ s.start }}"));
-        sitem.startnum = getTimeNum("{{ s.start }}");
-        sitem.end = getDatetime("{{ s.end }}");
-        sitem.endstr = getTimeStr(getDatetime("{{ s.end }}"));
-        sitem.endnum = getTimeNum("{{ s.end }}");
-        sitem.room = "{{ s.room }}";
-        sitem.colspan = {{ s.colspan }};
-        sitem.class = "{{ s.class }}";
-        slots.push(sitem);                  
+    sitem = {};
+    sitem.id = "{{ s.id }}";
+    sitem.title = "{{ s.title }}";
+    sitem.link = "{{ s.link }}";
+    sitem.description = "{{ s.description }}";
+    sitem.speaker = "{{ s.speaker }}";
+    sitem.day = "{{ s.day }}";
+    sitem.start = getDatetime("{{ s.start }}");
+    sitem.startstr = getTimeStr(getDatetime("{{ s.start }}"));
+    sitem.startnum = getTimeNum("{{ s.start }}");
+    sitem.end = getDatetime("{{ s.end }}");
+    sitem.endstr = getTimeStr(getDatetime("{{ s.end }}"));
+    sitem.endnum = getTimeNum("{{ s.end }}");
+    sitem.room = "{{ s.room }}";
+    sitem.colspan = {{ s.colspan }};
+    sitem.class = "{{ s.class }}";
+    slots.push(sitem);
     {% endfor %}
 
 </script>
@@ -292,15 +301,15 @@
     function drawTimetable() {
         var ttc = document.getElementById("timetable");
         ttc.innerHTML = "";
-        
+
 
         var w = window.innerWidth;
-        if(w >= 1200) {
+        if (w >= 1200) {
             var timetable1 = createTimetable("tt1", days, slots);
             ttc.appendChild(timetable1);
         } else {
             var di = 1;
-            for(d of days) {                
+            for (d of days) {
                 var selecteddays = [], selectedslots = [];
                 selecteddays.push(d);
                 selectedslots = slots.filter(x => x.day == d.id);
@@ -314,7 +323,7 @@
         }
     }
 
-    window.addEventListener('resize', function(event) {
+    window.addEventListener('resize', function (event) {
         drawTimetable();
     }, true);
 

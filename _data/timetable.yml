@@ -1,22 +1,22 @@
 days:
   - id: d1
-    date: 2024-09-14    
-    dayofweek: Saturday 
+    date: 2024-09-14
+    dayofweek: Saturday
     columns: 3
   - id: d2
-    date: 2024-09-15    
-    dayofweek: Sunday 
+    date: 2024-09-15
+    dayofweek: Sunday
     columns: 3
   - id: d3
-    date: 2024-09-16    
+    date: 2024-09-16
     dayofweek: Monday
     columns: 1
   - id: d4
-    date: 2024-09-17    
+    date: 2024-09-17
     dayofweek: Tuesday
     columns: 1
   - id: d5
-    date: 2024-09-18    
+    date: 2024-09-18
     dayofweek: Wednesday
     columns: 1
 
@@ -241,6 +241,7 @@ slots:
   - id: s2_9
     title: Workshop 4
     description: "Multimodal Multi-objective Optimization"
+    link: "https://mmmoo-workshop.github.io/"
     speaker: "Heike Trautmann, Lennart Schapermeier, Oliver Schuetze"
     day: d2
     start: "13:30"
