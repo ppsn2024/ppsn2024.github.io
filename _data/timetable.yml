@@ -20,11 +20,9 @@ days:
     dayofweek: Wednesday
     columns: 1
 
-
 # =================================================================================================
 # =================================================================================================
 # =================================================================================================
-
 
 slots:
   - id: s1_1
@@ -160,9 +158,7 @@ slots:
     colspan: 1
     class: tutorial
 
-
-# =================================================================================================
-
+  # =================================================================================================
 
   - id: s2_1
     title: Registration & Info Desk
@@ -298,9 +294,7 @@ slots:
     colspan: 1
     class: tutorial
 
-
-# =================================================================================================
-
+  # =================================================================================================
 
   - id: s3_1
     title: Registration & Info Desk
@@ -341,6 +335,7 @@ slots:
     end: "12:30"
     room: "tba"
     colspan: 1
+    chair: Frank Neumann
     class: session
   - id: s3_6
     title: Lunch Break
@@ -357,6 +352,7 @@ slots:
     end: "15:00"
     room: "tba"
     colspan: 1
+    chair: Emma Hart
     class: session
   - id: s3_8
     title: Coffee Break
@@ -373,6 +369,7 @@ slots:
     end: "17:00"
     room: "tba"
     colspan: 1
+    chair: Niki van Stein
     class: session
   - id: s3_10
     title: Welcome Reception
@@ -383,9 +380,7 @@ slots:
     colspan: 1
     class: social
 
-
     # =================================================================================================
-
 
   - id: s4_1
     title: Registration & Info Desk
@@ -418,6 +413,7 @@ slots:
     end: "12:30"
     room: "tba"
     colspan: 1
+    chair: Ofer Shir
     class: session
   - id: s4_5
     title: Lunch Break
@@ -434,6 +430,7 @@ slots:
     end: "15:00"
     room: "tba"
     colspan: 1
+    chair: Lennart Schäpermeier
     class: session
   - id: s4_7
     title: Coffee Break
@@ -450,6 +447,7 @@ slots:
     end: "17:00"
     room: "tba"
     colspan: 1
+    chair: Benjamin Doerr
     class: session
   - id: s4_9
     title: Conference Dinner
@@ -460,9 +458,7 @@ slots:
     colspan: 1
     class: social
 
-
-# =================================================================================================
-
+  # =================================================================================================
 
   - id: s5_1
     title: Registration & Info Desk
@@ -495,6 +491,7 @@ slots:
     end: "12:30"
     room: "tba"
     colspan: 1
+    chair: Tobias Glasmachers
     class: session
   - id: s5_5
     title: Lunch Break
@@ -511,6 +508,7 @@ slots:
     end: "15:00"
     room: "tba"
     colspan: 1
+    chair: Dirk Sudholt
     class: session
   - id: s5_7
     title: Closing
