@@ -21,7 +21,7 @@ papers:
       approach allows repurposing of advanced algorithms developed for natural language
       processing, and should be applicable to other population-based algorithms such
       as learning classifier systems."
-    slot_id: s1_1
+    slot_id: s3_5
   - ID: 103
     Title:
       "Automatic Brain Tumor Segmentation Using Convolutional Neural Networks:
@@ -54,7 +54,7 @@ papers:
       our study contributes to advancing the field`s understanding and applications.
       This research lays a foundation for future automated brain tumor segmentation
       developments, with implications for clinical practice and patient care.
-    slot_id: s1_1
+    slot_id: s3_7
   - ID: 114
     Title: Learning Discretized Bayesian Networks with GOMEA
     Submitter: Damy Ha
@@ -83,7 +83,7 @@ papers:
       learning multi-objectively. We show how this enables incorporating expert knowledge
       in a uniquely insightful fashion, finding multiple DBNs that trade-off complexity,
       accuracy, and the difference with a pre-determined expert network.
-    slot_id: s1_1
+    slot_id: s3_9
   - ID: 167
     Title: Pareto-Informed Multi-Objective Neural Architecture Search
     Submitter: Zefeng Chen
@@ -115,7 +115,7 @@ papers:
       search space, we successfully approached a strong baseline formed by a single-objective
       evolutionary algorithm with restricted parameter quantities, approximating the
       entire Pareto front in a comparable timeframe."
-    slot_id: s1_1
+    slot_id: s4_4
   - ID: 260
     Title:
       A Variable-Length Fuzzy Set Representation for Learning Fuzzy-Classifier
@@ -144,7 +144,7 @@ papers:
       input spaces, significantly improving test accuracy without increasing the risk
       of overfitting. Experimental results demonstrate that Fuzzy-UCSv outperforms conventional
       Fuzzy-UCS and other machine learning techniques in terms of test accuracy."
-    slot_id: s1_1
+    slot_id: s4_6
   - ID: 44
     Title: Emergence of Specialised Collective Behaviors in Evolving Heterogeneous Swarms
     Submitter: Fuda van Diggelen
@@ -173,7 +173,7 @@ papers:
       between the two sub-groups, leading to a more robust performance than with singular
       sub-group behavior. 4) The online regulatory mechanism enhances overall performance
       and scalability."
-    slot_id: s1_1
+    slot_id: s3_5
   - ID: 82
     Title: Identifying Easy Instances to Improve Efficiency of ML Pipelines for Algorithm-Selection
     Submitter: Quentin Renau
@@ -196,7 +196,7 @@ papers:
       in function evaluations. Re-allocating the saved budget to hard problems provides
       a substantial gain in performance compared to both the virtual best solver computed
       with the original budget (VBS), the single best solver (SBS) and a standard algorithm-selector."
-    slot_id: s1_1
+    slot_id: s3_7
   - ID: 106
     Title:
       Landscape-aware Automated Algorithm Configuration using Multi-output Mixed
@@ -228,7 +228,7 @@ papers:
       the predicted configurations are competitive against the single best solver in
       many cases. Overall, configurations with better performance can be best identified
       by using NN models trained on a combination of RGF and MA-BBOB functions.
-    slot_id: s1_1
+    slot_id: s3_9
   - ID: 125
     Title:
       Feature Encapsulation by Stages in the Regression Domain Using Grammatical
@@ -254,7 +254,7 @@ papers:
       baseline in all problems. Furthermore, we analyse individual complexity across
       generations, showing that populations utilising FES consist of simpler individuals,
       thereby reducing computational costs."
-    slot_id: s1_1
+    slot_id: s4_4
   - ID: 166
     Title:
       Evaluating the Robustness of Deep-Learning Algorithm-Selection Models by
@@ -284,7 +284,7 @@ papers:
       the method generates a large number of new instances misclassified with a wide
       variation in confidence, providing a rich new source of training data to create
       more robust models."
-    slot_id: s1_1
+    slot_id: s4_6
   - ID: 207
     Title: Learned Features vs. Classical ELA on Affine BBOB Functions
     Submitter: Moritz Seiler
@@ -313,7 +313,7 @@ papers:
       best-performing feature set by itself, using selected features from a combination
       of all three feature sets provides superior performance, and all three sets individually
       substantially outperform the single best solver.
-    slot_id: s1_1
+    slot_id: s4_8
   - ID: 220
     Title:
       Hybridizing Target- and SHAP-encoded Features for Algorithm Selection in
@@ -342,7 +342,7 @@ papers:
       of meta-selecting between the two feature sets. Both approaches are capable of
       taking advantage of the performance complementarity of the models trained on target-encoded
       and SHAP-encoded feature sets, respectively.
-    slot_id: s1_1
+    slot_id: s5_4
   - ID: 261
     Title:
       "iMOPSE: a Comprehensive Open Source Library for single- and multi-objective
@@ -375,7 +375,7 @@ papers:
       files, ensuring accessibility across Windows and Unix-based operating systems.
       Together, these features position iMOPSE as a comprehensive solution for addressing
       real-world optimization challenges.
-    slot_id: s1_2
+    slot_id: s5_6
   - ID: 296
     Title:
       Towards Understanding the Effectiveness of Automatic Heuristic Design with
@@ -402,7 +402,7 @@ papers:
       LLM-based EPS in AHD, while also contributing to the advancement of future EPS
       algorithmic development. To foster accessibility and reproducibility, we have
       fully open-sourced our benchmark and corresponding results.
-    slot_id: s1_2
+    slot_id: s3_5
   - ID: 43
     Title:
       Performance Comparison of Surrogate-Assisted Evolutionary Algorithms on Computational
@@ -426,6 +426,7 @@ papers:
       findings suggest that the more recently published methods, as well as the techniques
       that utilize differential evolution as one of their optimization mechanisms, perform
       significantly better than the other considered methods.
+    slot_id: s5_6
   - ID: 179
     Title:
       Balancing Between Time Budgets and Costs in Surrogate-Assisted Evolutionary
@@ -458,6 +459,7 @@ papers:
       models are mostly the best choice if up to several hundred function evaluations
       can be performed, we also observe that simple surrogate models can still outperform
       non-surrogate-assisted EAs if several thousand function evaluations can be performed.
+    slot_id: s5_4
   - ID: 269
     Title: An adaptive approach to Bayesian Optimization with switching costs
     Submitter: Stefan Pricopie
@@ -486,6 +488,7 @@ papers:
       are relevant to the general class of resource-constrained problems, they are particularly
       relevant to problems where adaptability to varying resource availability is of
       high importance.
+    slot_id: s4_8
   - ID: 274
     Title:
       Re-Examining Supervised Dimension Reduction for High-Dimensional Bayesian
@@ -513,6 +516,7 @@ papers:
       sian Process models. We verify empirically that tackling these two issues improves
       the performance of methods based on supervised dimension reduction on a wide
       range of problems."
+    slot_id: s4_6
   - ID: 294
     Title: Evolve Cost-aware Acquisition Functions Using Large Language Models
     Submitter: Yiming Yao
@@ -541,6 +545,7 @@ papers:
       to the well-known EIpu and EI-cool methods designed by human experts, our approach
       showcases remarkable efficiency and generalization across various tasks, including
       12 synthetic problems and 3 real-world hyperparameter tuning test sets.
+    slot_id: s4_4
   - ID: 297
     Title:
       A Surrogate-assisted Partial Optimization for Expensive Constrained Optimization
@@ -569,6 +574,7 @@ papers:
       surrogate models one by one. Experimental results reveal the superiority of SAPO
       compared to the state-of-the-art SAEAs on a single-objective optimization problem
       suite with inequality constraints under an expensive optimization scenario.
+    slot_id: s3_9
   - ID: 38
     Title:
       Aggregated Partial Hypervolumes - An Overall Indicator for Performance Evaluation
@@ -593,6 +599,7 @@ papers:
       descriptive MMMOO examples are studied to verify that the optimal population according
       to APHVs matches our understanding of the ideal outcome of MMMOO, taking into
       account the relative importance of MMO and MOO perspectives.
+    slot_id: s3_5
   - ID: 109
     Title: Empirical Analysis of the Dynamic Binary Value Problem with IOHprofiler
     Submitter: Diederick Vermetten
@@ -619,6 +626,7 @@ papers:
       Our results highlight some of the many synergies between theory and benchmarking
       and offer a platform through which further research into dynamic optimization
       problems can be performed."
+    slot_id: s3_7
   - ID: 256
     Title:
       A Deep Dive into Effects of Structural Bias on CMA-ES Performance along Affine
@@ -644,6 +652,7 @@ papers:
       functions, maintaining fixed optimum locations while gradually varying the landscape
       features. Our results demonstrate an interplay between module-induced structural
       bias and algorithm performance across different landscape characteristics."
+    slot_id: s3_9
   - ID: 116
     Title:
       On the design of diploid memetic algorithms for solving the multidimensional
@@ -673,6 +682,7 @@ papers:
       state-of-the-art algorithms. These findings were confirmed by the performed statistical
       evaluation. Finally, we conduct ablation studies on key algorithmic components
       to confirm their novelty and effectiveness."
+    slot_id: s3_5
   - ID: 143
     Title:
       Sliding Window Bi-Objective Evolutionary Algorithms for Optimizing Chance-Constrained
@@ -704,6 +714,7 @@ papers:
       we visualize the selection behavior of SW-GSEMO during its optimization process
       and show it beats other algorithms to obtain the highest quality of solution in
       variable instances.
+    slot_id: s3_7
   - ID: 154
     Title:
       "GPGLS: Genetic Programming Guided Local Search for Large-Scale Vehicle Routing
@@ -739,6 +750,7 @@ papers:
       X instances. The further analysis also shows the effectiveness of the newly learned
       GLS utility functions that take into account new factors which are not been considered
       by GLS and KGLS.
+    slot_id: s3_9
   - ID: 156
     Title: Generalizing and Unifying Gray-box Optimization Operators
     Submitter: Francisco Chicano
@@ -763,6 +775,7 @@ papers:
       power of the new framework by proposing an efficient hill climber and crossover
       for two related permutation problems: the Linear Ordering Problem and the Single
       Machine Total Weighted Tardiness Problem."
+    slot_id: s4_4
   - ID: 157
     Title: Ant Colony Optimization for the Dynamic Electric Vehicle Routing Problem
     Submitter: MARIA N. ANASTASIADOU
@@ -788,6 +801,7 @@ papers:
       from ground up. The advantage of ACO in DEVRP highlights the importance of adaptive-learning,
       knowledge-based, and decision-making in optimizing EV routes, presenting a promising
       path for future research in intelligent transportation systems.
+    slot_id: s4_6
   - ID: 193
     Title:
       Learning a Prior for Monte Carlo Search by Replaying Solutions to Combinatorial
@@ -809,6 +823,7 @@ papers:
       time and that brings large performance gains. The method is applied to three
       difficult combinatorial problems: Latin Square Completion, Kakuro, and Inverse
       RNA Folding."
+    slot_id: s4_8
   - ID: 211
     Title:
       Dancing to the State of the Art? How Candidate Lists Influence LKH for Solving
@@ -839,6 +854,7 @@ papers:
       this refined TSP heuristic is much more efficient -- causing fewer timeouts and
       improving the performance (in terms of penalized average runtime) by an order
       of magnitude -- and thereby challenges the state of the art in TSP solving."
+    slot_id: s5_4
   - ID: 234
     Title:
       Multi-Objective Evolutionary Approaches for the Knapsack Problem with Stochastic
@@ -867,6 +883,7 @@ papers:
       We evaluate this filtering approach by applying it along with GSEMO. We conduct
       extensive experiments to show the effectiveness of these approaches using several
       benchmarks and present a detailed analysis of the results."
+    slot_id: s5_6
   - ID: 276
     Title:
       Knowledge-Guided Optimization for Complex Vehicle Routing with 3D Loading
@@ -897,6 +914,7 @@ papers:
       AKI operator for broader exploration. Our experiments demonstrate that the AKS
       algorithm significantly outperforms the state-of-the-art method in solving various
       3L-SDVRP instances."
+    slot_id: s3_5
   - ID: 56
     Title: Exploring proprioceptive feedback in the evolution of modular robots
     Submitter: Babak Hosseinkhani Kargar
@@ -914,6 +932,7 @@ papers:
       that the evolved solutions use signals only from a fraction of the joints (25-51%)
       and perform better than the baseline, where all signals are used. This effect
       was observed across the majority of the test suite.
+    slot_id: s3_7
   - ID: 16
     Title: Funnels in Multi-objective Fitness Landscapes
     Submitter: Gabriela Ochoa
@@ -936,6 +955,7 @@ papers:
       metric. Our findings indicate that these proposed funnel metrics capture the landscape
       global structure, correlate with benchmark parameters and explain the performance
       of well-established multi-objective local search and evolutionary algorithms."
+    slot_id: s3_9
   - ID: 73
     Title:
       Contrasting the Landscapes of Feature Selection under Different Machine Learning
@@ -962,6 +982,7 @@ papers:
       by means of landscape analysis and local optima networks, and we relate them to
       the performance of three feature selection algorithms. Our findings have important
       implications for feature selection problems and algorithms.
+    slot_id: s4_4
   - ID: 110
     Title: Entropy, Search Trajectories, and Explainability for Frequency Fitness Assignment
     Submitter: Sarah L. Thomson
@@ -995,6 +1016,7 @@ papers:
       that the explanatory approach adopted in this study serves as an example and
       inspires further similar investigations into how — and why — FFA-assisted optimisation
       works."
+    slot_id: s4_6
   - ID: 127
     Title:
       "Over Sampling Local Optima: Selection and Sampling Bias in Hybrid Genetic
@@ -1018,6 +1040,7 @@ papers:
       that are local optima. We prove that hybrid GAs have an inherent bias that makes
       them more likely to sample other local optima. These two results can inform the
       design of more effective hybrid evolutionary algorithms."
+    slot_id: s4_8
   - ID: 227
     Title: "Regularized Feature Selection Landscapes: An Empirical Study of Multimodality"
     Submitter: Xavier F. C. Sánchez-Díaz
@@ -1042,6 +1065,7 @@ papers:
       on the landscape induced by feature selection. In the ten datasets studied, we
       find a high degree of multimodality when there is no regularization, and that
       the degree of multimodality drops off with increasing regularization.
+    slot_id: s5_4
   - ID: 9
     Title: Positional Bias Does Not Influence Cartesian Genetic Programming with Crossover
     Submitter: Henning Cui
@@ -1073,6 +1097,7 @@ papers:
       operators is incomplete, and CGP with recombination might not negatively impact
       its evolutionary search process. On the contrary, using CGP with crossover might
       improve its performance."
+    slot_id: s5_6
   - ID: 15
     Title: Unit-Aware Genetic Programming for the Development of Empirical Equations
     Submitter: Julia Reuter
@@ -1095,6 +1120,7 @@ papers:
       the unit-aware algorithms make only low sacrifices in accuracy, while producing
       unit-adherent solutions. Overall, we presented a promising novel approach for
       developing unit-adherent empirical equations.
+    slot_id: s5_6
   - ID: 67
     Title:
       Improving the performance of relocation rules for the container relocation
@@ -1127,6 +1153,7 @@ papers:
       to significantly improve the performance of RRs, albeit with increased execution
       time. Nevertheless, even in this case, the method can still solve all the considered
       problems within seconds, underscoring its effectiveness."
+    slot_id: s3_9
   - ID: 81
     Title:
       "P-Mixup: Improving Generalization Performance of Evolutionary Feature Construction
@@ -1156,6 +1183,7 @@ papers:
       clearly outperforms standard GP and seven other overfitting control methods for
       GP, validating the superiority of using pessimistic vicinal risk minimization
       to control overfitting in GP for feature construction.
+    slot_id: s5_4
   - ID: 89
     Title: Symbol Graph Genetic Programming for Symbolic Regression
     Submitter: jinglu song
@@ -1177,6 +1205,7 @@ papers:
       experiments conducted across three different benchmark types demonstrate that
       SGGP outperforms 21 existing baseline SR methods, achieving greater accuracy and
       conciseness in the mathematical expressions it generates.
+    slot_id: s4_8
   - ID: 115
     Title:
       Simultaneous Model-Based Evolution of Constants and Expression Structure
@@ -1210,6 +1239,7 @@ papers:
       and constant tuning after GP optimization. Our results indicate that our novel
       approach generally performs best and confirms the importance of simultaneous constant
       optimization during evolution.
+    slot_id: s4_8
   - ID: 165
     Title: Adaptive Sampling of Biomedical Images with Cartesian Genetic Programming
     Submitter: Yuri Lavinas
@@ -1233,6 +1263,7 @@ papers:
       which images to add heavily impacts convergence speed. Our work shows that the
       right choice of the image selection metric positively impacts the effectiveness
       of the evolutionary algorithm."
+    slot_id: s4_6
   - ID: 185
     Title: The Inefficiency of Genetic Programming for Symbolic Regression
     Submitter: Gabriel Kronberger
@@ -1259,6 +1290,7 @@ papers:
       well-fitting univariate expressions. The results show that genetic programming
       in such limited settings explores only a small fraction of all unique expressions,
       and evaluates expressions repeatedly that are congruent to already visited expressions."
+    slot_id: s4_4
   - ID: 204
     Title: Decision Tree Based Wrappers for Hearing Loss
     Submitter: Miguel Rabuge
@@ -1280,6 +1312,7 @@ papers:
       maintain baseline performance. Compared to traditional methods, FEDORA demonstrates
       superior performance, with a maximum accuracy of 76.2%, using 57 features. The
       framework also generated an individual that achieved 72.8% using a single feature.
+    slot_id: s5_4
   - ID: 223
     Title: Multi-Modal Adaptive Graph Evolution for Program Synthesis
     Submitter: Camilo De La Torre
@@ -1310,6 +1343,7 @@ papers:
       converges faster to local or global minimum compared to MT-CGP and explores the
       solution space more effectively by creating candidate solutions with lower semantic
       redundancy.
+    slot_id: s3_7
   - ID: 298
     Title:
       Enhancing the Computational Efficiency of Genetic Programming through Alternative
@@ -1344,6 +1378,7 @@ papers:
       Most importantly, in the context of specialized hardware, we conclude that our
       proposed techniques can likely allow for significant speedups over general-purpose
       computing platforms, as well as improved power/energy efficiency.
+    slot_id: s3_5
   - ID: 62
     Title:
       Selection Strategy Based on Proper Pareto Optimality in Evolutionary Multi-Objective
@@ -1371,6 +1406,7 @@ papers:
       and removed. Finally, weight vectors are adjusted, thereby enhancing the population
       diversity. In experimental studies, MOEA/D-SPP outperforms five state-of-the-art
       MOEAs on DRS-MOPs, demonstrating the promising application of SPP.
+    slot_id: s3_5
   - ID: 76
     Title: Hypervolume gradient subspace approximation
     Submitter: Kenneth Zhang
@@ -1393,6 +1429,7 @@ papers:
       algorithm is compared to state-of-the-art MOEAs on two- and three- objective
       benchmark suites, and outperforms all other algorithms on all 6 two-objective
       problems and 12 out of 17 three-objective problems."
+    slot_id: s3_5
   - ID: 94
     Title: "LTR-HSS: A Learning-to-Rank based Framework for Hypervolume Subset Selection"
     Submitter: Cheng Gong
@@ -1416,6 +1453,7 @@ papers:
       of objectives while achieving superior or competitive hypervolume performance.
       This demonstrates the potential of our method to be integrated into algorithms
       for many-objective optimization.
+    slot_id: s3_5
   - ID: 96
     Title:
       Three objectives degrade the convergence ability of dominance-based multi-objective
@@ -1444,6 +1482,7 @@ papers:
       (next MOEA/D with the weighted sum function) among the examined algorithms on
       many-objective problems in early generations before it starts to show the performance
       deterioration.
+    slot_id: s3_7
   - ID: 105
     Title: "Many-Objective Cover Problem: Discovering Few Solutions to Cover Many Objectives"
     Submitter: Yilu LIU
@@ -1467,6 +1506,7 @@ papers:
       experimental results on various test problems with up to 100 objectives demonstrate
       both the efficiency and effectiveness of CluSO, while also illustrating that MaCP
       is a feasible perspective on MaO."
+    slot_id: s3_7
   - ID: 113
     Title: Solution-based Knowledge Discovery for Multi-objective Optimization
     Submitter: Clément Legrand
@@ -1490,6 +1530,7 @@ papers:
       Windows (bVRPTW), to define accordingly the problem-dependent knowledge of the
       SKD mechanism. Our experiments show that using the KD mechanism we propose increases
       the performance of both IMOLS and MOEA/D algorithms."
+    slot_id: s3_7
   - ID: 120
     Title: Innovization for Route Planning
     Submitter: Eva Röper
@@ -1517,6 +1558,7 @@ papers:
       only about 40 % of previously necessary function evaluations, we manage to produce
       similar optimisation results. This is particularly beneficial for mobile applications
       with limited available computational resources.
+    slot_id: s3_9
   - ID: 146
     Title: Evolutionary Multi-Objective Diversity Optimization
     Submitter: Frank Neumann
@@ -1539,6 +1581,7 @@ papers:
       of maximum coverage, maximum cut and minimum vertex cover problems. The resulting
       non-dominated populations exhibit rich qualitative features, giving insights into
       the optimization instances and the quality-diversity trade-offs they induce.
+    slot_id: s3_9
   - ID: 152
     Title: Forward-Inverse Transfer Multiobjective Optimization
     Submitter: Tingyang Wei
@@ -1562,6 +1605,7 @@ papers:
       conducted on benchmark and real-world multitask multiobjective optimization problems
       demonstrate the faster convergence rate and enhanced inverse modeling accuracy
       of our algorithm compared to state-of-the-art algorithms."
+    slot_id: s3_9
   - ID: 153
     Title: Near-Tight Runtime Guarantees for Many-Objective Evolutionary Algorithms
     Submitter: Simon Wietheger
@@ -1588,6 +1632,7 @@ papers:
       and length of bitstrings. This is the first time that such tight bounds are proven
       for many-objective uses of these MOEAs.  Further, we show that our bounds also
       transfer to the more practically motivated NSGA-III algorithm."
+    slot_id: s4_4
   - ID: 163
     Title:
       Multi-Objective Random Bit Climbers with Weighted Permutation on Large Scale
@@ -1612,6 +1657,7 @@ papers:
       which ones to focus on when executing the bit climb. We present the implemented
       algorithm, compare its performance to other well known evolutionary algorithms
       and study some of its properties.
+    slot_id: s4_4
   - ID: 164
     Title:
       An Unbounded Archive-Based Inverse Model in Evolutionary Multi-objective
@@ -1667,6 +1713,7 @@ papers:
       log N).  As a result, this work contributes to the state-of-the-art Pareto-compliant
       unary performance metrics, such as the hypervolume indicator, offering an efficient
       and promising alternative."
+    slot_id: s4_6
   - ID: 186
     Title:
       Influence Maximization in Hypergraphs using Multi-Objective Evolutionary
@@ -1697,6 +1744,7 @@ papers:
       datasets and three propagation models, compared with five baseline algorithms,
       reveal that our method achieves in most cases state-of-the-art results in terms
       of hypervolume and solution diversity.
+    slot_id: s5_4
   - ID: 190
     Title: Biased Pareto Optimization for Subset Selection with Dynamic Cost Constraints
     Submitter: Dan-Xuan Liu
@@ -1724,6 +1772,7 @@ papers:
       coverage show that BPODC is capable of adapting more effectively and rapidly to
       budget changes, utilizing a running time that is less than that of the static
       greedy algorithm.
+    slot_id: s4_8
   - ID: 201
     Title:
       Reaching Pareto Front Shape Invariance with a Continuous Multi-Objective
@@ -1750,6 +1799,7 @@ papers:
       with respect to state-of-the-art MOEAs on several test suites with regular and
       irregular Pareto Front geometries. To the best of the author`s knowledge, GI-MOACO$_mathbb{R}$
       is the first Pareto-Front-Shape invariant MOACO.
+    slot_id: s4_8
   - ID: 213
     Title: Scalabale Quantum Approximate Optimiser for Multi-Objective Optimisation
     Submitter: Zakaria A. DAHI
@@ -1779,6 +1829,7 @@ papers:
       IBM 127-qubits` real quantum computers. The results show up to 89% execution-time
       decrease, which supports the applicability/reliability of the proposal in today`s
       time-constrained and error-prone quantum computers.
+    slot_id: s5_4
   - ID: 236
     Title:
       Reliability of Indicator-based Comparison Results of Evolutionary Multi-Objective
@@ -1810,6 +1861,7 @@ papers:
       Moreover, our observations also suggest the necessity of using multiple indicators
       (including the HV indicator with multiple reference points) to obtain reliable
       performance comparison results."
+    slot_id: s5_6
   - ID: 254
     Title:
       "Pareto Landscape: Visualising the Landscape of Multi-Objective Optimisation
@@ -1838,6 +1890,7 @@ papers:
       can capture problem characteristics that the other methods cannot do. Lastly,
       we present the Pareto landscapes of commonly used benchmark problems (ZDT, DTLZ,
       WFG and BBOB) in the domain, and discuss their features and characteristics.
+    slot_id: s5_6
   - ID: 147
     Title: Warm Starting of CMA-ES for Contextual Optimization Problems
     Submitter: Kento Uchida
@@ -1866,6 +1919,7 @@ papers:
       the search distribution using the posterior distribution of the Gaussian process
       regression. The numerical simulation shows that the CMA-ES-CWS outperforms the
       existing contextual optimization and warm starting methods.
+    slot_id: s5_6
   - ID: 176
     Title: A Potential Potential Function for a Variable-Metric Evolution Strategy
     Submitter: Stephan Frank
@@ -1885,6 +1939,7 @@ papers:
       function and to tune potential function parameters. Our results indicate that
       the tuned potential function is negative and uniformly bounded away from zero,
       which yields linear convergence."
+    slot_id: s5_4
   - ID: 200
     Title: CMA-ES for Discrete and Mixed-Variable Optimization on Sets of Points
     Submitter: Kento Uchida
@@ -1911,6 +1966,7 @@ papers:
       probability. Numerical simulations demonstrated that the CMA-ES-SoP successfully
       optimized the optimization problems on sets of points, whereas the naive CMA-ES
       failed to optimize them due to premature convergence.
+    slot_id: s4_8
   - ID: 266
     Title: Natural Gradient Interpretation of Rank-One Update in CMA-ES
     Submitter: Ryoki Hamano
@@ -1939,6 +1995,7 @@ papers:
       of the evolution path. Moreover, the newly derived rank-one update is extensible,
       where an additional term appears in the update for the mean vector. We empirically
       investigate the properties of the additional term using various benchmark functions.
+    slot_id: s4_6
   - ID: 300
     Title: Avoiding Redundant Restarts in Multimodal Global Optimization
     Submitter: Diederick Vermetten
@@ -1959,6 +2016,7 @@ papers:
       to avoid such wasted restarts with the CMA-ES, and investigate its efficacy on
       test-cases with high redundancy potential, when compared to the standard restart
       mechanism.
+    slot_id: s4_4
   - ID: 226
     Title: "LBIC-CMA: Two simple modifications of CMA-ES to handle mixed-integer problems"
     Submitter: Tristan Marty
@@ -1974,6 +2032,7 @@ papers:
       different variants ensu- ing from these modifications on the BBOB mixed-integer
       testbed and compare the performance of the different variants with the recently
       in- troduced CMA-ES with margin."
+    slot_id: s5_6
   - ID: 99
     Title:
       Improving continuous Monte Carlo Tree Search for identifying parameters in
@@ -1999,6 +2058,7 @@ papers:
       that bias the playouts and select promising actions in the search tree. The approach
       is experimentally validated on a real-world biological problem: the goal is to
       identify the continuous parameters of gene regulatory networks (GRNs)."
+    slot_id: s3_7
   - ID: 126
     Title:
       "Satellite Resource Scheduling:  Compaction Strategies for Genetic Algorithm
@@ -2020,6 +2080,7 @@ papers:
       algorithms to construct less fragmented schedules. A schedule with `fewer holes` should also translate into better resource utilization. We show that this is
       indeed the case. This work is impactful because this strategy can be used to improve
       all genetic algorithms schedulers."
+    slot_id: s3_9
   - ID: 140
     Title:
       Attacker-Defender Strategy Optimization Using Multi-objective Competitive
@@ -2050,6 +2111,7 @@ papers:
       To the best of our knowledge, this paper marks one of the first-ever applications
       of multi-objective, competitive, co-evolutionary optimization approaches to a
       real-world wargame scenario, revealing their impact and importance in practice."
+    slot_id: s4_4
   - ID: 212
     Title:
       On the Multi-Objective Optimization of Wind Farm Cable Layouts with regard
@@ -2085,6 +2147,7 @@ papers:
       the Anholt OWF. The obtained results indicate the ability of our approach to discover
       sets of high-quality solutions, underscoring its potential to enhance the strategic
       development of robust and economically viable OWF networks.
+    slot_id: s4_6
   - ID: 221
     Title:
       "EvoVec: Evolutionary Image Vectorization with Adaptive Curve Number and
@@ -2117,6 +2180,7 @@ papers:
       comparison with existing solutions show that our algorithm qualitatively and quickly
       vectorize images.  Particularly, our approach outperforms others in terms of
       pixel-by-pixel MSE by 15%. The implementation is publicly available https://github.com/EgorBa/EvoVec-Evolutionary-Image-Vectorization."
+    slot_id: s4_8
   - ID: 230
     Title:
       Evolution-based Feature Selection for Predicting Dissolved Oxygen Concentrations
@@ -2144,6 +2208,7 @@ papers:
       MPES not only produces accurate predictions with few observed labels but also,
       through gene maps of models, reveals sophisticated phenological patterns of different
       lake types."
+    slot_id: s5_4
   - ID: 233
     Title:
       Using Evolutionary Algorithms for the search of 16-variable Weight-Wise Perfectly
@@ -2169,6 +2234,7 @@ papers:
       16 variable WPB boolean functions with weight-wise non-linearities that surpassed
       previous achievements. This marks a significant advancement in the exploration
       of EAs’ potential in cryptography."
+    slot_id: s5_6
   - ID: 277
     Title:
       Discovering Rotation Symmetric Self-dual Bent Functions with Evolutionary
@@ -2192,6 +2258,7 @@ papers:
       known examples of such functions. We hope this work will open a new research direction
       that will result in finding more such functions for larger dimensions, as well
       as algebraic constructions that will be valid for infinite Boolean function sizes."
+    slot_id: s3_5
   - ID: 123
     Title: Self-Adjusting Evolutionary Algorithms Are Slow on Multimodal Landscapes
     Submitter: Konstantin Sturm
@@ -2216,6 +2283,7 @@ papers:
       This makes the self-adaptive algorithm considerably worse than good static parameter
       choices, which do allow to escape from local optima efficiently. We show this
       theoretically and complement the result with empirical runtime results."
+    slot_id: s3_5
   - ID: 142
     Title:
       Runtime Analysis of Evolutionary Diversity Optimization on the Multi-objective
@@ -2246,6 +2314,7 @@ papers:
       we show an upper bound of $O(k^2n^3 log(n))$ expected iterations. We complement
       our theoretical analysis with an empirical study, which shows a very similar behavior
       for both diversity measures that is close to the theory predictions."
+    slot_id: s3_7
   - ID: 149
     Title: Sliding Window 3-Objective Pareto Optimization for Problems with Chance Constraints
     Submitter: Frank Neumann
@@ -2267,7 +2336,8 @@ papers:
       guarantees. Our experimental investigations for the chance constrained dominating
       set problem show that our new sliding window approach allows one to solve much
       larger instances in a much more efficient way than the 3-objective approach presented
-      in (Neumann and Witt, GECCO 2023) .
+      in (Neumann and Witt, GECCO 2023).
+    slot_id: s3_5
   - ID: 158
     Title:
       Runtime Analysis of a Multi-Valued Compact Genetic Algorithm on Generalized
@@ -2297,6 +2367,7 @@ papers:
       the runtime bound is O(r^2 n log^2 r log^3 n) with high probability. At the end
       of experiments, we state one conjecture related to the expected runtime of another
       variant of multi-valued OneMax function."
+    slot_id: s3_7
   - ID: 168
     Title: Faster Optimization Through Genetic Drift
     Submitter: Marc Kaufmann
@@ -2325,6 +2396,7 @@ papers:
       mode becomes substantially slower, yielding a runtime of Ω(n^2), since genetic
       drift can only be avoided with smaller step sizes of O(1/n). We complement our
       theoretical results with simulations."
+    slot_id: s3_9
   - ID: 177
     Title: Greedy versus Curious Parent Selection for Multi-Objective Evolutionary Algorithms
     Submitter: Aishwarya Radhakrishnan
@@ -2352,6 +2424,7 @@ papers:
       By contrast, we show that greedy parent selection schemes can be trapped with
       an incomplete Pareto front for superpolynomial time.  Finally, we provide experimental
       results on the two-objective optimization of linear functions."
+    slot_id: s3_9
   - ID: 199
     Title: How Population Diversity Influences the Efficiency of Crossover
     Submitter: Sacha Cerf
@@ -2370,6 +2443,7 @@ papers:
       speed-up for any $mu=O(sqrt{n}/log^2 n)$. On the other hand, we show that even
       for $mu=2$, if we simply break ties in favor of diversity then this increases
       diversity so much that optimization is accelerated by a constant factor.
+    slot_id: s4_4
   - ID: 208
     Title:
       "Overcome Binary Adversarial Optimisation:  From $(1,lambda)$ Evolutionary
@@ -2400,6 +2474,7 @@ papers:
       approximation to the optimal solution of the Diagonal problem in polynomial
       runtime. This suggests the promising potential of coevolution for solving binary
       adversarial optimisation problems."
+    slot_id: s4_4
   - ID: 228
     Title: Evolving Populations of Solved Subgraphs with Crossover and Constraint Repair
     Submitter: Andrew Sutton
@@ -2421,6 +2496,7 @@ papers:
       cover problem in expected time $O{left(4^k m + m^4 k log n right)}$ using a
       simple RLS-style mutation. This bound can be improved to $O(4^k m + m^2 n k log
       n)$ by using standard mutation constrained to the vertices of the graph.
+    slot_id: s4_6
   - ID: 232
     Title:
       Analysis of Evolutionary Diversity Optimisation for the Maximum Matching
@@ -2452,6 +2528,7 @@ papers:
       number of vertices and (m) the number of edges. Our empirical studies, examining
       the scaling behavior with respect to $m$ and $mu$, complement these theoretical
       insights and suggest potential for further refinement of the runtime bounds."
+    slot_id: s4_6
   - ID: 239
     Title: Archive-based Single-Objective Evolutionary Algorithms for Submodular Optimization
     Submitter: Frank Neumann
@@ -2472,6 +2549,7 @@ papers:
       problems. Our algorithms are variants of the (1+lambda)-EA and (1+1) EA and increase
       the feasible region of the search space incrementally in order to deal with the
       considered submodular problems.
+    slot_id: s4_6
   - ID: 242
     Title:
       "Local Optima in Diversity Optimization: Non-trivial Offspring Population
@@ -2503,6 +2581,7 @@ papers:
       diversity, we also propose a $(1_mu + 1_mu)$ EA$_D$, which is an analogue
       of the $(1 + 1)$ EA for populations, and which is also efficient at optimizing
       diversity on the $k$-vertex cover problem."
+    slot_id: s4_8
   - ID: 252
     Title:
       Proven Runtime Guarantees for How the MOEA/D Computes the Pareto Front From
@@ -2539,6 +2618,7 @@ papers:
       best for $N = O(n^{beta - 1})$, resulting in an $O(n^ beta log n)$ bound.
       In contrast to standard bit mutation, smaller values of $N$ are better for power-law
       mutation, as it is capable of easily creating missing solutions."
+    slot_id: s4_8
   - ID: 265
     Title: Ranking Diversity Benefits Coevolutionary Algorithms on an Intransitive Game
     Submitter: Mario Alejandro Hevia Fajardo
@@ -2563,6 +2643,7 @@ papers:
       of rankings through an archive. In the second approach, we introduce a CoEA without
       an archive, but with a ranking diversity mechanism. Both approaches optimise Bilinear
       in expected polynomial time."
+    slot_id: s5_4
   - ID: 279
     Title:
       On the Equivalence between Stochastic Tournament and Power-law Ranking Selection
@@ -2594,6 +2675,7 @@ papers:
       we also find that the way ties are broken between equally fit solutions can make
       the difference between the best and the worst approach, especially when crossover
       is involved."
+    slot_id: s5_4
   - ID: 285
     Title:
       Level-based Theorems for Runtime Analysis of Multi-objective Evolutionary
@@ -2625,6 +2707,7 @@ papers:
       Pareto front, which may pave the way for runtime analyses of state-of-the-art
       MOEAs approximating the Pareto front with population sizes smaller than the Pareto
       front."
+    slot_id: s5_6
   - ID: 286
     Title:
       Runtime Analysis for State-of-the-Art Multi-Objective Evolutionary Algorithms
@@ -2650,6 +2733,7 @@ papers:
       confirm these findings. This work is the first runtime analysis of state-of-the-art
       MOEAs for the subset selection problem, and also the first runtime analysis of
       SMS-EMOA on a combinatorial problem.
+    slot_id: s5_4
   - ID: 302
     Title: When Does the Time-Linkage Property Help Optimization by Evolutionary Algorithms?
     Submitter: Mingfeng Li
@@ -2679,6 +2763,7 @@ papers:
       to be maintained. We construct a time-linkage variant of the Jump problem, and
       proved that the expected runtime is reduced from O(nk) to O(nk−1) (Theorem 4).
       Our experiments also verify the above theoretical findings."
+    slot_id: s4_8
   - ID: 303
     Title:
       A First Running Time Analysis of the Strength Pareto Evolutionary Algorithm
@@ -2706,3 +2791,4 @@ papers:
       respectively. The proofs are accomplished through general theorems which are also
       applicable for analyzing the expected running time of other MOEAs on these problems,
       and thus can be helpful for future theoretical analysis of MOEAs.
+    slot_id: s5_6
