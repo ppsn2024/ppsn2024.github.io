@@ -1684,6 +1684,7 @@ papers:
       that can measure the matching degree between the suggested solution and the decision
       maker`s preference. We demonstrate that the proposed UAIM is superior to IM on
       ten benchmark problems.
+    slot_id: s4_6
   - ID: 171
     Title: "Reinvestigating the R2 Indicator: Achieving Pareto Compliance by Integration"
     Submitter: Lennart Schäpermeier

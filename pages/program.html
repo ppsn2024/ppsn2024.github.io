@@ -19,6 +19,8 @@ custom_css:
                 word-wrap: break-word;
                 word-break: break-word;
             }
+
+            
         </style>
         <h2>Program</h2>
 
@@ -243,16 +245,19 @@ custom_css:
                         <tr>
                             <th>Authors</th>
                             <th>Title</th>
-                            <th>Category</th>
+                            <th class="d-none d-sm-table-cell">Category</th>
+                            <th>Session</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% assign papers = site.data.papers.papers | sort: "Category"%}
+                        {% assign papers = site.data.papers.papers | sort: "slot_id"%}
                         {% for paper in papers %}
+                        {% assign slot = site.data.timetable.slots | where: "id", paper.slot_id | first%}
                         <tr>
                             <td>{{paper.Authors}}</td>
                             <td>{{paper.Title}}</td>
-                            <td>{{paper.Category}}</td>
+                            <td class="d-none d-sm-table-cell">{{paper.Category}}</td>
+                            <td>{{slot.title}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
