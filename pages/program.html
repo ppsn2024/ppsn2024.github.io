@@ -247,7 +247,7 @@ custom_css:
                         </tr>
                     </thead>
                     <tbody>
-                        {% assign papers = site.data.papers | sort: "Category"%}
+                        {% assign papers = site.data.papers.papers | sort: "Category"%}
                         {% for paper in papers %}
                         <tr>
                             <td>{{paper.Authors}}</td>

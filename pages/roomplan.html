@@ -22,14 +22,7 @@ description: Programm of PPSN 2024 conference
       ᐊ
     </button>
     <div class="slider" id="mySlider">
-      {% for paper in site.data.plan[0].sessions[0].papers %}
-      <div class="paper" id="{{paper.id}}">
-        <div class="content">
-          <h4>ID: #{{paper.id}}</h4>
-          <p>{{paper.title}}</p>
-        </div>
-      </div>
-      {% endfor %}
+     
     </div>
     <button type="button" id="moveRight" class="btn-nav">
       ᐅ
@@ -44,7 +37,7 @@ description: Programm of PPSN 2024 conference
             <p id="paperAuthors" class="text-justify paperAuthors">
 
             </p>
-            <p id="paperAbstract" class="text-justify">
+            <p id="paperAbstract" class="text-justify paperAbstract">
 
             </p>
           </div>
@@ -160,53 +153,117 @@ description: Programm of PPSN 2024 conference
 
 </section>
 <script>
-  const planData = '{{ site.data.plan }}';
+  const planData = '{{ site.data.papers}}';
   const planDataJson = planData.replaceAll("=>", ":");
   const data = JSON.parse(planDataJson);
-  console.log(data);
+  console.log(data)
+
+  //const planData = "{{ site.data.plan }}";
+  //const planDataJson = planData.replaceAll("=>", ":");
+  //const data = JSON.parse(planDataJson);
+  //console.log(data);
+
+
 
   //URL params
   var queryParams = new URLSearchParams(window.location.search);
+  var slotIdParam = queryParams.get("slot");
   var paperIdParam = queryParams.get('paperid');
   var posterIdParam = queryParams.get('posterid');
   const title = document.getElementById("paperTitle");
   const authors = document.getElementById("paperAuthors");
   const abstract = document.getElementById("paperAbstract");
 
+  if (slotIdParam == null) {
+    slotIdParam = s1_1;
+  }
+
+  const papersPerSlot = getPapersBySlotId(slotIdParam);
+  console.log(papersPerSlot)
+
+  /////////// Set papers in slider
+  const slider = document.getElementById("mySlider");
+
+  function addPapersToSlider(papers, slider) {
+    papers.forEach(paper => {
+      // Create the paper div
+      const paperDiv = document.createElement('div');
+      paperDiv.className = 'paper';
+      paperDiv.id = paper.ID;
+
+      // Create the content div
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'content';
+
+      // Create the h4 element for ID
+      const h4 = document.createElement('h4');
+      h4.textContent = `ID: #${paper.ID}`;
+
+      // Create the p element for Title
+      const p = document.createElement('p');
+      p.textContent = paper.Title;
+
+      // Append h4 and p to contentDiv
+      contentDiv.appendChild(h4);
+      contentDiv.appendChild(p);
+      // Append contentDiv to paperDiv
+      paperDiv.appendChild(contentDiv);
+      // Append paperDiv to slider
+      slider.appendChild(paperDiv);
+    });
+  }
+
+  addPapersToSlider(papersPerSlot, slider);
+
+
+  function getPapersBySlotId(slotId) {
+    let papers = [];
+    for (const paper of data.papers) {
+      if (paper.slot_id == slotId) {
+        papers.push(paper);
+      }
+    }
+
+    return papers;
+  }
+
   if (paperIdParam == null) {
-    paperIdParam = 1;
+    paperIdParam = papersPerSlot[0].ID;
   }
 
   if (posterIdParam == null) {
     posterIdParam = 1;
   }
+
+
   const currentPaper = getPaperById(paperIdParam);
-  title.innerHTML = currentPaper.title;
-  authors.innerHTML = currentPaper.authors;
-  abstract.innerHTML = currentPaper.abstract;
-  colorPosterSVG(currentPaper.roomposition);
+  title.innerHTML = currentPaper.Title;
+  authors.innerHTML = currentPaper.Authors;
+  abstract.innerHTML = currentPaper.Abstract;
+  //////////////////////////////////////////////colorPosterSVG(currentPaper.roomposition);
 
   //Add event listeners to the papers
   const papers = document.querySelectorAll(".paper");
+  let lastClicked = null;
+  papers.forEach(paper => {
+    paper.onclick = function () {
+      const paperId = this.id;
+      const paper = papersPerSlot.find(p => p.ID == paperId);
 
-  papers.forEach((paper) => {
-    paper.addEventListener('click', (e) => {
-      var paperId = paper.id;
-      for (const p of data.sessions[0].papers) {
-        if (p.id === paperId) {
-          const title = document.getElementById("paperTitle");
-          const authors = document.getElementById("paperAuthors");
-          const abstract = document.getElementById("paperAbstract");
-          queryParams.set("paperid", p.id);
-          queryParams.set("posterid", p.roomposition)
-          history.pushState(null, null, "?" + queryParams.toString());
-          title.innerHTML = p.title;
-          authors.innerHTML = p.authors;
-          abstract.innerHTML = p.abstract;
-          colorPosterSVG(p.roomposition);
-        }
+      if (lastClicked) {
+        lastClicked.classList.remove('active');
       }
-    });
+
+      this.classList.add('active');
+      
+      queryParams.set("paperid", paper.ID);
+      queryParams.set("posterid", paper.roomposition)
+      history.pushState(null, null, "?" + queryParams.toString());
+      title.innerHTML = paper.Title;
+      authors.innerHTML = paper.Authors;
+      abstract.innerHTML = paper.Abstract;
+      //colorPosterSVG(p.roomposition);
+    }
   });
 
   function colorPosterSVG(activeStandId) {
@@ -220,11 +277,9 @@ description: Programm of PPSN 2024 conference
 
   function getPaperById(paperId) {
     console.log(paperId);
-    for (const session of data.sessions) {
-      for (const paper of session.papers) {
-        if (paper.id == paperId) {
-          return paper;
-        }
+    for (const paper of data.papers) {
+      if (paper.ID == paperId) {
+        return paper;
       }
     }
 
