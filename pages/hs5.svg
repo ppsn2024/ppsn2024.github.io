@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1200 1247.18" style="enable-background:new 0 0 1200 1247.18;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DDDDDD;}
+	.st1{fill:#999999;}
+	.st2{fill:none;stroke:#999999;stroke-width:3;stroke-miterlimit:10;}
+	.st3{fill:#666666;}
+	.st4{display:none;}
+</style>
+<g id="boundaries">
+	<g id="room">
+		<polygon class="st0" points="886,135.63 886,72.63 313,72.63 313,135.63 101,135.63 101,1176.63 1099,1079.63 1099,135.63 		"/>
+	</g>
+</g>
+<g id="basics">
+	<g id="frontdesk">
+		<rect x="556" y="190.13" class="st1" width="280" height="80"/>
+	</g>
+	<g id="door-west">
+		
+			<rect x="176" y="130.64" transform="matrix(-1 -4.489266e-11 4.489266e-11 -1 452 271.2879)" class="st1" width="100" height="10"/>
+		
+			<rect x="266" y="51.07" transform="matrix(-1 -4.492907e-11 4.492907e-11 -1 542 191.709)" class="st1" width="10" height="89.58"/>
+		<path class="st2" d="M177.51,131.07c0,0-3.56-78.51,88.49-78.51"/>
+	</g>
+	<g id="door-east">
+		
+			<rect x="989" y="130.74" transform="matrix(-1 -4.491086e-11 4.491086e-11 -1 2078 271.481)" class="st1" width="100" height="10"/>
+		
+			<rect x="1079" y="51.16" transform="matrix(-1 -4.502011e-11 4.502011e-11 -1 2168 191.902)" class="st1" width="10" height="89.58"/>
+		<path class="st2" d="M990.51,131.16c0,0-3.56-78.51,88.49-78.51"/>
+	</g>
+	<g id="blackboard">
+		<rect x="630" y="72.63" class="st1" width="226" height="10"/>
+	</g>
+	<g id="beamer-screen">
+		<rect x="343" y="72.63" class="st1" width="267" height="10"/>
+	</g>
+	<g id="window-northeast">
+		<rect x="1089" y="309.63" class="st1" width="10" height="300"/>
+	</g>
+	<g id="window-southeast">
+		<rect x="1089" y="706.63" class="st1" width="10" height="300"/>
+	</g>
+</g>
+<g id="setup">
+	
+		<rect id="poster-10" x="464.89" y="324.63" transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 769.2632)" class="st3" width="60" height="120"/>
+	
+		<rect id="poster-9" x="464.89" y="474.63" transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 1069.2632)" class="st3" width="60" height="120"/>
+	
+		<rect id="poster-8" x="464.89" y="624.63" transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 1369.2632)" class="st3" width="60" height="120"/>
+	
+		<rect id="poster-7" x="464.89" y="774.63" transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 1669.2632)" class="st3" width="60" height="120"/>
+	
+		<rect id="poster-6" x="494.89" y="894.63" transform="matrix(-4.489938e-11 1 -1 -4.489938e-11 1479.5227 429.7405)" class="st3" width="60" height="120"/>
+	
+		<rect id="poster-5" x="644.89" y="894.63" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 1629.5227 279.7405)" class="st3" width="60" height="120"/>
+	<rect id="poster-4" x="674.89" y="774.63" class="st3" width="60" height="120"/>
+	<rect id="poster-3" x="674.89" y="624.63" class="st3" width="60" height="120"/>
+	<rect id="poster-2" x="674.89" y="474.63" class="st3" width="60" height="120"/>
+	<rect id="poster-1" x="674.89" y="324.63" class="st3" width="60" height="120"/>
+</g>
+<g id="rulers" class="st4">
+</g>
+</svg>

@@ -149,9 +149,20 @@ ul.dashed > li:before {
 
 //roomplan
 #roomplan {
+    padding-bottom:0;
   .planerContainer {
     position: relative;
     background: $brand-dark-grey;
+  }
+/*
+  *
+  * THE Session CONTAINER
+  *
+  *********************************/
+  .session-info{
+    width:100%;
+    height:80px;
+    background:$brand-primary;
   }
 
   /*
@@ -170,6 +181,7 @@ ul.dashed > li:before {
     padding-bottom: var(--slider-py);
     -ms-overflow-style: none;
     scrollbar-width: none;
+    position: relative;
   }
 
   .slider::-webkit-scrollbar {
@@ -191,7 +203,6 @@ ul.dashed > li:before {
     background: $brand-grey;
     border:3px solid $brand-dark-grey;
     white-space: normal;
-    border-radius: 10px;
     padding: 0 2px;
     font-size: 0.8rem;
     transition: all 0.8s ease-in-out;
@@ -207,8 +218,15 @@ ul.dashed > li:before {
 
   .paper .content {
     padding:15px;
+    position: absolute;
 
+    h4 {
+      font-size: 1.4rem;
+    }
 
+    p {
+      font-size:0.9rem;
+    }
   }
 
   .description {
@@ -231,10 +249,6 @@ ul.dashed > li:before {
 
     .paper:hover > .description {
       display: block;
-    }
-    .paper:hover > img {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
     }
   }
   /*
@@ -282,6 +296,9 @@ ul.dashed > li:before {
   /*
   *INFO TEXT
   */
+  .green-bg {
+    background:$brand-primary;
+  }
 
   .paperInfo {
     background:$brand-primary;
@@ -289,7 +306,7 @@ ul.dashed > li:before {
     width:100%;
     min-height:300px;
     padding:10px 10px;
-
+    max-height:600px;
     p.paperAuthors {
       font-style: italic;
     }
@@ -300,6 +317,26 @@ ul.dashed > li:before {
   */
   .svgPlan {
     min-height:600px;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    .active{
+      fill:$brand-primary;
+      stroke-width:6;
+      stroke:$brand-grey;
+    }
+
+    svg {
+      position: relative;
+      height:600px;
+    }
   }
+  @media (orientation: portrait) {
+    .col-lg-6 {
+        width: 100%;
+    }
+  }
+
 
 }

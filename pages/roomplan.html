@@ -7,140 +7,272 @@ description: Programm of PPSN 2024 conference
 ---
 {% if jekyll.environment == "development" %}
 <section id="roomplan" class="background-light subpage-sec">
-   <div class="planerContainer">
-      <button type="button" id="moveLeft" class="btn-nav">
-        ᐊ
-      </button>
-      <div class="slider" id="mySlider">
-        {% for paper in site.data.plan[0].sessions[0].papers %}
-        <div class="paper" id="{{paper.id}}">
-          <div class="content">
-           <h4>ID: #{{paper.id}}</h4>
-           <p>{{paper.title}}</p>
-          </div>
+  <div class="planerContainer">
+    <button type="button" id="moveLeft" class="btn-nav">
+      ᐊ
+    </button>
+    <div class="slider" id="mySlider">
+      {% for paper in site.data.plan[0].sessions[0].papers %}
+      <div class="paper" id="{{paper.id}}">
+        <div class="content">
+          <h4>ID: #{{paper.id}}</h4>
+          <p>{{paper.title}}</p>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
+    </div>
     <button type="button" id="moveRight" class="btn-nav">
       ᐅ
     </button>
-    </div>
-    <div id="paperInfo" class="paperInfo">
-      <div class="container">
-         <h2 id="paperTitle">PaperID: #0001</h2>
-         <p id="paperAuthors" class="text-justify paperAuthors">
-            Christian Haider, Jan Zenisek, Florian Bachinger
-         </p>
-         <p id="paperAbstract" class="text-justify">
-            We investigate the addition of constraints on the function
-image and its derivatives for the incorporation of
-prior knowledge in symbolic regression. The approach is called
-shape-constrained symbolic regression and allows us to enforce e.g.
-monotonicity of the function over selected inputs. The aim is to find
-models which conform to expected behaviour and which have improved
-extrapolation capabilities.
-We demonstrate the feasibility of the idea and propose and compare two
-evolutionary algorithms for shape-constrained symbolic regression: i) an extension of
-tree-based genetic programming which discards infeasible solutions in the
-selection step, and ii) a two population evolutionary algorithm that separates
-the feasible from the infeasible solutions. In both algorithms we use interval
-arithmetic to approximate bounds for models and their partial derivatives.
-The algorithms are tested on a set of 19 synthetic and four real-world
-regression problems. Both algorithms are able to identify models which conform
-to shape constraints which is not the case for the unmodified symbolic regression algorithms. However, the predictive accuracy of models with constraints
-is worse on the training set and the test set. Shape-constrained polynomial regression produces the best results for the test set but also significantly larger models.
-         </p>
+  </div>
+  <div class="container-fluid">
+    <div class="row information">
+      <div class="col-lg-6 col-md-6 green-bg">
+        <div id="paperInfo" class="paperInfo">
+          <div class="container">
+            <h2 id="paperTitle"></h2>
+            <p id="paperAuthors" class="text-justify paperAuthors">
+
+            </p>
+            <p id="paperAbstract" class="text-justify">
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="svgPlan">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 1200 1247.18" style="enable-background:new 0 0 1200 1247.18;" xml:space="preserve">
+            <style type="text/css">
+              .st0 {
+                fill: #DDDDDD;
+              }
+
+              .st1 {
+                fill: #999999;
+              }
+
+              .st2 {
+                fill: none;
+                stroke: #999999;
+                stroke-width: 3;
+                stroke-miterlimit: 10;
+              }
+
+              .st3 {
+                fill: #666666;
+              }
+
+              .st4 {
+                display: none;
+              }
+            </style>
+            <g id="boundaries">
+              <g id="room">
+                <polygon class="st0"
+                  points="886,135.63 886,72.63 313,72.63 313,135.63 101,135.63 101,1176.63 1099,1079.63 1099,135.63 		" />
+              </g>
+            </g>
+            <g id="basics">
+              <g id="frontdesk">
+                <rect x="556" y="190.13" class="st1" width="280" height="80" />
+              </g>
+              <g id="door-west">
+
+                <rect x="176" y="130.64" transform="matrix(-1 -4.489266e-11 4.489266e-11 -1 452 271.2879)" class="st1"
+                  width="100" height="10" />
+
+                <rect x="266" y="51.07" transform="matrix(-1 -4.492907e-11 4.492907e-11 -1 542 191.709)" class="st1"
+                  width="10" height="89.58" />
+                <path class="st2" d="M177.51,131.07c0,0-3.56-78.51,88.49-78.51" />
+              </g>
+              <g id="door-east">
+
+                <rect x="989" y="130.74" transform="matrix(-1 -4.491086e-11 4.491086e-11 -1 2078 271.481)" class="st1"
+                  width="100" height="10" />
+
+                <rect x="1079" y="51.16" transform="matrix(-1 -4.502011e-11 4.502011e-11 -1 2168 191.902)" class="st1"
+                  width="10" height="89.58" />
+                <path class="st2" d="M990.51,131.16c0,0-3.56-78.51,88.49-78.51" />
+              </g>
+              <g id="blackboard">
+                <rect x="630" y="72.63" class="st1" width="226" height="10" />
+              </g>
+              <g id="beamer-screen">
+                <rect x="343" y="72.63" class="st1" width="267" height="10" />
+              </g>
+              <g id="window-northeast">
+                <rect x="1089" y="309.63" class="st1" width="10" height="300" />
+              </g>
+              <g id="window-southeast">
+                <rect x="1089" y="706.63" class="st1" width="10" height="300" />
+              </g>
+            </g>
+            <g id="setup">
+
+              <rect id="poster-10" x="464.89" y="324.63"
+                transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 769.2632)" class="st3" width="60"
+                height="120" />
+
+              <rect id="poster-9" x="464.89" y="474.63"
+                transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 1069.2632)" class="st3" width="60"
+                height="120" />
+
+              <rect id="poster-8" x="464.89" y="624.63"
+                transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 1369.2632)" class="st3" width="60"
+                height="120" />
+
+              <rect id="poster-7" x="464.89" y="774.63"
+                transform="matrix(-1 -4.489887e-11 4.489887e-11 -1 989.7822 1669.2632)" class="st3" width="60"
+                height="120" />
+
+              <rect id="poster-6" x="494.89" y="894.63"
+                transform="matrix(-4.489938e-11 1 -1 -4.489938e-11 1479.5227 429.7405)" class="st3" width="60"
+                height="120" />
+
+              <rect id="poster-5" x="644.89" y="894.63"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 1629.5227 279.7405)" class="st3" width="60"
+                height="120" />
+              <rect id="poster-4" x="674.89" y="774.63" class="st3" width="60" height="120" />
+              <rect id="poster-3" x="674.89" y="624.63" class="st3" width="60" height="120" />
+              <rect id="poster-2" x="674.89" y="474.63" class="st3" width="60" height="120" />
+              <rect id="poster-1" x="674.89" y="324.63" class="st3" width="60" height="120" />
+            </g>
+            <g id="rulers" class="st4">
+            </g>
+          </svg>
+        </div>
       </div>
     </div>
-    <div class="svgPlan">
+  </div>
 
-    </div>
+
 </section>
 <script>
-const planData = '{{ site.data.plan }}';
-const planDataJson = planData.replaceAll("=>", ":");
-const data = JSON.parse(planDataJson);
-console.log(data);
+  const planData = '{{ site.data.plan }}';
+  const planDataJson = planData.replaceAll("=>", ":");
+  const data = JSON.parse(planDataJson);
+  console.log(data);
 
-//URL params
-var queryParams = new URLSearchParams(window.location.search);
-var paperIdParam = queryParams.get('paperid');
+  //URL params
+  var queryParams = new URLSearchParams(window.location.search);
+  var paperIdParam = queryParams.get('paperid');
+  var posterIdParam = queryParams.get('posterid');
+  const title = document.getElementById("paperTitle");
+  const authors = document.getElementById("paperAuthors");
+  const abstract = document.getElementById("paperAbstract");
 
-console.log(paperIdParam);
+  if (paperIdParam == null) {
+    paperIdParam = 1;
+  }
 
-//Add event listeners to the papers
-const papers = document.querySelectorAll(".paper");
+  if (posterIdParam == null) {
+    posterIdParam = 1;
+  }
+  const currentPaper = getPaperById(paperIdParam);
+  title.innerHTML = currentPaper.title;
+  authors.innerHTML = currentPaper.authors;
+  abstract.innerHTML = currentPaper.abstract;
+  colorPosterSVG(currentPaper.roomposition);
 
-papers.forEach((paper) => {
-  paper.addEventListener('click', (e) => {
-    var paperId = paper.id;
-    for (const p of data.sessions[0].papers) {
-      if (p.id === paperId) {
+  //Add event listeners to the papers
+  const papers = document.querySelectorAll(".paper");
+
+  papers.forEach((paper) => {
+    paper.addEventListener('click', (e) => {
+      var paperId = paper.id;
+      for (const p of data.sessions[0].papers) {
+        if (p.id === paperId) {
           const title = document.getElementById("paperTitle");
           const authors = document.getElementById("paperAuthors");
           const abstract = document.getElementById("paperAbstract");
           queryParams.set("paperid", p.id);
-          history.pushState(null, null, "?"+queryParams.toString());
+          queryParams.set("posterid", p.roomposition)
+          history.pushState(null, null, "?" + queryParams.toString());
           title.innerHTML = p.title;
           authors.innerHTML = p.authors;
           abstract.innerHTML = p.abstract;
+          colorPosterSVG(p.roomposition);
+        }
+      }
+    });
+  });
+
+  function colorPosterSVG(activeStandId) {
+    const stands = document.querySelectorAll(".st3");
+    const activeStand = document.querySelector("#" + activeStandId);
+    stands.forEach(x => {
+      x.classList.remove("active");
+    });
+    activeStand.classList.add("active");
+  }
+
+  function getPaperById(paperId) {
+    console.log(paperId);
+    for (const session of data.sessions) {
+      for (const paper of session.papers) {
+        if (paper.id == paperId) {
+          return paper;
+        }
       }
     }
-  });
-});
+
+    return null; // Return null if paper with given ID is not found
+  }
 
 
-const roomSlider = document.querySelector(".slider");
-const btnLeft = document.getElementById("moveLeft");
-const btnRight = document.getElementById("moveRight");
+  const roomSlider = document.querySelector(".slider");
+  const btnLeft = document.getElementById("moveLeft");
+  const btnRight = document.getElementById("moveRight");
 
-let baseSliderWidth = roomSlider.offsetWidth;
-let activeIndex = 0; 
+  let baseSliderWidth = roomSlider.offsetWidth;
+  let activeIndex = 0;
 
 
-btnLeft.addEventListener("click", (e) => {
-  let paperWidth = document.querySelector(".paper").getBoundingClientRect()
-    .width;
-  let scrollDistance = paperWidth * 6; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
+  btnLeft.addEventListener("click", (e) => {
+    let paperWidth = document.querySelector(".paper").getBoundingClientRect()
+      .width;
+    let scrollDistance = paperWidth * 6; // Scroll the length of 6 papers. TODO: make work for mobile because (4 papers/page instead of 6)
 
-  roomSlider.scrollBy({
-    top: 0,
-    left: -scrollDistance,
-    behavior: "smooth",
-  });
-  activeIndex = (activeIndex - 1) % 3;
-  console.log(activeIndex);
-});
-
-// Scroll Right button
-btnRight.addEventListener("click", (e) => {
-  let paperWidth = document.querySelector(".paper").getBoundingClientRect()
-    .width;
-  let scrollDistance = paperWidth * 6; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
-
-  console.log(`paperWidth = ${paperWidth}`);
-  console.log(`scrolling right ${scrollDistance}`);
-
-  // if we're on the last page
-  if (activeIndex == 2) {
-    // duplicate all the items in the slider (this is how we make 'looping' slider)
-    //populateSlider();
     roomSlider.scrollBy({
       top: 0,
-      left: +scrollDistance,
+      left: -scrollDistance,
       behavior: "smooth",
     });
-    activeIndex = 0;
-  } else {
-   roomSlider.scrollBy({
-      top: 0,
-      left: +scrollDistance,
-      behavior: "smooth",
-    });
-    activeIndex = (activeIndex + 1) % 3;
+    activeIndex = (activeIndex - 1) % 3;
     console.log(activeIndex);
-  }
-});
+  });
+
+  // Scroll Right button
+  btnRight.addEventListener("click", (e) => {
+    let paperWidth = document.querySelector(".paper").getBoundingClientRect()
+      .width;
+    let scrollDistance = paperWidth * 6; // Scroll the length of 6 papers. TODO: make work for mobile because (4 papers/page instead of 6)
+
+    console.log(`paperWidth = ${paperWidth}`);
+    console.log(`scrolling right ${scrollDistance}`);
+
+    // if we're on the last page
+    if (activeIndex == 2) {
+      // duplicate all the items in the slider (this is how we make 'looping' slider)
+      //populateSlider();
+      roomSlider.scrollBy({
+        top: 0,
+        left: +scrollDistance,
+        behavior: "smooth",
+      });
+      activeIndex = 0;
+    } else {
+      roomSlider.scrollBy({
+        top: 0,
+        left: +scrollDistance,
+        behavior: "smooth",
+      });
+      activeIndex = (activeIndex + 1) % 3;
+      console.log(activeIndex);
+    }
+  });
 
 </script>
 {% endif %}
