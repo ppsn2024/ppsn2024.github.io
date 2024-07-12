@@ -3,8 +3,8 @@
   --paper-height: 150px;
   --arrow-width: 50px;
   --slider-py: 25px;
-
 }
+
 @media only screen and (max-width: 1000px) {
   :root {
     --paper-width: 25vw;
@@ -154,6 +154,11 @@ ul.dashed > li:before {
     position: relative;
     background: $brand-dark-grey;
   }
+
+  .session-information {
+    background:$brand-secondary;
+    min-height:100px;
+  }
 /*
   *
   * THE Session CONTAINER
@@ -172,13 +177,13 @@ ul.dashed > li:before {
   *********************************/
   .slider {
     width: 100%;
-    height:var(--paper-height) + var(--slider-py) + var(--slider-py);
+    height:$paper-height + $slider-py + $slider-py;
     overflow-x: scroll;
     overflow-y: visible;
     white-space: nowrap;
     position: relative;
-    padding-top: var(--slider-py);
-    padding-bottom: var(--slider-py);
+    padding-top: $slider-py;
+    padding-bottom: $slider-py;
     -ms-overflow-style: none;
     scrollbar-width: none;
     position: relative;
@@ -194,26 +199,27 @@ ul.dashed > li:before {
   *
   *********************************/
   .paper {
-    min-width:200px;
-    width: var(--paper-width);
-    height: var(--paper-height);
+    min-width:150px;
+    width: $paper-width;
+    height: $paper-height;
     display: inline-block;
     position: relative;
     color: white;
-    background: $brand-grey;
+    background: #7EA254;
     border:3px solid $brand-dark-grey;
     white-space: normal;
     padding: 0 2px;
     font-size: 0.8rem;
-    transition: all 0.8s ease-in-out;
   }
 
   .paper:hover {
     cursor: pointer;
+    filter:brightness(115%);
+    transition: all 200ms linear;
   }
 
   .paper:nth-of-type(1) {
-    margin-left: var(--arrow-width);
+    margin-left: $arrow-width;
   }
 
   .paper .content {
@@ -221,11 +227,13 @@ ul.dashed > li:before {
     position: absolute;
 
     h4 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
 
     p {
-      font-size:0.9rem;
+      font-size:0.8rem;
+      color: #000;
+      line-height:1.2;
     }
   }
 
@@ -234,7 +242,7 @@ ul.dashed > li:before {
     display: none;
     z-index: 9999;
     background-color: #272727;
-    width: var(--paper-width);
+    width: $paper-width;
     margin-top: -10px;
     padding: 10px 0;
     border-bottom-left-radius: 10px;
@@ -243,8 +251,7 @@ ul.dashed > li:before {
 
   @media only screen and (min-width: 900px) {
     .paper:hover {
-      transform: scale(1.2);
-      z-index: 2;
+      /*transform: scale(1.2);*/
     }
 
     .paper:hover > .description {
@@ -257,16 +264,16 @@ ul.dashed > li:before {
   *
   *********************************/
   .btn-nav {
-    width: var(--arrow-width);
-    height: var(--paper-height);
-    border-radius: 5px;
+    width: $arrow-width;
+    height: 100%;
+    border-radius: 0px;
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     outline: none;
     border: none;
     color: white;
-    top: var(--slider-py);
+    top: slider-py;
     z-index: 5;
     visibility: hidden;
   }
@@ -316,7 +323,8 @@ ul.dashed > li:before {
   *SVG PLAN
   */
   .svgPlan {
-    min-height:600px;
+    min-height:500px;
+    width:100%;
     display: block;
     margin: auto;
     text-align: center;
@@ -329,7 +337,7 @@ ul.dashed > li:before {
 
     svg {
       position: relative;
-      height:600px;
+      height:500px;
     }
   }
   @media (orientation: portrait) {
