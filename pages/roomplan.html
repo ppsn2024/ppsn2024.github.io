@@ -10,7 +10,7 @@ description: Programm of PPSN 2024 conference
   <div class="session-information">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" id="session">
           <h3>Poster Session 1</h3>
           <p>12:00-14:00</p>
         </div>
@@ -156,14 +156,12 @@ description: Programm of PPSN 2024 conference
   const planData = '{{ site.data.papers}}';
   const planDataJson = planData.replaceAll("=>", ":");
   const data = JSON.parse(planDataJson);
-  console.log(data)
+  console.log(data);
 
-  //const planData = "{{ site.data.plan }}";
-  //const planDataJson = planData.replaceAll("=>", ":");
-  //const data = JSON.parse(planDataJson);
-  //console.log(data);
-
-
+  const slots = '{{ site.data.timetable.slots}}';
+  const slotsString = slots.replaceAll("=>", ":");
+  const slotsJsonString = `[${slotsString.replace(/}{/g, '},{')}]`;
+  const slotsArray = JSON.parse(slotsJsonString);
 
   //URL params
   var queryParams = new URLSearchParams(window.location.search);
@@ -179,7 +177,11 @@ description: Programm of PPSN 2024 conference
   }
 
   const papersPerSlot = getPapersBySlotId(slotIdParam);
-  console.log(papersPerSlot)
+  const session = getSessionBySlotId(slotIdParam);
+
+
+  /////////// Set Session information
+  console.log(getElementById(slotsArray, slotIdParam));
 
   /////////// Set papers in slider
   const slider = document.getElementById("mySlider");
@@ -225,6 +227,10 @@ description: Programm of PPSN 2024 conference
     }
 
     return papers;
+  }
+
+  function getSessionBySlotId(slotId) {
+
   }
 
   if (paperIdParam == null) {
@@ -338,6 +344,10 @@ description: Programm of PPSN 2024 conference
       console.log(activeIndex);
     }
   });
+
+  function getElementById(array, id) {
+    return array.find(obj => obj.id === id);
+  }
 
 </script>
 {% endif %}
