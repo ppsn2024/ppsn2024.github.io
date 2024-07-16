@@ -88,16 +88,14 @@
 
     //Add event listeners to the papers
     const papers = document.querySelectorAll(".paper");
-    let lastClicked = null;
     papers.forEach(paper => {
         paper.onclick = function () {
+            /*papers.forEach(paper => {
+                paper.classList.remove('active');
+            });*/
             const paperId = this.id;
             const paper = papersPerSlot.find(p => p.ID == paperId);
-
-            if (lastClicked) {
-                lastClicked.classList.remove('active');
-            }
-            this.classList.add('active');
+            //this.classList.add('active');
 
             queryParams.set("paperid", paper.ID);
             queryParams.set("posterid", paper.poster_id)
@@ -116,6 +114,7 @@
             authors.innerHTML = currentPaper.Authors;
             abstract.innerHTML = currentPaper.Abstract;
             colorPosterSVG(currentPaper.poster_id);
+            colorActivePaper(currentPaper.ID)
         } else {
             if (slot.class == "session") {
                 console.log(slot)
@@ -148,10 +147,18 @@
                 }
             }
             swapSVG("/assets/rooms/roomplan.svg", svgContainer)
+
+            var element = null;
+
             if (slot.room == "Break Room") {
-                const element = document.getElementById("breakroom");
-                element.setAttribute("class", "cls-1")
+                element = document.getElementById("breakroom")
+            } else if (slot.room == "Lecture Hall Corridor") {
+                element = document.getElementById("registrationdesk")
+            } else if (slot.room == "tba") {
+                element = document.getElementById("hs5")
             }
+
+            element.setAttribute("class", "cls-1")
         }
     }
 
@@ -254,6 +261,16 @@
             x.classList.remove("active");
         });
         activeStand.classList.add("active");
+    }
+
+    function colorActivePaper(paperId) {
+        const papers = document.querySelectorAll(".paper");
+        const activePaper = document.getElementById(paperId);
+
+        papers.forEach(x => {
+            x.classList.remove("active");
+        });
+        activePaper.classList.add("active");
     }
 </script>
 

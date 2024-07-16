@@ -152,7 +152,7 @@ ul.dashed > li:before {
     padding-bottom:0;
   .planerContainer {
     position: relative;
-    background: $brand-dark-grey;
+    background: #ddd;
   }
 
   .session-information {
@@ -206,16 +206,23 @@ ul.dashed > li:before {
     position: relative;
     color: white;
     background: #7EA254;
-    border:3px solid $brand-dark-grey;
+    border:3px solid #999;
     white-space: normal;
     padding: 0 2px;
     font-size: 0.8rem;
+    margin: 0 5px;
   }
 
   .paper:hover {
     cursor: pointer;
     filter:brightness(115%);
+    border:3px solid #666;
     transition: all 200ms linear;
+  }
+
+  .paper.active {
+    filter:brightness(115%);
+    border:3px solid #666;
   }
 
   .paper:nth-of-type(1) {
@@ -232,6 +239,8 @@ ul.dashed > li:before {
     }
 
     p {
+      text-justify: none;
+      text-align: left;
       font-size:0.9rem;
       color: #000;
       line-height:1.2;
@@ -305,11 +314,11 @@ ul.dashed > li:before {
   *INFO TEXT
   */
   .green-bg {
-    background:$brand-primary;
+    background:#7EA254;
   }
 
   .paperInfo {
-    background:$brand-primary;
+    background:#7EA254;
     color:#fff;
     width:100%;
     min-height:300px;
@@ -321,6 +330,11 @@ ul.dashed > li:before {
 
     p.paperAbstract {
       color:#000;
+    }
+
+    #paperTitle {
+      text-align: left;
+      text-justify: none;
     }
   }
 
