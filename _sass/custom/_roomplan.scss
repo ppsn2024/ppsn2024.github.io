@@ -60,6 +60,10 @@
       transition: all 200ms linear;
    }
 
+   .task-slot.active {
+      filter: brightness(115%);
+   }
+
    .time-slot{
       background: #eee;
    }

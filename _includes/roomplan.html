@@ -86,6 +86,7 @@
     addPapersToSlider(papersPerSlot, slider);
     renderDetails(slot)
     drawDaySchedule(slot)
+    handleActiveTaskSlotsEffect(slot.id)
 
 
 
@@ -318,9 +319,13 @@
                 const timeSlots = document.querySelectorAll('.time-slot');
                 timeSlots.forEach(slot => {
                 slot.classList.remove('hovered');
+                });
+            });
+
+            task.addEventListener('onclick', function() {
+                handleActiveTaskSlotsEffect(task.getAttribute("slotid"));
             });
         });
-    });
 }
 
     function createTimeSlots(start, end) {
@@ -355,6 +360,7 @@
             div.style.marginLeft = `${maringSlots  * 120}px`;
             div.setAttribute("start", task.startnum)
             div.setAttribute("end", task.endnum)
+            div.setAttribute("slotId", task.id)
             div.textContent = task.title;
 
             a.appendChild(div);
@@ -387,6 +393,17 @@
             timeSlot.classList.add('hovered');
             }
         }
+    }
+
+    function handleActiveTaskSlotsEffect(slotId) {
+        var taskSlots = document.querySelectorAll(".task-slot");
+        var activeTaskSlot = document.querySelector(`[slotid="${slotId}"]`);
+        
+        taskSlots.forEach(slot => {
+            slot.classList.remove('active');
+        });
+
+        activeTaskSlot.classList.add('active');
     }
 </script>
 
