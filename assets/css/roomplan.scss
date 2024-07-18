@@ -3,6 +3,7 @@
 # only Main files contain this front matter, not partials.
 ---
 
-.session_overview_list_id {
-
-}
+@import
+    "vars",
+    "custom/roomplan"
+;

@@ -1,0 +1,98 @@
+.session-information {
+   position:relative;
+   background:#eee;
+ }
+
+#daySchedule{
+   width:100%;
+   white-space: no-wrap;
+   height:130px;
+   overflow-x: scroll;
+   overflow-y:visible;
+   position:relative;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+   padding:0;
+   margin:0;
+   
+   /*.slot-item {
+     min-width:7.3vw;
+     height:60px;
+     background:#eee;
+     text-align: center;
+   }*/
+   .row {
+      padding:0;
+      margin:0;
+   }
+
+   .dayScheduleRow {
+     margin:0;
+     padding:0;
+   }
+
+   .time-slots, .task-slots {
+     display:flex;
+     white-space: nowrap;
+   }
+
+   .time-slot, .task-slot {   
+     display: inline-block;
+     min-width:120px;
+     text-align:center;
+     padding:10px 0;
+     box-sizing: border-box;
+   }
+
+   .task-slot {
+     position:absolute;
+     height:90px;
+     /*border-inline-end-width: 5px;
+     border-inline-color: #fff;
+     border-inline-start-style: solid;
+     border-inline-start-width: 5px;*/
+     color:#fff;
+     filter: brightness(100%);
+   }
+
+   .task-slot:hover {
+      filter: brightness(115%);
+      transition: all 200ms linear;
+   }
+
+   .time-slot{
+      background: #eee;
+   }
+
+   .time-slot.hovered {
+      background-color: #999; 
+    }
+
+   .organization {
+      background: $tt-organization-color;
+   }
+
+   .keynote {
+      background: $tt-keynote-color;
+   }
+
+   .social {
+      background: $tt-social-color;
+   }
+
+   .session {
+      background: $tt-session-color;
+   }
+
+   .tutorial {
+      background: $tt-tutorial-color;
+   }
+
+   .workshop {
+      background: $tt-workshop-color;
+   }
+
+   .break {
+      background: $tt-break-color;
+   }
+ }

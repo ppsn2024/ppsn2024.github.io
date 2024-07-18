@@ -1,14 +1,16 @@
 <section id="roomplan" class="background-light subpage-sec">
-    <!-- <div class="session-information">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12" id="session">
-                    <h3>Poster Session 1</h3>
-                    <p>12:00-14:00</p>
-                </div>
-            </div>
+    <div class="session-information">
+        <button type="button" id="moveLeftTime" class="btn-nav">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div id="daySchedule">
+            <div id="time-slots" class="time-slots"></div>
+            <div id="task-slots" class="task-slots"></div>
         </div>
-    </div> -->
+        <button type="button" id="moveRightTime" class="btn-nav">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
     <div id="paperSlider" class="planerContainer">
         <button type="button" id="moveLeft" class="btn-nav">
             <i class="fa-solid fa-chevron-left"></i>
@@ -83,6 +85,7 @@
 
     addPapersToSlider(papersPerSlot, slider);
     renderDetails(slot)
+    drawDaySchedule(slot)
 
 
 
@@ -272,6 +275,119 @@
         });
         activePaper.classList.add("active");
     }
+
+    function drawDaySchedule(slot) {
+        const timeContainer = document.getElementById("time-slots");
+        const taskContainer = document.getElementById("task-slots");
+
+        const selectedDay = days.find(day => day.id == slot.day);
+        const selectedSlots = slots.filter(x => x.day == selectedDay.id);
+        
+        const endHourElement = selectedSlots.reduce((max, obj) => (obj.end > max.end ? obj : max), selectedSlots[0]);
+        const startHour = 8;
+        const endHour = endHourElement.endnum;
+        const timeElements = (endHour - startHour) * 2;
+
+        const timeSlots = createTimeSlots(startHour, endHour);
+        timeSlots.forEach(time => {
+            const div = document.createElement("div");
+            div.classList.add("time-slot");
+            div.textContent = time;
+            timeContainer.appendChild(div);
+        });
+
+
+        createTaskSlots(selectedSlots, taskContainer);
+
+        initializeTimeSlots();
+
+        const taskSlots = document.querySelectorAll('.task-slot');
+        taskSlots.forEach(task => {
+            task.addEventListener('mouseover', function() {
+                /*const start = (parseFloat(task.style.marginLeft) / 120); // Calculate start time based on margin-left
+                const width = (parseFloat(task.style.width) / 120); // Calculate width of task slot
+                const end = start + width / 2; // Calculate end time^*/
+                const start = task.getAttribute("start")
+                const end = task.getAttribute("end")
+
+                handleHoverEffect(parseFloat(start), parseFloat(end))
+
+            });
+
+            task.addEventListener('mouseout', function() {
+                const timeSlots = document.querySelectorAll('.time-slot');
+                timeSlots.forEach(slot => {
+                slot.classList.remove('hovered');
+            });
+        });
+    });
+}
+
+    function createTimeSlots(start, end) {
+        const timeSlots = [];
+        let current = new Date();
+        current.setHours(start, 0, 0, 0);
+
+        while(current.getHours() < end) {
+            timeSlots.push(current.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}));
+            current.setMinutes(current.getMinutes() + 30);
+        }
+        return timeSlots;
+    }
+
+    function createTaskSlots(tasks, container) {
+        console.log(tasks)
+        const slotsPerHour = 2;
+        const prevStart = 8;
+
+        tasks.forEach(task => {
+            const startSlot = (task.startnum - 8) * slotsPerHour;
+            const endSlot = (task.endnum - 8) * slotsPerHour;
+            const durationSlots = endSlot - startSlot;
+            const maringSlots = (task.startnum - prevStart) * slotsPerHour;
+
+            const a = document.createElement('a');
+            a.setAttribute("href", "/iprogram/?slot=" + task.id + "#roomplan")
+
+            const div  = document.createElement("div");
+            div.classList.add("task-slot", task.class);
+            div.style.width = `${durationSlots * 120}px`;
+            div.style.marginLeft = `${maringSlots  * 120}px`;
+            div.setAttribute("start", task.startnum)
+            div.setAttribute("end", task.endnum)
+            div.textContent = task.title;
+
+            a.appendChild(div);
+
+            container.appendChild(a);
+        });
+    }
+
+    function initializeTimeSlots() {
+        const timeSlots = document.querySelectorAll('.time-slot');
+        timeSlots.forEach((slot, index) => {
+            const time = (index + 16) / 2; // Calculate time (e.g., 8.0, 8.5, ...)
+            slot.setAttribute('data-time', time.toFixed(1));
+        });
+    }
+
+    function handleHoverEffect(start, end) {
+        console.log(start);
+        console.log(end)
+        // Clear previous hovered classes
+        const timeSlots = document.querySelectorAll('.time-slot');
+            timeSlots.forEach(slot => {
+            slot.classList.remove('hovered');
+        });
+
+        // Add hovered class to time slots between start and end
+        for (let i = start; i < end; i += 0.5) {
+            const timeSlot = document.querySelector(`.time-slot[data-time="${i.toFixed(1)}"]`);
+            if (timeSlot) {
+            timeSlot.classList.add('hovered');
+            }
+        }
+    }
 </script>
 
 <script>
@@ -328,4 +444,48 @@
             console.log(activeIndex);
         }
     });
+
+    const slotSlider = document.getElementById("daySchedule");
+    const btnLeftTime = document.getElementById("moveLeftTime");
+    const btnRightTime = document.getElementById("moveRightTime");
+
+    let baseSlotSliderWidth = slotSlider.offsetWidth;
+    let activeIndexSlotSlider = 0;
+
+    // Scroll Right button
+    btnRightTime.addEventListener("click", (e) => {
+        let slotWidth = document.querySelector(".task-slot").getBoundingClientRect()
+            .width;
+        let scrollDistance = slotWidth * 8; // Scroll the length of 6 papers. TODO: make work for mobile because (4 papers/page instead of 6)
+
+        console.log(`paperWidth = ${slotWidth}`);
+        console.log(`scrolling right ${scrollDistance}`);
+
+        slotSlider.scrollBy({
+            top: 0,
+            left: +scrollDistance,
+            behavior: "smooth",
+        });
+        activeIndex = (activeIndex + 1) % 3;
+        console.log(activeIndex);
+    });
+
+    btnLeftTime.addEventListener("click", (e) => {
+        let slotWidth = document.querySelector(".task-slot").getBoundingClientRect()
+            .width;
+        let scrollDistance = slotWidth * 8; // Scroll the length of 6 papers. TODO: make work for mobile because (4 papers/page instead of 6)
+
+        console.log(`paperWidth = ${slotWidth}`);
+        console.log(`scrolling right ${scrollDistance}`);
+
+        slotSlider.scrollBy({
+            top: 0,
+            left: -scrollDistance,
+            behavior: "smooth",
+        });
+        activeIndex = (activeIndex - 1) % 3;
+        console.log(activeIndex);
+    });
+
+
 </script>

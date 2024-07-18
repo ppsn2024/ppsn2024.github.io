@@ -154,11 +154,6 @@ ul.dashed > li:before {
     position: relative;
     background: #ddd;
   }
-
-  .session-information {
-    background:$brand-secondary;
-    min-height:100px;
-  }
 /*
   *
   * THE Session CONTAINER
@@ -192,6 +187,7 @@ ul.dashed > li:before {
   .slider::-webkit-scrollbar {
     display:none;
   }
+
 
   /*
   *
@@ -288,11 +284,11 @@ ul.dashed > li:before {
     visibility: hidden;
   }
 
-  #moveLeft {
+  #moveLeft, #moveLeftTime {
     left: 0;
   }
 
-  #moveRight {
+  #moveRight, #moveRightTime {
     right: 0;
   }
 
@@ -304,6 +300,9 @@ ul.dashed > li:before {
 
   @media only screen and (min-width: 901px) {
     .planerContainer:hover .btn-nav {
+      visibility: visible;
+    }
+    .session-information:hover .btn-nav {
       visibility: visible;
     }
   }
