@@ -390,9 +390,7 @@ papers:
     slot_id: s5_6
     poster_id: p_1
   - ID: 296
-    Title:
-      Towards Understanding the Effectiveness of Automatic Heuristic Design with
-      Large Language Models
+    Title: Understanding the Importance of Evolutionary Search in Automated Heuristic Design with Large Language Models
     Submitter: Rui Zhang
     Authors: Rui Zhang, Fei Liu, Xi Lin, Zhenkun Wang, Zhichao Lu, Qingfu Zhang
     Corresponding Authors: Zhichao Lu (luzhichaocn@gmail.com)
@@ -778,7 +776,7 @@ papers:
     slot_id: s3_9
     poster_id: p_5
   - ID: 156
-    Title: Generalizing and Unifying Gray-box Optimization Operators
+    Title: Generalizing and Unifying Gray-box Combinatorial Optimization Operators
     Submitter: Francisco Chicano
     Authors: Francisco Chicano, Darrell Whitey, Gabriela Ochoa, Renato Tinos
     Corresponding Authors: Francisco Chicano (chicano@uma.es)
@@ -1640,7 +1638,7 @@ papers:
     slot_id: s3_9
     poster_id: p_7
   - ID: 152
-    Title: Forward-Inverse Transfer Multiobjective Optimization
+    Title: Bayesian Forward-Inverse Transfer for Multiobjective Optimization
     Submitter: Tingyang Wei
     Authors: Tingyang Wei, Abhishek Gupta, Yew-Soon Ong, Puay Siew Tan, Jiao Liu
     Corresponding Authors: Abhishek Gupta (abhishekgupta@iitgoa.ac.in), Jiao Liu (jiao.liu@ntu.edu.sg)
@@ -1867,7 +1865,7 @@ papers:
     slot_id: s4_8
     poster_id: p_8
   - ID: 213
-    Title: Scalabale Quantum Approximate Optimiser for Multi-Objective Optimisation
+    Title: Scalable Quantum Approximate Optimiser for Pseudo-Boolean Multi-Objective Optimisation
     Submitter: Zakaria A. DAHI
     Authors:
       Zakaria A. DAHI, Francisco Chicano, Gabriel Luque, Enrique Alba, Bilel
@@ -2092,7 +2090,7 @@ papers:
     slot_id: s4_4
     poster_id: p_9
   - ID: 226
-    Title: "LBIC-CMA: Two simple modifications of CMA-ES to handle mixed-integer problems"
+    Title: "LB+IC-CMA-ES: Two simple modifications of CMA-ES to handle mixed-integer problems"
     Submitter: Tristan Marty
     Authors: Tristan Marty, Nikolaus Hansen, Anne Auger, Yann Semet, Sébastien Héron
     Corresponding Authors: Tristan Marty (tristan.marty@inria.fr)
@@ -2343,7 +2341,7 @@ papers:
     slot_id: s3_5
     poster_id: p_1
   - ID: 123
-    Title: Self-Adjusting Evolutionary Algorithms Are Slow on Multimodal Landscapes
+    Title: Self-Adjusting Evolutionary Algorithms Are Slow on a Class of Multimodal Landscapes
     Submitter: Konstantin Sturm
     Authors: Konstantin Sturm, Johannes Lengler
     Corresponding Authors:
@@ -2369,9 +2367,7 @@ papers:
     slot_id: s3_5
     poster_id: p_2
   - ID: 142
-    Title:
-      Runtime Analysis of Evolutionary Diversity Optimization on the Multi-objective
-      (LeadingOnes, TrailingZeros) Problem
+    Title: Runtime Analysis of Evolutionary Diversity Optimization on a Tri-Objective Version of the (LeadingOnes, TrailingZeros) Problem
     Submitter: Frank Neumann
     Authors: Antipov Denis, Aneta Neumann, Frank Neumann, Andrew Sutton
     Corresponding Authors:
@@ -2535,9 +2531,7 @@ papers:
     slot_id: s4_4
     poster_id: p_1
   - ID: 208
-    Title:
-      "Overcome Binary Adversarial Optimisation:  From $(1,lambda)$ Evolutionary
-      Algorithm to $(1,lambda)$ Co-evolutionary Algorithm"
+    Title: Overcoming Binary Adversarial Optimisation with Competitive Coevolution
     Submitter: Shishen Lin
     Authors: Per Kristian Lehre, Shishen Lin
     Corresponding Authors: Shishen Lin (sxl1242@student.bham.ac.uk)
