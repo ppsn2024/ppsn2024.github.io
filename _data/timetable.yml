@@ -313,7 +313,7 @@ slots:
     colspan: 1
     class: social
   - id: s3_3
-    title: Keynote 1
+    title: Keynote by Oliver Schütze
     day: d3
     start: "9:30"
     end: "10:30"
@@ -391,7 +391,7 @@ slots:
     colspan: 1
     class: organization
   - id: s4_2
-    title: Keynote 2
+    title: Keynote by Richard Küng
     day: d4
     start: "9:00"
     end: "10:00"
@@ -469,7 +469,7 @@ slots:
     colspan: 1
     class: organization
   - id: s5_2
-    title: Keynote 3
+    title: Keynote by Bernadino Romera-Paredes
     day: d5
     start: "9:00"
     end: "10:00"
