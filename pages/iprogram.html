@@ -1,6 +1,6 @@
 ---
 title: Interactive Program
-layout: page
+layout: presentation
 lang: en
 permalink: iprogram/
 description: Interactive Programm of PPSN 2024 conference
@@ -9,11 +9,30 @@ custom_css:
 - roomplan
 ---
 
-<section class="background-light fullscreen-section text-justify">
+<section class="background-light fullscreen-section-no-header text-justify">
     <div class="fullscreen-container">
         <h3>Preliminary Timetable</h3>
-        <br /><br />
+        <div class="view-toggle-container hide">
+            <a href="/iprogram" class="btn btn-primary toggle-btn btn-xl" id="programmBtn">Back to the program</a>
+        </div>
+        <br />
         {% include dynamictimetable.html %}
         {% include roomplan.html %}
     </div>
 </section>
+
+<script type="text/javascript">
+    var slotP = queryParams.get("slot");
+    if (slotP != null) {
+        const timetable = document.getElementById("timetable");
+        timetable.classList.add("hide");
+
+        const toggleContainer = document.querySelector(".view-toggle-container");
+        toggleContainer.classList.remove("hide");
+        const roomplan = document.getElementById("roomplan");
+        roomplan.classList.remove("hide");
+    } else {
+        const roomplan = document.getElementById("roomplan");
+        roomplan.classList.add("hide");
+    }
+</script>

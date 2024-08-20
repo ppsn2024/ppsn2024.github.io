@@ -1,4 +1,4 @@
-<section id="roomplan" class="background-light subpage-sec">
+<section id="roomplan" class="background-light">
     <div class="session-information">
         <button type="button" id="moveLeftTime" class="btn-nav">
             <i class="fa-solid fa-chevron-left"></i>
@@ -11,7 +11,7 @@
             <i class="fa-solid fa-chevron-right"></i>
         </button>
     </div>
-    <div id="paperSlider" class="planerContainer">
+    <div id="paperSlider" class="planerContainer hide">
         <button type="button" id="moveLeft" class="btn-nav">
             <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -88,8 +88,6 @@
     drawDaySchedule(slot)
     handleActiveTaskSlotsEffect(slot.id)
 
-
-
     //Add event listeners to the papers
     const papers = document.querySelectorAll(".paper");
     papers.forEach(paper => {
@@ -111,6 +109,9 @@
     });
 
     function renderDetails(slot) {
+        //Hide paperSlider
+        const paperSlider = document.getElementById("paperSlider");
+        paperSlider.classList.add("hide");
         if (paperIdParam != null) {
             const currentPaper = getPaperById(paperIdParam);
             swapSVG("/assets/rooms/hs5.svg", svgContainer)
@@ -119,6 +120,9 @@
             abstract.innerHTML = currentPaper.Abstract;
             colorPosterSVG(currentPaper.poster_id);
             colorActivePaper(currentPaper.ID)
+            //View paperSlider
+            const paperSlider = document.getElementById("paperSlider");
+            paperSlider.classList.remove("hide");
         } else {
             if (slot.class == "session") {
                 console.log(slot)
@@ -132,6 +136,9 @@
                 });
                 list += "</ul>"
                 abstract.innerHTML = list;
+                //View paperSlider
+                const paperSlider = document.getElementById("paperSlider");
+                paperSlider.classList.remove("hide");
             } else if (slot.class == "tutorial") {
                 title.innerHTML = slot.title;
                 authors.innerHTML = "Tutorial speakers: " + slot.speaker;
@@ -283,7 +290,10 @@
 
         const selectedDay = days.find(day => day.id == slot.day);
         const selectedSlots = slots.filter(x => x.day == selectedDay.id);
-        
+
+        console.log(selectedDay)
+        console.log(selectedSlots)
+
         const endHourElement = selectedSlots.reduce((max, obj) => (obj.end > max.end ? obj : max), selectedSlots[0]);
         const startHour = 8;
         const endHour = endHourElement.endnum;
@@ -297,6 +307,8 @@
             timeContainer.appendChild(div);
         });
 
+        console.log(timeSlots)
+
 
         createTaskSlots(selectedSlots, taskContainer);
 
@@ -304,7 +316,7 @@
 
         const taskSlots = document.querySelectorAll('.task-slot');
         taskSlots.forEach(task => {
-            task.addEventListener('mouseover', function() {
+            task.addEventListener('mouseover', function () {
                 /*const start = (parseFloat(task.style.marginLeft) / 120); // Calculate start time based on margin-left
                 const width = (parseFloat(task.style.width) / 120); // Calculate width of task slot
                 const end = start + width / 2; // Calculate end time^*/
@@ -315,49 +327,125 @@
 
             });
 
-            task.addEventListener('mouseout', function() {
+            task.addEventListener('mouseout', function () {
                 const timeSlots = document.querySelectorAll('.time-slot');
                 timeSlots.forEach(slot => {
-                slot.classList.remove('hovered');
+                    slot.classList.remove('hovered');
                 });
             });
 
-            task.addEventListener('onclick', function() {
+            task.addEventListener('onclick', function () {
                 handleActiveTaskSlotsEffect(task.getAttribute("slotid"));
             });
         });
-}
+    }
 
     function createTimeSlots(start, end) {
         const timeSlots = [];
         let current = new Date();
         current.setHours(start, 0, 0, 0);
 
-        while(current.getHours() < end) {
-            timeSlots.push(current.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}));
+        while (current.getHours() < end) {
+            timeSlots.push(current.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
             current.setMinutes(current.getMinutes() + 30);
         }
         return timeSlots;
     }
 
     function createTaskSlots(tasks, container) {
-        console.log(tasks)
         const slotsPerHour = 2;
         const prevStart = 8;
 
-        tasks.forEach(task => {
+        sessions = tasks.sort((a, b) => a.startnum - b.startnum);
+
+        // Step 2: Calculate overlaps considering only previous sessions
+        const overlaps = sessions.map((currentSession, index) => {
+            let overlapCount = 0;
+            let overlappingAll = 0;
+
+            for (let i = 0; i < index; i++) {
+                const previousSession = sessions[i];
+
+                // Check if the sessions overlap
+                const isOverlapping =
+                    currentSession.startnum < previousSession.endnum && !previousSession.title.includes("Workshop");
+
+                if (isOverlapping) {
+                    overlapCount++;
+                }
+            }
+
+            //Check all overlaps for height
+            for (let i = 0; i < sessions.length; i++) {
+                if (i !== index) {
+                    const otherSession = sessions[i];
+
+                    const isOverlapping =
+                        currentSession.startnum < otherSession.endnum &&
+                        otherSession.startnum < currentSession.endnum;
+
+                    if (isOverlapping) {
+                        overlappingAll++;
+                    }
+                }
+            }
+
+            console.log(overlappingAll)
+            return {
+                session: currentSession,
+                overlaps: overlapCount,
+                totalOverlaps: overlappingAll
+            };
+        });
+
+        overlaps.forEach(({ session, overlaps, totalOverlaps }) => {
+            console.log(session)
+            const startSlot = (session.startnum - 8) * slotsPerHour;
+            const endSlot = (session.endnum - 8) * slotsPerHour;
+            const durationSlots = endSlot - startSlot;
+            const maringSlots = (session.startnum - prevStart) * slotsPerHour;
+
+            let height = "50px";
+
+            if (totalOverlaps == 0) {
+                height = "154px";
+            } else if (totalOverlaps == 1) {
+                height = "104px";
+            }
+
+            const a = document.createElement('a');
+            a.setAttribute("href", "/iprogram/?slot=" + session.id)
+
+            const div = document.createElement("div");
+            div.classList.add("task-slot", session.class);
+            div.style.width = `${durationSlots * 120}px`;
+            div.style.marginLeft = `${maringSlots * 120}px`;
+            div.style.height = height;
+            div.style.zIndex = overlaps;
+            div.style.top = overlaps != 0 ? `${40 + overlaps * 52}px` : "";
+            div.setAttribute("start", session.startnum)
+            div.setAttribute("end", session.endnum)
+            div.setAttribute("slotId", session.id)
+            div.textContent = session.title;
+
+            a.appendChild(div);
+
+            container.appendChild(a);
+        });
+
+        /*tasks.forEach(task => {
             const startSlot = (task.startnum - 8) * slotsPerHour;
             const endSlot = (task.endnum - 8) * slotsPerHour;
             const durationSlots = endSlot - startSlot;
             const maringSlots = (task.startnum - prevStart) * slotsPerHour;
 
             const a = document.createElement('a');
-            a.setAttribute("href", "/iprogram/?slot=" + task.id + "#roomplan")
+            a.setAttribute("href", "/iprogram/?slot=" + task.id)
 
-            const div  = document.createElement("div");
+            const div = document.createElement("div");
             div.classList.add("task-slot", task.class);
             div.style.width = `${durationSlots * 120}px`;
-            div.style.marginLeft = `${maringSlots  * 120}px`;
+            div.style.marginLeft = `${maringSlots * 120}px`;
             div.setAttribute("start", task.startnum)
             div.setAttribute("end", task.endnum)
             div.setAttribute("slotId", task.id)
@@ -366,7 +454,7 @@
             a.appendChild(div);
 
             container.appendChild(a);
-        });
+        });*/
     }
 
     function initializeTimeSlots() {
@@ -382,7 +470,7 @@
         console.log(end)
         // Clear previous hovered classes
         const timeSlots = document.querySelectorAll('.time-slot');
-            timeSlots.forEach(slot => {
+        timeSlots.forEach(slot => {
             slot.classList.remove('hovered');
         });
 
@@ -390,7 +478,7 @@
         for (let i = start; i < end; i += 0.5) {
             const timeSlot = document.querySelector(`.time-slot[data-time="${i.toFixed(1)}"]`);
             if (timeSlot) {
-            timeSlot.classList.add('hovered');
+                timeSlot.classList.add('hovered');
             }
         }
     }
@@ -398,7 +486,7 @@
     function handleActiveTaskSlotsEffect(slotId) {
         var taskSlots = document.querySelectorAll(".task-slot");
         var activeTaskSlot = document.querySelector(`[slotid="${slotId}"]`);
-        
+
         taskSlots.forEach(slot => {
             slot.classList.remove('active');
         });

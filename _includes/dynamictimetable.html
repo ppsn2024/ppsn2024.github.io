@@ -200,7 +200,8 @@
                     td.setAttribute("rowspan", slot.rowspan);
 
                     var tdlink = document.createElement("a");
-                    tdlink.setAttribute("href", "/iprogram/?slot=" + slot.id + "#roomplan");
+                    tdlink.setAttribute("class", "slot-btn")
+                    tdlink.setAttribute("href", "/iprogram/?slot=" + slot.id);
 
                     var tdc = document.createElement("div");
                     tdc.setAttribute("class", "tdc");
