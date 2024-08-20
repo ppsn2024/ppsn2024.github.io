@@ -11,9 +11,17 @@ custom_css:
 
 <section class="background-light fullscreen-section-no-header text-justify">
     <div class="fullscreen-container">
-        <h3>Preliminary Timetable</h3>
-        <div class="view-toggle-container hide">
-            <a href="/iprogram" class="btn btn-primary toggle-btn btn-xl" id="programmBtn">Back to the program</a>
+        <h3>Schedule Details</h3>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+                <h4 id="detailsDay" class="hide"></h4>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <div class="view-toggle-container hide">
+                    <a href="/iprogram" class="btn btn-primary toggle-btn btn-xl" id="programmBtn">Back to the
+                        timetable</a>
+                </div>
+            </div>
         </div>
         <br />
         {% include dynamictimetable.html %}
@@ -31,8 +39,17 @@ custom_css:
         toggleContainer.classList.remove("hide");
         const roomplan = document.getElementById("roomplan");
         roomplan.classList.remove("hide");
+        const detailsDay = document.getElementById("detailsDay");
+        detailsDay.classList.remove("hide");
     } else {
         const roomplan = document.getElementById("roomplan");
         roomplan.classList.add("hide");
+        const detailsDay = document.getElementById("detailsDay");
+        detailsDay.classList.add("hide");
     }
+
+    //Show day information
+    const detailsDay = document.getElementById("detailsDay")
+    const day = days.find(day => day.id == slot.day);
+    detailsDay.innerHTML = day.formatteddate;
 </script>
