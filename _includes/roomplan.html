@@ -51,12 +51,18 @@
     //Load all necessary data from yml (slots and papers)
     const planData = '{{ site.data.papers}}';
     const paperslots = '{{ site.data.timetable.slots}}';
+    const keynotes = '{{ site.data.program.keynotes}}';
+    const socials = '{{ site.data.program.socials}}';
     //Generate js arrays from the loaded yml data
     const planDataJson = planData.replaceAll("=>", ":");
     const data = JSON.parse(planDataJson);
     const slotsString = paperslots.replaceAll("=>", ":");
     const slotsJsonString = `[${slotsString.replace(/}{/g, '},{')}]`;
     const slotsArray = JSON.parse(slotsJsonString);
+    const keynoteString = keynotes.replaceAll("=>", ":");
+    const keynoteJson = JSON.parse(`[${keynoteString.replace(/}{/g, '},{')}]`);
+    const socialsString = socials.replaceAll("=>", ":");
+    const socialsgJson = JSON.parse(`[${socialsString.replace(/}{/g, '},{')}]`);
     //URL params
     var queryParams = new URLSearchParams(window.location.search);
     var slotIdParam = queryParams.get("slot");
@@ -156,6 +162,16 @@
                     abstract.innerHTML = slot.description
                     abstract.innerHTML = "Get a coffee and meet the people around the area"
                 }
+            } else if (slot.class == "keynote") {
+                const keynote = getElementById(keynoteJson, slot.id);
+                title.innerHTML = keynote.title;
+                authors.innerHTML = keynote.author;
+                abstract.innerHTML = keynote.abstract;
+            } else if (slot.class == "social") {
+                const social = getElementById(socialsgJson, slot.id);
+                title.innerHTML = social.title;
+                authors.innerHTML = social.authors;
+                abstract.innerHTML = social.abstract;
             }
             swapSVG("/assets/rooms/roomplan.svg", svgContainer)
 
@@ -167,6 +183,8 @@
                 element = document.getElementById("registrationdesk")
             } else if (slot.room == "tba") {
                 element = document.getElementById("hs5")
+            } else if (slot.room == "Audimax") {
+                element = document.getElementById("audimax")
             }
 
             element.setAttribute("class", "cls-1")
@@ -291,9 +309,6 @@
         const selectedDay = days.find(day => day.id == slot.day);
         const selectedSlots = slots.filter(x => x.day == selectedDay.id);
 
-        console.log(selectedDay)
-        console.log(selectedSlots)
-
         const endHourElement = selectedSlots.reduce((max, obj) => (obj.end > max.end ? obj : max), selectedSlots[0]);
         const startHour = 8;
         const endHour = endHourElement.endnum;
@@ -306,9 +321,6 @@
             div.textContent = time;
             timeContainer.appendChild(div);
         });
-
-        console.log(timeSlots)
-
 
         createTaskSlots(selectedSlots, taskContainer);
 
@@ -390,7 +402,6 @@
                 }
             }
 
-            console.log(overlappingAll)
             return {
                 session: currentSession,
                 overlaps: overlapCount,
@@ -399,7 +410,6 @@
         });
 
         overlaps.forEach(({ session, overlaps, totalOverlaps }) => {
-            console.log(session)
             const startSlot = (session.startnum - 8) * slotsPerHour;
             const endSlot = (session.endnum - 8) * slotsPerHour;
             const durationSlots = endSlot - startSlot;
@@ -432,29 +442,6 @@
 
             container.appendChild(a);
         });
-
-        /*tasks.forEach(task => {
-            const startSlot = (task.startnum - 8) * slotsPerHour;
-            const endSlot = (task.endnum - 8) * slotsPerHour;
-            const durationSlots = endSlot - startSlot;
-            const maringSlots = (task.startnum - prevStart) * slotsPerHour;
-
-            const a = document.createElement('a');
-            a.setAttribute("href", "/iprogram/?slot=" + task.id)
-
-            const div = document.createElement("div");
-            div.classList.add("task-slot", task.class);
-            div.style.width = `${durationSlots * 120}px`;
-            div.style.marginLeft = `${maringSlots * 120}px`;
-            div.setAttribute("start", task.startnum)
-            div.setAttribute("end", task.endnum)
-            div.setAttribute("slotId", task.id)
-            div.textContent = task.title;
-
-            a.appendChild(div);
-
-            container.appendChild(a);
-        });*/
     }
 
     function initializeTimeSlots() {
@@ -466,8 +453,6 @@
     }
 
     function handleHoverEffect(start, end) {
-        console.log(start);
-        console.log(end)
         // Clear previous hovered classes
         const timeSlots = document.querySelectorAll('.time-slot');
         timeSlots.forEach(slot => {
