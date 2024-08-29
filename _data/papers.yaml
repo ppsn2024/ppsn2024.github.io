@@ -1356,7 +1356,7 @@ papers:
       maintain baseline performance. Compared to traditional methods, FEDORA demonstrates
       superior performance, with a maximum accuracy of 76.2%, using 57 features. The
       framework also generated an individual that achieved 72.8% using a single feature.
-    slot_id: s5_4
+    slot_id: s3_7
     poster_id: p_6
   - ID: 223
     Title: Multi-Modal Adaptive Graph Evolution for Program Synthesis
