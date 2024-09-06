@@ -19,7 +19,7 @@ For your convenience, you can view and download the folder as a PDF in DIN A5 fo
 
 <object data="/news/resources/2024-09-06-programfolder/PPSN2024_FolderA5.min.pdf" type="application/pdf" width="100%" height="700px">
     <embed src="/news/resources/2024-09-06-programfolder/PPSN2024_FolderA5.min.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: [Program Folder][program]{:target="_blank"}</p>
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/news/resources/2024-09-06-programfolder/PPSN2024_FolderA5.min.pdf" target="_blank">Program Folder</a></p>
     </embed>
 </object>
 
