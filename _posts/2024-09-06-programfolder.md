@@ -23,4 +23,4 @@ For your convenience, you can view and download the folder as a PDF in DIN A5 fo
     </embed>
 </object>
 
-[program]: (/news/resources/2024-09-06-programfolder/PPSN2024_FolderA5.min.pdf)
+[program]: /news/resources/2024-09-06-programfolder/PPSN2024_FolderA5.min.pdf
