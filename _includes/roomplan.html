@@ -152,7 +152,7 @@
             } else if (slot.class == "workshop") {
                 title.innerHTML = slot.title;
                 authors.innerHTML = "Tutorial speakers: " + slot.speaker;
-                abstract.innerHTML = slot.description;
+                abstract.innerHTML = slot.description + "<br /><br /> For more information visit the <a target='_blank' href='"+slot.link+"'>Website</a> !";
             } else if (slot.class == "break") {
                 if (slot.title.includes("Lunch  ")) {
                     title.innerHTML = slot.title;

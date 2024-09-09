@@ -171,6 +171,7 @@ slots:
   - id: s2_2
     title: Workshop 3
     description: "30 Years of EDAs"
+    link: "https://30yearsofedas.github.io/pro/index.html"
     speaker: "Benjamin Doerr, Concha Bielza, John McCall, and Weijie Zheng"
     day: d2
     start: "9:30"
