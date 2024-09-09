@@ -91,6 +91,8 @@
     }
 
     function createTimetable(id, days, slots) {
+        var tablecontainer = document.createElement("div");
+        tablecontainer.setAttribute("class", "table-responsive");
         var table = document.createElement("table");
         table.setAttribute("class", "timetable-table");
         var thead = document.createElement("thead");
@@ -104,6 +106,7 @@
         thead.append(theadrow);
         table.appendChild(thead);
         table.appendChild(tbody);
+        tablecontainer.appendChild(table);
 
         // load and transform day/slot data
         var slotstartdatetimes = slots.map(x => x.start);
@@ -254,7 +257,7 @@
             r++;
         }
 
-        return table;
+        return tablecontainer;
     }
 
 
