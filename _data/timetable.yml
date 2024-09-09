@@ -181,8 +181,8 @@ slots:
     class: workshop
   - id: s2_3
     title: Tutorial 9
-    description: "Robot Evolution"
-    speaker: "A.E. Eiben"
+    description: "Pareto Optimization for Subset Selection: Theories and Practical Algorithms"
+    speaker: "Chao Qian"
     day: d2
     start: "9:00"
     end: "10:30"
@@ -286,8 +286,8 @@ slots:
     class: tutorial
   - id: s2_14
     title: Tutorial 16
-    description: "Pareto Optimization for Subset Selection: Theories and Practical Algorithms"
-    speaker: "Chao Qian"
+    description: "Robot Evolution"
+    speaker: "A.E. Eiben"
     day: d2
     start: "15:30"
     end: "17:00"
