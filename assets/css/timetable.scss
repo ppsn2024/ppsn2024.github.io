@@ -146,6 +146,8 @@
         font-style: italic;
         display: block;
         color: #fff;
+        max-width: 100px;
+        overflow-wrap: break-word;
     }
 
     a.slot-link:hover {
