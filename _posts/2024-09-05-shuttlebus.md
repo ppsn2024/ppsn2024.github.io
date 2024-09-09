@@ -40,6 +40,8 @@ For information regarding public transport, please visit our subsite [Venue][ven
 | We   | 18.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg          |
 | We   | 18.9.2024 | 16:15 | FH OÖ Hagenberg        | Lentos Shipping Pier     |
 {: .table }
+{: .table-responsive}
+
 <br/><br/>
 
 **Lentos Shipping Pier** (first bus stop) <br/>
