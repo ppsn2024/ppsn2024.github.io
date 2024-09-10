@@ -20,6 +20,7 @@ The bus will take you from the *Lentos Shipping Pier* at the Lentos Art Museum i
 For information regarding public transport, please visit our subsite [Venue][ven].
 
 <br/>
+<div markdown="1" class="table-responsive">
 
 | Date |           | Time  | From                   | To                       |
 | :--  | :---      | :---  | :-----                 | :-----                   |
@@ -40,7 +41,8 @@ For information regarding public transport, please visit our subsite [Venue][ven
 | We   | 18.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg          |
 | We   | 18.9.2024 | 16:15 | FH OÖ Hagenberg        | Lentos Shipping Pier     |
 {: .table }
-{: .table-responsive}
+
+</div>
 
 <br/><br/>
 
