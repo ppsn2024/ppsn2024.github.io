@@ -153,15 +153,20 @@
             } else if (slot.class == "workshop") {
                 title.innerHTML = slot.title;
                 authors.innerHTML = "Tutorial speakers: " + slot.speaker;
-                abstract.innerHTML = slot.description + "<br /><br /> For more information visit the <a target='_blank' href='" + slot.link + "'>Website</a> !";
+                if (slot.link !== undefined) {
+                    abstract.innerHTML = slot.description + "<br /><br /> For more information visit the <a target='_blank' href='" + slot.link + "'>Website</a> !";
+                } else {
+                    abstract.innerHTML = slot.description;
+                }
+                
             } else if (slot.class == "break") {
-                if (slot.title.includes("Lunch  ")) {
+                if (slot.title.includes("Lunch Break")) {
                     title.innerHTML = slot.title;
-                    abstract.innerHTML = "Enjoy your meal at the lunch room :)"
+                    abstract.innerHTML = "Enjoy a delicious meal and take the opportunity to connect with other attendees in a relaxed setting. Whether you're discussing ideas or just unwinding, this is your time to refuel and recharge for the rest of the day."
                 } else if (slot.title.includes("Coffee")) {
                     title.innerHTML = slot.title;
-                    abstract.innerHTML = slot.description
-                    abstract.innerHTML = "Get a coffee and meet the people around the area"
+                    authors.innerHTML = "Coffee at the break room and hallway";
+                    abstract.innerHTML = "Take a well-deserved pause to recharge! Enjoy fresh coffee, snacks, and great conversations with fellow attendees. It's the perfect time to network, relax, and refresh before the next session."
                 }
             } else if (slot.class == "keynote") {
                 const keynote = getElementById(keynoteJson, slot.id);
@@ -173,6 +178,10 @@
                 title.innerHTML = social.title;
                 authors.innerHTML = social.authors;
                 abstract.innerHTML = social.abstract;
+            } else if (slot.class == "organization"){
+                title.innerHTML = slot.title;
+                authors.innerHTML = "Open: Daily from 8:00-9:00"
+                abstract.innerHTML = "Start your day with a warm welcome!<br /> Visit the Registration & Info Desk to collect your conference materials, ask any questions, and get oriented.<br /> Our team is here to assist you with anything you need throughout the event."
             }
             swapSVG("/assets/rooms/roomplan.svg", svgContainer)
 
@@ -185,13 +194,15 @@
             } else if (slot.room == "HS5") {
                 element = document.getElementById("hs5")
             } else if (slot.room == "HS3") {
-                element = document.getElementById("hs5")
+                element = document.getElementById("hs3")
             } else if (slot.room == "HS4") {
-                element = document.getElementById("hs5")
+                element = document.getElementById("hs4")
             } else if (slot.room == "HS6") {
-                element = document.getElementById("hs5")
+                element = document.getElementById("hs6")
             } else if (slot.room == "Audimax") {
                 element = document.getElementById("audimax")
+            } else if (slot.room == "Freistädter Brauhaus" || slot.room == "AEC Linz") {
+                return;
             }
 
             element.setAttribute("class", "cls-1")
