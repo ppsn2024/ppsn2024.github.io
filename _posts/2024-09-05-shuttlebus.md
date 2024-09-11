@@ -22,24 +22,25 @@ For information regarding public transport, please visit our subsite [Venue][ven
 <br/>
 <div markdown="1" class="table-responsive">
 
-| Date |           | Time  | From                   | To                       |
-| :--  | :---      | :---  | :-----                 | :-----                   |
-| Sa   | 14.9.2024 | 07:45 | Lentos Shipping Pier   | FH OÖ Hagenberg          |
-| Sa   | 14.9.2024 | 17:45 | FH OÖ Hagenberg        | Lentos Shipping Pier     |
-||||||
-| Su   | 15.9.2024 | 07:45 | Lentos Shipping Pier   | FH OÖ Hagenberg          |
-| Su   | 15.9.2024 | 17:45 | FH OÖ Hagenberg        | Lentos Shipping Pier     |
-||||||
-| Mo   | 16.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg          |
-| Mo   | 16.9.2024 | 18:30 | FH OÖ Hagenberg        | Ars Electronica Center   |
-| Mo   | 16.9.2024 | 22:00 | Ars Electronica Center | FH OÖ Hagenberg          |
-||||||
-| Tu   | 17.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg          |
-| Tu   | 17.9.2024 | 18:30 | FH OÖ Hagenberg        | Freistädter Brauhaus     |
-| Tu   | 17.9.2024 | 22:00 | Freistädter Brauhaus   | FH OÖ Hagenberg          |
-||||||
-| We   | 18.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg          |
-| We   | 18.9.2024 | 16:15 | FH OÖ Hagenberg        | Lentos Shipping Pier     |
+| Date |           | Time  | From                   | To                     |
+| :--- | :-------- | :---- | :--------------------- | :--------------------- |
+| Sa   | 14.9.2024 | 07:45 | Lentos Shipping Pier   | FH OÖ Hagenberg        |
+| Sa   | 14.9.2024 | 17:45 | FH OÖ Hagenberg        | Lentos Shipping Pier   |
+|      |           |       |                        |                        |
+| Su   | 15.9.2024 | 07:45 | Lentos Shipping Pier   | FH OÖ Hagenberg        |
+| Su   | 15.9.2024 | 17:45 | FH OÖ Hagenberg        | Lentos Shipping Pier   |
+|      |           |       |                        |                        |
+| Mo   | 16.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg        |
+| Mo   | 16.9.2024 | 18:30 | FH OÖ Hagenberg        | Ars Electronica Center |
+| Mo   | 16.9.2024 | 22:00 | Ars Electronica Center | FH OÖ Hagenberg        |
+|      |           |       |                        |                        |
+| Tu   | 17.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg        |
+| Tu   | 17.9.2024 | 18:30 | FH OÖ Hagenberg        | Freistädter Brauhaus   |
+| Tu   | 17.9.2024 | 22:00 | Freistädter Brauhaus   | FH OÖ Hagenberg        |
+| Tu   | 17.9.2024 | 22:30 | FH OÖ Hagenberg        | Lentos Shipping Pier   |
+|      |           |       |                        |                        |
+| We   | 18.9.2024 | 08:00 | Lentos Shipping Pier   | FH OÖ Hagenberg        |
+| We   | 18.9.2024 | 16:15 | FH OÖ Hagenberg        | Lentos Shipping Pier   |
 {: .table }
 
 </div>
