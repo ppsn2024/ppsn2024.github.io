@@ -102,7 +102,7 @@ slots:
   - id: s1_9
     title: Workshop 2
     description: "Good Benchmarking Practices for Evolutionary Computation BENCHMARKING"
-    speaker: "Carola Doerr, Vanessa Volz, Boris Naujoks, Olaf Mersmann, Mike Preuss, Pascal Kerschk"
+    speaker: "Carola Doerr, Vanessa Volz, Boris Naujoks, Olaf Mersmann, Mike Preuss, Pascal Kerschke"
     day: d1
     start: "13:30"
     end: "17:00"
