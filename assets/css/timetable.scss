@@ -202,3 +202,11 @@
         }
     }
 }
+
+button.accordion-button:not(.collapsed),
+button.accordion-button:focus {
+    background: #5E8036!important;
+    border-color: #5E8036;
+    color:#ffffff;
+    box-shadow: none;
+}

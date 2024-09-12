@@ -319,7 +319,7 @@
             // accordion
             var accordion = document.createElement("div");
             accordion.setAttribute("class", "accordion accordion-flush");
-            accordion.setAttribute("id", "accordionFlushExample");
+            accordion.setAttribute("id", "accordionFlushExample2");
 
             for (d of days) {
                 var selecteddays = [], selectedslots = [];
@@ -351,7 +351,7 @@
                 accordionCollapse.setAttribute("class", "accordion-collapse collapse");
                 accordionCollapse.setAttribute("id", "flush-collapse" + d.id);
                 accordionCollapse.setAttribute("aria-labelledb", "flush-heading" + d.id);
-                accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample");
+                accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample2");
                 var accordionBody = document.createElement("div");
                 accordionBody.setAttribute("class", "accordion-body");
 
@@ -361,7 +361,7 @@
                 accordionCollapse.appendChild(accordionBody);
                 accordionItem.appendChild(accordionCollapse);
                 accordion.appendChild(accordionItem);
-                
+
                 di++;
             }
             ttc.appendChild(accordion);
