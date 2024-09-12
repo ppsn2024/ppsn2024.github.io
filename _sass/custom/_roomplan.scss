@@ -23,6 +23,10 @@
    padding:0;
    margin:0;
 
+   ::-webkit-scrollbar {
+    display: none;
+   }
+
    /*.slot-item {
      min-width:7.3vw;
      height:60px;
