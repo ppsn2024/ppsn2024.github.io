@@ -174,7 +174,6 @@
 
             var tdlink = document.createElement("a");
             // tdlink.setAttribute("href", "/program/?time=" + t.str); // 
-            // tdlink.setAttribute("href", "#");
 
             var tdc = document.createElement("div");
             tdc.setAttribute("class", "tdc");
@@ -204,6 +203,7 @@
                     td.setAttribute("rowspan", slot.rowspan);
 
                     var tdlink = document.createElement("a");
+                    tdlink.setAttribute("onclick", "olOn()");
                     tdlink.setAttribute("class", "slot-btn")
                     // tdlink.setAttribute("href", "/iprogram/?slot=" + slot.id); //
                     // tdlink.setAttribute("href", "#");
@@ -374,4 +374,16 @@
 
     drawTimetable();
 
+    function olOn() {
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function olOff() {
+        document.getElementById("overlay").style.display = "none";
+    }
+
 </script>
+
+<div id="overlay" onclick="olOff()">
+    <div id="text">Slot details loading...</div>
+</div>
