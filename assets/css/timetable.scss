@@ -220,17 +220,18 @@ button.accordion-button:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.8);
     z-index: 1;
     cursor: pointer;
   }
 
-  #text{
+  #overlay-text{
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 50px;
+    font-size: 1em;
     color: white;
+    text-align: center;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
   }

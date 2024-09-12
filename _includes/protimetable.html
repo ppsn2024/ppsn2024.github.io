@@ -203,7 +203,7 @@
                     td.setAttribute("rowspan", slot.rowspan);
 
                     var tdlink = document.createElement("a");
-                    tdlink.setAttribute("onclick", "olOn()");
+                    tdlink.setAttribute("onclick", "olOn('" + slot.id + "')");
                     tdlink.setAttribute("class", "slot-btn")
                     // tdlink.setAttribute("href", "/iprogram/?slot=" + slot.id); //
                     // tdlink.setAttribute("href", "#");
@@ -374,8 +374,19 @@
 
     drawTimetable();
 
-    function olOn() {
-        document.getElementById("overlay").style.display = "block";
+    function olOn(slotId) {
+        var ol = document.getElementById("overlay")
+        ol.style.display = "block";
+        var olt = document.getElementById("overlay-text")
+        olt.innerHTML = slotId;
+
+
+        var ssl = slots.find(x => x.id == slotId);
+        var day = days.find(x => x.id == ssl.day);
+        olt.innerHTML = ssl.title;
+        olt.innerHTML += "<br/><br/>"  + day.formatteddate + ", " + ssl.startstr + " - " + ssl.endstr + ", " + ssl.room;
+        olt.innerHTML += "<br/><br/>" + ssl.description + "<br/><br/>" + ssl.speaker;
+
     }
 
     function olOff() {
@@ -385,5 +396,5 @@
 </script>
 
 <div id="overlay" onclick="olOff()">
-    <div id="text">Slot details loading...</div>
+    <div id="overlay-text">Slot details loading...</div>
 </div>
