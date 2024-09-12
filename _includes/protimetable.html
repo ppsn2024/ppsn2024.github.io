@@ -315,17 +315,56 @@
             ttc.appendChild(timetable1);
         } else {
             var di = 1;
+
+            // accordion
+            var accordion = document.createElement("div");
+            accordion.setAttribute("class", "accordion accordion-flush");
+            accordion.setAttribute("id", "accordionFlushExample");
+
             for (d of days) {
                 var selecteddays = [], selectedslots = [];
                 selecteddays.push(d);
                 selectedslots = slots.filter(x => x.day == d.id);
+                // console.log(d.formatteddate);
+
+                // accordion
+                var accordionItem = document.createElement("div");
+                accordionItem.setAttribute("class", "accordion-item");
+                var accordionHeader = document.createElement("h2");
+                accordionHeader.setAttribute("class", "accordion-header");
+                accordionHeader.setAttribute("id", "flush-heading" + d.id);
+                var accordionButton = document.createElement("button");
+                accordionButton.setAttribute("class", "accordion-button collapsed");
+                accordionButton.setAttribute("type", "button");
+                accordionButton.setAttribute("data-bs-toggle", "collapse");
+                accordionButton.setAttribute("data-bs-target", "#flush-collapse" + d.id);
+                accordionButton.setAttribute("aria-expanded", "false");
+                accordionButton.setAttribute("aria-controls", "flush-collapseOne" + d.id);
+                var accordionHeading = document.createElement("h3");
+                accordionHeading.innerHTML = d.formatteddate;
+
+                accordionButton.appendChild(accordionHeading);
+                accordionHeader.appendChild(accordionButton);
+                accordionItem.appendChild(accordionHeader);
+
+                var accordionCollapse = document.createElement("div");
+                accordionCollapse.setAttribute("class", "accordion-collapse collapse");
+                accordionCollapse.setAttribute("id", "flush-collapse" + d.id);
+                accordionCollapse.setAttribute("aria-labelledb", "flush-heading" + d.id);
+                accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample");
+                var accordionBody = document.createElement("div");
+                accordionBody.setAttribute("class", "accordion-body");
 
                 var timetableN = createTimetable("tt" + di, selecteddays, selectedslots);
-                ttc.appendChild(timetableN);
-                ttc.appendChild(document.createElement("br"));
+                accordionBody.appendChild(timetableN);
 
+                accordionCollapse.appendChild(accordionBody);
+                accordionItem.appendChild(accordionCollapse);
+                accordion.appendChild(accordionItem);
+                
                 di++;
             }
+            ttc.appendChild(accordion);
         }
     }
 
