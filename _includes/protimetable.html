@@ -383,7 +383,7 @@
 
         var ssl = slots.find(x => x.id == slotId);
         var day = days.find(x => x.id == ssl.day);
-        olt.innerHTML = ssl.title;
+        olt.innerHTML = "<strong>" + ssl.title + "</strong>";
         olt.innerHTML += "<br/><br/>"  + day.formatteddate + ", " + ssl.startstr + " - " + ssl.endstr + ", " + ssl.room;
         olt.innerHTML += "<br/><br/>" + ssl.description + "<br/><br/>" + ssl.speaker;
 
