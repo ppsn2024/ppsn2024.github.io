@@ -29,6 +29,8 @@ custom_css:
 
     .accordion {
         overscroll-behavior: none;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 
     .accordion-collapse {
@@ -248,39 +250,25 @@ custom_css:
     </div>
 </section>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
 
-    const accordionItems = document.querySelectorAll('.accordion-collapse')
-    const acc = document.getElementById('accordionFlushExample2')
+        document.querySelectorAll('.accordion-item').forEach(function (item) {
+            item.addEventListener('shown.bs.collapse', function () {
+                var itemHeight = this.scrollHeight;
 
-    accordionItems.forEach((el) => {
-        el.addEventListener('shown.bs.collapse', (e) => {
-            var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
-            acc.scroll({
-                top: scrollOffset,
-                left: 0,
-                behavior: 'instant'
-            })
-        })
-    })
+                if (itemHeight >= window.innerHeight) {
+                    window.scrollTo({
+                        top: this.offsetTop,
+                        behavior: 'instant'
+                    });
+                } else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
+                    window.scrollTo({
+                        top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
+                        behavior: 'instant'
+                    });
+                }
 
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     document.querySelectorAll('.accordion-item').forEach(function (item) {
-    //         item.addEventListener('shown.bs.collapse', function () {
-    //             var itemHeight = this.scrollHeight;
-
-    //             if (itemHeight >= window.innerHeight) {
-    //                 window.scrollTo({
-    //                     top: this.offsetTop,
-    //                     behavior: 'instant'
-    //                 });
-    //             } else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
-    //                 window.scrollTo({
-    //                     top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
-    //                     behavior: 'instant'
-    //                 });
-    //             }
-
-    //         });
-    //     });
-    // });
+            });
+        });
+    });
 </script>
