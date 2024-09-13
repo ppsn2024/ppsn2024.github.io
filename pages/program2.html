@@ -249,12 +249,14 @@ custom_css:
         document.querySelectorAll('.accordion-item').forEach(function (item) {
             item.addEventListener('shown.bs.collapse', function () {
                 var itemHeight = this.scrollHeight;
+                var bottomThreshold = window.innerHeight + window.scrollY;
+                var documentHeight = document.documentElement.scrollHeight;
 
                 // Check if any accordion is open
                 let anyOpen = document.querySelector('.accordion-collapse.show');
 
-                // Only scroll if an accordion item is open (safety check)
-                if (anyOpen) {
+                // Only scroll if an accordion item is open and we're not at the bottom of the page
+                if (anyOpen && bottomThreshold < documentHeight - 50) {
                     if (itemHeight >= window.innerHeight) {
                         window.scrollTo({
                             top: this.offsetTop,
