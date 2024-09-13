@@ -321,99 +321,95 @@
 
             // TODO create accordion with rest of  the content (keynotes, workshops etc.)
         } else {
-            let id = 1;
-            //accordion
-            var accordion = document.createElement("div");
-            accordion.setAttribute("class", "my-accordion");
-
-            for (d of days) {
-                let selecteddays = [], selectedslots = [];
-                selecteddays.push(d);
-                selectedslots = slots.filter(x => x.day == d.id);
-                console.log(d.formatteddate);
-                const accordionContent = document.createElement("div");
-                accordionContent.setAttribute("class", "my-accordion-content")
-                const header = document.createElement("header");
-                const accordionTitle = document.createElement("span");
-                accordionTitle.setAttribute("class", "my-accordion-content-title");
-                accordionTitle.innerHTML = d.formatteddate;
-                const accordionGlyph = document.createElement("i");
-                accordionGlyph.setAttribute("class", "fa-solid fa-plus");
-                header.appendChild(accordionTitle);
-                header.appendChild(accordionGlyph);
-                const accordionDescription = document.createElement("div");
-                accordionDescription.setAttribute("class", "my-accordion-content-description");
-                const timetableN = createTimetable("tt" + id, selecteddays, selectedslots);   
-                accordionDescription.appendChild(timetableN);
-
-                accordionContent.appendChild(header);
-                accordionContent.appendChild(accordionDescription);
-                accordion.appendChild(accordionContent);
-            }
-
-            ttc.appendChild(accordion);
-
-            // var di = 1;
-
-            // // accordion
+            // let id = 1;
+            // //accordion
             // var accordion = document.createElement("div");
-            // accordion.setAttribute("class", "accordion accordion-flush overflow-auto");
-            // accordion.setAttribute("id", "accordionFlushExample2");
+            // accordion.setAttribute("class", "my-accordion");
 
             // for (d of days) {
-            //     var selecteddays = [], selectedslots = [];
+            //     let selecteddays = [], selectedslots = [];
             //     selecteddays.push(d);
             //     selectedslots = slots.filter(x => x.day == d.id);
-            //     // console.log(d.formatteddate);
+            //     console.log(d.formatteddate);
+            //     const accordionContent = document.createElement("div");
+            //     accordionContent.setAttribute("class", "my-accordion-content")
+            //     const header = document.createElement("header");
+            //     const accordionTitle = document.createElement("span");
+            //     accordionTitle.setAttribute("class", "my-accordion-content-title");
+            //     accordionTitle.innerHTML = d.formatteddate;
+            //     const accordionGlyph = document.createElement("i");
+            //     accordionGlyph.setAttribute("class", "fa-solid fa-plus");
+            //     header.appendChild(accordionTitle);
+            //     header.appendChild(accordionGlyph);
+            //     const accordionDescription = document.createElement("div");
+            //     accordionDescription.setAttribute("class", "my-accordion-content-description");
+            //     const timetableN = createTimetable("tt" + id, selecteddays, selectedslots);   
+            //     accordionDescription.appendChild(timetableN);
 
-            //     // accordion
-            //     var accordionItem = document.createElement("div");
-            //     accordionItem.setAttribute("class", "accordion-item");
-            //     accordionItem.setAttribute("id", "accordion-item-" + d.id);
-            //     var accordionHeader = document.createElement("h2");
-            //     accordionHeader.setAttribute("class", "accordion-header");
-            //     accordionHeader.setAttribute("id", "flush-heading" + d.id);
-            //     var accordionButton = document.createElement("button");
-            //     accordionButton.setAttribute("class", "accordion-button collapsed");
-            //     accordionButton.setAttribute("type", "button");
-            //     accordionButton.setAttribute("data-bs-toggle", "collapse");
-            //     accordionButton.setAttribute("data-bs-target", "#flush-collapse" + d.id);
-            //     accordionButton.setAttribute("aria-expanded", "false");
-            //     accordionButton.setAttribute("aria-controls", "flush-collapse" + d.id);
-            //     var accordionHeading = document.createElement("h3");
-            //     accordionHeading.innerHTML = d.formatteddate;
-
-            //     accordionButton.appendChild(accordionHeading);
-            //     accordionHeader.appendChild(accordionButton);
-            //     accordionItem.appendChild(accordionHeader);
-
-            //     var accordionCollapse = document.createElement("div");
-            //     accordionCollapse.setAttribute("class", "accordion-collapse collapse");
-            //     accordionCollapse.setAttribute("id", "flush-collapse" + d.id);
-            //     accordionCollapse.setAttribute("aria-labelledby", "flush-heading" + d.id);
-            //     accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample2");
-            //     var accordionBody = document.createElement("div");
-            //     accordionBody.setAttribute("class", "accordion-body");
-
-            //     var timetableN = createTimetable("tt" + di, selecteddays, selectedslots);
-            //     accordionBody.appendChild(timetableN);
-
-            //     accordionCollapse.appendChild(accordionBody);
-            //     accordionItem.appendChild(accordionCollapse);
-            //     accordion.appendChild(accordionItem);
-
-            //     di++;
+            //     accordionContent.appendChild(header);
+            //     accordionContent.appendChild(accordionDescription);
+            //     accordion.appendChild(accordionContent);
             // }
 
-            // // TODO append accordion items with rest of  the content (keynotes, workshops etc.)
             // ttc.appendChild(accordion);
+
+            var di = 1;
+
+            // accordion
+            var accordion = document.createElement("div");
+            accordion.setAttribute("class", "accordion accordion-flush overflow-auto");
+            accordion.setAttribute("id", "accordionFlushExample2");
+
+            for (d of days) {
+                var selecteddays = [], selectedslots = [];
+                selecteddays.push(d);
+                selectedslots = slots.filter(x => x.day == d.id);
+                // console.log(d.formatteddate);
+
+                // accordion
+                var accordionItem = document.createElement("div");
+                accordionItem.setAttribute("class", "accordion-item");
+                accordionItem.setAttribute("id", "accordion-item-" + d.id);
+                var accordionHeader = document.createElement("h2");
+                accordionHeader.setAttribute("class", "accordion-header");
+                accordionHeader.setAttribute("id", "flush-heading" + d.id);
+                var accordionButton = document.createElement("button");
+                accordionButton.setAttribute("class", "accordion-button collapsed");
+                accordionButton.setAttribute("type", "button");
+                accordionButton.setAttribute("data-bs-toggle", "collapse");
+                accordionButton.setAttribute("data-bs-target", "#flush-collapse" + d.id);
+                accordionButton.setAttribute("aria-expanded", "false");
+                accordionButton.setAttribute("aria-controls", "flush-collapse" + d.id);
+                var accordionHeading = document.createElement("h3");
+                accordionHeading.innerHTML = d.formatteddate;
+
+                accordionButton.appendChild(accordionHeading);
+                accordionHeader.appendChild(accordionButton);
+                accordionItem.appendChild(accordionHeader);
+
+                var accordionCollapse = document.createElement("div");
+                accordionCollapse.setAttribute("class", "accordion-collapse collapse");
+                accordionCollapse.setAttribute("id", "flush-collapse" + d.id);
+                accordionCollapse.setAttribute("aria-labelledby", "flush-heading" + d.id);
+                accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample2");
+                var accordionBody = document.createElement("div");
+                accordionBody.setAttribute("class", "accordion-body");
+
+                var timetableN = createTimetable("tt" + di, selecteddays, selectedslots);
+                accordionBody.appendChild(timetableN);
+
+                accordionCollapse.appendChild(accordionBody);
+                accordionItem.appendChild(accordionCollapse);
+                accordion.appendChild(accordionItem);
+
+                di++;
+            }
+
+            // TODO append accordion items with rest of  the content (keynotes, workshops etc.)
+            ttc.appendChild(accordion);
         }
     }
-
-    window.addEventListener('resize', function (event) {
-        drawTimetable();
-    }, true);
-
+    
     drawTimetable();
 
     function olOn(slotId) {
