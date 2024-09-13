@@ -8,12 +8,27 @@ custom_css:
 - timetable
 ---
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    // $(document).on("touchstart", ".accordion", function(event){
+    //     event.preventDefault();
+    // });
+    // $(document).on("touchstart", ".accordion-item", function(event){
+    //     event.preventDefault();
+    // });
+    //touchstart
+</script>
+
 <section class="background-light subpage-sec">
     <div class="container text-justify">
         <style>
             /* html {
                 scrollbar-gutter: stable!important;
             } */
+
+            .accordion {
+                touch-action: pan-y!important;
+            }
 
             body {
                 overflow-anchor: none!important;
@@ -34,7 +49,7 @@ custom_css:
         </style>
         <h2>Program</h2>
         <br />
-        {% include dynamictimetable.html %}
+        {% include protimetable.html %}
         <br /><br />
 
         <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
