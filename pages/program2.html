@@ -11,6 +11,7 @@ custom_css:
 <style>
     html {
         scrollbar-gutter: stable !important;
+        scroll-behavior: smooth;
     }
 
     .subpage-sec {
@@ -25,13 +26,23 @@ custom_css:
     .info-table td:nth-child(4) {
         white-space: nowrap;
     }
+
+    .accordion {
+        overscroll-behavior: none;
+    }
+
+    .accordion-collapse {
+        transition: none !important;
+        /* Disable transition */
+    }
 </style>
 
 <section class="background-light subpage-sec">
     <div class="container text-justify">
         <h2>Program</h2>
         <br />
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+        {% include protimetable.html %}
+        <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -230,6 +241,29 @@ custom_css:
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.accordion-item').forEach(function (item) {
+            item.addEventListener('shown.bs.collapse', function () {
+                var itemHeight = this.scrollHeight;
+
+                if (itemHeight >= window.innerHeight) {
+                    window.scrollTo({
+                        top: this.offsetTop,
+                        behavior: 'instant'
+                    });
+
+                } else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
+                    window.scrollTo({
+                        top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
+                        behavior: 'instant'
+                    });
+                }
+
+            });
+        });
+    });
+</script>
