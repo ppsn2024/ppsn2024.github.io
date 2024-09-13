@@ -92,7 +92,7 @@
 
     function createTimetable(id, days, slots) {
         var tablecontainer = document.createElement("div");
-        tablecontainer.setAttribute("class", "table-responsive2");
+        tablecontainer.setAttribute("class", "table-responsive");
         var table = document.createElement("table");
         table.setAttribute("class", "timetable-table");
         var thead = document.createElement("thead");
@@ -308,7 +308,6 @@
 <div id="timetable" class="background-light"></div>
 
 <script>
-
     function drawTimetable() {
         var ttc = document.getElementById("timetable");
         ttc.innerHTML = "";
@@ -319,8 +318,8 @@
             var timetable1 = createTimetable("tt1", days, slots);
             ttc.appendChild(timetable1);
 
-            // TODO create accordion with rest of  the content (keynotes, workshops etc.)
         } else {
+
             var di = 1;
 
             // accordion
@@ -377,9 +376,27 @@
             ttc.appendChild(accordion);
         }
     }
-
+    var oldWidth = window.innerWidth;
+    console.log(oldWidth);
     window.addEventListener('resize', function (event) {
-        drawTimetable();
+        // Get the new window width after resize
+        var newWidth = window.innerWidth;
+
+        // Check if the old width was < 1200 and the new width is >= 1200
+        if (newWidth >= 1200 && oldWidth < 1200) {
+            console.log("redraw");
+            drawTimetable();
+        }
+        // Optionally, check if the old width was >= 1200 and the new width is < 1200
+        else if (newWidth < 1200 && oldWidth >= 1200) {
+            // If needed, redrawTimetable() or other logic
+            console.log("redraw-all")
+            drawTimetable();
+        }
+
+        // Update oldWidth to the new width for the next resize event
+        oldWidth = newWidth;
+
     }, true);
 
     drawTimetable();
