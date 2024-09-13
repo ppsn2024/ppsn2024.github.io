@@ -248,89 +248,25 @@ custom_css:
     </div>
 </section>
 <script>
-
     document.addEventListener('DOMContentLoaded', function () {
+
         document.querySelectorAll('.accordion-item').forEach(function (item) {
-            // Add event listener for the click event on the accordion button
-            item.querySelector('.accordion-button').addEventListener('click', function (e) {
-                console.log("ets");
-                // Prevent the default behavior of scrolling
-
-            });
-
-            // Listen for the "show.bs.collapse" event (before the accordion opens)
-            item.addEventListener('show.bs.collapse', function (e) {
-                // Prevent Bootstrap's default behavior for scroll jumps
-
-            });
-
-            // Listen for the "shown.bs.collapse" event (after the accordion is fully opened)
-            item.addEventListener('shown.bs.collapse', function (e) {
-                // Prevent Bootstrap's default behavior
-                e.preventDefault();
-
-                // Now we can control the scroll behavior manually
-
+            item.addEventListener('shown.bs.collapse', function () {
                 var itemHeight = this.scrollHeight;
-                var bottomThreshold = window.innerHeight + window.scrollY;
-                var documentHeight = document.documentElement.scrollHeight;
 
-                // Check if any accordion is open
-                let anyOpen = document.querySelector('.accordion-collapse.show');
-
-                // Only scroll if an accordion item is open and we're not at the bottom of the page
-                if (anyOpen && bottomThreshold < documentHeight - 50) { // Prevent scroll when near the bottom
-                    // If the item content is taller than the window, scroll to the top of the accordion
-                    if (itemHeight >= window.innerHeight) {
-                        window.scrollTo({
-                            top: this.offsetTop,
-                            behavior: 'instant' // Immediate scroll
-                        });
-                    }
-                    // Otherwise, scroll so the item is centered vertically in the viewport
-                    else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
-                        window.scrollTo({
-                            top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
-                            behavior: 'instant' // Immediate scroll
-                        });
-                    }
+                if (itemHeight >= window.innerHeight) {
+                    window.scrollTo({
+                        top: this.offsetTop,
+                        behavior: 'instant'
+                    });
+                } else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
+                    window.scrollTo({
+                        top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
+                        behavior: 'instant'
+                    });
                 }
+
             });
         });
     });
-
-    // const accordionItems = document.querySelectorAll('.accordion-collapse')
-    // const acc = document.getElementById('accordionFlushExample2')
-
-    // accordionItems.forEach((el) => {
-    //     el.addEventListener('shown.bs.collapse', (e) => {
-    //         var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
-    //         acc.scroll({
-    //             top: scrollOffset,
-    //             left: 0,
-    //             behavior: 'instant'
-    //         })
-    //     })
-    // })
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     document.querySelectorAll('.accordion-item').forEach(function (item) {
-    //         item.addEventListener('shown.bs.collapse', function () {
-    //             var itemHeight = this.scrollHeight;
-
-    //             if (itemHeight >= window.innerHeight) {
-    //                 window.scrollTo({
-    //                     top: this.offsetTop,
-    //                     behavior: 'instant'
-    //                 });
-    //             } else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
-    //                 window.scrollTo({
-    //                     top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
-    //                     behavior: 'instant'
-    //                 });
-    //             }
-
-    //         });
-    //     });
-    // });
 </script>
