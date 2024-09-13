@@ -313,6 +313,8 @@
         if (w >= 1200) {
             var timetable1 = createTimetable("tt1", days, slots);
             ttc.appendChild(timetable1);
+
+            // TODO create accordion with rest of  the content (keynotes, workshops etc.)
         } else {
             var di = 1;
 
@@ -364,6 +366,8 @@
 
                 di++;
             }
+
+            // TODO append accordion items with rest of  the content (keynotes, workshops etc.)
             ttc.appendChild(accordion);
         }
     }
@@ -387,6 +391,7 @@
         olt.innerHTML += "<br/><br/>"  + day.formatteddate + ", " + ssl.startstr + " - " + ssl.endstr + ", " + ssl.room;
         olt.innerHTML += "<br/><br/>" + ssl.description + "<br/><br/>" + ssl.speaker;
 
+        // TODO: check if slot is session, if yes: get poster ids
     }
 
     function olOff() {
