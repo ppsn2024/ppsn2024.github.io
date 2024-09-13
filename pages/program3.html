@@ -17,6 +17,12 @@ custom_css:
     //     event.preventDefault();
     // });
     //touchstart
+    window.addEventListener('touchmove', ev => {
+
+            ev.preventDefault();
+            ev.stopImmediatePropagation();
+
+        }, { passive: false });
 </script>
 
 <section class="background-light subpage-sec">
