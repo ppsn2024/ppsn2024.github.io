@@ -1,58 +1,29 @@
 ---
-title: Program3
+title: Program4
 layout: presentation
 lang: en
-permalink: program3/
+permalink: program4/
 description: Programm of PPSN 2024 conference
 custom_css:
 - timetable
 ---
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-    // $(document).on("touchstart", ".accordion", function(event){
-    //     event.preventDefault();
-    // });
-    // $(document).on("touchstart", ".accordion-item", function(event){
-    //     event.preventDefault();
-    // });
-    //touchstart
 
-    // window.addEventListener('touchcancel', ev => {
-    //     ev.preventDefault();
-    //     ev.stopImmediatePropagation();
-    // }, { passive: false });
 
-    console.log("hola1");
-    $('.collapse').on('shown.bs.collapse', function(e) {
-        console.log("hola2");
-        var $card = $(this).closest('.accordion-item');
-        var $open = $($(this).data('parent')).find('.collapse.show');
-        
-        var additionalOffset = 0;
-        if($card.prevAll().filter($open.closest('.accordion-item')).length !== 0)
-        {
-                additionalOffset =  $open.height();
-        }
-        $('html,body').animate({
-            scrollTop: $card.offset().top - additionalOffset
-        }, 500);
-    });
-</script>
 
 <section class="background-light subpage-sec">
-    <div class="container text-justify">
+    <div class="container">
         <style>
             /* html {
                 scrollbar-gutter: stable!important;
             } */
 
-            body {
+            /* body {
                 touch-action: pan-y !important;
             }
 
             body {
                 overflow-anchor: none !important;
-            }
+            } */
 
             .subpage-sec {
                 min-height: 0 !important;
@@ -68,11 +39,9 @@ custom_css:
             }
         </style>
         <h2>Program</h2>
-        <br />
-        {% include protimetable.html %}
-        <br /><br />
 
-        <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+        
+        <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -346,7 +315,37 @@ custom_css:
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
     </div>
 </section>
+
+<script>
+    // $(document).on("touchstart", ".accordion", function(event){
+    //     event.preventDefault();
+    // });
+    // $(document).on("touchstart", ".accordion-item", function(event){
+    //     event.preventDefault();
+    // });
+    //touchstart
+
+    // window.addEventListener('touchcancel', ev => {
+    //     ev.preventDefault();
+    //     ev.stopImmediatePropagation();
+    // }, { passive: false });
+
+    console.log("hola1");
+    $('.collapse').on('shown.bs.collapse', function (e) {
+        console.log("hola2");
+        var $card = $(this).closest('.accordion-item');
+        var $open = $($(this).data('parent')).find('.collapse.show');
+
+        var additionalOffset = 0;
+        if ($card.prevAll().filter($open.closest('.accordion-item')).length !== 0) {
+            additionalOffset = $open.height();
+        }
+        $('html,body').animate({
+            scrollTop: $card.offset().top - additionalOffset
+        }, 100);
+    });
+</script>
