@@ -173,7 +173,7 @@
             timetd.setAttribute("class", "time");
 
             var tdlink = document.createElement("a");
-            // tdlink.setAttribute("href", "/program/?time=" + t.str); // 
+            // tdlink.setAttribute("href", "/program/?time=" + t.str); //
 
             var tdc = document.createElement("div");
             tdc.setAttribute("class", "tdc");
@@ -320,7 +320,7 @@
 
             // accordion
             var accordion = document.createElement("div");
-            accordion.setAttribute("class", "accordion accordion-flush");
+            accordion.setAttribute("class", "accordion accordion-flush overflow-auto");
             accordion.setAttribute("id", "accordionFlushExample2");
 
             for (d of days) {
@@ -352,7 +352,7 @@
                 var accordionCollapse = document.createElement("div");
                 accordionCollapse.setAttribute("class", "accordion-collapse collapse");
                 accordionCollapse.setAttribute("id", "flush-collapse" + d.id);
-                accordionCollapse.setAttribute("aria-labelledb", "flush-heading" + d.id);
+                accordionCollapse.setAttribute("aria-labelledby", "flush-heading" + d.id);
                 accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample2");
                 var accordionBody = document.createElement("div");
                 accordionBody.setAttribute("class", "accordion-body");
@@ -388,7 +388,7 @@
         var ssl = slots.find(x => x.id == slotId);
         var day = days.find(x => x.id == ssl.day);
         olt.innerHTML = "<strong>" + ssl.title + "</strong>";
-        olt.innerHTML += "<br/><br/>"  + day.formatteddate + ", " + ssl.startstr + " - " + ssl.endstr + ", " + ssl.room;
+        olt.innerHTML += "<br/><br/>" + day.formatteddate + ", " + ssl.startstr + " - " + ssl.endstr + ", " + ssl.room;
         olt.innerHTML += "<br/><br/>" + ssl.description + "<br/><br/>" + ssl.speaker;
 
         // TODO: check if slot is session, if yes: get poster ids
