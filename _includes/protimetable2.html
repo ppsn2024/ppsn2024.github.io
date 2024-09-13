@@ -308,7 +308,6 @@
 <div id="timetable" class="background-light"></div>
 
 <script>
-
     function drawTimetable() {
         var ttc = document.getElementById("timetable");
         ttc.innerHTML = "";
@@ -319,39 +318,7 @@
             var timetable1 = createTimetable("tt1", days, slots);
             ttc.appendChild(timetable1);
 
-            // TODO create accordion with rest of  the content (keynotes, workshops etc.)
         } else {
-            // let id = 1;
-            // //accordion
-            // var accordion = document.createElement("div");
-            // accordion.setAttribute("class", "my-accordion");
-
-            // for (d of days) {
-            //     let selecteddays = [], selectedslots = [];
-            //     selecteddays.push(d);
-            //     selectedslots = slots.filter(x => x.day == d.id);
-            //     console.log(d.formatteddate);
-            //     const accordionContent = document.createElement("div");
-            //     accordionContent.setAttribute("class", "my-accordion-content")
-            //     const header = document.createElement("header");
-            //     const accordionTitle = document.createElement("span");
-            //     accordionTitle.setAttribute("class", "my-accordion-content-title");
-            //     accordionTitle.innerHTML = d.formatteddate;
-            //     const accordionGlyph = document.createElement("i");
-            //     accordionGlyph.setAttribute("class", "fa-solid fa-plus");
-            //     header.appendChild(accordionTitle);
-            //     header.appendChild(accordionGlyph);
-            //     const accordionDescription = document.createElement("div");
-            //     accordionDescription.setAttribute("class", "my-accordion-content-description");
-            //     const timetableN = createTimetable("tt" + id, selecteddays, selectedslots);   
-            //     accordionDescription.appendChild(timetableN);
-
-            //     accordionContent.appendChild(header);
-            //     accordionContent.appendChild(accordionDescription);
-            //     accordion.appendChild(accordionContent);
-            // }
-
-            // ttc.appendChild(accordion);
 
             var di = 1;
 
@@ -409,7 +376,29 @@
             ttc.appendChild(accordion);
         }
     }
-    
+    var oldWidth = window.innerWidth;
+    console.log(oldWidth);
+    window.addEventListener('resize', function (event) {
+        // Get the new window width after resize
+        var newWidth = window.innerWidth;
+
+        // Check if the old width was < 1200 and the new width is >= 1200
+        if (newWidth >= 1200 && oldWidth < 1200) {
+            console.log("redraw");
+            drawTimetable();
+        }
+        // Optionally, check if the old width was >= 1200 and the new width is < 1200
+        else if (newWidth < 1200 && oldWidth >= 1200) {
+            // If needed, redrawTimetable() or other logic
+            console.log("redraw-all")
+            drawTimetable();
+        }
+
+        // Update oldWidth to the new width for the next resize event
+        oldWidth = newWidth;
+
+    }, true);
+
     drawTimetable();
 
     function olOn(slotId) {
