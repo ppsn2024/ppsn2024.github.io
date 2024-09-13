@@ -319,7 +319,6 @@ custom_css:
 </section>
 
 <script>
-    console.log("hola1");
     $('.collapse').on('shown.bs.collapse', function (e) {
         console.log("hola2");
         var $card = $(this).closest('.accordion-item');
@@ -330,7 +329,7 @@ custom_css:
             additionalOffset = $open.height();
         }
         $('html,body').animate({
-            scrollTop: $card.offset().top - additionalOffset
+            scrollTop: $card.offset().top - additionalOffset - 82
         }, 100);
     });
 </script>
