@@ -298,6 +298,11 @@
     slots.push(sitem);
     {% endfor %}
 
+    //Read papers
+    const planData = '{{ site.data.papers}}';
+    const planDataJson = planData.replaceAll("=>", ":");
+    const papers = JSON.parse(planDataJson);
+
 </script>
 
 <div id="timetable" class="background-light"></div>
@@ -389,9 +394,28 @@
         var day = days.find(x => x.id == ssl.day);
         olt.innerHTML = "<strong>" + ssl.title + "</strong>";
         olt.innerHTML += "<br/><br/>" + day.formatteddate + ", " + ssl.startstr + " - " + ssl.endstr + ", " + ssl.room;
-        olt.innerHTML += "<br/><br/>" + ssl.description + "<br/><br/>" + ssl.speaker;
 
-        // TODO: check if slot is session, if yes: get poster ids
+        if (ssl.description != "") {
+            olt.innerHTML += "<br/><br/>" + ssl.description;
+        }
+
+        if (ssl.speaker != "") {
+            olt.innerHTML += "<br/><br/>" + ssl.speaker;
+        }
+
+
+        if (ssl.class == "session") {
+            olt.innerHTML += "<br /><br />Papers:<br />"
+            //Get papers for session Id
+            let paperIds = "";
+            for (const paper of papers.papers) {
+                if (paper.slot_id == ssl.id) {
+                    paperIds += "#" + paper.ID + ", ";
+                }
+            }
+
+            olt.innerHTML += paperIds;
+        }
     }
 
     function olOff() {
