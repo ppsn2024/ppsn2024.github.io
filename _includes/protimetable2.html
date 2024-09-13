@@ -1,0 +1,462 @@
+{% assign days = site.data.timetable.days | sort:"date" %}
+{% assign slots = site.data.timetable.slots | sort:"id" %}
+
+<script>
+    function printMatrix(m) {
+        console.log("matrix:");
+        for (var i = 0; i < m.length; i++) {
+            console.log(m[i]);
+        }
+        console.log("");
+    }
+
+    function getDatetime(str) {
+        var timeArr = str.split(":");
+        var newDate = new Date();
+        newDate.setHours(timeArr[0]);
+        newDate.setMinutes(timeArr[1]);
+
+        return newDate;
+    }
+
+    function getTimeStr(date) {
+        var timeHours = date.getHours();
+        var timeMinutes = date.getMinutes();
+        return (timeHours <= 9 ? "0" : "") + timeHours + ":" + (timeMinutes <= 9 ? "0" : "") + timeMinutes;
+    }
+
+    function getTimeNum(str) {
+        var timeArr = str.split(":");
+        var hour = parseInt(timeArr[0]);
+        var minute = parseInt(timeArr[1]);
+
+        return hour + minute / 60.0;
+    }
+
+    function diffTime(startDate, endDate) {
+        var diff = endDate.getTime() - startDate.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+
+        // If using time pickers with 24 hours format, add the below line get exact hours
+        if (hours < 0)
+            hours = hours + 24;
+
+        return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
+    }
+
+    function getRowspan(startDate, endDate, slotSpan) {
+        var diff = endDate.getTime() - startDate.getTime();
+        var hours = diff / 1000 / 60 / 60;
+
+        return Math.floor(hours / slotSpan);
+    }
+
+    function getTimes(startDate, endDate, slotSpan) {
+        var startDatetime = startDate.getTime();
+        var endDatetime = endDate.getTime();
+
+        var diff = endDatetime - startDatetime;
+        var hours = diff / 1000 / 60 / 60;
+        var rowcount = Math.floor(hours / slotSpan);
+        var step = diff / rowcount; // ms
+
+        var times = [];
+        for (let i = 0; i < rowcount; i++) {
+            var newDate = new Date(startDatetime + step * i);
+            var timeHours = newDate.getHours();
+            var timeMinutes = newDate.getMinutes();
+            var time = {};
+            time.str = (timeHours <= 9 ? "0" : "") + timeHours + ":" + (timeMinutes <= 9 ? "0" : "") + timeMinutes;
+            time.num = newDate.getHours() + newDate.getMinutes() / 60.0;
+            times[i] = time;
+        }
+
+        return times;
+    }
+
+    function setMatrixField(matrix, rowstart, colstart, rowspan, colspan, id) {
+        var curcol = colstart;
+        for (let r = rowstart; r < (rowstart + rowspan); r++) {
+            for (let c = colstart; c < (colstart + colspan); c++) {
+                if (!matrix[r][c]) matrix[r][c] = id;
+                else colstart++;
+
+                curcol = c;
+            }
+        }
+
+        return curcol + 1;
+    }
+
+    function createTimetable(id, days, slots) {
+        var tablecontainer = document.createElement("div");
+        tablecontainer.setAttribute("class", "table-responsive");
+        var table = document.createElement("table");
+        table.setAttribute("class", "timetable-table");
+        var thead = document.createElement("thead");
+        var theadrow = document.createElement("tr");
+        var theadblank = document.createElement("th");
+        theadblank.setAttribute("colspan", 1);
+        theadblank.setAttribute("class", "time blank");
+        var tbody = document.createElement("tbody");
+
+        theadrow.appendChild(theadblank);
+        thead.append(theadrow);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        tablecontainer.appendChild(table);
+
+        // load and transform day/slot data
+        var slotstartdatetimes = slots.map(x => x.start);
+        var slotenddatetimes = slots.map(x => x.end);
+
+        var mintime = new Date(Math.min.apply(null, slotstartdatetimes));
+        var maxtime = new Date(Math.max.apply(null, slotenddatetimes));
+        var slotspan = 0.5; // hours
+        var rowcount = getRowspan(mintime, maxtime, slotspan);
+        var colcount = days.map(x => x.columns).reduce((a, b) => a + b, 0);
+        var times = getTimes(mintime, maxtime, slotspan);
+
+        // initialize matrix for internal representation
+        var matrix = new Array(rowcount);
+        for (let i = 0; i < rowcount; i++) {
+            matrix[i] = new Array(colcount);
+            for (let j = 0; j < colcount; j++) {
+                matrix[i][j] = "";
+            }
+        }
+
+        // fill matrix
+        var ti = 0, di = 0;
+        for (t of times) {
+            c = 0;
+            for (d of days) {
+                // console.log(slots.map(x => x.startnum).join(" "));
+                var startingslots = slots.filter(x => x.day == d.id && x.startnum == t.num)
+                var cc = c;
+                for (s of startingslots) {
+                    var slotrowspan = getRowspan(s.start, s.end, slotspan);
+                    s.rowspan = slotrowspan;
+                    cc = setMatrixField(matrix, ti, cc, slotrowspan, s.colspan, s.id);
+                }
+                c += d.columns;
+                di++;
+            }
+            ti++;
+        }
+        // printMatrix(matrix);
+
+        // setup array for slot checking
+        var slotStatus = [];
+        for (s of slots) {
+            slotStatus[s.id] = false;
+            // console.log(s.id);
+        }
+
+        // build header
+        for (d of days) {
+            var theadday = document.createElement("th");
+            theadday.setAttribute("class", "day");
+            theadday.setAttribute("colspan", d.columns);
+            var theaddaycontent = document.createElement("span");
+            theaddaycontent.innerHTML = d.formatteddate;
+            theadday.appendChild(theaddaycontent);
+            theadrow.appendChild(theadday);
+        }
+
+        var r = 0;
+        for (t of times) {
+            var timerow = document.createElement("tr");
+            var timetd = document.createElement("td");
+            timetd.setAttribute("class", "time");
+
+            var tdlink = document.createElement("a");
+            // tdlink.setAttribute("href", "/program/?time=" + t.str); //
+
+            var tdc = document.createElement("div");
+            tdc.setAttribute("class", "tdc");
+            var timetdcontent = document.createElement("span");
+            timetdcontent.innerHTML = t.str;
+            tdc.appendChild(timetdcontent);
+
+            tdlink.appendChild(tdc);
+            timetd.appendChild(tdlink);
+            timerow.appendChild(timetd);
+
+            for (let c = 0; c < colcount; c++) {
+                var sid = matrix[r][c];
+                if (!sid) {
+                    var td = document.createElement("td");
+                    td.setAttribute("class", "blank");
+                    td.setAttribute("colspan", 1);
+                    td.setAttribute("rowspan", 1);
+                    // var span = document.createElement("span");
+                    // td.appendChild(span);
+                    timerow.appendChild(td);
+                } else if (slotStatus[sid] === false) {
+                    var slot = slots.find(x => x.id == sid);
+                    var td = document.createElement("td");
+                    td.setAttribute("class", "slot " + slot.class);
+                    td.setAttribute("colspan", slot.colspan);
+                    td.setAttribute("rowspan", slot.rowspan);
+
+                    var tdlink = document.createElement("a");
+                    tdlink.setAttribute("onclick", "olOn('" + slot.id + "')");
+                    tdlink.setAttribute("class", "slot-btn")
+                    // tdlink.setAttribute("href", "/iprogram/?slot=" + slot.id); //
+                    // tdlink.setAttribute("href", "#");
+
+                    var tdc = document.createElement("div");
+                    tdc.setAttribute("class", "tdc");
+                    if (slot.rowspan > 1) {
+                        tdc.classList.add("tdc-rowspan" + slot.rowspan);
+                    }
+
+                    var span = document.createElement("span");
+                    span.setAttribute("class", "slot-title");
+                    span.innerHTML = slot.title;
+                    tdc.appendChild(span);
+                    if (slot.start && slot.end && slot.room) {
+                        // tdc.appendChild(document.createElement("br"));
+                        var spandesc = document.createElement("span");
+                        spandesc.setAttribute("class", "slot-baseinfo");
+                        spandesc.innerHTML = slot.startstr + " - " + slot.endstr + ", " + slot.room;
+                        tdc.appendChild(spandesc);
+                    }
+                    if (slot.description) {
+                        tdc.appendChild(document.createElement("br"));
+                        var spandesc = document.createElement("span");
+                        spandesc.setAttribute("class", "slot-description");
+                        spandesc.innerHTML = slot.description;
+                        tdc.appendChild(spandesc);
+                    }
+                    if (slot.link) {
+                        tdc.appendChild(document.createElement("br"));
+                        var link = document.createElement("a");
+                        link.setAttribute("class", "slot-link");
+                        link.href = slot.link;
+                        link.target = "_blank";
+                        link.innerHTML = slot.link;
+                        tdc.appendChild(link);
+                    }
+                    if (slot.speaker) {
+                        tdc.appendChild(document.createElement("br"));
+                        var spanspeaker = document.createElement("span");
+                        spanspeaker.setAttribute("class", "slot-speaker");
+                        spanspeaker.innerHTML = slot.speaker;
+                        tdc.appendChild(spanspeaker);
+                    }
+                    tdlink.appendChild(tdc);
+                    td.appendChild(tdlink);
+                    timerow.appendChild(td);
+                    slotStatus[sid] = true;
+                }
+            }
+
+            tbody.appendChild(timerow);
+            r++;
+        }
+
+        return tablecontainer;
+    }
+
+
+    // transfer data from yml
+    var days = [];
+    var slots = [];
+    var ditem = {}, sitem;
+
+    {% for d in days %}
+    ditem = {};
+    ditem.id = "{{ d.id }}";
+    ditem.date = {{ d.date }};
+    ditem.dayofweek = "{{ d.dayofweek }}";
+    ditem.formatteddate = '{{ d.date | date: "%A, %-d %b" }}';
+    ditem.columns = {{ d.columns }};
+    days.push(ditem);
+    {% endfor %}
+
+    {% for s in slots %}
+    sitem = {};
+    sitem.id = "{{ s.id }}";
+    sitem.title = "{{ s.title }}";
+    sitem.link = "{{ s.link }}";
+    sitem.description = "{{ s.description }}";
+    sitem.speaker = "{{ s.speaker }}";
+    sitem.day = "{{ s.day }}";
+    sitem.start = getDatetime("{{ s.start }}");
+    sitem.startstr = getTimeStr(getDatetime("{{ s.start }}"));
+    sitem.startnum = getTimeNum("{{ s.start }}");
+    sitem.end = getDatetime("{{ s.end }}");
+    sitem.endstr = getTimeStr(getDatetime("{{ s.end }}"));
+    sitem.endnum = getTimeNum("{{ s.end }}");
+    sitem.room = "{{ s.room }}";
+    sitem.colspan = {{ s.colspan }};
+    sitem.class = "{{ s.class }}";
+    slots.push(sitem);
+    {% endfor %}
+
+    //Read papers
+    const planData = '{{ site.data.papers}}';
+    const planDataJson = planData.replaceAll("=>", ":");
+    const papers = JSON.parse(planDataJson);
+
+</script>
+
+<div id="timetable" class="background-light"></div>
+
+<script>
+
+    function drawTimetable() {
+        var ttc = document.getElementById("timetable");
+        ttc.innerHTML = "";
+
+
+        var w = window.innerWidth;
+        if (w >= 1200) {
+            var timetable1 = createTimetable("tt1", days, slots);
+            ttc.appendChild(timetable1);
+
+            // TODO create accordion with rest of  the content (keynotes, workshops etc.)
+        } else {
+            let id = 1;
+            //accordion
+            var accordion = document.createElement("div");
+            accordion.setAttribute("class", "my-accordion");
+
+            for (d of days) {
+                let selecteddays = [], selectedslots = [];
+                selecteddays.push(d);
+                selectedslots = slots.filter(x => x.day == d.id);
+                console.log(d.formatteddate);
+                const accordionContent = document.createElement("div");
+                accordionContent.setAttribute("class", "my-accordion-content")
+                const header = document.createElement("header");
+                const accordionTitle = document.createElement("span");
+                accordionTitle.setAttribute("class", "my-accordion-content-title");
+                accordionTitle.innerHTML = d.formatteddate;
+                const accordionGlyph = document.createElement("i");
+                accordionGlyph.setAttribute("class", "fa-solid fa-plus");
+                header.appendChild(accordionTitle);
+                header.appendChild(accordionGlyph);
+                const accordionDescription = document.createElement("div");
+                accordionDescription.setAttribute("class", "my-accordion-content-description");
+                const timetableN = createTimetable("tt" + id, selecteddays, selectedslots);   
+                accordionDescription.appendChild(timetableN);
+
+                accordionContent.appendChild(header);
+                accordionContent.appendChild(accordionDescription);
+                accordion.appendChild(accordionContent);
+            }
+
+            ttc.appendChild(accordion);
+
+            // var di = 1;
+
+            // // accordion
+            // var accordion = document.createElement("div");
+            // accordion.setAttribute("class", "accordion accordion-flush overflow-auto");
+            // accordion.setAttribute("id", "accordionFlushExample2");
+
+            // for (d of days) {
+            //     var selecteddays = [], selectedslots = [];
+            //     selecteddays.push(d);
+            //     selectedslots = slots.filter(x => x.day == d.id);
+            //     // console.log(d.formatteddate);
+
+            //     // accordion
+            //     var accordionItem = document.createElement("div");
+            //     accordionItem.setAttribute("class", "accordion-item");
+            //     accordionItem.setAttribute("id", "accordion-item-" + d.id);
+            //     var accordionHeader = document.createElement("h2");
+            //     accordionHeader.setAttribute("class", "accordion-header");
+            //     accordionHeader.setAttribute("id", "flush-heading" + d.id);
+            //     var accordionButton = document.createElement("button");
+            //     accordionButton.setAttribute("class", "accordion-button collapsed");
+            //     accordionButton.setAttribute("type", "button");
+            //     accordionButton.setAttribute("data-bs-toggle", "collapse");
+            //     accordionButton.setAttribute("data-bs-target", "#flush-collapse" + d.id);
+            //     accordionButton.setAttribute("aria-expanded", "false");
+            //     accordionButton.setAttribute("aria-controls", "flush-collapse" + d.id);
+            //     var accordionHeading = document.createElement("h3");
+            //     accordionHeading.innerHTML = d.formatteddate;
+
+            //     accordionButton.appendChild(accordionHeading);
+            //     accordionHeader.appendChild(accordionButton);
+            //     accordionItem.appendChild(accordionHeader);
+
+            //     var accordionCollapse = document.createElement("div");
+            //     accordionCollapse.setAttribute("class", "accordion-collapse collapse");
+            //     accordionCollapse.setAttribute("id", "flush-collapse" + d.id);
+            //     accordionCollapse.setAttribute("aria-labelledby", "flush-heading" + d.id);
+            //     accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample2");
+            //     var accordionBody = document.createElement("div");
+            //     accordionBody.setAttribute("class", "accordion-body");
+
+            //     var timetableN = createTimetable("tt" + di, selecteddays, selectedslots);
+            //     accordionBody.appendChild(timetableN);
+
+            //     accordionCollapse.appendChild(accordionBody);
+            //     accordionItem.appendChild(accordionCollapse);
+            //     accordion.appendChild(accordionItem);
+
+            //     di++;
+            // }
+
+            // // TODO append accordion items with rest of  the content (keynotes, workshops etc.)
+            // ttc.appendChild(accordion);
+        }
+    }
+
+    window.addEventListener('resize', function (event) {
+        drawTimetable();
+    }, true);
+
+    drawTimetable();
+
+    function olOn(slotId) {
+        var ol = document.getElementById("overlay")
+        ol.style.display = "block";
+        var olt = document.getElementById("overlay-text")
+        olt.innerHTML = slotId;
+
+
+        var ssl = slots.find(x => x.id == slotId);
+        var day = days.find(x => x.id == ssl.day);
+        olt.innerHTML = "<strong>" + ssl.title + "</strong>";
+        olt.innerHTML += "<br/><br/>" + day.formatteddate + ", " + ssl.startstr + " - " + ssl.endstr + ", " + ssl.room;
+
+        if (ssl.description != "") {
+            olt.innerHTML += "<br/><br/>" + ssl.description;
+        }
+
+        if (ssl.speaker != "") {
+            olt.innerHTML += "<br/><br/>" + ssl.speaker;
+        }
+
+
+        if (ssl.class == "session") {
+            olt.innerHTML += "<br /><br />Papers:<br />"
+            //Get papers for session Id
+            let paperIds = "";
+            for (const paper of papers.papers) {
+                if (paper.slot_id == ssl.id) {
+                    paperIds += "#" + paper.ID + ", ";
+                }
+            }
+
+            olt.innerHTML += paperIds;
+        }
+    }
+
+    function olOff() {
+        document.getElementById("overlay").style.display = "none";
+    }
+
+</script>
+
+<div id="overlay" onclick="olOff()">
+    <div id="overlay-text">Slot details loading...</div>
+</div>
