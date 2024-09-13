@@ -250,19 +250,23 @@ custom_css:
             item.addEventListener('shown.bs.collapse', function () {
                 var itemHeight = this.scrollHeight;
 
-                if (itemHeight >= window.innerHeight) {
-                    window.scrollTo({
-                        top: this.offsetTop,
-                        behavior: 'instant'
-                    });
+                // Check if any accordion is open
+                let anyOpen = document.querySelector('.accordion-collapse.show');
 
-                } else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
-                    window.scrollTo({
-                        top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
-                        behavior: 'instant'
-                    });
+                // Only scroll if an accordion item is open (safety check)
+                if (anyOpen) {
+                    if (itemHeight >= window.innerHeight) {
+                        window.scrollTo({
+                            top: this.offsetTop,
+                            behavior: 'instant'
+                        });
+                    } else if (this.offsetTop - (window.innerHeight - itemHeight) / 2 > window.scrollY) {
+                        window.scrollTo({
+                            top: this.offsetTop - (window.innerHeight - itemHeight) / 2,
+                            behavior: 'instant'
+                        });
+                    }
                 }
-
             });
         });
     });
