@@ -532,7 +532,7 @@ papers:
       the performance of methods based on supervised dimension reduction on a wide
       range of problems."
     slot_id: s4_6
-    poster_id: p_9
+    poster_id: p_3
   - ID: 294
     Title: Evolve Cost-aware Acquisition Functions Using Large Language Models
     Submitter: Yiming Yao
@@ -1101,7 +1101,7 @@ papers:
       find a high degree of multimodality when there is no regularization, and that
       the degree of multimodality drops off with increasing regularization.
     slot_id: s5_4
-    poster_id: p_9
+    poster_id: p_4
   - ID: 9
     Title: Positional Bias Does Not Influence Cartesian Genetic Programming with Crossover
     Submitter: Henning Cui
@@ -1389,7 +1389,7 @@ papers:
       solution space more effectively by creating candidate solutions with lower semantic
       redundancy.
     slot_id: s3_7
-    poster_id: p_6
+    poster_id: p_7
   - ID: 298
     Title:
       Enhancing the Computational Efficiency of Genetic Programming through Alternative
@@ -1533,7 +1533,7 @@ papers:
       many-objective problems in early generations before it starts to show the performance
       deterioration.
     slot_id: s3_7
-    poster_id: p_7
+    poster_id: p_8
   - ID: 105
     Title: "Many-Objective Cover Problem: Discovering Few Solutions to Cover Many Objectives"
     Submitter: Yilu LIU
@@ -1558,7 +1558,7 @@ papers:
       both the efficiency and effectiveness of CluSO, while also illustrating that MaCP
       is a feasible perspective on MaO."
     slot_id: s3_7
-    poster_id: p_8
+    poster_id: p_9
   - ID: 113
     Title: Solution-based Knowledge Discovery for Multi-objective Optimization
     Submitter: Clément Legrand
@@ -1583,7 +1583,7 @@ papers:
       SKD mechanism. Our experiments show that using the KD mechanism we propose increases
       the performance of both IMOLS and MOEA/D algorithms."
     slot_id: s3_7
-    poster_id: p_9
+    poster_id: p_10
   - ID: 120
     Title: Innovization for Route Planning
     Submitter: Eva Röper
@@ -1636,7 +1636,7 @@ papers:
       non-dominated populations exhibit rich qualitative features, giving insights into
       the optimization instances and the quality-diversity trade-offs they induce.
     slot_id: s3_9
-    poster_id: p_7
+    poster_id: p_9
   - ID: 152
     Title: Bayesian Forward-Inverse Transfer for Multiobjective Optimization
     Submitter: Tingyang Wei
@@ -1661,7 +1661,7 @@ papers:
       demonstrate the faster convergence rate and enhanced inverse modeling accuracy
       of our algorithm compared to state-of-the-art algorithms."
     slot_id: s3_9
-    poster_id: p_8
+    poster_id: p_10
   - ID: 153
     Title: Near-Tight Runtime Guarantees for Many-Objective Evolutionary Algorithms
     Submitter: Simon Wietheger
@@ -1806,7 +1806,7 @@ papers:
       reveal that our method achieves in most cases state-of-the-art results in terms
       of hypervolume and solution diversity.
     slot_id: s5_4
-    poster_id: p_7
+    poster_id: p_6
   - ID: 190
     Title: Biased Pareto Optimization for Subset Selection with Dynamic Cost Constraints
     Submitter: Dan-Xuan Liu
@@ -1894,7 +1894,7 @@ papers:
       decrease, which supports the applicability/reliability of the proposal in today`s
       time-constrained and error-prone quantum computers.
     slot_id: s5_4
-    poster_id: p_8
+    poster_id: p_7
   - ID: 236
     Title:
       Reliability of Indicator-based Comparison Results of Evolutionary Multi-Objective
@@ -2008,7 +2008,7 @@ papers:
       the tuned potential function is negative and uniformly bounded away from zero,
       which yields linear convergence."
     slot_id: s5_4
-    poster_id: p_9
+    poster_id: p_8
   - ID: 200
     Title: CMA-ES for Discrete and Mixed-Variable Optimization on Sets of Points
     Submitter: Kento Uchida
@@ -2132,7 +2132,7 @@ papers:
       is experimentally validated on a real-world biological problem: the goal is to
       identify the continuous parameters of gene regulatory networks (GRNs)."
     slot_id: s3_7
-    poster_id: p_10
+    poster_id: p_11
   - ID: 126
     Title:
       "Satellite Resource Scheduling:  Compaction Strategies for Genetic Algorithm
@@ -2155,7 +2155,7 @@ papers:
       indeed the case. This work is impactful because this strategy can be used to improve
       all genetic algorithms schedulers."
     slot_id: s3_9
-    poster_id: p_9
+    poster_id: p_11
   - ID: 140
     Title:
       Attacker-Defender Strategy Optimization Using Multi-objective Competitive
@@ -2287,7 +2287,7 @@ papers:
       through gene maps of models, reveals sophisticated phenological patterns of different
       lake types."
     slot_id: s5_4
-    poster_id: p_10
+    poster_id: p_9
   - ID: 233
     Title:
       Using Evolutionary Algorithms for the search of 16-variable Weight-Wise Perfectly
@@ -2339,7 +2339,7 @@ papers:
       that will result in finding more such functions for larger dimensions, as well
       as algebraic constructions that will be valid for infinite Boolean function sizes."
     slot_id: s3_5
-    poster_id: p_1
+    poster_id: p_11
   - ID: 123
     Title: Self-Adjusting Evolutionary Algorithms Are Slow on a Class of Multimodal Landscapes
     Submitter: Konstantin Sturm
@@ -2365,7 +2365,7 @@ papers:
       choices, which do allow to escape from local optima efficiently. We show this
       theoretically and complement the result with empirical runtime results."
     slot_id: s3_5
-    poster_id: p_2
+    poster_id: p_12
   - ID: 142
     Title: Runtime Analysis of Evolutionary Diversity Optimization on a Tri-Objective Version of the (LeadingOnes, TrailingZeros) Problem
     Submitter: Frank Neumann
@@ -2395,7 +2395,7 @@ papers:
       our theoretical analysis with an empirical study, which shows a very similar behavior
       for both diversity measures that is close to the theory predictions."
     slot_id: s3_7
-    poster_id: p_1
+    poster_id: p_12
   - ID: 149
     Title: Sliding Window 3-Objective Pareto Optimization for Problems with Chance Constraints
     Submitter: Frank Neumann
@@ -2419,7 +2419,7 @@ papers:
       larger instances in a much more efficient way than the 3-objective approach presented
       in (Neumann and Witt, GECCO 2023).
     slot_id: s3_5
-    poster_id: p_3
+    poster_id: p_13
   - ID: 158
     Title:
       Runtime Analysis of a Multi-Valued Compact Genetic Algorithm on Generalized
@@ -2450,7 +2450,7 @@ papers:
       of experiments, we state one conjecture related to the expected runtime of another
       variant of multi-valued OneMax function."
     slot_id: s3_7
-    poster_id: p_2
+    poster_id: p_13
   - ID: 168
     Title: Faster Optimization Through Genetic Drift
     Submitter: Marc Kaufmann
@@ -2480,7 +2480,7 @@ papers:
       drift can only be avoided with smaller step sizes of O(1/n). We complement our
       theoretical results with simulations."
     slot_id: s3_9
-    poster_id: p_10
+    poster_id: p_12
   - ID: 177
     Title: Greedy versus Curious Parent Selection for Multi-Objective Evolutionary Algorithms
     Submitter: Aishwarya Radhakrishnan
@@ -2509,7 +2509,7 @@ papers:
       an incomplete Pareto front for superpolynomial time.  Finally, we provide experimental
       results on the two-objective optimization of linear functions."
     slot_id: s3_9
-    poster_id: p_1
+    poster_id: p_13
   - ID: 199
     Title: How Population Diversity Influences the Efficiency of Crossover
     Submitter: Sacha Cerf
@@ -2529,7 +2529,7 @@ papers:
       for $mu=2$, if we simply break ties in favor of diversity then this increases
       diversity so much that optimization is accelerated by a constant factor.
     slot_id: s4_4
-    poster_id: p_1
+    poster_id: p_11
   - ID: 208
     Title: Overcoming Binary Adversarial Optimisation with Competitive Coevolution
     Submitter: Shishen Lin
@@ -2559,7 +2559,7 @@ papers:
       runtime. This suggests the promising potential of coevolution for solving binary
       adversarial optimisation problems."
     slot_id: s4_4
-    poster_id: p_2
+    poster_id: p_12
   - ID: 228
     Title: Evolving Populations of Solved Subgraphs with Crossover and Constraint Repair
     Submitter: Andrew Sutton
@@ -2582,7 +2582,7 @@ papers:
       simple RLS-style mutation. This bound can be improved to $O(4^k m + m^2 n k log
       n)$ by using standard mutation constrained to the vertices of the graph.
     slot_id: s4_6
-    poster_id: p_1
+    poster_id: p_11
   - ID: 232
     Title:
       Analysis of Evolutionary Diversity Optimisation for the Maximum Matching
@@ -2615,7 +2615,7 @@ papers:
       the scaling behavior with respect to $m$ and $mu$, complement these theoretical
       insights and suggest potential for further refinement of the runtime bounds."
     slot_id: s4_6
-    poster_id: p_2
+    poster_id: p_12
   - ID: 239
     Title: Archive-based Single-Objective Evolutionary Algorithms for Submodular Optimization
     Submitter: Frank Neumann
@@ -2637,7 +2637,7 @@ papers:
       the feasible region of the search space incrementally in order to deal with the
       considered submodular problems.
     slot_id: s4_6
-    poster_id: p_3
+    poster_id: p_13
   - ID: 242
     Title:
       "Local Optima in Diversity Optimization: Non-trivial Offspring Population
@@ -2670,7 +2670,7 @@ papers:
       of the $(1 + 1)$ EA for populations, and which is also efficient at optimizing
       diversity on the $k$-vertex cover problem."
     slot_id: s4_8
-    poster_id: p_1
+    poster_id: p_11
   - ID: 252
     Title:
       Proven Runtime Guarantees for How the MOEA/D Computes the Pareto Front From
@@ -2708,7 +2708,7 @@ papers:
       In contrast to standard bit mutation, smaller values of $N$ are better for power-law
       mutation, as it is capable of easily creating missing solutions."
     slot_id: s4_8
-    poster_id: p_2
+    poster_id: p_12
   - ID: 265
     Title: Ranking Diversity Benefits Coevolutionary Algorithms on an Intransitive Game
     Submitter: Mario Alejandro Hevia Fajardo
@@ -2734,7 +2734,7 @@ papers:
       an archive, but with a ranking diversity mechanism. Both approaches optimise Bilinear
       in expected polynomial time."
     slot_id: s5_4
-    poster_id: p_1
+    poster_id: p_10
   - ID: 279
     Title:
       On the Equivalence between Stochastic Tournament and Power-law Ranking Selection
@@ -2767,7 +2767,7 @@ papers:
       the difference between the best and the worst approach, especially when crossover
       is involved."
     slot_id: s5_4
-    poster_id: p_2
+    poster_id: p_11
   - ID: 285
     Title:
       Level-based Theorems for Runtime Analysis of Multi-objective Evolutionary
@@ -2800,7 +2800,7 @@ papers:
       MOEAs approximating the Pareto front with population sizes smaller than the Pareto
       front."
     slot_id: s5_6
-    poster_id: p_1
+    poster_id: p_11
   - ID: 286
     Title:
       Runtime Analysis for State-of-the-Art Multi-Objective Evolutionary Algorithms
@@ -2827,7 +2827,7 @@ papers:
       MOEAs for the subset selection problem, and also the first runtime analysis of
       SMS-EMOA on a combinatorial problem.
     slot_id: s5_4
-    poster_id: p_3
+    poster_id: p_12
   - ID: 302
     Title: When Does the Time-Linkage Property Help Optimization by Evolutionary Algorithms?
     Submitter: Mingfeng Li
@@ -2858,7 +2858,7 @@ papers:
       proved that the expected runtime is reduced from O(nk) to O(nk−1) (Theorem 4).
       Our experiments also verify the above theoretical findings."
     slot_id: s4_8
-    poster_id: p_3
+    poster_id: p_13
   - ID: 303
     Title:
       A First Running Time Analysis of the Strength Pareto Evolutionary Algorithm
@@ -2887,4 +2887,4 @@ papers:
       applicable for analyzing the expected running time of other MOEAs on these problems,
       and thus can be helpful for future theoretical analysis of MOEAs.
     slot_id: s5_6
-    poster_id: p_9
+    poster_id: p_12
