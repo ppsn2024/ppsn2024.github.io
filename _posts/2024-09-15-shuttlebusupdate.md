@@ -11,7 +11,7 @@ author: jzenisek
 image: /news/resources/2024-09-15-shuttlebusupdate/linz.png
 ---
 
-Due to the critical weather situation, including possible flooding in the Danube area, the PPSN shuttle bus will not be able to depart from the *Lentos Shipping Pier*. Instead, the bus will park at another free spot at *Lentos Art Museum* - please plan to arrive a few minutes early to find the exact spot!
+Due to the critical weather situation, including possible flooding in the Danube area, the PPSN shuttle bus will not be able to depart from the *Lentos Shipping Pier*. Instead, the bus will park at another free spot in front of *Lentos Art Museum* - please plan to arrive a few minutes early to find the exact spot!
 
 <!--more-->
 
