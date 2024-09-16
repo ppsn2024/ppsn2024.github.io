@@ -423,23 +423,28 @@
 
 
         if (ssl.class == "session") {
-            olt.innerHTML += "<br /><br />Papers:<br />"
             //Get papers for session Id
-            let paperIds = "";
-            for (const paper of papers.papers) {
-                if (paper.slot_id == ssl.id) {
-                    paperIds += "#" + paper.ID + ", ";
-                }
-            }
+            let allpapers = papers.papers;
 
-            olt.innerHTML += paperIds;
+            const slotPapers = allpapers.filter(item => item.slot_id == ssl.id);
+
+            const hs5Papers = slotPapers.filter(item => item.room == "hs5");
+            const hs6Papers = slotPapers.filter(item => item.room == "hs6");
+
+            const hs5PapersString = hs5Papers.map(paper => paper.ID).join(", ");
+            const hs6PapersString = hs6Papers.map(paper => paper.ID).join(", ");
+
+            olt.innerHTML += "<br /><br />Papers HS 5:<br />"
+            olt.innerHTML += hs5PapersString;
+            olt.innerHTML += "<br />Papers HS 6:<br />"
+            olt.innerHTML += hs6PapersString;
+
         }
     }
 
     function olOff() {
         document.getElementById("overlay").style.display = "none";
     }
-
 </script>
 
 <div id="overlay" onclick="olOff()">
