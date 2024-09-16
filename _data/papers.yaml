@@ -23,6 +23,7 @@ papers:
       as learning classifier systems."
     slot_id: s3_5
     poster_id: p_1
+    room: hs5
   - ID: 103
     Title:
       "Automatic Brain Tumor Segmentation Using Convolutional Neural Networks:
@@ -57,6 +58,7 @@ papers:
       developments, with implications for clinical practice and patient care.
     slot_id: s3_7
     poster_id: p_1
+    room: hs5
   - ID: 114
     Title: Learning Discretized Bayesian Networks with GOMEA
     Submitter: Damy Ha
@@ -87,6 +89,7 @@ papers:
       accuracy, and the difference with a pre-determined expert network.
     slot_id: s3_9
     poster_id: p_1
+    room: hs5
   - ID: 167
     Title: Pareto-Informed Multi-Objective Neural Architecture Search
     Submitter: Zefeng Chen
@@ -120,6 +123,7 @@ papers:
       entire Pareto front in a comparable timeframe."
     slot_id: s4_4
     poster_id: p_1
+    room: hs5
   - ID: 260
     Title:
       A Variable-Length Fuzzy Set Representation for Learning Fuzzy-Classifier
@@ -150,6 +154,7 @@ papers:
       Fuzzy-UCS and other machine learning techniques in terms of test accuracy."
     slot_id: s4_6
     poster_id: p_1
+    room: hs5
   - ID: 44
     Title: Emergence of Specialised Collective Behaviors in Evolving Heterogeneous Swarms
     Submitter: Fuda van Diggelen
@@ -180,6 +185,7 @@ papers:
       and scalability."
     slot_id: s3_5
     poster_id: p_2
+    room: hs5
   - ID: 82
     Title: Identifying Easy Instances to Improve Efficiency of ML Pipelines for Algorithm-Selection
     Submitter: Quentin Renau
@@ -204,6 +210,7 @@ papers:
       with the original budget (VBS), the single best solver (SBS) and a standard algorithm-selector."
     slot_id: s3_7
     poster_id: p_2
+    room: hs5
   - ID: 106
     Title:
       Landscape-aware Automated Algorithm Configuration using Multi-output Mixed
@@ -237,6 +244,7 @@ papers:
       by using NN models trained on a combination of RGF and MA-BBOB functions.
     slot_id: s3_9
     poster_id: p_2
+    room: hs5
   - ID: 125
     Title:
       Feature Encapsulation by Stages in the Regression Domain Using Grammatical
@@ -264,6 +272,7 @@ papers:
       thereby reducing computational costs."
     slot_id: s4_4
     poster_id: p_2
+    room: hs5
   - ID: 166
     Title:
       Evaluating the Robustness of Deep-Learning Algorithm-Selection Models by
@@ -295,6 +304,7 @@ papers:
       more robust models."
     slot_id: s4_6
     poster_id: p_2
+    room: hs5
   - ID: 207
     Title: Learned Features vs. Classical ELA on Affine BBOB Functions
     Submitter: Moritz Seiler
@@ -325,6 +335,7 @@ papers:
       substantially outperform the single best solver.
     slot_id: s4_8
     poster_id: p_1
+    room: hs5
   - ID: 220
     Title:
       Hybridizing Target- and SHAP-encoded Features for Algorithm Selection in
@@ -355,6 +366,7 @@ papers:
       and SHAP-encoded feature sets, respectively.
     slot_id: s5_4
     poster_id: p_1
+    room: hs5
   - ID: 261
     Title:
       "iMOPSE: a Comprehensive Open Source Library for single- and multi-objective
@@ -389,6 +401,7 @@ papers:
       real-world optimization challenges.
     slot_id: s5_6
     poster_id: p_1
+    room: hs5
   - ID: 296
     Title: Understanding the Importance of Evolutionary Search in Automated Heuristic Design with Large Language Models
     Submitter: Rui Zhang
@@ -415,6 +428,7 @@ papers:
       fully open-sourced our benchmark and corresponding results.
     slot_id: s3_5
     poster_id: p_3
+    room: hs5
   - ID: 43
     Title:
       Performance Comparison of Surrogate-Assisted Evolutionary Algorithms on Computational
@@ -440,6 +454,7 @@ papers:
       significantly better than the other considered methods.
     slot_id: s5_6
     poster_id: p_2
+    room: hs5
   - ID: 179
     Title:
       Balancing Between Time Budgets and Costs in Surrogate-Assisted Evolutionary
@@ -474,6 +489,7 @@ papers:
       non-surrogate-assisted EAs if several thousand function evaluations can be performed.
     slot_id: s5_4
     poster_id: p_2
+    room: hs5
   - ID: 269
     Title: An adaptive approach to Bayesian Optimization with switching costs
     Submitter: Stefan Pricopie
@@ -504,6 +520,7 @@ papers:
       high importance.
     slot_id: s4_8
     poster_id: p_2
+    room: hs5
   - ID: 274
     Title:
       Re-Examining Supervised Dimension Reduction for High-Dimensional Bayesian
@@ -533,6 +550,7 @@ papers:
       range of problems."
     slot_id: s4_6
     poster_id: p_3
+    room: hs5
   - ID: 294
     Title: Evolve Cost-aware Acquisition Functions Using Large Language Models
     Submitter: Yiming Yao
@@ -563,6 +581,7 @@ papers:
       12 synthetic problems and 3 real-world hyperparameter tuning test sets.
     slot_id: s4_4
     poster_id: p_3
+    room: hs5
   - ID: 297
     Title:
       A Surrogate-assisted Partial Optimization for Expensive Constrained Optimization
@@ -593,6 +612,7 @@ papers:
       suite with inequality constraints under an expensive optimization scenario.
     slot_id: s3_9
     poster_id: p_3
+    room: hs5
   - ID: 38
     Title:
       Aggregated Partial Hypervolumes - An Overall Indicator for Performance Evaluation
@@ -619,6 +639,7 @@ papers:
       account the relative importance of MMO and MOO perspectives.
     slot_id: s3_5
     poster_id: p_4
+    room: hs5
   - ID: 109
     Title: Empirical Analysis of the Dynamic Binary Value Problem with IOHprofiler
     Submitter: Diederick Vermetten
@@ -647,6 +668,7 @@ papers:
       problems can be performed."
     slot_id: s3_7
     poster_id: p_3
+    room: hs5
   - ID: 256
     Title:
       A Deep Dive into Effects of Structural Bias on CMA-ES Performance along Affine
@@ -674,6 +696,7 @@ papers:
       bias and algorithm performance across different landscape characteristics."
     slot_id: s3_9
     poster_id: p_4
+    room: hs5
   - ID: 116
     Title:
       On the design of diploid memetic algorithms for solving the multidimensional
@@ -705,6 +728,7 @@ papers:
       to confirm their novelty and effectiveness."
     slot_id: s3_5
     poster_id: p_5
+    room: hs5
   - ID: 143
     Title:
       Sliding Window Bi-Objective Evolutionary Algorithms for Optimizing Chance-Constrained
@@ -738,6 +762,7 @@ papers:
       variable instances.
     slot_id: s3_7
     poster_id: p_4
+    room: hs5
   - ID: 154
     Title:
       "GPGLS: Genetic Programming Guided Local Search for Large-Scale Vehicle Routing
@@ -775,6 +800,7 @@ papers:
       by GLS and KGLS.
     slot_id: s3_9
     poster_id: p_5
+    room: hs5
   - ID: 156
     Title: Generalizing and Unifying Gray-box Combinatorial Optimization Operators
     Submitter: Francisco Chicano
@@ -801,6 +827,7 @@ papers:
       Machine Total Weighted Tardiness Problem."
     slot_id: s4_4
     poster_id: p_4
+    room: hs5
   - ID: 157
     Title: Ant Colony Optimization for the Dynamic Electric Vehicle Routing Problem
     Submitter: MARIA N. ANASTASIADOU
@@ -828,6 +855,7 @@ papers:
       path for future research in intelligent transportation systems.
     slot_id: s4_6
     poster_id: p_4
+    room: hs5
   - ID: 193
     Title:
       Learning a Prior for Monte Carlo Search by Replaying Solutions to Combinatorial
@@ -851,6 +879,7 @@ papers:
       RNA Folding."
     slot_id: s4_8
     poster_id: p_3
+    room: hs5
   - ID: 211
     Title:
       Dancing to the State of the Art? How Candidate Lists Influence LKH for Solving
@@ -883,6 +912,7 @@ papers:
       of magnitude -- and thereby challenges the state of the art in TSP solving."
     slot_id: s5_4
     poster_id: p_3
+    room: hs5
   - ID: 234
     Title:
       Multi-Objective Evolutionary Approaches for the Knapsack Problem with Stochastic
@@ -913,6 +943,7 @@ papers:
       benchmarks and present a detailed analysis of the results."
     slot_id: s5_6
     poster_id: p_3
+    room: hs5
   - ID: 276
     Title:
       Knowledge-Guided Optimization for Complex Vehicle Routing with 3D Loading
@@ -945,6 +976,7 @@ papers:
       3L-SDVRP instances."
     slot_id: s3_5
     poster_id: p_6
+    room: hs5
   - ID: 56
     Title: Exploring proprioceptive feedback in the evolution of modular robots
     Submitter: Babak Hosseinkhani Kargar
@@ -964,6 +996,7 @@ papers:
       was observed across the majority of the test suite.
     slot_id: s3_7
     poster_id: p_5
+    room: hs5
   - ID: 16
     Title: Funnels in Multi-objective Fitness Landscapes
     Submitter: Gabriela Ochoa
@@ -988,6 +1021,7 @@ papers:
       of well-established multi-objective local search and evolutionary algorithms."
     slot_id: s3_9
     poster_id: p_6
+    room: hs5
   - ID: 73
     Title:
       Contrasting the Landscapes of Feature Selection under Different Machine Learning
@@ -1016,6 +1050,7 @@ papers:
       implications for feature selection problems and algorithms.
     slot_id: s4_4
     poster_id: p_5
+    room: hs5
   - ID: 110
     Title: Entropy, Search Trajectories, and Explainability for Frequency Fitness Assignment
     Submitter: Sarah L. Thomson
@@ -1051,6 +1086,7 @@ papers:
       works."
     slot_id: s4_6
     poster_id: p_5
+    room: hs5
   - ID: 127
     Title:
       "Over Sampling Local Optima: Selection and Sampling Bias in Hybrid Genetic
@@ -1076,6 +1112,7 @@ papers:
       design of more effective hybrid evolutionary algorithms."
     slot_id: s4_8
     poster_id: p_4
+    room: hs5
   - ID: 227
     Title: "Regularized Feature Selection Landscapes: An Empirical Study of Multimodality"
     Submitter: Xavier F. C. Sánchez-Díaz
@@ -1102,6 +1139,7 @@ papers:
       the degree of multimodality drops off with increasing regularization.
     slot_id: s5_4
     poster_id: p_4
+    room: hs5
   - ID: 9
     Title: Positional Bias Does Not Influence Cartesian Genetic Programming with Crossover
     Submitter: Henning Cui
@@ -1135,6 +1173,7 @@ papers:
       improve its performance."
     slot_id: s5_6
     poster_id: p_4
+    room: hs5
   - ID: 15
     Title: Unit-Aware Genetic Programming for the Development of Empirical Equations
     Submitter: Julia Reuter
@@ -1159,6 +1198,7 @@ papers:
       developing unit-adherent empirical equations.
     slot_id: s5_6
     poster_id: p_5
+    room: hs5
   - ID: 67
     Title:
       Improving the performance of relocation rules for the container relocation
@@ -1193,6 +1233,7 @@ papers:
       problems within seconds, underscoring its effectiveness."
     slot_id: s3_9
     poster_id: p_7
+    room: hs6
   - ID: 81
     Title:
       "P-Mixup: Improving Generalization Performance of Evolutionary Feature Construction
@@ -1224,6 +1265,7 @@ papers:
       to control overfitting in GP for feature construction.
     slot_id: s5_4
     poster_id: p_5
+    room: hs5
   - ID: 89
     Title: Symbol Graph Genetic Programming for Symbolic Regression
     Submitter: jinglu song
@@ -1247,6 +1289,7 @@ papers:
       conciseness in the mathematical expressions it generates.
     slot_id: s4_8
     poster_id: p_5
+    room: hs5
   - ID: 115
     Title:
       Simultaneous Model-Based Evolution of Constants and Expression Structure
@@ -1282,6 +1325,7 @@ papers:
       optimization during evolution.
     slot_id: s4_8
     poster_id: p_6
+    room: hs5
   - ID: 165
     Title: Adaptive Sampling of Biomedical Images with Cartesian Genetic Programming
     Submitter: Yuri Lavinas
@@ -1307,6 +1351,7 @@ papers:
       of the evolutionary algorithm."
     slot_id: s4_6
     poster_id: p_6
+    room: hs5
   - ID: 185
     Title: The Inefficiency of Genetic Programming for Symbolic Regression
     Submitter: Gabriel Kronberger
@@ -1335,6 +1380,7 @@ papers:
       and evaluates expressions repeatedly that are congruent to already visited expressions."
     slot_id: s4_4
     poster_id: p_6
+    room: hs5
   - ID: 204
     Title: Decision Tree Based Wrappers for Hearing Loss
     Submitter: Miguel Rabuge
@@ -1358,6 +1404,7 @@ papers:
       framework also generated an individual that achieved 72.8% using a single feature.
     slot_id: s3_7
     poster_id: p_6
+    room: hs5
   - ID: 223
     Title: Multi-Modal Adaptive Graph Evolution for Program Synthesis
     Submitter: Camilo De La Torre
@@ -1390,6 +1437,7 @@ papers:
       redundancy.
     slot_id: s3_7
     poster_id: p_7
+    room: hs6
   - ID: 298
     Title:
       Enhancing the Computational Efficiency of Genetic Programming through Alternative
@@ -1426,6 +1474,7 @@ papers:
       computing platforms, as well as improved power/energy efficiency.
     slot_id: s3_5
     poster_id: p_7
+    room: hs6
   - ID: 62
     Title:
       Selection Strategy Based on Proper Pareto Optimality in Evolutionary Multi-Objective
@@ -1455,6 +1504,7 @@ papers:
       MOEAs on DRS-MOPs, demonstrating the promising application of SPP.
     slot_id: s3_5
     poster_id: p_8
+    room: hs6
   - ID: 76
     Title: Hypervolume gradient subspace approximation
     Submitter: Kenneth Zhang
@@ -1479,6 +1529,7 @@ papers:
       problems and 12 out of 17 three-objective problems."
     slot_id: s3_5
     poster_id: p_9
+    room: hs6
   - ID: 94
     Title: "LTR-HSS: A Learning-to-Rank based Framework for Hypervolume Subset Selection"
     Submitter: Cheng Gong
@@ -1504,6 +1555,7 @@ papers:
       for many-objective optimization.
     slot_id: s3_5
     poster_id: p_10
+    room: hs6
   - ID: 96
     Title:
       Three objectives degrade the convergence ability of dominance-based multi-objective
@@ -1534,6 +1586,7 @@ papers:
       deterioration.
     slot_id: s3_7
     poster_id: p_8
+    room: hs6
   - ID: 105
     Title: "Many-Objective Cover Problem: Discovering Few Solutions to Cover Many Objectives"
     Submitter: Yilu LIU
@@ -1559,6 +1612,7 @@ papers:
       is a feasible perspective on MaO."
     slot_id: s3_7
     poster_id: p_9
+    room: hs6
   - ID: 113
     Title: Solution-based Knowledge Discovery for Multi-objective Optimization
     Submitter: Clément Legrand
@@ -1584,6 +1638,7 @@ papers:
       the performance of both IMOLS and MOEA/D algorithms."
     slot_id: s3_7
     poster_id: p_10
+    room: hs6
   - ID: 120
     Title: Innovization for Route Planning
     Submitter: Eva Röper
@@ -1613,6 +1668,7 @@ papers:
       with limited available computational resources.
     slot_id: s3_9
     poster_id: p_8
+    room: hs6
   - ID: 146
     Title: Evolutionary Multi-Objective Diversity Optimization
     Submitter: Frank Neumann
@@ -1637,6 +1693,7 @@ papers:
       the optimization instances and the quality-diversity trade-offs they induce.
     slot_id: s3_9
     poster_id: p_9
+    room: hs6
   - ID: 152
     Title: Bayesian Forward-Inverse Transfer for Multiobjective Optimization
     Submitter: Tingyang Wei
@@ -1662,6 +1719,7 @@ papers:
       of our algorithm compared to state-of-the-art algorithms."
     slot_id: s3_9
     poster_id: p_10
+    room: hs6
   - ID: 153
     Title: Near-Tight Runtime Guarantees for Many-Objective Evolutionary Algorithms
     Submitter: Simon Wietheger
@@ -1690,6 +1748,7 @@ papers:
       transfer to the more practically motivated NSGA-III algorithm."
     slot_id: s4_4
     poster_id: p_7
+    room: hs6
   - ID: 163
     Title:
       Multi-Objective Random Bit Climbers with Weighted Permutation on Large Scale
@@ -1716,6 +1775,7 @@ papers:
       and study some of its properties.
     slot_id: s4_4
     poster_id: p_8
+    room: hs6
   - ID: 164
     Title:
       An Unbounded Archive-Based Inverse Model in Evolutionary Multi-objective
@@ -1744,6 +1804,7 @@ papers:
       ten benchmark problems.
     slot_id: s4_6
     poster_id: p_7
+    room: hs6
   - ID: 171
     Title: "Reinvestigating the R2 Indicator: Achieving Pareto Compliance by Integration"
     Submitter: Lennart Schäpermeier
@@ -1775,6 +1836,7 @@ papers:
       and promising alternative."
     slot_id: s4_6
     poster_id: p_8
+    room: hs6
   - ID: 186
     Title:
       Influence Maximization in Hypergraphs using Multi-Objective Evolutionary
@@ -1807,6 +1869,7 @@ papers:
       of hypervolume and solution diversity.
     slot_id: s5_4
     poster_id: p_6
+    room: hs5
   - ID: 190
     Title: Biased Pareto Optimization for Subset Selection with Dynamic Cost Constraints
     Submitter: Dan-Xuan Liu
@@ -1836,6 +1899,7 @@ papers:
       greedy algorithm.
     slot_id: s4_8
     poster_id: p_7
+    room: hs6
   - ID: 201
     Title:
       Reaching Pareto Front Shape Invariance with a Continuous Multi-Objective
@@ -1864,6 +1928,7 @@ papers:
       is the first Pareto-Front-Shape invariant MOACO.
     slot_id: s4_8
     poster_id: p_8
+    room: hs6
   - ID: 213
     Title: Scalable Quantum Approximate Optimiser for Pseudo-Boolean Multi-Objective Optimisation
     Submitter: Zakaria A. DAHI
@@ -1895,6 +1960,7 @@ papers:
       time-constrained and error-prone quantum computers.
     slot_id: s5_4
     poster_id: p_7
+    room: hs6
   - ID: 236
     Title:
       Reliability of Indicator-based Comparison Results of Evolutionary Multi-Objective
@@ -1928,6 +1994,7 @@ papers:
       performance comparison results."
     slot_id: s5_6
     poster_id: p_6
+    room: hs5
   - ID: 254
     Title:
       "Pareto Landscape: Visualising the Landscape of Multi-Objective Optimisation
@@ -1958,6 +2025,7 @@ papers:
       WFG and BBOB) in the domain, and discuss their features and characteristics.
     slot_id: s5_6
     poster_id: p_7
+    room: hs6
   - ID: 147
     Title: Warm Starting of CMA-ES for Contextual Optimization Problems
     Submitter: Kento Uchida
@@ -1988,6 +2056,7 @@ papers:
       existing contextual optimization and warm starting methods.
     slot_id: s5_6
     poster_id: p_8
+    room: hs6
   - ID: 176
     Title: A Potential Potential Function for a Variable-Metric Evolution Strategy
     Submitter: Stephan Frank
@@ -2009,6 +2078,7 @@ papers:
       which yields linear convergence."
     slot_id: s5_4
     poster_id: p_8
+    room: hs6
   - ID: 200
     Title: CMA-ES for Discrete and Mixed-Variable Optimization on Sets of Points
     Submitter: Kento Uchida
@@ -2037,6 +2107,7 @@ papers:
       failed to optimize them due to premature convergence.
     slot_id: s4_8
     poster_id: p_9
+    room: hs6
   - ID: 266
     Title: Natural Gradient Interpretation of Rank-One Update in CMA-ES
     Submitter: Ryoki Hamano
@@ -2067,6 +2138,7 @@ papers:
       investigate the properties of the additional term using various benchmark functions.
     slot_id: s4_6
     poster_id: p_9
+    room: hs6
   - ID: 300
     Title: Avoiding Redundant Restarts in Multimodal Global Optimization
     Submitter: Diederick Vermetten
@@ -2089,6 +2161,7 @@ papers:
       mechanism.
     slot_id: s4_4
     poster_id: p_9
+    room: hs6
   - ID: 226
     Title: "LB+IC-CMA-ES: Two simple modifications of CMA-ES to handle mixed-integer problems"
     Submitter: Tristan Marty
@@ -2106,6 +2179,7 @@ papers:
       in- troduced CMA-ES with margin."
     slot_id: s5_6
     poster_id: p_9
+    room: hs6
   - ID: 99
     Title:
       Improving continuous Monte Carlo Tree Search for identifying parameters in
@@ -2133,6 +2207,7 @@ papers:
       identify the continuous parameters of gene regulatory networks (GRNs)."
     slot_id: s3_7
     poster_id: p_11
+    room: hs6
   - ID: 126
     Title:
       "Satellite Resource Scheduling:  Compaction Strategies for Genetic Algorithm
@@ -2156,6 +2231,7 @@ papers:
       all genetic algorithms schedulers."
     slot_id: s3_9
     poster_id: p_11
+    room: hs6
   - ID: 140
     Title:
       Attacker-Defender Strategy Optimization Using Multi-objective Competitive
@@ -2188,6 +2264,7 @@ papers:
       real-world wargame scenario, revealing their impact and importance in practice."
     slot_id: s4_4
     poster_id: p_10
+    room: hs6
   - ID: 212
     Title:
       On the Multi-Objective Optimization of Wind Farm Cable Layouts with regard
@@ -2225,6 +2302,7 @@ papers:
       development of robust and economically viable OWF networks.
     slot_id: s4_6
     poster_id: p_10
+    room: hs6
   - ID: 221
     Title:
       "EvoVec: Evolutionary Image Vectorization with Adaptive Curve Number and
@@ -2259,6 +2337,7 @@ papers:
       pixel-by-pixel MSE by 15%. The implementation is publicly available https://github.com/EgorBa/EvoVec-Evolutionary-Image-Vectorization."
     slot_id: s4_8
     poster_id: p_10
+    room: hs6
   - ID: 230
     Title:
       Evolution-based Feature Selection for Predicting Dissolved Oxygen Concentrations
@@ -2288,6 +2367,7 @@ papers:
       lake types."
     slot_id: s5_4
     poster_id: p_9
+    room: hs6
   - ID: 233
     Title:
       Using Evolutionary Algorithms for the search of 16-variable Weight-Wise Perfectly
@@ -2315,6 +2395,7 @@ papers:
       of EAs’ potential in cryptography."
     slot_id: s5_6
     poster_id: p_10
+    room: hs6
   - ID: 277
     Title:
       Discovering Rotation Symmetric Self-dual Bent Functions with Evolutionary
@@ -2340,6 +2421,7 @@ papers:
       as algebraic constructions that will be valid for infinite Boolean function sizes."
     slot_id: s3_5
     poster_id: p_11
+    room: hs6
   - ID: 123
     Title: Self-Adjusting Evolutionary Algorithms Are Slow on a Class of Multimodal Landscapes
     Submitter: Konstantin Sturm
@@ -2366,6 +2448,7 @@ papers:
       theoretically and complement the result with empirical runtime results."
     slot_id: s3_5
     poster_id: p_12
+    room: hs6
   - ID: 142
     Title: Runtime Analysis of Evolutionary Diversity Optimization on a Tri-Objective Version of the (LeadingOnes, TrailingZeros) Problem
     Submitter: Frank Neumann
@@ -2396,6 +2479,7 @@ papers:
       for both diversity measures that is close to the theory predictions."
     slot_id: s3_7
     poster_id: p_12
+    room: hs6
   - ID: 149
     Title: Sliding Window 3-Objective Pareto Optimization for Problems with Chance Constraints
     Submitter: Frank Neumann
@@ -2420,6 +2504,7 @@ papers:
       in (Neumann and Witt, GECCO 2023).
     slot_id: s3_5
     poster_id: p_13
+    room: hs6
   - ID: 158
     Title:
       Runtime Analysis of a Multi-Valued Compact Genetic Algorithm on Generalized
@@ -2451,6 +2536,7 @@ papers:
       variant of multi-valued OneMax function."
     slot_id: s3_7
     poster_id: p_13
+    room: hs6
   - ID: 168
     Title: Faster Optimization Through Genetic Drift
     Submitter: Marc Kaufmann
@@ -2481,6 +2567,7 @@ papers:
       theoretical results with simulations."
     slot_id: s3_9
     poster_id: p_12
+    room: hs6
   - ID: 177
     Title: Greedy versus Curious Parent Selection for Multi-Objective Evolutionary Algorithms
     Submitter: Aishwarya Radhakrishnan
@@ -2510,6 +2597,7 @@ papers:
       results on the two-objective optimization of linear functions."
     slot_id: s3_9
     poster_id: p_13
+    room: hs6
   - ID: 199
     Title: How Population Diversity Influences the Efficiency of Crossover
     Submitter: Sacha Cerf
@@ -2530,6 +2618,7 @@ papers:
       diversity so much that optimization is accelerated by a constant factor.
     slot_id: s4_4
     poster_id: p_11
+    room: hs6
   - ID: 208
     Title: Overcoming Binary Adversarial Optimisation with Competitive Coevolution
     Submitter: Shishen Lin
@@ -2560,6 +2649,7 @@ papers:
       adversarial optimisation problems."
     slot_id: s4_4
     poster_id: p_12
+    room: hs6
   - ID: 228
     Title: Evolving Populations of Solved Subgraphs with Crossover and Constraint Repair
     Submitter: Andrew Sutton
@@ -2583,6 +2673,7 @@ papers:
       n)$ by using standard mutation constrained to the vertices of the graph.
     slot_id: s4_6
     poster_id: p_11
+    room: hs6
   - ID: 232
     Title:
       Analysis of Evolutionary Diversity Optimisation for the Maximum Matching
@@ -2616,6 +2707,7 @@ papers:
       insights and suggest potential for further refinement of the runtime bounds."
     slot_id: s4_6
     poster_id: p_12
+    room: hs6
   - ID: 239
     Title: Archive-based Single-Objective Evolutionary Algorithms for Submodular Optimization
     Submitter: Frank Neumann
@@ -2638,6 +2730,7 @@ papers:
       considered submodular problems.
     slot_id: s4_6
     poster_id: p_13
+    room: hs6
   - ID: 242
     Title:
       "Local Optima in Diversity Optimization: Non-trivial Offspring Population
@@ -2671,6 +2764,7 @@ papers:
       diversity on the $k$-vertex cover problem."
     slot_id: s4_8
     poster_id: p_11
+    room: hs6
   - ID: 252
     Title:
       Proven Runtime Guarantees for How the MOEA/D Computes the Pareto Front From
@@ -2709,6 +2803,7 @@ papers:
       mutation, as it is capable of easily creating missing solutions."
     slot_id: s4_8
     poster_id: p_12
+    room: hs6
   - ID: 265
     Title: Ranking Diversity Benefits Coevolutionary Algorithms on an Intransitive Game
     Submitter: Mario Alejandro Hevia Fajardo
@@ -2735,6 +2830,7 @@ papers:
       in expected polynomial time."
     slot_id: s5_4
     poster_id: p_10
+    room: hs6
   - ID: 279
     Title:
       On the Equivalence between Stochastic Tournament and Power-law Ranking Selection
@@ -2768,6 +2864,7 @@ papers:
       is involved."
     slot_id: s5_4
     poster_id: p_11
+    room: hs6
   - ID: 285
     Title:
       Level-based Theorems for Runtime Analysis of Multi-objective Evolutionary
@@ -2801,6 +2898,7 @@ papers:
       front."
     slot_id: s5_6
     poster_id: p_11
+    room: hs6
   - ID: 286
     Title:
       Runtime Analysis for State-of-the-Art Multi-Objective Evolutionary Algorithms
@@ -2828,6 +2926,7 @@ papers:
       SMS-EMOA on a combinatorial problem.
     slot_id: s5_4
     poster_id: p_12
+    room: hs6
   - ID: 302
     Title: When Does the Time-Linkage Property Help Optimization by Evolutionary Algorithms?
     Submitter: Mingfeng Li
@@ -2859,6 +2958,7 @@ papers:
       Our experiments also verify the above theoretical findings."
     slot_id: s4_8
     poster_id: p_13
+    room: hs6
   - ID: 303
     Title:
       A First Running Time Analysis of the Strength Pareto Evolutionary Algorithm
@@ -2888,3 +2988,4 @@ papers:
       and thus can be helpful for future theoretical analysis of MOEAs.
     slot_id: s5_6
     poster_id: p_12
+    room: hs6

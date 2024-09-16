@@ -334,7 +334,7 @@ slots:
     day: d3
     start: "11:00"
     end: "12:30"
-    room: HS5
+    room: HS5 & HS6
     colspan: 1
     chair: Frank Neumann
     class: session
@@ -351,7 +351,7 @@ slots:
     day: d3
     start: "13:30"
     end: "15:00"
-    room: HS6
+    room: HS5 & HS6
     colspan: 1
     chair: Emma Hart
     class: session
@@ -368,7 +368,7 @@ slots:
     day: d3
     start: "15:30"
     end: "17:00"
-    room: HS5
+    room: HS5 & HS6
     colspan: 1
     chair: Niki van Stein
     class: session
@@ -412,7 +412,7 @@ slots:
     day: d4
     start: "10:30"
     end: "12:30"
-    room: HS5
+    room: HS5 & HS6
     colspan: 1
     chair: Ofer Shir
     class: session
@@ -429,7 +429,7 @@ slots:
     day: d4
     start: "13:30"
     end: "15:00"
-    room: HS6
+    room: HS5 & HS6
     colspan: 1
     chair: Lennart Schäpermeier
     class: session
@@ -446,7 +446,7 @@ slots:
     day: d4
     start: "15:30"
     end: "17:00"
-    room: HS5
+    room: HS5 & HS6
     colspan: 1
     chair: Benjamin Doerr
     class: session
@@ -490,7 +490,7 @@ slots:
     day: d5
     start: "10:30"
     end: "12:30"
-    room: HS5
+    room: HS5 & HS6
     colspan: 1
     chair: Tobias Glasmachers
     class: session
@@ -507,7 +507,7 @@ slots:
     day: d5
     start: "13:30"
     end: "15:00"
-    room: HS6
+    room: HS5 & HS6
     colspan: 1
     chair: Dirk Sudholt
     class: session

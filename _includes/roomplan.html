@@ -121,7 +121,13 @@
         paperSlider.classList.add("hide");
         if (paperIdParam != null) {
             const currentPaper = getPaperById(paperIdParam);
-            swapSVG("/assets/rooms/hs5.svg", svgContainer)
+            let svgPath = "";
+            if (currentPaper.room == "hs5") {
+                svgPath = "/assets/rooms/hs5_fixed.svg";
+            } else if (currentPaper.room == "hs6") {
+                svgPath = "/assets/rooms/hs6_fixed.svg"
+            }
+            swapSVG(svgPath, svgContainer)
             title.innerHTML = currentPaper.Title;
             authors.innerHTML = currentPaper.Authors;
             abstract.innerHTML = currentPaper.Abstract;
@@ -158,7 +164,7 @@
                 } else {
                     abstract.innerHTML = slot.description;
                 }
-                
+
             } else if (slot.class == "break") {
                 if (slot.title.includes("Lunch Break")) {
                     title.innerHTML = slot.title;
@@ -178,34 +184,42 @@
                 title.innerHTML = social.title;
                 authors.innerHTML = social.authors;
                 abstract.innerHTML = social.abstract;
-            } else if (slot.class == "organization"){
+            } else if (slot.class == "organization") {
                 title.innerHTML = slot.title;
                 authors.innerHTML = "Open: Daily from 8:00-9:00"
                 abstract.innerHTML = "Start your day with a warm welcome!<br /> Visit the Registration & Info Desk to collect your conference materials, ask any questions, and get oriented.<br /> Our team is here to assist you with anything you need throughout the event."
             }
             swapSVG("/assets/rooms/roomplan.svg", svgContainer)
 
-            var element = null;
+            if (slot.room == "HS5 & HS6") {
+                let hs5 = document.getElementById("hs5");
+                let hs6 = document.getElementById("hs6");
 
-            if (slot.room == "Break Room") {
-                element = document.getElementById("breakroom")
-            } else if (slot.room == "Lecture Hall Corridor") {
-                element = document.getElementById("registrationdesk")
-            } else if (slot.room == "HS5") {
-                element = document.getElementById("hs5")
-            } else if (slot.room == "HS3") {
-                element = document.getElementById("hs3")
-            } else if (slot.room == "HS4") {
-                element = document.getElementById("hs4")
-            } else if (slot.room == "HS6") {
-                element = document.getElementById("hs6")
-            } else if (slot.room == "Audimax") {
-                element = document.getElementById("audimax")
-            } else if (slot.room == "Freistädter Brauhaus" || slot.room == "AEC Linz") {
-                return;
+                hs5.setAttribute("class", "cls-1");
+                hs6.setAttribute("class", "cls-1");
+            } else {
+                var element = null;
+
+                if (slot.room == "Break Room") {
+                    element = document.getElementById("breakroom")
+                } else if (slot.room == "Lecture Hall Corridor") {
+                    element = document.getElementById("registrationdesk")
+                } else if (slot.room == "HS5") {
+                    element = document.getElementById("hs5")
+                } else if (slot.room == "HS3") {
+                    element = document.getElementById("hs3")
+                } else if (slot.room == "HS4") {
+                    element = document.getElementById("hs4")
+                } else if (slot.room == "HS6") {
+                    element = document.getElementById("hs6")
+                } else if (slot.room == "Audimax") {
+                    element = document.getElementById("audimax")
+                } else if (slot.room == "Freistädter Brauhaus" || slot.room == "AEC Linz") {
+                    return;
+                }
+
+                element.setAttribute("class", "cls-1")
             }
-
-            element.setAttribute("class", "cls-1")
         }
     }
 
@@ -304,9 +318,14 @@
     function colorPosterSVG(activeStandId) {
         const stands = document.querySelectorAll(".st3");
         const activeStand = document.querySelector("#" + activeStandId);
+        console.log(stands)
+        console.log(activeStandId)
+
         stands.forEach(x => {
             x.classList.remove("active");
         });
+
+
         activeStand.classList.add("active");
     }
 
